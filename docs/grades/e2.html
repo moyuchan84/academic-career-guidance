@@ -1,0 +1,285 @@
+---
+title: 초등 2학년
+parent: 학년별 가이드
+nav_order: 2
+stage: root
+kid: true
+summary: 곱셈구구 · 스스로 읽기 · 공부 루틴
+---
+<header class="page-hero">
+  <p class="kicker">1단계 뿌리 · 만 7~8세 · 2026년 첫째</p>
+  <h1>초등 2학년</h1>
+  <p class="lede">학교가 익숙해지고 자신감이 붙는 해. 목표는 <strong>곱셈구구를 "외우기 전에 이해"</strong>하고, 그림책에서 글밥 있는 책으로 넘어가며, 매일 같은 시간 20분 공부하는 <strong>루틴의 뿌리</strong>를 내리는 것입니다.</p>
+</header>
+
+<!-- ================= KID ================= -->
+<div class="kid-only">
+  <div class="kid-box">
+    <div class="mascot" data-stage="root"></div>
+    <div>
+      <h3>2학년 형님이 된 걸 축하해! 나는 새싹이야</h3>
+      <p>뿌리가 더 튼튼해지는 2학년에는 이런 걸 배워요.</p>
+      <ul>
+        <li>1000까지, 그리고 네 자리 수 세기</li>
+        <li>곱셈구구! 2단부터 9단까지</li>
+        <li>자로 길이 재기 (cm와 m)</li>
+        <li>몇 시 몇 분인지 시계 읽기</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="kid-stickers">2학년 탐험 스티커</h2>
+  <p>해낸 것을 눌러서 스티커를 붙여 봐! <span class="stamp-count" data-stamp-count="e2"></span></p>
+  <div class="stamps" data-key="e2">
+    <button class="stamp c-root" data-id="gugu25"><span class="stamp-ic">✌️</span>2단·5단<small>곱셈구구</small></button>
+    <button class="stamp c-stem" data-id="gugu9"><span class="stamp-ic">🧮</span>9단까지<small>곱셈구구 완성</small></button>
+    <button class="stamp c-branch" data-id="ruler"><span class="stamp-ic">📏</span>자로 재기<small>내 키는 몇 cm?</small></button>
+    <button class="stamp c-fruit" data-id="clock"><span class="stamp-ic">🕰️</span>몇 시 몇 분<small>시계 읽기</small></button>
+    <button class="stamp c-accent" data-id="chapter"><span class="stamp-ic">📘</span>글밥 책 1권<small>그림 적은 책</small></button>
+    <button class="stamp c-note" data-id="diary"><span class="stamp-ic">📝</span>일기 10편<small>겪은 일 쓰기</small></button>
+    <button class="stamp c-tip" data-id="routine"><span class="stamp-ic">⏲️</span>20분 공부<small>일주일 연속</small></button>
+    <button class="stamp c-warn" data-id="shop"><span class="stamp-ic">🛒</span>장보기 계산<small>거스름돈 맞히기</small></button>
+  </div>
+
+  <h2 id="kid-gugu">새싹이 구구단 도전</h2>
+  <p>문제를 보고 답을 적어 봐. 맞히면 다음 문제가 나와!</p>
+  <div class="quiz e2-gugu" id="e2-gugu">
+    <p class="quiz-q"><span class="e2-gq">3 × 4 = ?</span></p>
+    <div class="e2-row">
+      <input class="memo e2-in" type="number" inputmode="numeric" aria-label="구구단 답 입력" id="e2-gugu-in">
+      <button class="btn sm e2-go" type="button">확인</button>
+      <button class="btn sm ghost e2-new" type="button">다른 문제</button>
+    </div>
+    <p class="quiz-fb e2-fb"></p>
+    <p class="e2-score">연속 정답 <b class="e2-streak">0</b>개</p>
+  </div>
+
+  <h2 id="kid-quiz">새싹이 퀴즈</h2>
+  <div class="quiz" data-answer="2">
+    <p class="quiz-q">한 봉지에 사탕이 4개씩, 3봉지 있어. 사탕은 모두 몇 개일까?</p>
+    <div class="quiz-opts">
+      <button class="quiz-opt">7개</button><button class="quiz-opt">10개</button><button class="quiz-opt">12개</button>
+    </div>
+    <p class="quiz-fb" data-ok="딩동댕! 4씩 3번 묶으면 4 × 3 = 12야" data-no="4, 8, 12… 4씩 뛰어 세어 볼까?"></p>
+  </div>
+  <div class="quiz" data-answer="1">
+    <p class="quiz-q">1m는 몇 cm일까?</p>
+    <div class="quiz-opts">
+      <button class="quiz-opt">10cm</button><button class="quiz-opt">100cm</button><button class="quiz-opt">1000cm</button>
+    </div>
+    <p class="quiz-fb" data-ok="정답! 1m = 100cm. 두 팔을 쭉 벌리면 1m쯤 돼" data-no="30cm 자를 3개 조금 넘게 이어 붙여야 1m야!"></p>
+  </div>
+  <div class="quiz" data-answer="0">
+    <p class="quiz-q">1시간은 몇 분일까?</p>
+    <div class="quiz-opts">
+      <button class="quiz-opt">60분</button><button class="quiz-opt">100분</button><button class="quiz-opt">12분</button>
+    </div>
+    <p class="quiz-fb" data-ok="맞아! 긴바늘이 한 바퀴 돌면 60분 = 1시간" data-no="긴바늘이 시계를 한 바퀴 도는 시간을 떠올려 봐!"></p>
+  </div>
+  <div class="quiz" data-answer="1">
+    <p class="quiz-q">53 − 18 은 얼마일까? (받아내림 조심!)</p>
+    <div class="quiz-opts">
+      <button class="quiz-opt">45</button><button class="quiz-opt">35</button><button class="quiz-opt">25</button>
+    </div>
+    <p class="quiz-fb" data-ok="대단해! 십의 자리에서 10을 빌려 와서 13 − 8 = 5, 4 − 1 = 3" data-no="3에서 8은 못 빼니까 십의 자리에서 10을 빌려 와!"></p>
+  </div>
+
+  <h2 id="kid-ask">엄마 아빠한테 물어봐!</h2>
+  <div class="cards" style="--min: 200px">
+    <button class="flip" style="min-height:150px"><span class="flip-front"><b>왜 '구구단'이라고 불러요?</b></span><span class="flip-back"><b>옛날엔 9×9부터 외웠대</b><span>한자 九(구)는 9라는 뜻이야. 옛날 중국에서는 "구구 팔십일"처럼 큰 수부터 외워서 이름이 구구단이 됐어.</span></span></button>
+    <button class="flip" style="min-height:150px"><span class="flip-front"><b>개미는 왜 줄 서서 다녀요?</b></span><span class="flip-back"><b>냄새 길을 따라가서</b><span>먹이를 찾은 개미가 땅에 냄새(페로몬)를 남기면, 다른 개미들이 그 냄새 길을 따라 줄지어 가.</span></span></button>
+    <button class="flip" style="min-height:150px"><span class="flip-front"><b>달은 왜 나를 따라와요?</b></span><span class="flip-back"><b>아주아주 멀리 있어서</b><span>가까운 나무는 휙휙 지나가지만, 달은 너무 멀어서 우리가 움직여도 늘 같은 자리에 있는 것처럼 보여.</span></span></button>
+    <button class="flip" style="min-height:150px"><span class="flip-front"><b>왜 10이 모이면 자리가 바뀌어요?</b></span><span class="flip-back"><b>손가락이 10개라서!</b><span>사람들은 손가락으로 세다 보니 10개씩 묶는 방법을 만들었어. 10개가 모이면 한 자리 올라가.</span></span></button>
+  </div>
+</div>
+
+<!-- ================= PARENT ================= -->
+<div class="parent-only">
+
+<div class="cards" style="--min: 200px">
+  <div class="card top c-root"><span class="tag">키워드 1</span><h3>곱셈구구</h3><p>2학기 첫 단원. 암기보다 "묶어 세기"로 원리를 먼저 잡으면 초3 나눗셈이 편해집니다.</p></div>
+  <div class="card top c-stem"><span class="tag">키워드 2</span><h3>스스로 읽기</h3><p>그림책 → 저학년 문고(글밥 있는 책)로 한 단계. 소리 내어 읽기에서 눈으로 읽기로.</p></div>
+  <div class="card top c-fruit"><span class="tag">키워드 3</span><h3>공부 루틴</h3><p>매일 같은 시간 20분. 양보다 "매일"이 중요합니다. 초3의 교과 분화를 버티는 힘이 돼요.</p></div>
+</div>
+
+<h2 id="year-flow">2학년의 1년 흐름</h2>
+<figure class="dg" style="--dg-min: 640px">
+  <svg viewBox="0 0 760 170" role="img" aria-label="초2 1년 흐름: 3월 새 반부터 2월 3학년 준비까지">
+    <defs><marker id="e2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <line x1="30" y1="60" x2="735" y2="60" class="dg-line strong" marker-end="url(#e2a)"/>
+    <g><circle cx="60" cy="60" r="9" class="dg-box c-root"/><text x="60" y="34" text-anchor="middle" class="dg-t">3월</text><text x="60" y="92" text-anchor="middle" class="dg-t">새 반·새 담임</text><text x="60" y="110" text-anchor="middle" class="dg-t sm">세 자리 수</text></g>
+    <g><circle cx="175" cy="60" r="9" class="dg-box c-root"/><text x="175" y="34" text-anchor="middle" class="dg-t">4~5월</text><text x="175" y="92" text-anchor="middle" class="dg-t">덧셈·뺄셈</text><text x="175" y="110" text-anchor="middle" class="dg-t sm">받아올림·받아내림</text></g>
+    <g><circle cx="290" cy="60" r="9" class="dg-box c-stem"/><text x="290" y="34" text-anchor="middle" class="dg-t">6~7월</text><text x="290" y="92" text-anchor="middle" class="dg-t">곱셈 첫걸음</text><text x="290" y="110" text-anchor="middle" class="dg-t sm">묶어 세기 · 몇의 몇 배</text></g>
+    <g><circle cx="405" cy="60" r="11" class="dg-box c-accent"/><text x="405" y="34" text-anchor="middle" class="dg-t">7~8월</text><text x="405" y="92" text-anchor="middle" class="dg-t">여름방학</text><text x="405" y="110" text-anchor="middle" class="dg-t sm">통지표 · 체험 · 쉬기</text></g>
+    <g><circle cx="520" cy="60" r="11" class="dg-box c-fruit"/><text x="520" y="34" text-anchor="middle" class="dg-t">9~10월</text><text x="520" y="92" text-anchor="middle" class="dg-t">곱셈구구</text><text x="520" y="110" text-anchor="middle" class="dg-t sm">2·5단 → 9단 · 0의 곱</text></g>
+    <g><circle cx="650" cy="60" r="9" class="dg-box c-stem"/><text x="650" y="34" text-anchor="middle" class="dg-t">11~2월</text><text x="650" y="92" text-anchor="middle" class="dg-t">3학년 준비</text><text x="650" y="110" text-anchor="middle" class="dg-t sm">시각·표·규칙 · 알파벳 놀이</text></g>
+    <text x="30" y="150" class="dg-t sm muted">단원 순서는 교과서 기준 예시입니다. 학교 학사일정표와 교과서 목차로 확인하세요.</text>
+  </svg>
+</figure>
+
+<h2 id="gugu-map">곱셈구구, 이 순서로 이어져요</h2>
+<p>교과서는 보통 2단·5단 → 3단·6단 → 4단·8단 → 7단 → 9단 → 1단과 0의 곱 순서로 나옵니다. 단끼리 이어진 관계를 알면 외울 양이 절반으로 줄어요.</p>
+<figure class="dg" data-interactive style="--dg-min: 640px">
+  <svg viewBox="0 0 760 250" role="img" aria-label="곱셈구구 단 사이의 관계도">
+    <defs><marker id="e2g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <path data-edge="bundle>d2" class="dg-line" d="M140 125L190 62" marker-end="url(#e2g)"/>
+    <path data-edge="bundle>d5" class="dg-line" d="M140 125L190 192" marker-end="url(#e2g)"/>
+    <path data-edge="bundle>d3" class="dg-line" d="M140 125L340 125" marker-end="url(#e2g)"/>
+    <path data-edge="d2>d4" class="dg-line" d="M290 62L340 42" marker-end="url(#e2g)"/>
+    <path data-edge="d4>d8" class="dg-line" d="M440 42L490 42" marker-end="url(#e2g)"/>
+    <path data-edge="d3>d6" class="dg-line" d="M440 125L490 125" marker-end="url(#e2g)"/>
+    <path data-edge="d3>d9" class="dg-line" d="M440 115C480 85 600 85 640 115" marker-end="url(#e2g)"/>
+    <path data-edge="d5>d7" class="dg-line" d="M290 192L490 206" marker-end="url(#e2g)"/>
+    <path data-edge="bundle>d0" class="dg-line dash" d="M80 147L80 240L690 240L690 232" marker-end="url(#e2g)"/>
+    <g data-node="bundle" data-info="<b>묶어 세기</b> 2학년 1학기 마지막 단원 '곱셈'. 2씩, 5씩 묶어 세고 '몇의 몇 배'로 말해 봅니다. 여기가 튼튼해야 구구단이 노래가 아니라 수학이 돼요." class="c-root"><rect x="20" y="103" width="120" height="44" rx="10" class="dg-box"/><text x="80" y="130" text-anchor="middle" class="dg-t">묶어 세기</text></g>
+    <g data-node="d2" data-deps="bundle" data-info="<b>2단</b> 짝수 세기. 양말 짝, 젓가락 짝으로 세어 보세요." class="c-stem"><rect x="190" y="40" width="100" height="44" rx="10" class="dg-box"/><text x="240" y="67" text-anchor="middle" class="dg-t">2단</text></g>
+    <g data-node="d5" data-deps="bundle" data-info="<b>5단</b> 일의 자리가 5, 0, 5, 0… 시계의 5분 눈금, 손가락 한 손과 연결됩니다." class="c-stem"><rect x="190" y="170" width="100" height="44" rx="10" class="dg-box"/><text x="240" y="197" text-anchor="middle" class="dg-t">5단</text></g>
+    <g data-node="d3" data-deps="bundle" data-info="<b>3단</b> 세발자전거 바퀴 세기. 3단을 알면 6단과 9단이 쉬워져요." class="c-stem"><rect x="340" y="103" width="100" height="44" rx="10" class="dg-box"/><text x="390" y="130" text-anchor="middle" class="dg-t">3단</text></g>
+    <g data-node="d4" data-deps="d2" data-info="<b>4단</b> 2단을 두 번 더한 것. 2 × 3 = 6 이면 4 × 3 = 12." class="c-branch"><rect x="340" y="20" width="100" height="44" rx="10" class="dg-box"/><text x="390" y="47" text-anchor="middle" class="dg-t">4단</text></g>
+    <g data-node="d8" data-deps="d4 d2" data-info="<b>8단</b> 4단의 두 배. 7·8단이 가장 많이 막히는 구간이니 카드 게임으로 반복하세요." class="c-fruit"><rect x="490" y="20" width="100" height="44" rx="10" class="dg-box"/><text x="540" y="47" text-anchor="middle" class="dg-t">8단</text></g>
+    <g data-node="d6" data-deps="d3 bundle" data-info="<b>6단</b> 3단의 두 배. 달걀 한 판 반(6개 묶음)으로 세어 보기." class="c-branch"><rect x="490" y="103" width="100" height="44" rx="10" class="dg-box"/><text x="540" y="130" text-anchor="middle" class="dg-t">6단</text></g>
+    <g data-node="d7" data-deps="d5 bundle" data-info="<b>7단</b> 기댈 친구가 적은 단. 5단 + 2단으로 쪼개면 됩니다 (7 × 6 = 5 × 6 + 2 × 6). 일주일 7일 달력으로도 연습." class="c-fruit"><rect x="490" y="186" width="100" height="44" rx="10" class="dg-box"/><text x="540" y="213" text-anchor="middle" class="dg-t">7단</text></g>
+    <g data-node="d9" data-deps="d3 bundle" data-info="<b>9단</b> 곱의 십의 자리와 일의 자리를 더하면 늘 9 (18, 27, 36…). 손가락 접기 놀이가 유명해요." class="c-fruit"><rect x="640" y="103" width="100" height="44" rx="10" class="dg-box"/><text x="690" y="130" text-anchor="middle" class="dg-t">9단</text></g>
+    <g data-node="d0" data-deps="bundle" data-info="<b>1단과 0의 곱</b> '빈 접시 3개에 사탕은 몇 개?' 0 × 3 = 0 을 이야기로 이해하게 해 주세요." class="c-accent"><rect x="640" y="186" width="100" height="44" rx="10" class="dg-box"/><text x="690" y="213" text-anchor="middle" class="dg-t">1단·0의 곱</text></g>
+  </svg>
+  <p class="dg-info dg-hint">단을 눌러 보세요. 먼저 알아야 할 단이 함께 빛나요.</p>
+  <figcaption>화살표는 "이걸 알면 저게 쉬워진다"는 관계입니다.</figcaption>
+</figure>
+
+<h2 id="learn">이번 학년에 배우는 것</h2>
+<div class="tabs" data-tabs>
+  <div class="tab-list"><button>국어</button><button>수학</button><button>통합교과</button><button>창의적 체험활동</button></div>
+  <div class="tab-panel">
+    <ul>
+      <li>시와 말놀이, 소리와 모양을 흉내 내는 말</li>
+      <li>인물의 마음 짐작하기, 이야기 순서대로 말하기</li>
+      <li>겪은 일 쓰기, 일기와 편지 쓰기</li>
+      <li>낱말의 뜻 짐작하기, 문단 읽기</li>
+    </ul>
+    <p class="callout note">수학 서술형도 결국 국어입니다. 문제를 소리 내어 읽고 "무엇을 묻는지" 먼저 말하게 해 주세요.</p>
+  </div>
+  <div class="tab-panel">
+    <div class="compare">
+      <div class="c-root" style="--cs: var(--root-soft)"><h4>1학기</h4><ul><li>세 자리 수</li><li>여러 가지 도형 (원·삼각형·사각형, 쌓기나무)</li><li>받아올림·받아내림 있는 덧셈과 뺄셈</li><li>길이 재기 (cm)</li><li>분류하기</li><li>곱셈 (묶어 세기, 몇의 몇 배)</li></ul></div>
+      <div class="c-stem" style="--cs: var(--stem-soft)"><h4>2학기</h4><ul><li>네 자리 수</li><li><strong>곱셈구구</strong></li><li>길이 재기 (m와 cm)</li><li>시각과 시간 (몇 시 몇 분, 하루·1주일·달력)</li><li>표와 그래프</li><li>규칙 찾기</li></ul></div>
+    </div>
+    <p class="callout tip">받아내림은 수 모형·동전으로 "10 빌려오기"를 눈으로 보여 준 다음 숫자로 넘어갑니다.</p>
+  </div>
+  <div class="tab-panel">
+    <p><strong>바른 생활 · 슬기로운 생활 · 즐거운 생활</strong>을 2학년 주제로 묶어 배웁니다. 교과서 주제는 <strong>나 · 자연 · 마을 · 세계</strong>.</p>
+    <p>나의 몸과 마음, 계절과 자연 관찰, 우리 마을 사람들, 다른 나라 문화 등. 이 경험이 초3의 사회·과학·도덕으로 이어집니다.</p>
+  </div>
+  <div class="tab-panel">
+    <p>자율·동아리·봉사·진로 활동. 안전교육은 학년마다 반복됩니다. 학교 행사(운동회, 현장체험학습, 학예회)가 곧 배움의 장이에요.</p>
+  </div>
+</div>
+<p class="callout warning">2022 개정 교육과정이 적용된 교과서 기준 예시입니다. 단원 이름·순서는 학교와 교과서마다 조금씩 달라요. 학기 초 교과서 목차로 확인하세요.</p>
+
+<h2 id="growth">발달 특성</h2>
+<div class="compare">
+  <div class="c-root" style="--cs: var(--root-soft)"><h4>생각</h4><ul><li>학교가 익숙해져 자신감 상승</li><li>여전히 구체물로 이해, 머릿속 계산은 연습 중</li><li>긴 이야기책을 따라갈 집중력이 생기기 시작</li></ul></div>
+  <div class="c-stem" style="--cs: var(--stem-soft)"><h4>마음과 관계</h4><ul><li>비교 의식이 싹틈 ("쟤는 벌써 9단 다 외웠대")</li><li>친구 무리가 생기고 서운함도 커짐</li><li>칭찬받고 싶은 마음이 큼, 실패에 예민</li></ul></div>
+</div>
+
+<h2 id="role">부모의 역할: 이것만은 함께</h2>
+<div class="cards" style="--min: 220px">
+  <div class="card"><div class="card-ic" style="--cs:var(--root-soft);--c:var(--root)">🧮</div><h3>구구단은 원리 먼저</h3><p>노래는 그다음. 바둑돌을 묶어 세고, 차 안·식탁에서 가벼운 퀴즈로 반복합니다.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--stem-soft);--c:var(--stem)">📚</div><h3>독서 한 단계 올리기</h3><p>그림책과 저학년 문고를 섞어서. 아이가 고른 책 1권 + 부모가 권한 책 1권.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--fruit-soft);--c:var(--fruit)">⏲️</div><h3>매일 20분 루틴</h3><p>시간과 장소를 고정. 끝나면 스스로 표시하는 달력을 붙여 두세요.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--branch-soft);--c:var(--branch)">🛒</div><h3>생활 속 수학</h3><p>장보기 계산, 달력 보며 남은 날 세기, 요리하며 길이·무게 재기.</p></div>
+</div>
+
+<h2 id="hard">흔한 어려움과 대처</h2>
+<details class="acc"><summary>받아내림 뺄셈이 자꾸 틀려요<small>큰 수에서 작은 수를 빼 버릴 때 (53 − 18 = 45)</small></summary><div class="acc-body"><p>일의 자리끼리 "빼지 못하는" 상황을 동전이나 수 모형으로 먼저 겪게 합니다. 10원짜리 하나를 1원짜리 10개로 바꾸는 장면을 직접 해 보면 "빌려온다"가 이해돼요. 문제집 양을 늘리기보다 하루 5문제를 말로 설명하게 하세요.</p></div></details>
+<details class="acc"><summary>7단·8단이 안 외워져요<small>2·5단은 술술인데 뒤로 갈수록 막힐 때</small></summary><div class="acc-body"><p>외울 것은 생각보다 적습니다. 곱셈은 순서를 바꿔도 같으니(3 × 7 = 7 × 3) 새로 외울 칸은 7단·8단의 뒷부분 몇 개뿐. 카드 뒤집기 게임, 틀린 칸만 모아 냉장고에 붙이기. 겨울방학까지 느긋하게 가도 충분합니다.</p></div></details>
+<details class="acc"><summary>학습만화만 읽어요<small>줄글 책을 펴면 금방 덮을 때</small></summary><div class="acc-body"><p>만화를 금지하면 독서 자체가 싫어집니다. "만화 2권 + 줄글 1권" 같은 교환 규칙, 같은 주제의 줄글 책 연결(만화 과학 → 과학 동화), 잠자리에서 부모가 앞부분만 읽어 주기가 효과적이에요.</p></div></details>
+<details class="acc"><summary>친구와 비교하며 속상해해요<small>"나만 못해", "쟤는 영어 학원 다닌대"</small></summary><div class="acc-body"><p>비교 대상을 "어제의 나"로 돌려 주세요. 한 달 전 일기와 지금 일기를 나란히 보기, 스티커판으로 쌓인 것 보여 주기. 부모도 다른 집과 비교하는 말을 아이 앞에서 하지 않기로 약속합니다.</p></div></details>
+<details class="acc"><summary>숙제 시간마다 싸워요<small>앉히기까지 30분, 하는 건 10분</small></summary><div class="acc-body"><p>"언제 할래?"를 아이가 고르게 하고(간식 후 / 저녁 전), 타이머 20분. 끝나면 무조건 자유 시간. 부모는 옆에서 자기 책을 읽는 "같이 공부" 분위기가 가장 잘 먹힙니다.</p></div></details>
+
+<h2 id="extras">체험 · 학습지 · 예체능</h2>
+<div class="tabs" data-tabs>
+  <div class="tab-list"><button>체험·여행</button><button>학습지·교재</button><button>예체능</button></div>
+  <div class="tab-panel">
+    <div class="cards" style="--min: 200px">
+      <a class="card c-root" href="../trips/places.html"><span class="tag">수학</span><h3>시장·마트 장보기</h3><p>예산 정해 주고 직접 계산, 거스름돈 맞히기.</p></a>
+      <a class="card c-stem" href="../trips/places.html"><span class="tag">통합</span><h3>어린이박물관</h3><p>국립중앙박물관 어린이박물관처럼 만지고 노는 전시.</p></a>
+      <a class="card c-branch" href="../trips/places.html"><span class="tag">과학</span><h3>국립과천과학관</h3><p>어린이 탐구 공간, 곤충생태관.</p></a>
+      <a class="card c-fruit" href="../trips/places.html"><span class="tag">자연</span><h3>농촌·갯벌 체험</h3><p>계절 따라 감자 캐기, 갯벌 생물 관찰.</p></a>
+    </div>
+  </div>
+  <div class="tab-panel">
+    <ul>
+      <li>연산 학습지는 <strong>하루 10분</strong>. 구구단 시기엔 곱셈 한 장만.</li>
+      <li>독서록은 "한 줄 + 그림"이면 충분. 길게 쓰라고 하면 책이 싫어져요.</li>
+      <li>수학 문제집은 교과서 수준 1권 + 가벼운 사고력 1권.</li>
+      <li>영어는 노래·영상·그림책. 파닉스는 흥미가 있으면 시작.</li>
+    </ul>
+    <p><a href="../materials/worksheets.html">학습지 비교 보기 →</a> · <a href="../materials/books.html">교재 로드맵 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <div class="tags"><span class="tag c-branch">수영</span><span class="tag c-fruit">태권도</span><span class="tag c-note">피아노</span><span class="tag c-stem">줄넘기</span><span class="tag c-accent">미술</span><span class="tag c-root">바둑</span><span class="tag c-tip">인라인</span></div>
+    <p style="margin-top:12px">초1 종목을 유지하며 새 관심 종목 하나를 탐색하는 해. 3학년 무렵 학교 <strong>생존수영</strong>이 있으니 물에 뜨는 연습을 미리 해 두면 아이가 편해요.</p>
+    <p><a href="../arts/activities.html">종목별 가이드 →</a></p>
+  </div>
+</div>
+
+<h2 id="prelearning">선행·심화: 적정선</h2>
+<div class="compare">
+  <div style="--cs: var(--paper-2)"><h4>교육특구에서 흔한 모습</h4><ul><li>사고력 수학 학원 + 연산 학습지가 기본값처럼 여겨짐</li><li>영어 어학원 레벨테스트, 레벨별 반 이동</li><li>구구단은 입학 전·초1에 끝내는 경우도</li></ul></div>
+  <div style="--cs: var(--tip-soft); --c: var(--tip)"><h4>우리 집 기준안</h4><ul><li>수학: 한 학기 예습이면 충분. 대신 <strong>문장제를 읽고 이해하는 힘</strong></li><li>국어: 독서 수준 한 단계 올리기가 최고의 선행</li><li>영어: 파닉스는 흥미 있을 때, 초3 학교 영어 전에 알파벳과 친해지기</li></ul></div>
+</div>
+<p><a href="../prelearning/principles.html">선행해도 될까? 자가진단 →</a> · <a href="../prelearning/our-plan.html">우리 집 선행 기준 →</a></p>
+
+<h2 id="checklist">부부 체크리스트</h2>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="e2-check">
+  <li class="task"><label><input type="checkbox"><span>3월: 담임 상담 신청, 올해 목표 1~2개 합의 (예: 20분 루틴, 글밥 책)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>4~5월: 받아내림 뺄셈 이해 확인 (말로 설명할 수 있나?)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>매월: 공부 정서 점검 "요즘 공부 몇 점?" (1~5점)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>7월: 통지표 함께 읽기, 여름방학 계획 (체험 1회, 쉬는 주 1주)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>10~11월: 곱셈구구 막히는 단 확인 → 게임으로 복습</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>12월: 3학년 대비 (영어 노출 방식, 예체능 유지/중단) 결정 → <a href="../workbook/decision-log.html">결정 로그</a> 기록</span></label></li>
+</ul>
+
+<h2 id="record">우리 아이 기록</h2>
+<label class="memo-label" for="e2-memo">관찰한 것 · 우리가 한 것 · 결과</label>
+<textarea class="memo" id="e2-memo" data-key="grade-e2" placeholder="예) 10/8 7단에서 짜증 → 5단+2단으로 쪼개기 보여줌 → 이틀 뒤 스스로 7×6 풀이 설명"></textarea>
+<p class="saved-hint"></p>
+
+</div>
+
+<style>
+  .e2-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .e2-row .e2-in { width: 110px; font-size: 20px; text-align: center; }
+  .e2-gq { font-size: 26px; }
+  .e2-score { margin: 6px 0 0 !important; font-size: 14px; color: var(--muted); }
+</style>
+<script>
+(function () {
+  var box = document.getElementById('e2-gugu');
+  if (!box) return;
+  var q = box.querySelector('.e2-gq'), inp = box.querySelector('.e2-in'), fb = box.querySelector('.e2-fb'), st = box.querySelector('.e2-streak');
+  var a = 3, b = 4, streak = 0, best = 0;
+  try { best = parseInt(localStorage.getItem('e2-gugu-best'), 10) || 0; } catch (e) {}
+  function pick() {
+    a = 2 + Math.floor(Math.random() * 8); b = 1 + Math.floor(Math.random() * 9);
+    q.textContent = a + ' × ' + b + ' = ?'; inp.value = ''; fb.textContent = ''; fb.className = 'quiz-fb e2-fb';
+  }
+  function check() {
+    var v = parseInt(inp.value, 10);
+    if (isNaN(v)) { fb.textContent = '숫자를 적어 줘!'; return; }
+    if (v === a * b) {
+      streak++; if (streak > best) { best = streak; try { localStorage.setItem('e2-gugu-best', String(best)); } catch (e) {} }
+      fb.className = 'quiz-fb e2-fb ok'; fb.textContent = '딩동댕! ' + a + '씩 ' + b + '번이면 ' + (a * b) + ' (최고 기록 ' + best + '개)';
+      st.textContent = streak; setTimeout(pick, 1200);
+    } else {
+      streak = 0; st.textContent = 0;
+      fb.className = 'quiz-fb e2-fb no'; fb.textContent = '아깝다! ' + a + '씩 ' + b + '번 뛰어 세어 볼까?';
+    }
+  }
+  box.querySelector('.e2-go').addEventListener('click', check);
+  box.querySelector('.e2-new').addEventListener('click', pick);
+  inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+  pick();
+})();
+</script>

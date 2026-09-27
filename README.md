@@ -1,35 +1,32 @@
 # 우리 아이 교육 로드맵
 
 초1·2 아이를 둔 부부가 초·중·고 12년 교육 방향을 함께 설계하기 위한 GitHub Pages 사이트입니다.
-(Jekyll + [just-the-docs](https://just-the-docs.com) 테마, 한글 검색 지원)
+모든 페이지는 인터랙티브 HTML이며, 상단의 **아이 모드**를 켜면 아이와 함께 볼 수 있는 화면으로 바뀝니다.
 
-## 배포
-1. GitHub에 저장소 생성 후 push
-2. Settings → Pages → Source: `Deploy from a branch`, Branch: `main` / `(root)`
-3. 1~2분 뒤 `https://<아이디>.github.io/<저장소명>/` 접속
-
-> 가족만 보고 싶다면: 공개 저장소의 Pages는 누구나 볼 수 있습니다. 아이 이름·학교 등 개인정보는 적지 말거나, 비공개 저장소 + 유료 플랜의 Private Pages를 고려하세요.
-
-## 로컬 미리보기 (선택)
-```bash
-bundle install
-bundle exec jekyll serve
-```
+사이트: https://moyuchan84.github.io/academic-career-guidance/
 
 ## 구조
-| 폴더 | 내용 |
-|---|---|
-| `docs/00-start` | 교육 철학 합의문, 사용법 |
-| `docs/01-roadmap` | 12년 연표, 4단계 로드맵, 갈림길 |
-| `docs/02-system` | 교육과정·평가·고교학점제·대입 |
-| `docs/03-grades` | 초1~고3 학년별 가이드 (공통 11개 항목) |
-| `docs/04-subjects` | 과목별 진도 계통도·선행/심화 |
-| `docs/05-field-trips` | 교과 연계 체험·여행 |
-| `docs/06-materials` | 학습지·교재·학원·예산 |
-| `docs/07-prelearning` | 선행 전략, 교육특구 실태 |
-| `docs/08-arts-sports` | 예체능 |
-| `docs/09-school-choice` | 중·고 유형, 학군 |
-| `docs/10-overseas` | 해외 진학 트랙 |
-| `docs/11-wellbeing` | 번아웃 방지·정서 |
-| `docs/12-workbook` | 부부 회의·결정 로그·관찰 기록 |
-| `docs/13-resources` | 공식 사이트·용어 사전 |
+| 경로 | 내용 | 아이 모드 |
+|---|---|---|
+| `index.html` | 홈 (부모: 12년 지도·원칙·목차 / 아이: 새싹 탐험대) | ✓ |
+| `docs/start` | 시작하기: 교육 철학 합의문, 사이트 사용법(컴포넌트 가이드) | |
+| `docs/roadmap` | 12년 로드맵: 두 아이 연표, 갈림길, 연도 선택기 | ✓ |
+| `docs/grades` | 초1~고3 학년별 가이드 (진도·1년 흐름·부모 역할·체크리스트) | ✓ |
+| `docs/subjects` | 과목별 가이드 (수학 개념 지도 등) | ✓ |
+| `docs/trips` | 체험·여행: 장소 필터, 한국사 루트, 가족 여행 여권 | ✓ |
+| `docs/arts` | 예체능·특기 | ✓ |
+| `docs/wellbeing` | 마음 돌봄: 마음 날씨, 번아웃 자가진단 | ✓ |
+| `docs/system` | 교육제도: 교육과정·평가·고교학점제·대입 | |
+| `docs/paths` | 진학 경로: 학교 유형, 학군, 해외 트랙 | |
+| `docs/prelearning` | 선행 전략 | |
+| `docs/materials` | 학습지·사교육, 예산 계산기 | |
+| `docs/workbook` | 부부 워크북: 분기 회의, 결정 로그, 관찰 기록 | |
+| `docs/resources` | 자료실: 공식 사이트, 용어 사전 | |
+
+공통 틀: `_layouts/default.html` (목차·검색·아이 모드), 스타일 `assets/css/site.css`·`components.css`, 동작 `assets/js/site.js`·`components.js`.
+컴포넌트(탭, 퀴즈, 스탬프, 다이어그램 등) 사용법은 사이트의 **시작하기 → 사이트 사용법**에 있습니다.
+
+## 알아둘 점
+- 체크·메모·스탬프·결정 로그는 **각 브라우저에만** 저장됩니다 (서버 없음). 부부가 기록을 공유하려면 결정 로그의 내보내기/가져오기를 쓰거나 HTML을 직접 수정하세요.
+- 공개 저장소이므로 아이 이름·학교 등 개인정보는 페이지에 적지 마세요.
+- 제도·입시 정보(“확인 필요” 표시)는 매년 공식 출처로 다시 확인하세요.

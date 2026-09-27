@@ -1,0 +1,133 @@
+---
+title: 우리 가족 교육 철학
+parent: 시작하기
+nav_order: 1
+summary: 엄마 · 아빠 · 합의 — 인쇄해서 붙여 두는 합의문
+---
+<style>
+.phil-q { margin: 0 0 30px; padding: 20px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+.phil-q h3 { margin-top: 0 !important; }
+.phil-q .phil-ex { font-size: 13.5px; color: var(--muted); margin: 0 0 4px; }
+.phil-grid { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 0 14px; }
+.phil-grid .phil-agree .memo { border-color: var(--tip); background: var(--tip-soft); }
+.phil-bands { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0 12px; }
+.phil-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 28px; }
+@media (max-width: 720px) { .phil-grid { grid-template-columns: 1fr; } }
+@media print {
+  .phil-actions, .phil-noprint { display: none !important; }
+  .phil-q { box-shadow: none; break-inside: avoid; }
+  .phil-q .memo { border: 1px solid #999; resize: none; overflow: visible; }
+}
+</style>
+<header class="page-hero">
+  <p class="kicker">시작하기 1단계 · 매년 3월 다시 읽기</p>
+  <h1>우리 가족 교육 철학</h1>
+  <p class="lede">정보를 모으기 전에 <strong>우리가 무엇을 지킬지</strong>부터 정합니다. 엄마·아빠가 각자 먼저 쓰고, 이야기를 나눈 뒤 가운데 합의 칸을 채우세요. 다 쓰면 인쇄해서 잘 보이는 곳에 붙여 둡니다.</p>
+</header>
+
+<div class="phil-actions">
+  <button class="btn" type="button" id="phil-print">합의문 인쇄</button>
+  <span class="saved-hint" style="margin:0">입력한 내용은 이 브라우저에만 자동 저장됩니다.</span>
+</div>
+
+<p class="callout tip phil-noprint">순서가 중요해요. <strong>각자 따로 먼저</strong> 쓰고 나서 비교하면, 한 사람 의견에 끌려가지 않고 진짜 차이가 보입니다. 합의 칸은 두 사람 모두 "이 정도면 지킬 수 있다"고 말할 수 있는 문장으로 쓰세요.</p>
+
+<section class="phil-q">
+  <h3>1. 우리가 바라는 아이의 모습 (성적 말고)</h3>
+  <p class="phil-ex">예) 호기심을 잃지 않는 아이 · 스스로 계획하고 지키는 아이 · 몸과 마음이 건강한 아이</p>
+  <div class="phil-grid">
+    <div><label class="memo-label" for="phil-kid-mom">엄마의 답</label><textarea class="memo" id="phil-kid-mom" data-key="start-phil-kid-mom"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-kid-dad">아빠의 답</label><textarea class="memo" id="phil-kid-dad" data-key="start-phil-kid-dad"></textarea><p class="saved-hint"></p></div>
+    <div class="phil-agree"><label class="memo-label" for="phil-kid-agree">합의</label><textarea class="memo" id="phil-kid-agree" data-key="start-phil-kid-agree"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="phil-q">
+  <h3>2. 하루 공부 시간 상한 (학년별)</h3>
+  <p class="phil-ex">학교 수업 외에 집·학원·학습지를 모두 합친 시간입니다. "최소"가 아니라 "이 이상은 하지 않는다"는 상한이에요. 주말·방학 원칙도 함께 적어 보세요.</p>
+  <div class="phil-grid">
+    <div><label class="memo-label" for="phil-time-mom">엄마의 답</label><textarea class="memo" id="phil-time-mom" data-key="start-phil-time-mom"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-time-dad">아빠의 답</label><textarea class="memo" id="phil-time-dad" data-key="start-phil-time-dad"></textarea><p class="saved-hint"></p></div>
+    <div class="phil-agree"><label class="memo-label" for="phil-time-agree">합의 (메모)</label><textarea class="memo" id="phil-time-agree" data-key="start-phil-time-agree"></textarea><p class="saved-hint"></p></div>
+  </div>
+  <p class="memo-label">합의한 학년별 상한</p>
+  <div class="phil-bands">
+    <div><label class="memo-label" for="phil-band-e12">초1~2</label><input class="memo" id="phil-band-e12" data-key="start-phil-time-e12" placeholder="예) 40분"><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-band-e34">초3~4</label><input class="memo" id="phil-band-e34" data-key="start-phil-time-e34"><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-band-e56">초5~6</label><input class="memo" id="phil-band-e56" data-key="start-phil-time-e56"><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-band-m">중학교</label><input class="memo" id="phil-band-m" data-key="start-phil-time-m"><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-band-h">고등학교</label><input class="memo" id="phil-band-h" data-key="start-phil-time-h"><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-band-vac">주말·방학</label><input class="memo" id="phil-band-vac" data-key="start-phil-time-vac" placeholder="예) 방학 1주는 완전 휴식"><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="phil-q">
+  <h3>3. 사교육 예산 상한</h3>
+  <p class="phil-ex">금액보다 <strong>월 소득 대비 비율</strong>로 정하면 상황이 바뀌어도 기준이 유지됩니다. 아이 둘을 합친 상한과, 넘으면 무엇부터 줄일지도 적어 두세요. 자세한 계산은 <a href="../materials/budget.html">사교육 예산</a>에서.</p>
+  <div class="phil-grid">
+    <div><label class="memo-label" for="phil-budget-mom">엄마의 답</label><textarea class="memo" id="phil-budget-mom" data-key="start-phil-budget-mom"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-budget-dad">아빠의 답</label><textarea class="memo" id="phil-budget-dad" data-key="start-phil-budget-dad"></textarea><p class="saved-hint"></p></div>
+    <div class="phil-agree"><label class="memo-label" for="phil-budget-agree">합의</label><textarea class="memo" id="phil-budget-agree" data-key="start-phil-budget-agree"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="phil-q">
+  <h3>4. 선행 원칙</h3>
+  <p class="phil-ex">우리 집 기본값은 "현행 심화 &gt; 선행"입니다. 과목별로 몇 학기까지 허용할지, 어떤 신호가 보이면 멈출지 적어 보세요. 참고: <a href="../prelearning/principles.html">선행 vs 심화</a>, <a href="../prelearning/our-plan.html">우리 집 선행 기준</a></p>
+  <div class="phil-grid">
+    <div><label class="memo-label" for="phil-pre-mom">엄마의 답</label><textarea class="memo" id="phil-pre-mom" data-key="start-phil-pre-mom"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-pre-dad">아빠의 답</label><textarea class="memo" id="phil-pre-dad" data-key="start-phil-pre-dad"></textarea><p class="saved-hint"></p></div>
+    <div class="phil-agree"><label class="memo-label" for="phil-pre-agree">합의</label><textarea class="memo" id="phil-pre-agree" data-key="start-phil-pre-agree"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="phil-q">
+  <h3>5. 의견이 갈릴 때의 규칙</h3>
+  <p class="phil-ex">제안: 의견이 갈리면 2주 보류 후 다시 이야기 · 아이 앞에서는 한 목소리 · 결정은 <a href="../workbook/decision-log.html">결정 로그</a>에 이유와 "다시 볼 날짜"까지 남긴다.</p>
+  <div class="phil-grid">
+    <div><label class="memo-label" for="phil-rule-mom">엄마의 답</label><textarea class="memo" id="phil-rule-mom" data-key="start-phil-rule-mom"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-rule-dad">아빠의 답</label><textarea class="memo" id="phil-rule-dad" data-key="start-phil-rule-dad"></textarea><p class="saved-hint"></p></div>
+    <div class="phil-agree"><label class="memo-label" for="phil-rule-agree">합의</label><textarea class="memo" id="phil-rule-agree" data-key="start-phil-rule-agree"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="phil-q">
+  <h3>6. 절대 하지 않을 것</h3>
+  <p class="phil-ex">예) 다른 집 아이와 비교하는 말 · 성적으로 용돈·게임 시간을 거래하기 · 아이 앞에서 서로의 교육 방식 깎아내리기 (예시일 뿐, 두 사람이 합의한 것만 남기세요)</p>
+  <div class="phil-grid">
+    <div><label class="memo-label" for="phil-never-mom">엄마의 답</label><textarea class="memo" id="phil-never-mom" data-key="start-phil-never-mom"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-never-dad">아빠의 답</label><textarea class="memo" id="phil-never-dad" data-key="start-phil-never-dad"></textarea><p class="saved-hint"></p></div>
+    <div class="phil-agree"><label class="memo-label" for="phil-never-agree">합의</label><textarea class="memo" id="phil-never-agree" data-key="start-phil-never-agree"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="phil-q">
+  <h3>서명과 날짜</h3>
+  <div class="phil-grid">
+    <div><label class="memo-label" for="phil-sign-date">합의한 날짜</label><input class="memo" id="phil-sign-date" data-key="start-phil-sign-date" placeholder="예) 2026-03-01"><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="phil-sign-next">다시 읽을 날짜</label><input class="memo" id="phil-sign-next" data-key="start-phil-sign-next" placeholder="예) 2027-03-01"><p class="saved-hint"></p></div>
+    <div class="phil-agree"><label class="memo-label" for="phil-sign-names">엄마 · 아빠</label><input class="memo" id="phil-sign-names" data-key="start-phil-sign-names"><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<div class="phil-noprint">
+<h2 id="tips">합의가 잘 되는 요령</h2>
+<p class="callout tip">한 번 쓰고 끝내는 문서가 아닙니다. 매년 3월(새 학년)에 다시 읽고, 바뀐 부분은 고친 날짜와 함께 남기세요. 철학이 바뀌는 건 실패가 아니라 아이를 더 잘 알게 됐다는 뜻이에요.</p>
+<div class="cards" style="--min: 220px">
+  <div class="card c-note"><div class="card-ic">✍️</div><h3>문장은 짧게</h3><p>"~하지 않는다", "~까지만"처럼 지켰는지 확인할 수 있는 문장으로.</p></div>
+  <div class="card c-stem"><div class="card-ic">🔁</div><h3>분기 회의에서 점검</h3><p><a href="../workbook/quarterly-meeting.html">분기별 부부 회의</a> 첫 안건으로 합의문을 소리 내어 읽어 보세요.</p></div>
+  <div class="card c-warn"><div class="card-ic">📱</div><h3>저장 위치 주의</h3><p>이 양식은 이 브라우저에만 저장돼요. 두 사람이 같이 보려면 인쇄하거나 GitHub에 옮겨 적으세요.</p></div>
+</div>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('phil-print');
+  function grow() {
+    var list = document.querySelectorAll('.phil-q textarea');
+    for (var i = 0; i < list.length; i++) { list[i].style.height = 'auto'; list[i].style.height = (list[i].scrollHeight + 4) + 'px'; }
+  }
+  window.addEventListener('beforeprint', grow);
+  if (btn) btn.addEventListener('click', function () { grow(); try { window.print(); } catch (e) {} });
+})();
+</script>

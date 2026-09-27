@@ -1,0 +1,179 @@
+---
+title: 결정 로그
+parent: 부부 워크북
+nav_order: 2
+summary: 무엇을 · 왜 · 언제 다시 볼지 · 결과
+---
+<style>
+.dl-form { display: grid; grid-template-columns: 160px 1fr; gap: 0 14px; padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); margin: 0 0 24px; }
+.dl-form .dl-full { grid-column: 1 / -1; }
+.dl-form .dl-actions { grid-column: 1 / -1; display: flex; gap: 10px; align-items: center; margin-top: 12px; }
+.dl-sum { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+.dl-table td { vertical-align: top; }
+.dl-table td.dl-when { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.dl-table .dl-reason { color: var(--ink-2); font-size: 13.5px; white-space: pre-wrap; }
+.dl-table tr.dl-due td { background: var(--warn-soft); }
+.dl-table tr.dl-due td:first-child { box-shadow: inset 4px 0 0 var(--warn); }
+.dl-table input.memo { height: 36px; font-size: 14px; min-width: 140px; }
+.dl-del { border: 0; background: none; color: var(--muted); cursor: pointer; font: 600 13px var(--sans); padding: 4px 6px; }
+.dl-del:hover { color: var(--danger); }
+.dl-io { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+.dl-msg { font-size: 13px; color: var(--muted); min-height: 1.4em; }
+@media (max-width: 640px) { .dl-form { grid-template-columns: 1fr; } }
+</style>
+<header class="page-hero">
+  <p class="kicker">부부 워크북 · 결정은 기록으로</p>
+  <h1>결정 로그</h1>
+  <p class="lede">학원을 시작하거나 끊을 때, 선행 속도를 정할 때, 예체능을 바꿀 때. <strong>무엇을, 왜, 언제 다시 볼지</strong>를 남겨 두면 1년 뒤의 우리가 과거의 우리를 이해할 수 있어요. "다시 볼 날짜"가 지난 결정은 노랗게 표시됩니다.</p>
+</header>
+
+<h2 id="add">새 결정 기록하기</h2>
+<form class="dl-form" id="dl-form" autocomplete="off">
+  <div><label class="memo-label" for="dl-date">날짜</label><input class="memo" type="date" id="dl-date" required></div>
+  <div><label class="memo-label" for="dl-decision">결정</label><input class="memo" id="dl-decision" required placeholder="예) 첫째 수학 학원은 초4 2학기까지 보류"></div>
+  <div class="dl-full"><label class="memo-label" for="dl-reason">이유 (두 사람의 생각, 근거가 된 관찰)</label><textarea class="memo" id="dl-reason" style="min-height:70px" placeholder="예) 교과 단원평가는 안정적, 스스로 푸는 습관이 먼저. 엄마는 사고력 수업 원했지만 아이가 주말 시간을 원함"></textarea></div>
+  <div><label class="memo-label" for="dl-review">다시 볼 날짜</label><input class="memo" type="date" id="dl-review"></div>
+  <div><label class="memo-label" for="dl-result">결과 (나중에 채워도 돼요)</label><input class="memo" id="dl-result"></div>
+  <div class="dl-actions"><button class="btn" type="submit">기록 추가</button><span class="dl-msg" id="dl-form-msg"></span></div>
+</form>
+
+<h2 id="log">우리 집 결정 목록</h2>
+<div class="dl-sum" id="dl-sum"></div>
+<div class="table-wrap"><table class="dl-table">
+  <thead><tr><th>날짜</th><th>결정 · 이유</th><th>다시 볼 날짜</th><th>결과</th><th>삭제</th></tr></thead>
+  <tbody id="dl-body"></tbody>
+</table></div>
+<p class="dl-msg" id="dl-empty">아직 기록이 없어요. 이미 하고 있는 학원·학습지·예체능부터 옮겨 적어 보세요.</p>
+
+<h2 id="share">다른 기기와 나누기</h2>
+<p>결정 로그는 이 브라우저에만 저장됩니다. 엄마 폰의 기록을 아빠 폰으로 옮기려면 내보낸 JSON을 메신저 등으로 보내고, 다른 기기에서 가져오기 하세요.</p>
+<div class="dl-io">
+  <button type="button" class="btn sm" id="dl-export">JSON 파일로 내보내기</button>
+  <button type="button" class="btn sm ghost" id="dl-copy">JSON 복사</button>
+  <label class="btn sm ghost" for="dl-file" style="cursor:pointer">JSON 파일 가져오기</label>
+  <input type="file" id="dl-file" accept=".json,application/json" hidden>
+</div>
+<label class="memo-label" for="dl-paste">또는 복사한 JSON을 여기에 붙여 넣고 가져오기</label>
+<textarea class="memo" id="dl-paste" style="min-height:70px" placeholder="[ ... ]"></textarea>
+<div class="dl-io" style="margin-top:10px"><button type="button" class="btn sm ghost" id="dl-import-merge">합치기 (기존 기록 유지)</button><button type="button" class="btn sm ghost" id="dl-import-replace">바꾸기 (기존 기록 삭제)</button></div>
+<p class="dl-msg" id="dl-io-msg"></p>
+
+<p class="callout tip">좋은 결정 기록의 조건: 되돌릴 수 있게 "다시 볼 날짜"를 꼭 넣기, 이유에 <strong>아이의 의견</strong>도 적기, 결과는 성적보다 공부 정서·생활 변화를 적기. 회의 흐름은 <a href="quarterly-meeting.html">분기별 부부 회의</a>에서.</p>
+
+<script>
+(function () {
+  var KEY = 'workbook-decisions';
+  function load() { try { var a = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+  function save(a) { try { localStorage.setItem(KEY, JSON.stringify(a)); return true; } catch (e) { return false; } }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function today() { var d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function uid() { return 'd' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function $(id) { return document.getElementById(id); }
+
+  var items = load();
+  var body = $('dl-body'), sum = $('dl-sum'), empty = $('dl-empty');
+  if (!body) return;
+  $('dl-date').value = today();
+
+  function render() {
+    var t = today(), due = 0;
+    items.sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+    body.innerHTML = '';
+    items.forEach(function (it) {
+      var tr = el('tr');
+      var isDue = it.review && it.review <= t;
+      if (isDue) { tr.className = 'dl-due'; due++; }
+      tr.appendChild(el('td', 'dl-when', it.date || ''));
+      var td = el('td'); td.appendChild(el('strong', null, it.decision || ''));
+      if (it.reason) { td.appendChild(el('div', 'dl-reason', it.reason)); }
+      tr.appendChild(td);
+      var rv = el('td', 'dl-when', it.review || '–');
+      if (isDue) { rv.appendChild(document.createElement('br')); var tg = el('span', 'tag c-warn', '다시 볼 때'); rv.appendChild(tg); }
+      tr.appendChild(rv);
+      var rt = el('td'), inp = el('input', 'memo'); inp.value = it.result || ''; inp.setAttribute('aria-label', '결과'); inp.placeholder = '결과 적기';
+      inp.addEventListener('change', function () { it.result = inp.value; save(items); });
+      rt.appendChild(inp); tr.appendChild(rt);
+      var dt = el('td'), del = el('button', 'dl-del', '삭제'); del.type = 'button';
+      del.addEventListener('click', function () {
+        if (!window.confirm('이 결정을 삭제할까요?\n' + (it.decision || ''))) return;
+        items = items.filter(function (x) { return x !== it; }); save(items); render();
+      });
+      dt.appendChild(del); tr.appendChild(dt);
+      body.appendChild(tr);
+    });
+    empty.hidden = items.length > 0;
+    sum.innerHTML = '';
+    sum.appendChild(el('span', 'tag c-note', '전체 ' + items.length + '건'));
+    if (due) sum.appendChild(el('span', 'tag c-warn', '다시 볼 때가 된 결정 ' + due + '건'));
+  }
+
+  $('dl-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = $('dl-decision').value.replace(/^\s+|\s+$/g, '');
+    if (!d) return;
+    items.push({ id: uid(), date: $('dl-date').value || today(), decision: d, reason: $('dl-reason').value, review: $('dl-review').value, result: $('dl-result').value });
+    var ok = save(items);
+    $('dl-decision').value = ''; $('dl-reason').value = ''; $('dl-review').value = ''; $('dl-result').value = '';
+    $('dl-form-msg').textContent = ok ? '저장했어요 (이 브라우저)' : '저장하지 못했어요. 브라우저 저장소가 막혀 있을 수 있어요.';
+    render();
+  });
+
+  var msg = $('dl-io-msg');
+  function json() { return JSON.stringify(items, null, 2); }
+  $('dl-export').addEventListener('click', function () {
+    try {
+      var blob = new Blob([json()], { type: 'application/json' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = 'decision-log-' + today() + '.json';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+      msg.textContent = '파일을 저장했어요.';
+    } catch (e) { msg.textContent = '내보내기에 실패했어요. JSON 복사를 써 보세요.'; }
+  });
+  $('dl-copy').addEventListener('click', function () {
+    var text = json();
+    function fb() { var p = $('dl-paste'); p.value = text; p.select(); msg.textContent = '아래 칸에 JSON을 넣었어요. 직접 복사하세요.'; }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { msg.textContent = '복사했어요. 다른 기기의 붙여넣기 칸에 넣으세요.'; }, fb);
+      else fb();
+    } catch (e) { fb(); }
+  });
+
+  function valid(a) {
+    if (!Array.isArray(a)) return null;
+    return a.filter(function (x) { return x && typeof x.decision === 'string'; }).map(function (x) {
+      return { id: String(x.id || uid()), date: String(x.date || ''), decision: x.decision, reason: String(x.reason || ''), review: String(x.review || ''), result: String(x.result || '') };
+    });
+  }
+  function doImport(text, replace) {
+    var a;
+    try { a = valid(JSON.parse(text)); } catch (e) { a = null; }
+    if (!a) { msg.textContent = 'JSON 형식이 아니에요. 내보낸 내용을 그대로 붙여 넣어 주세요.'; return; }
+    if (replace) {
+      if (!window.confirm('지금 기기의 결정 ' + items.length + '건을 지우고 ' + a.length + '건으로 바꿀까요?')) return;
+      items = a;
+    } else {
+      var seen = {}; items.forEach(function (x) { seen[x.id] = x; });
+      var added = 0;
+      a.forEach(function (x) { if (seen[x.id]) { if (x.result && !seen[x.id].result) seen[x.id].result = x.result; } else { items.push(x); added++; } });
+      msg.textContent = added + '건을 새로 가져왔어요.';
+    }
+    save(items); render();
+    if (replace) msg.textContent = a.length + '건으로 바꿨어요.';
+  }
+  $('dl-import-merge').addEventListener('click', function () { doImport($('dl-paste').value, false); });
+  $('dl-import-replace').addEventListener('click', function () { doImport($('dl-paste').value, true); });
+  $('dl-file').addEventListener('change', function () {
+    var f = this.files && this.files[0]; if (!f) return;
+    try {
+      var r = new FileReader();
+      r.onload = function () { doImport(String(r.result), false); };
+      r.readAsText(f);
+    } catch (e) { msg.textContent = '파일을 읽지 못했어요.'; }
+    this.value = '';
+  });
+
+  render();
+})();
+</script>

@@ -1,0 +1,171 @@
+---
+title: 활동 기록
+parent: 예체능·특기
+nav_order: 3
+kid: true
+summary: 활동별 비용·만족도 기록 · 좋아하는 활동 온도계
+---
+<header class="page-hero">
+  <p class="kicker">예체능·특기 · 기록</p>
+  <h1>활동 기록</h1>
+  <p class="lede"><span class="parent-only-inline">언제 무엇을 했고, 얼마가 들었고, 아이가 얼마나 좋아했는지. 기록이 쌓이면 "계속할까, 그만둘까"를 감이 아니라 근거로 이야기할 수 있고, 둘째에게도 좋은 지도가 됩니다.</span><span class="kid-only-inline">내가 좋아하는 활동은 몇 도일까? 온도계에 별을 눌러서 알려 줘!</span></p>
+</header>
+
+<!-- ================= KID ================= -->
+<div class="kid-only">
+  <div class="kid-box">
+    <div class="mascot" data-stage="stem"></div>
+    <div>
+      <h3>좋아하는 마음을 재 보자!</h3>
+      <p>별 1개는 "음… 별로", 별 5개는 "완전 최고!"야.</p>
+      <p>솔직하게 눌러도 괜찮아. 엄마 아빠가 네 마음을 알고 싶대.</p>
+    </div>
+  </div>
+
+  <h2 id="kid-therm">내가 좋아하는 활동 온도계</h2>
+  <div class="filters arts-who" role="group" aria-label="누구의 온도계인지 고르기"><button type="button" data-kid="first">첫째 온도계</button><button type="button" data-kid="second">둘째 온도계</button></div>
+  <div class="arts-therm" id="arts-therm"></div>
+  <p class="arts-therm-top" id="arts-therm-top"></p>
+
+  <h2 id="kid-week">이번 주 활동 도장</h2>
+  <p>운동하거나 연습한 날에 도장을 찍어 봐! <span class="stamp-count" data-stamp-count="arts-log-week"></span></p>
+  <div class="stamps" data-key="arts-log-week">
+    <button class="stamp c-accent" data-id="mon"><span class="stamp-ic">🌙</span>월요일</button>
+    <button class="stamp c-fruit" data-id="tue"><span class="stamp-ic">🔥</span>화요일</button>
+    <button class="stamp c-branch" data-id="wed"><span class="stamp-ic">💧</span>수요일</button>
+    <button class="stamp c-stem" data-id="thu"><span class="stamp-ic">🌳</span>목요일</button>
+    <button class="stamp c-warn" data-id="fri"><span class="stamp-ic">⭐</span>금요일</button>
+    <button class="stamp c-root" data-id="sat"><span class="stamp-ic">🪨</span>토요일</button>
+    <button class="stamp c-tip" data-id="sun"><span class="stamp-ic">☀️</span>일요일</button>
+  </div>
+  <p>도장을 다시 누르면 지워져. 새로운 주가 되면 엄마 아빠랑 같이 지우고 다시 시작하자!</p>
+</div>
+
+<!-- ================= PARENT ================= -->
+<div class="parent-only">
+
+<h2 id="kid-view">아이가 매긴 온도</h2>
+<p>아이 모드의 "좋아하는 활동 온도계"에서 아이가 누른 별이 여기에 모입니다 (이 브라우저 기준). 숫자보다 <strong>변화</strong>를 보세요. 좋아하던 활동의 온도가 내려가면 이야기를 나눌 때예요.</p>
+<div class="cards" style="--min: 240px" id="arts-therm-summary">
+  <div class="card c-stem"><span class="tag">첫째</span><p class="arts-sum" data-kid="first">아직 표시한 활동이 없어요.</p></div>
+  <div class="card c-branch"><span class="tag">둘째</span><p class="arts-sum" data-kid="second">아직 표시한 활동이 없어요.</p></div>
+</div>
+
+<h2 id="table">활동 기록표</h2>
+<p>칸에 바로 적으면 자동 저장됩니다. 만족도는 아이에게 직접 물어본 1~5점을 적어 주세요.</p>
+<div class="tabs" data-tabs id="arts-log-tabs">
+  <div class="tab-list"><button>첫째</button><button>둘째</button></div>
+  <div class="tab-panel"><div class="table-wrap arts-logt"><table>
+    <thead><tr><th scope="col">기간</th><th scope="col">종목</th><th scope="col">월 비용</th><th scope="col">만족도 (1~5)</th><th scope="col">계속 / 중단 이유</th></tr></thead>
+    <tbody>
+      <tr><td><input class="memo" type="text" aria-label="첫째 1 기간" data-key="arts-log-first-1-when" placeholder="예) 2026.3~"></td><td><input class="memo" type="text" aria-label="첫째 1 종목" data-key="arts-log-first-1-what" placeholder="예) 수영"></td><td><input class="memo" type="text" aria-label="첫째 1 월 비용" data-key="arts-log-first-1-cost"></td><td><input class="memo" type="text" aria-label="첫째 1 만족도" data-key="arts-log-first-1-score" placeholder="예) 4"></td><td><input class="memo" type="text" aria-label="첫째 1 이유" data-key="arts-log-first-1-why" placeholder="예) 평영 배우는 중, 계속"></td></tr>
+      <tr><td><input class="memo" type="text" aria-label="첫째 2 기간" data-key="arts-log-first-2-when"></td><td><input class="memo" type="text" aria-label="첫째 2 종목" data-key="arts-log-first-2-what"></td><td><input class="memo" type="text" aria-label="첫째 2 월 비용" data-key="arts-log-first-2-cost"></td><td><input class="memo" type="text" aria-label="첫째 2 만족도" data-key="arts-log-first-2-score"></td><td><input class="memo" type="text" aria-label="첫째 2 이유" data-key="arts-log-first-2-why"></td></tr>
+      <tr><td><input class="memo" type="text" aria-label="첫째 3 기간" data-key="arts-log-first-3-when"></td><td><input class="memo" type="text" aria-label="첫째 3 종목" data-key="arts-log-first-3-what"></td><td><input class="memo" type="text" aria-label="첫째 3 월 비용" data-key="arts-log-first-3-cost"></td><td><input class="memo" type="text" aria-label="첫째 3 만족도" data-key="arts-log-first-3-score"></td><td><input class="memo" type="text" aria-label="첫째 3 이유" data-key="arts-log-first-3-why"></td></tr>
+      <tr><td><input class="memo" type="text" aria-label="첫째 4 기간" data-key="arts-log-first-4-when"></td><td><input class="memo" type="text" aria-label="첫째 4 종목" data-key="arts-log-first-4-what"></td><td><input class="memo" type="text" aria-label="첫째 4 월 비용" data-key="arts-log-first-4-cost"></td><td><input class="memo" type="text" aria-label="첫째 4 만족도" data-key="arts-log-first-4-score"></td><td><input class="memo" type="text" aria-label="첫째 4 이유" data-key="arts-log-first-4-why"></td></tr>
+      <tr><td><input class="memo" type="text" aria-label="첫째 5 기간" data-key="arts-log-first-5-when"></td><td><input class="memo" type="text" aria-label="첫째 5 종목" data-key="arts-log-first-5-what"></td><td><input class="memo" type="text" aria-label="첫째 5 월 비용" data-key="arts-log-first-5-cost"></td><td><input class="memo" type="text" aria-label="첫째 5 만족도" data-key="arts-log-first-5-score"></td><td><input class="memo" type="text" aria-label="첫째 5 이유" data-key="arts-log-first-5-why"></td></tr>
+    </tbody>
+  </table></div></div>
+  <div class="tab-panel"><div class="table-wrap arts-logt"><table>
+    <thead><tr><th scope="col">기간</th><th scope="col">종목</th><th scope="col">월 비용</th><th scope="col">만족도 (1~5)</th><th scope="col">계속 / 중단 이유</th></tr></thead>
+    <tbody>
+      <tr><td><input class="memo" type="text" aria-label="둘째 1 기간" data-key="arts-log-second-1-when" placeholder="예) 2026.3~"></td><td><input class="memo" type="text" aria-label="둘째 1 종목" data-key="arts-log-second-1-what" placeholder="예) 태권도"></td><td><input class="memo" type="text" aria-label="둘째 1 월 비용" data-key="arts-log-second-1-cost"></td><td><input class="memo" type="text" aria-label="둘째 1 만족도" data-key="arts-log-second-1-score" placeholder="예) 5"></td><td><input class="memo" type="text" aria-label="둘째 1 이유" data-key="arts-log-second-1-why" placeholder="예) 친구랑 같이 다녀서 즐거워함"></td></tr>
+      <tr><td><input class="memo" type="text" aria-label="둘째 2 기간" data-key="arts-log-second-2-when"></td><td><input class="memo" type="text" aria-label="둘째 2 종목" data-key="arts-log-second-2-what"></td><td><input class="memo" type="text" aria-label="둘째 2 월 비용" data-key="arts-log-second-2-cost"></td><td><input class="memo" type="text" aria-label="둘째 2 만족도" data-key="arts-log-second-2-score"></td><td><input class="memo" type="text" aria-label="둘째 2 이유" data-key="arts-log-second-2-why"></td></tr>
+      <tr><td><input class="memo" type="text" aria-label="둘째 3 기간" data-key="arts-log-second-3-when"></td><td><input class="memo" type="text" aria-label="둘째 3 종목" data-key="arts-log-second-3-what"></td><td><input class="memo" type="text" aria-label="둘째 3 월 비용" data-key="arts-log-second-3-cost"></td><td><input class="memo" type="text" aria-label="둘째 3 만족도" data-key="arts-log-second-3-score"></td><td><input class="memo" type="text" aria-label="둘째 3 이유" data-key="arts-log-second-3-why"></td></tr>
+      <tr><td><input class="memo" type="text" aria-label="둘째 4 기간" data-key="arts-log-second-4-when"></td><td><input class="memo" type="text" aria-label="둘째 4 종목" data-key="arts-log-second-4-what"></td><td><input class="memo" type="text" aria-label="둘째 4 월 비용" data-key="arts-log-second-4-cost"></td><td><input class="memo" type="text" aria-label="둘째 4 만족도" data-key="arts-log-second-4-score"></td><td><input class="memo" type="text" aria-label="둘째 4 이유" data-key="arts-log-second-4-why"></td></tr>
+      <tr><td><input class="memo" type="text" aria-label="둘째 5 기간" data-key="arts-log-second-5-when"></td><td><input class="memo" type="text" aria-label="둘째 5 종목" data-key="arts-log-second-5-what"></td><td><input class="memo" type="text" aria-label="둘째 5 월 비용" data-key="arts-log-second-5-cost"></td><td><input class="memo" type="text" aria-label="둘째 5 만족도" data-key="arts-log-second-5-score"></td><td><input class="memo" type="text" aria-label="둘째 5 이유" data-key="arts-log-second-5-why"></td></tr>
+    </tbody>
+  </table></div></div>
+</div>
+
+<h2 id="review">6개월마다 보는 질문</h2>
+<div class="cards" style="--min: 220px">
+  <div class="card c-stem"><div class="card-ic">🌡️</div><h3>온도가 변했나?</h3><p>아이 온도계와 기록표의 만족도를 비교해 보세요. 3개월 넘게 낮다면 이유를 물어볼 때.</p></div>
+  <div class="card c-fruit"><div class="card-ic">⚖️</div><h3>운동 1 + 예술 1인가?</h3><p>한쪽으로 쏠렸다면 다음 학기에 균형을 맞춰 봅니다.</p></div>
+  <div class="card c-branch"><div class="card-ic">🎯</div><h3>졸업할 때가 됐나?</h3><p>목표를 이룬 종목은 멋지게 마무리하고 새 종목에 자리를 내줘도 좋아요.</p></div>
+</div>
+<p class="callout tip">계속·중단 결정은 <a href="../workbook/decision-log.html">결정 로그</a>에, 비용 변화는 <a href="../materials/budget.html">사교육 예산</a>에도 반영해 두세요.</p>
+</div>
+
+<style>
+  .arts-therm { display: grid; gap: 10px; margin: 0 0 16px; }
+  .arts-therm .at-row { display: grid; grid-template-columns: 120px auto 1fr; gap: 12px; align-items: center; padding: 10px 14px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
+  .arts-therm .at-name { font-weight: 700; }
+  .arts-therm .at-stars { display: flex; gap: 2px; }
+  .arts-therm .at-star { width: 34px; height: 34px; border: 0; border-radius: 10px; background: var(--paper-2); color: var(--muted); font-size: 18px; cursor: pointer; line-height: 1; }
+  .arts-therm .at-star.is-on { background: #ffe27a; color: #c47a00; }
+  .arts-therm .at-temp { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .arts-therm .at-temp .meter { flex: 1; height: 12px; }
+  .arts-therm .at-word { font-size: 14px; white-space: nowrap; min-width: 64px; }
+  .arts-therm-top { font-weight: 700; min-height: 1.4em; }
+  .arts-logt td { padding: 6px; min-width: 110px; }
+  .arts-logt input.memo { height: 38px; padding: 6px 10px; font-size: 14px; }
+  @media (max-width: 560px) { .arts-therm .at-row { grid-template-columns: 1fr; gap: 6px; } }
+</style>
+<script>
+(function () {
+  var P = 'arts-log-therm-';
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  var ACTS = [['swim', '🏊', '수영'], ['tkd', '🥋', '태권도'], ['soccer', '⚽', '축구'], ['rope', '🪢', '줄넘기'], ['dance', '🩰', '발레·춤'], ['piano', '🎹', '피아노'], ['violin', '🎻', '바이올린'], ['draw', '🎨', '미술'], ['baduk', '⚫', '바둑'], ['coding', '🤖', '코딩·로봇']];
+  var WORDS = ['아직 몰라', '🧊 꽁꽁', '🌥️ 미지근', '🙂 따뜻', '😊 뜨끈', '🔥 활활'];
+  var COLORS = ['var(--line)', 'var(--note)', 'var(--branch)', 'var(--stem)', 'var(--fruit)', 'var(--accent)'];
+  function score(kid, id) { var v = +(get(P + kid + '-' + id) || 0); return v >= 0 && v <= 5 ? v : 0; }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+
+  var box = document.getElementById('arts-therm');
+  var top = document.getElementById('arts-therm-top');
+  var whoBtns = [].slice.call(document.querySelectorAll('.arts-who button'));
+  var kid = get('arts-log-who') || 'first';
+
+  function favLine(k) {
+    var list = ACTS.map(function (a) { return { a: a, v: score(k, a[0]) }; }).filter(function (x) { return x.v > 0; });
+    list.sort(function (x, y) { return y.v - x.v; });
+    return list;
+  }
+  function render() {
+    if (!box) return;
+    whoBtns.forEach(function (b) { var on = b.getAttribute('data-kid') === kid; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    box.innerHTML = '';
+    ACTS.forEach(function (a) {
+      var v = score(kid, a[0]);
+      var row = el('div', 'at-row');
+      row.appendChild(el('span', 'at-name', a[1] + ' ' + a[2]));
+      var stars = el('span', 'at-stars');
+      for (var i = 1; i <= 5; i++) {
+        (function (n) {
+          var s = el('button', 'at-star' + (n <= v ? ' is-on' : ''), '★');
+          s.type = 'button';
+          s.setAttribute('aria-label', a[2] + ' 별 ' + n + '개');
+          s.addEventListener('click', function () {
+            var cur = score(kid, a[0]);
+            set(P + kid + '-' + a[0], String(cur === n ? 0 : n));
+            render(); summary();
+          });
+          stars.appendChild(s);
+        })(i);
+      }
+      row.appendChild(stars);
+      var temp = el('span', 'at-temp');
+      var meter = el('span', 'meter'); meter.style.display = 'block';
+      var bar = el('i'); bar.style.setProperty('--v', v * 20); bar.style.background = COLORS[v];
+      meter.appendChild(bar);
+      temp.appendChild(meter);
+      temp.appendChild(el('span', 'at-word', WORDS[v]));
+      row.appendChild(temp);
+      box.appendChild(row);
+    });
+    var fav = favLine(kid);
+    if (top) top.textContent = fav.length && fav[0].v >= 4 ? '지금 제일 뜨거운 활동은 ' + fav[0].a[1] + ' ' + fav[0].a[2] + '! 엄마 아빠한테 자랑해 봐.' : '별을 눌러서 온도를 올려 봐!';
+  }
+  function summary() {
+    [].slice.call(document.querySelectorAll('.arts-sum')).forEach(function (p) {
+      var list = favLine(p.getAttribute('data-kid'));
+      p.textContent = list.length ? list.map(function (x) { return x.a[2] + ' ' + x.v + '점 (' + WORDS[x.v] + ')'; }).join(' · ') : '아직 표시한 활동이 없어요.';
+    });
+  }
+  whoBtns.forEach(function (b) {
+    b.addEventListener('click', function () { kid = b.getAttribute('data-kid'); set('arts-log-who', kid); render(); });
+  });
+  render(); summary();
+})();
+</script>

@@ -1,0 +1,286 @@
+---
+title: 12년 로드맵
+nav_order: 2
+permalink: /docs/roadmap/
+kid: true
+kid_title: 자라는 지도
+wide: true
+summary: 2026 → 2037 두 아이의 12년 한눈에
+---
+<style>
+  .rm-hi { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.4; transition: x .3s; }
+  .rm-year { padding: 20px 22px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); margin: 0 0 28px; }
+  .rm-year-top { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .rm-year-top b { font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); min-width: 110px; }
+  .rm-year input[type=range] { flex: 1; min-width: 200px; accent-color: var(--accent); }
+  .rm-year-kids { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .rm-year-kids > div { padding: 14px 16px; border-radius: 12px; background: var(--paper-2); }
+  .rm-year-kids h4 { margin: 0 0 6px; font-size: 16px; }
+  .rm-year-kids p { margin: 0 0 6px; font-size: 14.5px; color: var(--ink-2); }
+  .rm-year-note { margin: 12px 0 0 !important; font-size: 14.5px; }
+  .rm-grow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 0 0 26px; }
+  .rm-grow > div { text-align: center; padding: 16px 12px; border-radius: var(--radius); background: var(--card); border: 2px solid var(--line); }
+  .rm-grow .mascot { margin: 0 auto 6px; width: 84px; height: 84px; }
+  .rm-grow b { display: block; font-family: var(--serif); font-size: 20px; }
+  .rm-grow span { font-size: 14.5px; color: var(--ink-2); }
+  @media (max-width: 640px) { .rm-year-kids { grid-template-columns: 1fr; } }
+</style>
+
+<header class="page-hero">
+  <p class="kicker">2026 → 2037 · 두 아이의 12년</p>
+  <h1>12년 로드맵</h1>
+  <p class="lede">첫째는 2036년 11월, 둘째는 2037년 11월에 수능을 봅니다. 한 해 차이로 같은 길을 걷는 두 아이의 12년을 한 장에 펼쳐 두고, <strong>언제 무엇을 결정해야 하는지</strong> 미리 봅니다. 지금은 <span data-grade-now></span>.</p>
+</header>
+
+<!-- ================= KID ================= -->
+<div class="kid-only">
+  <div class="kid-box">
+    <div class="mascot" data-stage="root"></div>
+    <div>
+      <h3>새싹이가 나무가 되기까지</h3>
+      <p>나는 씨앗에서 시작해서 뿌리를 내리고, 줄기를 세우고, 가지를 뻗고, 마지막엔 열매를 맺어.</p>
+      <p>너도 학교에 다니면서 이렇게 자라는 거야. 천천히, 한 칸씩!</p>
+    </div>
+  </div>
+
+  <h2 id="kid-grow">새싹이의 자라는 길</h2>
+  <div class="rm-grow">
+    <div><div class="mascot" data-stage="root"></div><b>🌱 뿌리</b><span>1~2학년<br>한글, 숫자, 친구 사귀기</span></div>
+    <div><div class="mascot" data-stage="stem"></div><b>🌿 줄기</b><span>3~4학년<br>영어, 과학, 사회를 처음 만나요</span></div>
+    <div><div class="mascot" data-stage="branch"></div><b>🌳 가지</b><span>5~6학년<br>역사 이야기, 내가 좋아하는 것 찾기</span></div>
+    <div><div class="mascot" data-stage="fruit"></div><b>🍎 열매</b><span>중학교·고등학교<br>꿈을 향해 스스로 공부해요</span></div>
+  </div>
+
+  <h2 id="kid-quiz">새싹이 퀴즈</h2>
+  <div class="quiz" data-answer="1">
+    <p class="quiz-q">3학년이 되면 새싹이는 어떤 모습일까?</p>
+    <div class="quiz-opts">
+      <button class="quiz-opt">🌱 뿌리</button><button class="quiz-opt">🌿 줄기</button><button class="quiz-opt">🍎 열매</button>
+    </div>
+    <p class="quiz-fb" data-ok="딩동댕! 3~4학년은 줄기가 쑥쑥 자라는 때야" data-no="위의 자라는 길을 다시 볼까?"></p>
+  </div>
+  <div class="quiz" data-answer="2">
+    <p class="quiz-q">초등학교는 몇 학년까지 있을까?</p>
+    <div class="quiz-opts">
+      <button class="quiz-opt">4학년</button><button class="quiz-opt">5학년</button><button class="quiz-opt">6학년</button>
+    </div>
+    <p class="quiz-fb" data-ok="맞아! 초등학교 6년, 중학교 3년, 고등학교 3년이야" data-no="음, 조금 더 길어!"></p>
+  </div>
+  <div class="quiz" data-answer="0">
+    <p class="quiz-q">나무가 튼튼하게 자라려면 제일 먼저 필요한 건?</p>
+    <div class="quiz-opts">
+      <button class="quiz-opt">깊은 뿌리</button><button class="quiz-opt">빨리 열리는 열매</button><button class="quiz-opt">높은 키</button>
+    </div>
+    <p class="quiz-fb" data-ok="정답! 뿌리가 튼튼해야 바람이 불어도 안 쓰러져. 책 읽기랑 잘 놀기가 뿌리야" data-no="열매는 맨 마지막이야. 제일 아래에 있는 건 뭘까?"></p>
+  </div>
+
+  <h2 id="kid-secret">새싹이의 비밀</h2>
+  <div class="cards" style="--min: 200px">
+    <button class="flip" style="min-height:140px"><span class="flip-front"><b>나무는 매일 쑥쑥 자랄까?</b></span><span class="flip-back"><b>아니, 쉬기도 해!</b><span>나무도 겨울에는 쉬면서 힘을 모아. 너도 쉬는 날이 꼭 필요해.</span></span></button>
+    <button class="flip" style="min-height:140px"><span class="flip-front"><b>옆 나무보다 늦게 자라면 어떡해?</b></span><span class="flip-back"><b>괜찮아!</b><span>나무마다 꽃 피는 때가 달라. 벚꽃은 봄, 국화는 가을에 피잖아.</span></span></button>
+    <button class="flip" style="min-height:140px"><span class="flip-front"><b>언니·오빠·형·누나랑 같은 길이야?</b></span><span class="flip-back"><b>비슷하지만 달라</b><span>한 해 먼저 같은 길을 가지만, 좋아하는 것도 잘하는 것도 서로 달라.</span></span></button>
+  </div>
+
+  <h2 id="kid-dream">내가 어른이 되면</h2>
+  <label class="memo-label" for="rm-kid-dream">하고 싶은 일, 가 보고 싶은 곳, 되고 싶은 모습을 적어 봐! (바뀌어도 괜찮아)</label>
+  <textarea class="memo" id="rm-kid-dream" data-key="roadmap-kid-dream" placeholder="예) 공룡 박사가 돼서 화석을 찾고 싶어"></textarea>
+  <p class="saved-hint"></p>
+</div>
+
+<!-- ================= PARENT ================= -->
+<div class="parent-only">
+
+<div class="stats">
+  <div class="stat" style="--c:var(--root)"><b>2036.11</b><span>첫째 수능 (고3)</span></div>
+  <div class="stat" style="--c:var(--branch)"><b>2037.11</b><span>둘째 수능 (고3)</span></div>
+  <div class="stat" style="--c:var(--accent)"><b>6번</b><span>부부가 함께 내릴 큰 갈림길</span></div>
+  <div class="stat" style="--c:var(--fruit)"><b>1년</b><span>두 아이의 간격 · 첫째가 먼저 겪는 길</span></div>
+</div>
+
+<h2 id="timeline">우리 아이 연표 2026 → 2037</h2>
+<figure class="dg" data-interactive style="--dg-min: 960px">
+  <svg viewBox="0 0 1210 400" role="img" aria-label="2026년부터 2037년까지 두 아이의 학년과 주요 사건, 큰 갈림길">
+    <rect id="rm-yearhi" x="140" y="14" width="88" height="186" rx="10" class="rm-hi"/>
+    <text x="184" y="34" text-anchor="middle" class="dg-t">2026</text>
+    <text x="272" y="34" text-anchor="middle" class="dg-t">2027</text>
+    <text x="360" y="34" text-anchor="middle" class="dg-t">2028</text>
+    <text x="448" y="34" text-anchor="middle" class="dg-t">2029</text>
+    <text x="536" y="34" text-anchor="middle" class="dg-t">2030</text>
+    <text x="624" y="34" text-anchor="middle" class="dg-t">2031</text>
+    <text x="712" y="34" text-anchor="middle" class="dg-t">2032</text>
+    <text x="800" y="34" text-anchor="middle" class="dg-t">2033</text>
+    <text x="888" y="34" text-anchor="middle" class="dg-t">2034</text>
+    <text x="976" y="34" text-anchor="middle" class="dg-t">2035</text>
+    <text x="1064" y="34" text-anchor="middle" class="dg-t">2036</text>
+    <text x="1152" y="34" text-anchor="middle" class="dg-t">2037</text>
+    <text x="20" y="69" class="dg-t lg">첫째</text>
+    <rect x="143" y="48" width="82" height="34" rx="8" class="dg-box c-root"/><text x="184" y="69" text-anchor="middle" class="dg-t">초2</text>
+    <rect x="231" y="48" width="82" height="34" rx="8" class="dg-box c-stem"/><text x="272" y="69" text-anchor="middle" class="dg-t">초3</text>
+    <text x="272" y="98" text-anchor="middle" class="dg-t sm">교과 분화</text>
+    <text x="272" y="112" text-anchor="middle" class="dg-t sm">영어 시작</text>
+    <rect x="319" y="48" width="82" height="34" rx="8" class="dg-box c-stem"/><text x="360" y="69" text-anchor="middle" class="dg-t">초4</text>
+    <rect x="407" y="48" width="82" height="34" rx="8" class="dg-box c-branch"/><text x="448" y="69" text-anchor="middle" class="dg-t">초5</text>
+    <text x="448" y="98" text-anchor="middle" class="dg-t sm">역사·실과</text>
+    <rect x="495" y="48" width="82" height="34" rx="8" class="dg-box c-branch"/><text x="536" y="69" text-anchor="middle" class="dg-t">초6</text>
+    <text x="536" y="98" text-anchor="middle" class="dg-t sm">중학 배정</text>
+    <rect x="583" y="48" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="624" y="69" text-anchor="middle" class="dg-t">중1</text>
+    <text x="624" y="98" text-anchor="middle" class="dg-t sm">자유학기</text>
+    <rect x="671" y="48" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="712" y="69" text-anchor="middle" class="dg-t">중2</text>
+    <rect x="759" y="48" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="800" y="69" text-anchor="middle" class="dg-t">중3</text>
+    <text x="800" y="98" text-anchor="middle" class="dg-t sm">고입 결정</text>
+    <rect x="847" y="48" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="888" y="69" text-anchor="middle" class="dg-t">고1</text>
+    <text x="888" y="98" text-anchor="middle" class="dg-t sm">고교학점제</text>
+    <text x="888" y="112" text-anchor="middle" class="dg-t sm">내신 시작</text>
+    <rect x="935" y="48" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="976" y="69" text-anchor="middle" class="dg-t">고2</text>
+    <rect x="1023" y="48" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="1064" y="69" text-anchor="middle" class="dg-t">고3</text>
+    <text x="1064" y="98" text-anchor="middle" class="dg-t sm">11월 수능</text>
+    <text x="1152" y="69" text-anchor="middle" class="dg-t sm muted">대학·진로</text>
+    <text x="20" y="143" class="dg-t lg">둘째</text>
+    <rect x="143" y="122" width="82" height="34" rx="8" class="dg-box c-root"/><text x="184" y="143" text-anchor="middle" class="dg-t">초1</text>
+    <rect x="231" y="122" width="82" height="34" rx="8" class="dg-box c-root"/><text x="272" y="143" text-anchor="middle" class="dg-t">초2</text>
+    <rect x="319" y="122" width="82" height="34" rx="8" class="dg-box c-stem"/><text x="360" y="143" text-anchor="middle" class="dg-t">초3</text>
+    <text x="360" y="172" text-anchor="middle" class="dg-t sm">교과 분화</text>
+    <text x="360" y="186" text-anchor="middle" class="dg-t sm">영어 시작</text>
+    <rect x="407" y="122" width="82" height="34" rx="8" class="dg-box c-stem"/><text x="448" y="143" text-anchor="middle" class="dg-t">초4</text>
+    <rect x="495" y="122" width="82" height="34" rx="8" class="dg-box c-branch"/><text x="536" y="143" text-anchor="middle" class="dg-t">초5</text>
+    <text x="536" y="172" text-anchor="middle" class="dg-t sm">역사·실과</text>
+    <rect x="583" y="122" width="82" height="34" rx="8" class="dg-box c-branch"/><text x="624" y="143" text-anchor="middle" class="dg-t">초6</text>
+    <text x="624" y="172" text-anchor="middle" class="dg-t sm">중학 배정</text>
+    <rect x="671" y="122" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="712" y="143" text-anchor="middle" class="dg-t">중1</text>
+    <text x="712" y="172" text-anchor="middle" class="dg-t sm">자유학기</text>
+    <rect x="759" y="122" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="800" y="143" text-anchor="middle" class="dg-t">중2</text>
+    <rect x="847" y="122" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="888" y="143" text-anchor="middle" class="dg-t">중3</text>
+    <text x="888" y="172" text-anchor="middle" class="dg-t sm">고입 결정</text>
+    <rect x="935" y="122" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="976" y="143" text-anchor="middle" class="dg-t">고1</text>
+    <text x="976" y="172" text-anchor="middle" class="dg-t sm">고교학점제</text>
+    <text x="976" y="186" text-anchor="middle" class="dg-t sm">내신 시작</text>
+    <rect x="1023" y="122" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="1064" y="143" text-anchor="middle" class="dg-t">고2</text>
+    <rect x="1111" y="122" width="82" height="34" rx="8" class="dg-box c-fruit"/><text x="1152" y="143" text-anchor="middle" class="dg-t">고3</text>
+    <text x="1152" y="172" text-anchor="middle" class="dg-t sm">11월 수능</text>
+    <line x1="20" y1="208" x2="1196" y2="208" class="dg-line dash"/>
+    <text x="20" y="232" class="dg-t lg">큰 갈림길</text>
+    <text x="20" y="250" class="dg-t sm muted">눌러서 자세히</text>
+    <line x1="201.6" y1="246" x2="201.6" y2="214" class="dg-line dash"/>
+    <g data-node="eng" data-info="<b>영어 방식 정하기 · 초3 전</b> (첫째 2026 · 둘째 2027)<br>학원 / 학습지 / 엄마표 중 무엇으로 할지. 핵심은 매일 조금씩 이어갈 수 있는 방식인가입니다. <a href='../subjects/english.html'>영어 가이드 →</a>"><rect x="139.6" y="246" width="124" height="50" rx="12" class="dg-box c-accent"/><text x="201.6" y="268" text-anchor="middle" class="dg-t">영어 방식</text><text x="201.6" y="286" text-anchor="middle" class="dg-t sm">초3 전</text></g>
+    <line x1="316" y1="306" x2="316" y2="214" class="dg-line dash"/>
+    <g data-node="math" data-info="<b>수학 선행 여부와 속도 · 초4 전</b> (첫째 2027 · 둘째 2028)<br>분수가 나오는 초3~4가 갈림길. 우리 집 기본값은 현행 심화, 선행은 한 학기 이내. <a href='../prelearning/our-plan.html'>우리 집 선행 기준 →</a>"><rect x="254" y="306" width="124" height="50" rx="12" class="dg-box c-accent"/><text x="316" y="328" text-anchor="middle" class="dg-t">수학 선행</text><text x="316" y="346" text-anchor="middle" class="dg-t sm">초4 전</text></g>
+    <line x1="448" y1="246" x2="448" y2="214" class="dg-line dash"/>
+    <g data-node="gifted" data-info="<b>영재원·경시 도전 · 초5~6</b> (첫째 2029~30 · 둘째 2030~31)<br>아이가 원하고 즐거워할 때만. 선발 일정·방식은 교육청·기관마다 달라 매년 확인. <a href='../subjects/math.html'>수학 가이드 →</a>"><rect x="386" y="246" width="124" height="50" rx="12" class="dg-box c-accent"/><text x="448" y="268" text-anchor="middle" class="dg-t">영재원·경시</text><text x="448" y="286" text-anchor="middle" class="dg-t sm">초5~6</text></g>
+    <line x1="580" y1="306" x2="580" y2="214" class="dg-line dash"/>
+    <g data-node="move" data-info="<b>이사(학군)·국제중 · 초6</b> (첫째 2030 · 둘째 2031)<br>중학교는 거주지 기준 배정이라 이사 결정은 초6 전에. 교육특구 정보는 참고용. <a href='../paths/choosing.html'>학교 선택과 학군 →</a>"><rect x="518" y="306" width="124" height="50" rx="12" class="dg-box c-accent"/><text x="580" y="328" text-anchor="middle" class="dg-t">이사·국제중</text><text x="580" y="346" text-anchor="middle" class="dg-t sm">초6</text></g>
+    <line x1="712" y1="246" x2="712" y2="214" class="dg-line dash"/>
+    <g data-node="high" data-info="<b>고교 유형 방향 · 중2</b> (첫째 2032 · 둘째 2033)<br>일반고 / 자사고 / 특목고 / 해외. 중3 원서 전에 방향을 잡아 둡니다. <a href='../paths/school-types.html'>중·고등학교 유형 →</a>"><rect x="650" y="246" width="124" height="50" rx="12" class="dg-box c-accent"/><text x="712" y="268" text-anchor="middle" class="dg-t">고교 유형</text><text x="712" y="286" text-anchor="middle" class="dg-t sm">중2</text></g>
+    <line x1="888" y1="306" x2="888" y2="214" class="dg-line dash"/>
+    <g data-node="adm" data-info="<b>수시·정시 무게중심 · 고1</b> (첫째 2034 · 둘째 2035)<br>내신·학생부와 수능 중 어디에 무게를 둘지. 2028 대입 개편 이후 제도는 해마다 확인. <a href='../system/admission.html'>대입 제도 →</a>"><rect x="826" y="306" width="124" height="50" rx="12" class="dg-box c-accent"/><text x="888" y="328" text-anchor="middle" class="dg-t">수시 vs 정시</text><text x="888" y="346" text-anchor="middle" class="dg-t sm">고1</text></g>
+    <text x="20" y="386" class="dg-t sm muted">연도는 3월 학년 시작 기준. 수능은 고3 11월. 색: 뿌리(초1~2) · 줄기(초3~4) · 가지(초5~6) · 열매(중·고)</text>
+  </svg>
+  <p class="dg-info dg-hint">아래 주황색 갈림길을 눌러 보세요. 무엇을 결정하는지, 어디를 읽으면 되는지 나옵니다.</p>
+  <figcaption>첫째가 1년 먼저 같은 길을 갑니다. 첫째 때 겪은 것을 결정 로그에 남겨 두면 둘째 때 훨씬 수월해요.</figcaption>
+</figure>
+
+<h2 id="year">그 해에는? 연도 돌려 보기</h2>
+<div class="rm-year" id="rm-year">
+  <div class="rm-year-top">
+    <b id="rm-y-label">2029년</b>
+    <input type="range" id="rm-y" min="2026" max="2037" step="1" value="2029" aria-label="연도 선택">
+  </div>
+  <div class="rm-year-kids">
+    <div><h4 id="rm-k1-h">첫째</h4><p id="rm-k1-p"></p><a class="btn sm ghost" id="rm-k1-a" href="../grades/e5.html">학년 가이드 →</a></div>
+    <div><h4 id="rm-k2-h">둘째</h4><p id="rm-k2-p"></p><a class="btn sm ghost" id="rm-k2-a" href="../grades/e4.html">학년 가이드 →</a></div>
+  </div>
+  <p class="rm-year-note" id="rm-y-note"></p>
+</div>
+
+<h2 id="stages">4단계로 보는 12년</h2>
+<div class="cards" style="--min: 220px">
+  <a class="card top c-root" href="../grades/e1.html"><span class="tag">1단계 · 초1~2</span><div class="card-ic">🌱</div><h3>뿌리</h3><p>학교 적응, 한글·수 감각, 독서 습관, 몸 쓰기.</p><span class="card-foot">부모 역할: 함께 읽고 함께 놀기</span></a>
+  <a class="card top c-stem" href="../grades/e3.html"><span class="tag">2단계 · 초3~4</span><div class="card-ic">🌿</div><h3>줄기</h3><p>교과 분화 적응, 분수, 영어 시작, 스스로 공부하는 루틴.</p><span class="card-foot">부모 역할: 루틴 설계자</span></a>
+  <a class="card top c-branch" href="../grades/e5.html"><span class="tag">3단계 · 초5~6</span><div class="card-ic">🌳</div><h3>가지</h3><p>비율·역사 같은 추상 개념, 사춘기 시작, 관심 분야 발견, 중학 준비.</p><span class="card-foot">부모 역할: 코치·상담자</span></a>
+  <a class="card top c-fruit" href="../grades/m1.html"><span class="tag">4단계 · 중1~고3</span><div class="card-ic">🍎</div><h3>열매</h3><p>내신, 진로 탐색, 고교 선택, 입시 전략.</p><span class="card-foot">부모 역할: 정보 파트너·정서 지지자</span></a>
+</div>
+<p class="callout tip">어느 단계든 첫 줄은 같습니다. <strong>공부를 싫어하게 만들지 않는 것.</strong> 진도가 조금 늦는 것은 되돌릴 수 있지만, 공부 정서가 무너지면 회복에 몇 년이 걸립니다. <a href="../wellbeing/">마음 돌봄 →</a></p>
+
+<h2 id="cross">큰 갈림길 6개</h2>
+<div class="cards" style="--min: 250px">
+  <a class="card c-accent" href="../subjects/english.html"><span class="tag">초3 전 · 첫째 2026 / 둘째 2027</span><h3>영어를 어떤 방식으로?</h3><p>학원 · 학습지 · 엄마표. 매일 20~30분을 꾸준히 이어갈 수 있는 방식이 정답입니다.</p></a>
+  <a class="card c-accent" href="../prelearning/our-plan.html"><span class="tag">초4 전 · 첫째 2027 / 둘째 2028</span><h3>수학 선행 여부와 속도</h3><p>분수·소수가 본격화되는 시기. 기본값은 현행 심화, 선행은 합의한 범위 안에서만.</p></a>
+  <a class="card c-accent" href="../subjects/math.html"><span class="tag">초5~6 · 첫째 2029 / 둘째 2030</span><h3>영재원·경시 도전?</h3><p>아이가 원하는지가 먼저. 부모가 원해서 시작하면 오래가지 못합니다.</p></a>
+  <a class="card c-accent" href="../paths/choosing.html"><span class="tag">초6 · 첫째 2030 / 둘째 2031</span><h3>이사(학군)·국제중</h3><p>중학교는 거주지 기준 배정. 이사를 한다면 초6 배정 전에 결정해야 합니다.</p></a>
+  <a class="card c-accent" href="../paths/school-types.html"><span class="tag">중2 · 첫째 2032 / 둘째 2033</span><h3>고교 유형 방향</h3><p>일반고 · 자사고 · 특목고 · 해외. 중3 원서 전에 아이와 함께 방향을 잡습니다.</p></a>
+  <a class="card c-accent" href="../system/admission.html"><span class="tag">고1 · 첫째 2034 / 둘째 2035</span><h3>수시 vs 정시 무게중심</h3><p>1학년 내신과 모의고사를 본 뒤 학생부·수능 중 어디에 힘을 줄지 정합니다.</p></a>
+</div>
+
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="roadmap-cross">
+  <li class="task"><label><input type="checkbox"><span>초3 전: 영어를 학원/학습지/엄마표 중 무엇으로 할지 합의</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>초4 전: 수학 선행 여부와 속도 합의 (우리 집 선행 기준 작성)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>초5~6: 영재원·경시 도전 여부 (아이 의사 먼저 묻기)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>초6: 이사(학군) 여부, 국제중 지원 여부</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>중2: 고교 유형(일반고/자사고/특목고/해외) 방향</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>고1: 수시(학종/교과) vs 정시 중심</span></label></li>
+</ul>
+<p>갈림길마다 <a href="../workbook/decision-log.html">결정 로그</a>에 이유와 다시 볼 날짜를 남겨 두세요. 첫째 때의 기록이 둘째 때 가장 좋은 자료가 됩니다.</p>
+
+<p class="callout warning">두 아이 모두 <strong>2022 개정 교육과정</strong>과 <strong>2028학년도 대입 개편</strong>(선택과목 없는 통합형 수능, 고교 내신 5등급제) 대상입니다. 대입 세부 제도는 두 아이가 고등학생이 될 2030년대까지 다시 바뀔 수 있으니 고1 진학 전 반드시 최신 발표를 확인하세요.</p>
+
+</div>
+
+<script>
+(function () {
+  var GR = ['', '초1', '초2', '초3', '초4', '초5', '초6', '중1', '중2', '중3', '고1', '고2', '고3'];
+  var FILE = ['', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'm1', 'm2', 'm3', 'h1', 'h2', 'h3'];
+  var TODO = {
+    1: '학교 적응이 전부. 한글 완성, 매일 함께 읽기, 등교 루틴.',
+    2: '스스로 읽기, 구구단, 받아쓰기는 놀이처럼. 영어 방식은 이 해에 정해요.',
+    3: '교과 분화(사회·과학·영어 시작). 알림장·숙제를 스스로 챙기는 연습.',
+    4: '분수 본격화. 선행보다 교과 심화, 주 단위 할 일 목록.',
+    5: '역사·실과(정보) 시작. 관심 분야 찾기, 영재원은 원할 때만.',
+    6: '중학 배정 준비, 사춘기 대화. 이사를 고민한다면 이 해가 마지막.',
+    7: '자유학기로 진로 탐색. 첫 지필평가 적응, 시험 계획 세우기.',
+    8: '고교 유형 방향 잡기. 사춘기 절정일 수 있으니 관계가 우선.',
+    9: '고입 원서. 고교학점제 과목 선택을 위한 진로 윤곽.',
+    10: '고교학점제·5등급 내신 시작. 1학기 뒤 수시/정시 무게중심 논의.',
+    11: '진로에 맞춘 선택과목, 학생부 활동은 깊게 하나.',
+    12: '수능(11월)과 원서. 부모는 정보 정리와 컨디션 관리 담당.'
+  };
+  var NOTE = {
+    2026: '두 아이 모두 초등 저학년. 12년 중 가장 가볍게, 가장 많이 노는 해로.',
+    2027: '첫째가 교과 분화를 먼저 겪어요. 11월에는 2028학년도 개편 수능이 처음 시행됩니다(참고).',
+    2028: '둘째도 영어 시작. 두 아이의 영어 방식을 같게 할지 따로 할지 정해요.',
+    2029: '첫째 고학년 시작. 두 아이의 일정이 가장 많이 늘어나는 해라 번아웃 점검을 자주.',
+    2030: '첫째 중학 배정 준비. 이사를 고민한다면 두 아이 모두를 기준으로.',
+    2031: '첫째 중학생. 둘째는 1년 뒤 같은 길이니 첫째의 경험을 기록해요.',
+    2032: '두 아이 모두 중학생. 사춘기 두 명, 부부 역할 분담이 중요해요.',
+    2033: '첫째 고입 원서. 둘째는 고교 방향을 잡는 중2.',
+    2034: '첫째 고등학생. 내신이 시작되며 집안 분위기가 바뀌기 쉬운 해.',
+    2035: '두 아이 모두 고등학생. 사교육비가 가장 커질 수 있는 구간이라 예산 점검.',
+    2036: '첫째 수능의 해. 둘째도 고2라 두 아이의 긴장을 따로 챙겨요.',
+    2037: '둘째 수능의 해. 첫째는 대학·진로의 첫 해.'
+  };
+  var $ = function (id) { return document.getElementById(id); };
+  var range = $('rm-y'); if (!range) return;
+  var hi = $('rm-yearhi');
+  function kid(n, g, y) {
+    var h = $('rm-k' + n + '-h'), p = $('rm-k' + n + '-p'), a = $('rm-k' + n + '-a');
+    var name = n === 1 ? '첫째' : '둘째';
+    if (g > 12) { h.textContent = name + ' · 졸업'; p.textContent = '고등학교를 마치고 대학·진로의 첫 해를 보내요.'; a.style.display = 'none'; return; }
+    h.textContent = name + ' · ' + GR[g];
+    p.textContent = TODO[g];
+    a.style.display = ''; a.href = '../grades/' + FILE[g] + '.html';
+  }
+  function show(y) {
+    y = +y;
+    $('rm-y-label').textContent = y + '년';
+    kid(1, 2 + (y - 2026), y); kid(2, 1 + (y - 2026), y);
+    $('rm-y-note').textContent = NOTE[y] || '';
+    if (hi) hi.setAttribute('x', 140 + 88 * (y - 2026));
+    try { localStorage.setItem('roadmap-year', y); } catch (e) {}
+  }
+  var start = null;
+  try { start = localStorage.getItem('roadmap-year'); } catch (e) {}
+  if (!start) { var d = new Date(); start = Math.min(2037, Math.max(2026, d.getFullYear() + (d.getMonth() < 2 ? -1 : 0))); }
+  range.value = start;
+  range.addEventListener('input', function () { show(range.value); });
+  show(range.value);
+})();
+</script>

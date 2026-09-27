@@ -1,0 +1,349 @@
+---
+title: 수학
+parent: 과목별 가이드
+nav_order: 2
+kid: true
+summary: 개념 지도 · 학년별 걸림돌 · 문제집 단계
+wide: true
+---
+<header class="page-hero">
+  <p class="kicker">과목별 가이드 · 수학</p>
+  <h1>수학</h1>
+  <p class="lede">수학은 계통성이 가장 강한 과목입니다. <strong>구멍 하나가 그 위에 쌓인 모든 것을 흔듭니다.</strong> 그래서 우리 집의 수학 원칙은 "빨리"가 아니라 "빈틈없이, 싫어하지 않게"예요.</p>
+</header>
+
+<!-- ================= KID ================= -->
+<div class="kid-only">
+  <div class="kid-box">
+    <div class="mascot" data-stage="stem"></div>
+    <div>
+      <h3>수학 섬에 온 걸 환영해!</h3>
+      <p>수학은 계산만 하는 게 아니야. 규칙을 찾고, 모양을 보고, 똑같이 나누는 방법을 생각하는 놀이야.</p>
+      <p>틀려도 괜찮아. 틀린 문제는 보물이거든! "왜 틀렸지?" 말로 설명하면 머리가 쑥쑥 자라.</p>
+    </div>
+  </div>
+
+  <h2 id="kid-ten">10 만들기 게임</h2>
+  <p>사과가 몇 개 있어. 몇 개를 더하면 딱 10개가 될까? 숫자를 눌러 봐!</p>
+  <div class="math-ten" id="math-ten">
+    <p class="math-ten-q" data-q>준비 중…</p>
+    <p class="math-ten-apples" data-apples aria-hidden="true"></p>
+    <div class="math-ten-opts" data-opts></div>
+    <p class="math-ten-fb" data-fb></p>
+    <p class="math-ten-score">맞힌 개수 <b data-score>0</b></p>
+  </div>
+
+  <h2 id="kid-riddle">수학 수수께끼</h2>
+  <div class="quiz" data-answer="1">
+    <p class="quiz-q">2, 4, 6, 8 … 다음에 올 수는?</p>
+    <div class="quiz-opts"><button class="quiz-opt">9</button><button class="quiz-opt">10</button><button class="quiz-opt">12</button></div>
+    <p class="quiz-fb" data-ok="딩동댕! 2씩 뛰어 세기야" data-no="수와 수 사이가 얼마씩 커지는지 봐!"></p>
+  </div>
+  <div class="quiz" data-answer="0">
+    <p class="quiz-q">뾰족한 곳(꼭짓점)이 3개인 모양은?</p>
+    <div class="quiz-opts"><button class="quiz-opt">세모 🔺</button><button class="quiz-opt">네모 🟦</button><button class="quiz-opt">동그라미 ⚪</button></div>
+    <p class="quiz-fb" data-ok="정답! 세모는 꼭짓점도 3개, 변도 3개" data-no="손가락으로 뾰족한 곳을 세어 봐!"></p>
+  </div>
+  <div class="quiz" data-answer="1">
+    <p class="quiz-q">사탕 12개를 3명이 똑같이 나누면 한 명이 몇 개씩 먹을까?</p>
+    <div class="quiz-opts"><button class="quiz-opt">3개</button><button class="quiz-opt">4개</button><button class="quiz-opt">6개</button></div>
+    <p class="quiz-fb" data-ok="맞아! 4개씩 3명이면 12개" data-no="사탕을 한 개씩 차례로 나눠 줘 볼까?"></p>
+  </div>
+  <div class="quiz" data-answer="2">
+    <p class="quiz-q">5 + 5 + 5 는 5 × 몇 이랑 같을까?</p>
+    <div class="quiz-opts"><button class="quiz-opt">5 × 1</button><button class="quiz-opt">5 × 2</button><button class="quiz-opt">5 × 3</button></div>
+    <p class="quiz-fb" data-ok="대단해! 5를 3번 더하면 5 × 3 = 15" data-no="5를 몇 번 더했는지 세어 봐!"></p>
+  </div>
+
+  <h2 id="kid-stamps">생활 속 수학 스탬프</h2>
+  <p>집이나 밖에서 해 보면 눌러! <span class="stamp-count" data-stamp-count="subjects-math"></span></p>
+  <div class="stamps" data-key="subjects-math">
+    <button class="stamp c-root" data-id="dice"><span class="stamp-ic">🎲</span>주사위 게임<small>눈 더하기</small></button>
+    <button class="stamp c-stem" data-id="clock"><span class="stamp-ic">⏰</span>시계 읽기<small>몇 시 몇 분</small></button>
+    <button class="stamp c-branch" data-id="shop"><span class="stamp-ic">🛒</span>장보기 계산<small>거스름돈</small></button>
+    <button class="stamp c-fruit" data-id="cook"><span class="stamp-ic">🍳</span>요리 계량<small>컵의 반</small></button>
+    <button class="stamp c-accent" data-id="shape"><span class="stamp-ic">🔷</span>모양 찾기 산책<small>세모·네모·원</small></button>
+    <button class="stamp c-note" data-id="gugu"><span class="stamp-ic">🎵</span>구구단 노래<small>2단부터</small></button>
+    <button class="stamp c-tip" data-id="pizza"><span class="stamp-ic">🍕</span>피자 나누기<small>똑같이 4조각</small></button>
+    <button class="stamp c-warn" data-id="explain"><span class="stamp-ic">🗣️</span>풀이 설명하기<small>엄마 아빠한테</small></button>
+  </div>
+</div>
+
+<!-- ================= PARENT ================= -->
+<div class="parent-only">
+
+<div class="cards" style="--min:220px">
+  <div class="card top c-root"><span class="tag">사실 1</span><h3>가장 영향력이 큰 과목</h3><p>내신·수능 모두에서 비중이 크고, 동시에 포기자가 가장 많이 나오는 과목입니다.</p></div>
+  <div class="card top c-stem"><span class="tag">사실 2</span><h3>계통성이 가장 강함</h3><p>분수 → 비율 → 방정식 → 함수. 앞 개념이 비면 뒤는 "외워서" 버티다 무너집니다.</p></div>
+  <div class="card top c-fruit"><span class="tag">우리 집</span><h3>결손 방지 &gt; 선행</h3><p>현재 학년 심화 문제를 70~80% 풀 수 있을 때만 앞으로 갑니다.</p></div>
+</div>
+
+<h2 id="map">수학 개념 지도 (눌러 보세요)</h2>
+<p>개념을 누르면 <strong>그 개념을 떠받치는 앞 개념</strong>이 모두 켜지고, 왜 중요한지와 흔히 막히는 학년이 아래에 나옵니다. 아이가 어떤 단원에서 막히면, 그 단원이 아니라 <strong>켜진 앞 개념부터</strong> 점검하세요.</p>
+<figure class="dg" data-interactive style="--dg-min:860px">
+  <svg viewBox="0 0 960 510" role="img" aria-label="수학 개념 의존 그래프: 수 세기에서 미적분까지, 도형·측정과 자료·가능성 영역 포함">
+    <defs><marker id="m-math-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <text x="100" y="26" text-anchor="middle" class="dg-t lg">초1~2</text>
+    <text x="290" y="26" text-anchor="middle" class="dg-t lg">초3~4</text>
+    <text x="480" y="26" text-anchor="middle" class="dg-t lg">초5~6</text>
+    <text x="680" y="26" text-anchor="middle" class="dg-t lg">중학교</text>
+    <text x="880" y="26" text-anchor="middle" class="dg-t lg">고등학교</text>
+    <line x1="195" y1="40" x2="195" y2="496" class="dg-line dash"/>
+    <line x1="385" y1="40" x2="385" y2="496" class="dg-line dash"/>
+    <line x1="580" y1="40" x2="580" y2="496" class="dg-line dash"/>
+    <line x1="780" y1="40" x2="780" y2="496" class="dg-line dash"/>
+    <text x="25" y="52" class="dg-t sm muted">수와 연산 → 변화와 관계</text>
+    <text x="25" y="370" class="dg-t sm muted">도형과 측정</text>
+    <text x="25" y="440" class="dg-t sm muted">자료와 가능성</text>
+
+    <!-- edges -->
+    <path data-edge="count>addsub" d="M100 97 V123" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="addsub>mult" d="M100 157 V183" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="mult>div" d="M175 200 L215 80" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="div>frac" d="M290 97 V123" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="div>factor" d="M365 80 H405" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="frac>reduce" d="M365 140 H405" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="factor>reduce" d="M480 97 V123" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="reduce>fracops" d="M480 157 V183" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="fracops>ratio" d="M480 217 V243" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="fracops>integer" d="M555 196 L605 84" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="integer>letters" d="M680 97 V123" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="letters>equation" d="M680 157 V183" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="equation>linfunc" d="M680 217 V243" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="ratio>linfunc" d="M555 260 H605" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="linfunc>quadfunc" d="M680 277 V303" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="quadfunc>hsfunc" d="M755 320 L805 262" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="hsfunc>calc" d="M880 277 V303" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="shape>plane" d="M175 400 H215" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="plane>area" d="M365 400 H405" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="area>cong" d="M555 400 H605" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="ratio>cong" d="M540 277 L620 383" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="cong>geomeq" d="M755 400 H805" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="linfunc>geomeq" d="M755 268 L812 383" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="table>bar" d="M175 470 H215" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="bar>avg" d="M365 470 H405" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="avg>prob" d="M555 470 H605" class="dg-line" marker-end="url(#m-math-arrow)"/>
+    <path data-edge="prob>stats" d="M755 470 H805" class="dg-line" marker-end="url(#m-math-arrow)"/>
+
+    <!-- nodes: number & algebra -->
+    <g data-node="count" class="c-root" data-info="&lt;b&gt;수 세기 · 초1&lt;/b&gt; 100까지 세고 읽고 크기를 비교해요. &lt;b&gt;왜 중요?&lt;/b&gt; 모든 수학의 출발점, 특히 '10 묶음' 감각이 받아올림의 뿌리입니다. &lt;b&gt;걸림돌:&lt;/b&gt; 거의 없지만 10 묶음을 모르고 넘어가면 초2에서 드러나요."><rect x="25" y="63" width="150" height="34" rx="8" class="dg-box"/><text x="100" y="81" text-anchor="middle" dominant-baseline="middle" class="dg-t">수 세기</text></g>
+    <g data-node="addsub" data-deps="count" class="c-root" data-info="&lt;b&gt;덧셈·뺄셈 · 초1~2&lt;/b&gt; 받아올림·받아내림이 있는 두 자리·세 자리 계산. &lt;b&gt;왜 중요?&lt;/b&gt; 곱셈은 '같은 수를 여러 번 더하기'라 여기서 출발합니다. &lt;b&gt;걸림돌: 초2&lt;/b&gt; 받아내림. 손가락 계산이 오래 가면 연산 학습지 하루 10분으로 유창성만 채워요."><rect x="25" y="123" width="150" height="34" rx="8" class="dg-box"/><text x="100" y="141" text-anchor="middle" dominant-baseline="middle" class="dg-t">덧셈·뺄셈</text></g>
+    <g data-node="mult" data-deps="addsub" class="c-root" data-info="&lt;b&gt;곱셈구구 · 초2&lt;/b&gt; 2단~9단. &lt;b&gt;왜 중요?&lt;/b&gt; 나눗셈·약수·분수·넓이가 모두 구구단 위에 섭니다. &lt;b&gt;걸림돌: 초2 2학기&lt;/b&gt; 7·8·9단. 묶어 세기 → 뛰어 세기 → 암기 순서로, 노래·보드게임으로 반복해요."><rect x="25" y="183" width="150" height="34" rx="8" class="dg-box"/><text x="100" y="201" text-anchor="middle" dominant-baseline="middle" class="dg-t">곱셈구구</text></g>
+    <g data-node="div" data-deps="mult" class="c-stem" data-info="&lt;b&gt;나눗셈 · 초3~4&lt;/b&gt; 똑같이 나누기 → 몫과 나머지 → 두 자리로 나누기. &lt;b&gt;왜 중요?&lt;/b&gt; 분수(나눗셈의 결과)와 약수·배수, 평균의 기초. &lt;b&gt;걸림돌: 초4&lt;/b&gt; 긴 나눗셈(세 자리 ÷ 두 자리)의 몫 어림."><rect x="215" y="63" width="150" height="34" rx="8" class="dg-box"/><text x="290" y="81" text-anchor="middle" dominant-baseline="middle" class="dg-t">나눗셈</text></g>
+    <g data-node="frac" data-deps="div" class="c-stem" data-info="&lt;b&gt;분수 개념 · 초3~4&lt;/b&gt; 전체와 부분, 단위분수, 분모가 같은 분수의 덧뺄셈, 소수. &lt;b&gt;왜 중요?&lt;/b&gt; 초등 수학 최대의 분기점. 여기서 '그림'으로 이해하지 못하면 이후 전부가 공식 암기가 됩니다. &lt;b&gt;걸림돌: 초3~4&lt;/b&gt; '1/3이 1/4보다 크다'가 직관에 안 맞는 아이가 많아요. 피자·종이접기로."><rect x="215" y="123" width="150" height="34" rx="8" class="dg-box"/><text x="290" y="141" text-anchor="middle" dominant-baseline="middle" class="dg-t">분수 개념</text></g>
+    <g data-node="factor" data-deps="div" class="c-branch" data-info="&lt;b&gt;약수·배수 · 초5&lt;/b&gt; 최대공약수와 최소공배수. &lt;b&gt;왜 중요?&lt;/b&gt; 약분(최대공약수)과 통분(최소공배수)의 도구. 중학교 소인수분해로 이어져요. &lt;b&gt;걸림돌: 초5 1학기&lt;/b&gt; 구구단이 느리면 여기서 속도가 확 떨어집니다."><rect x="405" y="63" width="150" height="34" rx="8" class="dg-box"/><text x="480" y="81" text-anchor="middle" dominant-baseline="middle" class="dg-t">약수·배수</text></g>
+    <g data-node="reduce" data-deps="frac factor" class="c-branch" data-info="&lt;b&gt;약분·통분 · 초5&lt;/b&gt; 크기가 같은 분수 만들기. &lt;b&gt;왜 중요?&lt;/b&gt; 분모가 다른 분수의 계산은 전부 통분에서 시작합니다. &lt;b&gt;걸림돌: 초5&lt;/b&gt; 수포자가 처음 생기는 지점으로 자주 꼽혀요. 틀리면 약수·배수와 분수 개념부터 되짚어요."><rect x="405" y="123" width="150" height="34" rx="8" class="dg-box"/><text x="480" y="141" text-anchor="middle" dominant-baseline="middle" class="dg-t">약분·통분</text></g>
+    <g data-node="fracops" data-deps="reduce" class="c-branch" data-info="&lt;b&gt;분수 사칙계산 · 초5~6&lt;/b&gt; 분수·소수의 덧셈·뺄셈·곱셈·나눗셈. &lt;b&gt;왜 중요?&lt;/b&gt; 유리수, 비율, 확률, 방정식 풀이의 계산 엔진. &lt;b&gt;걸림돌: 초6&lt;/b&gt; 분수의 나눗셈 '왜 뒤집어서 곱하지?' 이유를 그림으로 한 번은 설명해 보세요."><rect x="405" y="183" width="150" height="34" rx="8" class="dg-box"/><text x="480" y="201" text-anchor="middle" dominant-baseline="middle" class="dg-t">분수 사칙계산</text></g>
+    <g data-node="ratio" data-deps="fracops" class="c-branch" data-info="&lt;b&gt;비와 비율 · 초6&lt;/b&gt; 비, 비율, 백분율, 비례식과 비례배분. &lt;b&gt;왜 중요?&lt;/b&gt; 중학교 정비례·반비례 → 일차함수, 닮음, 과학의 속력·농도 계산이 모두 비율입니다. &lt;b&gt;걸림돌: 초6&lt;/b&gt; 문장제에서 '무엇에 대한 무엇'인지 헷갈려요. 할인·요리 비율로 생활 연습."><rect x="405" y="243" width="150" height="34" rx="8" class="dg-box"/><text x="480" y="261" text-anchor="middle" dominant-baseline="middle" class="dg-t">비와 비율</text></g>
+    <g data-node="integer" data-deps="fracops" class="c-fruit" data-info="&lt;b&gt;정수·유리수 · 중1&lt;/b&gt; 음수의 등장, 수직선, 부호 계산. &lt;b&gt;왜 중요?&lt;/b&gt; 문자식과 방정식의 모든 계산이 부호 위에서 돌아갑니다. &lt;b&gt;걸림돌: 중1&lt;/b&gt; (−)×(−)=(+) 같은 부호 실수. 분수 계산이 약하면 유리수에서 두 배로 무너져요."><rect x="605" y="63" width="150" height="34" rx="8" class="dg-box"/><text x="680" y="81" text-anchor="middle" dominant-baseline="middle" class="dg-t">정수·유리수</text></g>
+    <g data-node="letters" data-deps="integer" class="c-fruit" data-info="&lt;b&gt;문자와 식 · 중1&lt;/b&gt; x, y로 수량을 나타내고 식을 정리하기. &lt;b&gt;왜 중요?&lt;/b&gt; 산수에서 대수로 넘어가는 문. 이후 모든 수학이 문자로 쓰입니다. &lt;b&gt;걸림돌: 중1&lt;/b&gt; '문자가 왜 나와?' 추상화 충격. 초등의 □ 넣기 문제와 연결해 설명해 주세요."><rect x="605" y="123" width="150" height="34" rx="8" class="dg-box"/><text x="680" y="141" text-anchor="middle" dominant-baseline="middle" class="dg-t">문자와 식</text></g>
+    <g data-node="equation" data-deps="letters" class="c-fruit" data-info="&lt;b&gt;방정식 · 중1~3&lt;/b&gt; 일차방정식(중1) → 연립방정식(중2) → 이차방정식(중3). &lt;b&gt;왜 중요?&lt;/b&gt; 문제 상황을 식으로 세우는 힘, 함수의 교점 구하기로 이어집니다. &lt;b&gt;걸림돌: 중2&lt;/b&gt; 식은 푸는데 문장제에서 식을 못 세움 → 초6 비율·문장 독해 문제인 경우가 많아요."><rect x="605" y="183" width="150" height="34" rx="8" class="dg-box"/><text x="680" y="201" text-anchor="middle" dominant-baseline="middle" class="dg-t">방정식</text></g>
+    <g data-node="linfunc" data-deps="equation ratio" class="c-fruit" data-info="&lt;b&gt;일차함수 · 중2&lt;/b&gt; 기울기, 절편, 그래프와 직선의 방정식. &lt;b&gt;왜 중요?&lt;/b&gt; '변화와 관계'의 첫 본격 단원. 고등 함수와 도형의 방정식의 기초. &lt;b&gt;걸림돌: 중2&lt;/b&gt; 기울기 = 비율이라는 연결이 안 되면 공식 암기로 흐릅니다. 표 → 그래프 → 식을 오가게 해 주세요."><rect x="605" y="243" width="150" height="34" rx="8" class="dg-box"/><text x="680" y="261" text-anchor="middle" dominant-baseline="middle" class="dg-t">일차함수</text></g>
+    <g data-node="quadfunc" data-deps="linfunc" class="c-fruit" data-info="&lt;b&gt;이차함수 · 중3&lt;/b&gt; 포물선, 꼭짓점, 인수분해·완전제곱식. &lt;b&gt;왜 중요?&lt;/b&gt; 고1 공통수학의 다항식·방정식·부등식이 모두 이 위에 있어요. &lt;b&gt;걸림돌: 중3&lt;/b&gt; 인수분해가 느리면 이차함수 전체가 막힙니다. 고등 선행 전에 여기부터 확인."><rect x="605" y="303" width="150" height="34" rx="8" class="dg-box"/><text x="680" y="321" text-anchor="middle" dominant-baseline="middle" class="dg-t">이차함수</text></g>
+    <g data-node="hsfunc" data-deps="quadfunc" class="c-accent" data-info="&lt;b&gt;고등 함수·수열 · 고1~2&lt;/b&gt; 공통수학1·2(다항식, 방정식·부등식, 함수), 대수(지수·로그, 삼각함수, 수열). &lt;b&gt;왜 중요?&lt;/b&gt; 미적분의 언어. &lt;b&gt;걸림돌: 고1~2&lt;/b&gt; 추상화가 급증해 중학 결손이 한꺼번에 드러나요."><rect x="805" y="243" width="150" height="34" rx="8" class="dg-box"/><text x="880" y="261" text-anchor="middle" dominant-baseline="middle" class="dg-t">고등 함수·수열</text></g>
+    <g data-node="calc" data-deps="hsfunc" class="c-accent" data-info="&lt;b&gt;미적분 · 고2~3&lt;/b&gt; 미적분Ⅰ(극한, 미분, 적분), 이공계 진로면 미적분Ⅱ. &lt;b&gt;왜 중요?&lt;/b&gt; 이공계·의약계열의 기본 도구. &lt;b&gt;걸림돌: 고2&lt;/b&gt; 함수의 그래프 감각이 없으면 계산만 하는 미적분이 됩니다. 2028 수능부터 수학은 대수·미적분Ⅰ·확률과 통계가 공통 범위예요."><rect x="805" y="303" width="150" height="34" rx="8" class="dg-box"/><text x="880" y="321" text-anchor="middle" dominant-baseline="middle" class="dg-t">미적분</text></g>
+
+    <!-- nodes: geometry -->
+    <g data-node="shape" class="c-root" data-info="&lt;b&gt;모양·길이·시계 · 초1~2&lt;/b&gt; 세모·네모·동그라미, cm와 m, 시각 읽기. &lt;b&gt;왜 중요?&lt;/b&gt; 공간 감각과 단위 감각의 시작. &lt;b&gt;걸림돌: 초2&lt;/b&gt; 시계의 '분' 읽기. 집에 아날로그 시계를 걸어 두면 대부분 해결돼요."><rect x="25" y="383" width="150" height="34" rx="8" class="dg-box"/><text x="100" y="401" text-anchor="middle" dominant-baseline="middle" class="dg-t">모양·길이·시계</text></g>
+    <g data-node="plane" data-deps="shape" class="c-stem" data-info="&lt;b&gt;각도·평면도형 · 초3~4&lt;/b&gt; 직각, 각도기, 삼각형·사각형 분류, 원, 들이·무게. &lt;b&gt;왜 중요?&lt;/b&gt; 도형의 성질을 '정의'로 보는 첫 경험. &lt;b&gt;걸림돌: 초4&lt;/b&gt; 사다리꼴·평행사변형·마름모 포함 관계. 도형 카드 분류 놀이가 효과적."><rect x="215" y="383" width="150" height="34" rx="8" class="dg-box"/><text x="290" y="401" text-anchor="middle" dominant-baseline="middle" class="dg-t">각도·평면도형</text></g>
+    <g data-node="area" data-deps="plane mult" class="c-branch" data-info="&lt;b&gt;넓이·부피 · 초5~6&lt;/b&gt; 다각형 넓이, 원의 넓이, 직육면체 부피, 입체도형. &lt;b&gt;왜 중요?&lt;/b&gt; 공식이 '왜' 그런지 잘라 붙이며 이해하면 중학 도형이 쉬워집니다. &lt;b&gt;걸림돌: 초5~6&lt;/b&gt; 공식만 외우고 단위(cm² · cm³)를 헷갈려요."><rect x="405" y="383" width="150" height="34" rx="8" class="dg-box"/><text x="480" y="401" text-anchor="middle" dominant-baseline="middle" class="dg-t">넓이·부피</text></g>
+    <g data-node="cong" data-deps="area ratio" class="c-fruit" data-info="&lt;b&gt;합동·닮음·피타고라스 · 중1~3&lt;/b&gt; 작도, 합동 조건, 닮음비, 피타고라스 정리, 삼각비. &lt;b&gt;왜 중요?&lt;/b&gt; 논리적 증명과 도형 계산의 핵심. &lt;b&gt;걸림돌: 중2~3&lt;/b&gt; 증명 서술. 닮음은 초6 비율이 약하면 흔들려요."><rect x="605" y="383" width="150" height="34" rx="8" class="dg-box"/><text x="680" y="401" text-anchor="middle" dominant-baseline="middle" class="dg-t">닮음·피타고라스</text></g>
+    <g data-node="geomeq" data-deps="cong linfunc" class="c-accent" data-info="&lt;b&gt;도형의 방정식·기하 · 고1~3&lt;/b&gt; 좌표평면 위의 직선·원(공통수학2), 진로 선택 기하(벡터, 이차곡선). &lt;b&gt;왜 중요?&lt;/b&gt; 도형과 식이 만나는 곳. &lt;b&gt;걸림돌: 고1&lt;/b&gt; 중2 일차함수·중3 피타고라스가 동시에 필요해요."><rect x="805" y="383" width="150" height="34" rx="8" class="dg-box"/><text x="880" y="401" text-anchor="middle" dominant-baseline="middle" class="dg-t">도형의 방정식</text></g>
+
+    <!-- nodes: data -->
+    <g data-node="table" class="c-root" data-info="&lt;b&gt;분류·표·그래프 · 초1~2&lt;/b&gt; 기준 정해 분류하기, 표와 ○ 그래프. &lt;b&gt;왜 중요?&lt;/b&gt; 자료를 정리하는 첫 습관. &lt;b&gt;걸림돌:&lt;/b&gt; 거의 없음. 장난감 분류 놀이로 충분해요."><rect x="25" y="453" width="150" height="34" rx="8" class="dg-box"/><text x="100" y="471" text-anchor="middle" dominant-baseline="middle" class="dg-t">분류·표·그래프</text></g>
+    <g data-node="bar" data-deps="table" class="c-stem" data-info="&lt;b&gt;막대·꺾은선 그래프 · 초3~4&lt;/b&gt; 눈금 읽기, 변화 해석. &lt;b&gt;왜 중요?&lt;/b&gt; 사회·과학 교과서의 자료 해석과 직결. &lt;b&gt;걸림돌: 초4&lt;/b&gt; 눈금 한 칸의 크기 착각. 날씨 기록을 그래프로 그려 보세요."><rect x="215" y="453" width="150" height="34" rx="8" class="dg-box"/><text x="290" y="471" text-anchor="middle" dominant-baseline="middle" class="dg-t">막대·꺾은선</text></g>
+    <g data-node="avg" data-deps="bar div" class="c-branch" data-info="&lt;b&gt;평균·가능성 · 초5~6&lt;/b&gt; 평균, 일이 일어날 가능성을 말·수로 표현, 띠·원그래프. &lt;b&gt;왜 중요?&lt;/b&gt; 통계와 확률의 입구. 평균은 나눗셈, 원그래프는 비율이 필요해요. &lt;b&gt;걸림돌: 초5&lt;/b&gt; 평균을 '가운데 값'으로 오해."><rect x="405" y="453" width="150" height="34" rx="8" class="dg-box"/><text x="480" y="471" text-anchor="middle" dominant-baseline="middle" class="dg-t">평균·가능성</text></g>
+    <g data-node="prob" data-deps="avg" class="c-fruit" data-info="&lt;b&gt;통계·확률 · 중1~3&lt;/b&gt; 도수분포, 경우의 수와 확률, 대푯값·산포도. &lt;b&gt;왜 중요?&lt;/b&gt; 데이터 시대의 기본 소양, 정보·AI 과목과도 연결. &lt;b&gt;걸림돌: 중2&lt;/b&gt; 경우의 수를 빠짐없이 세기. 분수 계산이 약하면 확률 계산이 흔들려요."><rect x="605" y="453" width="150" height="34" rx="8" class="dg-box"/><text x="680" y="471" text-anchor="middle" dominant-baseline="middle" class="dg-t">통계·확률</text></g>
+    <g data-node="stats" data-deps="prob" class="c-accent" data-info="&lt;b&gt;확률과 통계 · 고2~3&lt;/b&gt; 순열·조합, 확률분포, 통계적 추정. &lt;b&gt;왜 중요?&lt;/b&gt; 문·이과 모두 쓰는 과목, 2028 수능 공통 범위. &lt;b&gt;걸림돌: 고2&lt;/b&gt; 문장 해석. 국어 독해력이 결정적이에요."><rect x="805" y="453" width="150" height="34" rx="8" class="dg-box"/><text x="880" y="471" text-anchor="middle" dominant-baseline="middle" class="dg-t">확률과 통계</text></g>
+  </svg>
+  <p class="dg-info dg-hint">개념을 누르거나 마우스를 올려 보세요. 앞 개념이 켜지고 설명이 여기에 나와요.</p>
+  <figcaption>화살표 = "이게 있어야 저게 된다". 색은 학교급(초1~2 · 초3~4 · 초5~6 · 중 · 고). 단원 순서는 교과서·학기마다 조금씩 달라요.</figcaption>
+</figure>
+
+<h2 id="courses">학년별 진도 계통</h2>
+<div class="tabs" data-tabs id="math-course-tabs">
+  <div class="tab-list"><button>초1~2</button><button>초3~4</button><button>초5~6</button><button>중학교</button><button>고등학교</button></div>
+  <div class="tab-panel">
+    <div class="cards" style="--min:200px">
+      <div class="card c-root"><span class="tag">수와 연산</span><p>100 → 1000까지의 수, 받아올림·받아내림 있는 덧뺄셈, 곱셈구구</p></div>
+      <div class="card c-root"><span class="tag">변화와 관계</span><p>규칙 찾기 (무늬, 수 배열)</p></div>
+      <div class="card c-root"><span class="tag">도형과 측정</span><p>여러 가지 모양, 길이 재기(cm·m), 시각과 시간</p></div>
+      <div class="card c-root"><span class="tag">자료와 가능성</span><p>분류하기, 표와 그래프</p></div>
+    </div>
+    <p class="callout tip">구체물(바둑돌·동전·손가락)로 충분히 조작한 뒤 숫자로. 연산 학습지는 하루 10분이면 충분합니다.</p>
+  </div>
+  <div class="tab-panel">
+    <div class="cards" style="--min:200px">
+      <div class="card c-stem"><span class="tag">수와 연산</span><p>세 자리·네 자리 곱셈과 나눗셈, 분수·소수의 기초, 분모가 같은 분수의 덧뺄셈</p></div>
+      <div class="card c-stem"><span class="tag">변화와 관계</span><p>규칙과 대응, 계산식의 규칙</p></div>
+      <div class="card c-stem"><span class="tag">도형과 측정</span><p>직선·각·각도, 평면도형의 이동, 삼각형·사각형·다각형, 원, 들이·무게</p></div>
+      <div class="card c-stem"><span class="tag">자료와 가능성</span><p>그림그래프, 막대그래프, 꺾은선그래프</p></div>
+    </div>
+  </div>
+  <div class="tab-panel">
+    <div class="cards" style="--min:200px">
+      <div class="card c-branch"><span class="tag">수와 연산</span><p>약수·배수, 약분·통분, 분수·소수의 사칙계산, 혼합 계산</p></div>
+      <div class="card c-branch"><span class="tag">변화와 관계</span><p>비와 비율, 백분율, 비례식과 비례배분</p></div>
+      <div class="card c-branch"><span class="tag">도형과 측정</span><p>다각형의 둘레·넓이, 합동과 대칭, 직육면체, 원의 넓이, 입체도형의 겉넓이·부피</p></div>
+      <div class="card c-branch"><span class="tag">자료와 가능성</span><p>평균, 가능성, 띠그래프·원그래프</p></div>
+    </div>
+  </div>
+  <div class="tab-panel">
+    <div class="cards" style="--min:200px">
+      <div class="card c-fruit"><span class="tag">중1</span><p>소인수분해, 정수와 유리수, 문자와 식, 일차방정식, 좌표평면과 그래프(정비례·반비례), 기본 도형·작도, 평면·입체도형, 자료의 정리와 해석</p></div>
+      <div class="card c-fruit"><span class="tag">중2</span><p>유리수와 순환소수, 식의 계산, 일차부등식, 연립방정식, 일차함수, 삼각형·사각형의 성질, 닮음, 확률</p></div>
+      <div class="card c-fruit"><span class="tag">중3</span><p>제곱근과 실수, 다항식의 곱셈과 인수분해, 이차방정식, 이차함수, 피타고라스 정리·삼각비, 원의 성질, 산포도, 상관관계</p></div>
+    </div>
+    <p class="callout note">2022 개정 교육과정에서 중학교 단원 배치가 일부 조정됐어요(예: 피타고라스 정리의 학년 이동 등). 아이가 쓰는 교과서 목차가 최종 기준입니다.</p>
+  </div>
+  <div class="tab-panel">
+    <div class="cards" style="--min:200px">
+      <div class="card c-accent"><span class="tag">고1 공통</span><h3>공통수학1·2</h3><p>다항식, 방정식과 부등식, 경우의 수, 행렬 / 도형의 방정식, 집합과 명제, 함수와 그래프</p></div>
+      <div class="card c-accent"><span class="tag">일반 선택</span><h3>대수 · 미적분Ⅰ · 확률과 통계</h3><p>지수·로그, 삼각함수, 수열 / 극한, 미분, 적분 / 순열·조합, 확률분포, 통계적 추정</p></div>
+      <div class="card c-accent"><span class="tag">진로 선택</span><h3>미적분Ⅱ · 기하 등</h3><p>이공계 진로 학생이 주로 선택. 경제 수학, 인공지능 수학 등도 있어요.</p></div>
+    </div>
+    <p class="callout warning">2028학년도 수능부터 수학은 선택과목 없이 <strong>대수 · 미적분Ⅰ · 확률과 통계</strong>가 공통 출제 범위입니다(미적분Ⅱ·기하는 수능 범위 밖). 첫째의 수능은 2036년 11월이라 그사이 다시 바뀔 수 있어요. <a href="../system/admission.html">대입 제도</a> 페이지에서 매년 확인합니다.</p>
+  </div>
+</div>
+
+<h2 id="stuck">학년별 걸림돌</h2>
+<p>수포자는 "어느 날 갑자기" 생기지 않습니다. 대부분 아래 지점 중 하나에서 생긴 작은 구멍이 2~3년 뒤에 드러나요.</p>
+<div class="timeline">
+  <div class="tl-item" style="--c:var(--root)"><div class="tl-when">초2</div><h3>받아내림 · 곱셈구구</h3><p>신호: 손가락 계산이 계속됨, 7·8·9단에서 멈춤. 대처: 10 묶음 교구, 구구단 노래·카드 게임.</p></div>
+  <div class="tl-item" style="--c:var(--stem)"><div class="tl-when">초3~4</div><h3>분수 개념 · 긴 나눗셈</h3><p>신호: 1/3과 1/4 중 어느 게 큰지 헷갈림. 대처: 피자·종이 접기로 "같은 크기로 나눈 것 중 몇 개" 말하기.</p></div>
+  <div class="tl-item" style="--c:var(--branch)"><div class="tl-when">초5</div><h3>약분·통분 · 분수 사칙</h3><p>신호: 풀이 절차를 외웠지만 이유를 설명 못 함. 대처: 약수·배수와 분수 개념을 먼저 되짚기.</p></div>
+  <div class="tl-item" style="--c:var(--branch)"><div class="tl-when">초6</div><h3>비와 비율</h3><p>신호: 문장제에서 기준량·비교하는 양을 뒤바꿈. 대처: 할인, 요리, 지도 축척 같은 생활 문제.</p></div>
+  <div class="tl-item" style="--c:var(--fruit)"><div class="tl-when">중1</div><h3>음수 · 문자 사용</h3><p>신호: 부호 실수 반복, "x가 왜 나와요?" 대처: □ 넣기 문제와 연결, 수직선 위에서 움직여 보기.</p></div>
+  <div class="tl-item" style="--c:var(--fruit)"><div class="tl-when">중2</div><h3>일차함수</h3><p>신호: 그래프와 식을 따로 외움. 대처: 표 → 그래프 → 식을 오가는 연습, 기울기 = 비율.</p></div>
+  <div class="tl-item" style="--c:var(--fruit)"><div class="tl-when">중3</div><h3>인수분해 · 이차함수</h3><p>신호: 인수분해가 느림. 대처: 고등 선행 전에 이 단원부터 완성.</p></div>
+  <div class="tl-item" style="--c:var(--accent)"><div class="tl-when">고1~2</div><h3>추상화 급증</h3><p>함수·수열·미적분. 앞 결손이 한꺼번에 드러나는 시기. 개념 지도에서 거꾸로 짚어 보세요.</p></div>
+</div>
+
+<h2 id="stuck-more">막혔을 때 이렇게</h2>
+<details class="acc"><summary>문제는 푸는데 설명을 못 해요<small>절차 암기형 신호</small></summary><div class="acc-body"><p>"어떻게 풀었어?"를 매일 한 문제만 물어보세요. 설명이 막히는 지점이 곧 개념 구멍입니다. 부모가 정답을 말해 주기보다 "그림으로 그려 볼까?"로 돌려주세요.</p></div></details>
+<details class="acc"><summary>연산 실수가 너무 많아요<small>알면서 틀린다</small></summary><div class="acc-body"><p>연산 속도·정확도가 낮으면 사고력 문제에 쓸 여유가 없습니다. 연산 학습지를 하루 10분, 짧고 매일. 시간을 재기보다 "오늘 실수 몇 개?"를 스스로 세게 하세요.</p></div></details>
+<details class="acc"><summary>수학 시간이 싫대요<small>공부 정서 적신호</small></summary><div class="acc-body"><p>진도보다 정서가 먼저입니다. 1~2주 문제집을 쉬고 보드게임·퍼즐·요리로 "수학 = 재미"를 회복한 뒤 한 단계 쉬운 문제집으로 다시 시작해요. <a href="../wellbeing/study-emotion.html">공부 정서 지키기</a>도 함께 보세요.</p></div></details>
+<details class="acc"><summary>학원 레벨테스트에서 "늦었다"고 들었어요<small>불안이 올라올 때</small></summary><div class="acc-body"><p>레벨테스트는 그 학원의 진도 기준입니다. 현재 학년 개념에 구멍이 없는지, 심화를 70% 이상 푸는지가 우리 집 기준이에요. 결정 전에 <a href="../wellbeing/parent-anxiety.html">부모의 불안 관리</a>를 한 번 읽고 부부가 함께 이야기해요.</p></div></details>
+
+<h2 id="books">문제집 단계: 연산 → 개념 → 유형 → 심화</h2>
+<figure class="dg" style="--dg-min:640px">
+  <svg viewBox="0 0 760 150" role="img" aria-label="문제집 4단계: 연산, 개념, 유형, 심화">
+    <defs><marker id="m-math-step" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <rect x="15" y="80" width="160" height="50" rx="10" class="dg-box c-root"/><text x="95" y="100" text-anchor="middle" class="dg-t">1 연산</text><text x="95" y="118" text-anchor="middle" class="dg-t sm">매일 10분 · 유창성</text>
+    <rect x="205" y="58" width="160" height="72" rx="10" class="dg-box c-stem"/><text x="285" y="88" text-anchor="middle" class="dg-t">2 개념</text><text x="285" y="106" text-anchor="middle" class="dg-t sm">교과서 + 개념서</text>
+    <rect x="395" y="36" width="160" height="94" rx="10" class="dg-box c-branch"/><text x="475" y="76" text-anchor="middle" class="dg-t">3 유형</text><text x="475" y="94" text-anchor="middle" class="dg-t sm">문제 유형 익히기</text>
+    <rect x="585" y="14" width="160" height="116" rx="10" class="dg-box c-fruit"/><text x="665" y="64" text-anchor="middle" class="dg-t">4 심화</text><text x="665" y="82" text-anchor="middle" class="dg-t sm">생각하는 힘</text><text x="665" y="98" text-anchor="middle" class="dg-t sm">70~80% 목표</text>
+    <path d="M175 105 H201" class="dg-line" marker-end="url(#m-math-step)"/>
+    <path d="M365 94 H391" class="dg-line" marker-end="url(#m-math-step)"/>
+    <path d="M555 83 H581" class="dg-line" marker-end="url(#m-math-step)"/>
+  </svg>
+  <figcaption>한 학기 안에서 이 순서로 올라갑니다. 심화를 70~80% 풀면 그때 다음 학기(선행)를 고민해요.</figcaption>
+</figure>
+<div class="cards" style="--min:200px">
+  <div class="card top c-root"><span class="tag">연산</span><h3>계산 근육</h3><p>초1~4 중심. 하루 1~2쪽, 10분. 싫어하면 분량을 줄이고 끊지는 말기.</p><span class="card-foot">신호: 실수가 줄고 속도가 붙음</span></div>
+  <div class="card top c-stem"><span class="tag">개념</span><h3>왜 그런지</h3><p>교과서가 가장 좋은 개념서. 개념 설명을 아이가 부모에게 "가르쳐" 보게 하기.</p><span class="card-foot">신호: 말로 설명할 수 있음</span></div>
+  <div class="card top c-branch"><span class="tag">유형</span><h3>문제 모양 익히기</h3><p>학교 시험 대비의 중심. 틀린 문제에 표시하고 1주 뒤 다시 풀기.</p><span class="card-foot">신호: 단원평가 90점 안팎</span></div>
+  <div class="card top c-fruit"><span class="tag">심화</span><h3>생각하는 힘</h3><p>한 문제에 10분 이상 고민해 보는 경험. 힌트는 한 줄씩만.</p><span class="card-foot">신호: 70~80% 스스로 해결</span></div>
+</div>
+<p><a href="../materials/books.html">교재 로드맵 보기 →</a></p>
+
+<h2 id="home">가정에서 할 것</h2>
+<div class="cards" style="--min:200px">
+  <div class="card"><div class="card-ic" style="--cs:var(--root-soft);--c:var(--root)">🎲</div><h3>보드게임 주 2회</h3><p>주사위·카드 게임은 덧셈·곱셈 유창성과 전략적 사고를 동시에 키워요.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--stem-soft);--c:var(--stem)">🍳</div><h3>요리와 장보기</h3><p>계량컵의 1/2, 1/4. 장보기 합계와 거스름돈. 분수와 어림셈을 몸으로.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--branch-soft);--c:var(--branch)">🗣️</div><h3>"어떻게 풀었어?"</h3><p>하루 한 문제 설명하기. 서술형·사고력의 뿌리이자 결손 탐지기.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--fruit-soft);--c:var(--fruit)">💎</div><h3>틀린 문제 = 보물</h3><p>오답 이유를 말로. "실수"라고 넘기지 말고 어느 단계에서 틀렸는지 찾기.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--accent-soft);--c:var(--accent)">⏰</div><h3>아날로그 시계</h3><p>거실에 바늘 시계 하나. 시각 읽기와 시간 계산이 저절로.</p></div>
+</div>
+
+<h2 id="trips">체험 연계</h2>
+<div class="cards" style="--min:200px">
+  <a class="card c-stem" href="../trips/places.html"><span class="tag">과학관</span><h3>국립과천과학관</h3><p>수학·과학 체험 전시. 퍼즐과 기하 원리를 손으로.</p></a>
+  <a class="card c-branch" href="../trips/places.html"><span class="tag">전시</span><h3>착시·퍼즐 체험</h3><p>도형·대칭·패턴을 놀이로 만나는 전시와 체험관.</p></a>
+  <a class="card c-fruit" href="../trips/places.html"><span class="tag">여행 중</span><h3>여행 계산 담당</h3><p>거리·시간·예산 계산을 아이에게 맡겨 보기. 초5~6이면 비율·속력까지.</p></a>
+</div>
+
+<h2 id="ahead">선행 적정선: 교육특구에서는 vs 우리 집</h2>
+<div class="compare">
+  <div style="--cs:var(--paper-2)"><h4>교육특구에서 흔한 모습</h4><ul><li>초1~3 사고력 수학 학원, 초3~4에 교과 선행으로 전환</li><li>초5~6 중등 과정, 초6~중1에 고1 공통수학 진입</li><li>영재원·경시·과학고/영재학교 트랙은 초4~5부터 준비</li><li>"의대반" 등 초고속 선행반도 있지만 부담·번아웃 사례도 많음</li></ul></div>
+  <div style="--cs:var(--tip-soft);--c:var(--tip)"><h4>우리 집 기준안</h4><ul><li>현행 심화 &gt; 선행: 심화 70~80% 해결이 선행의 조건</li><li>초1~4: 0.5학기 안쪽 예습</li><li>초5~6: 최대 1학년 선행 (아이가 원하고 정서가 괜찮을 때)</li><li>분기마다 개념 지도로 구멍 점검</li></ul></div>
+</div>
+
+<div class="selfcheck" id="math-ahead-check">
+  <p><strong>다음 학기로 넘어가도 될까? 자가 점검</strong></p>
+  <ul class="checklist">
+    <li class="task"><label><input type="checkbox"><span>현재 학기 개념을 아이가 말로 설명할 수 있다</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>유형 문제집 정답률이 90% 안팎이다</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>심화 문제를 70% 이상 스스로 푼다</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>수학 시간을 싫어하지 않는다 (공부 정서 괜찮음)</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>아이가 먼저 "다음 거 해 보고 싶어"라고 한다</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>부부가 선행 범위를 합의하고 결정 로그에 적었다</span></label></li>
+  </ul>
+  <div class="selfcheck-result">
+    <p>점수 <span class="selfcheck-score"></span></p>
+    <p data-min="0">지금은 현행을 깊게 할 때예요. 개념 설명과 유형 정답률부터.</p>
+    <p data-min="3">절반은 준비됐어요. 심화와 정서 항목을 먼저 채워 보세요.</p>
+    <p data-min="5">준비가 됐어요. 0.5~1학기 범위에서 가볍게 시작하고 한 달 뒤 다시 점검해요.</p>
+  </div>
+</div>
+<p><a href="../prelearning/principles.html">선행 vs 심화 원칙 →</a> · <a href="../prelearning/our-plan.html">우리 집 선행 기준 →</a></p>
+
+<h2 id="policy">우리 집 수학 방침</h2>
+<label class="memo-label" for="math-policy">목표 수준 · 방법(학습지/문제집/학원) · 예산 · 점검 주기</label>
+<textarea class="memo" id="math-policy" data-key="subjects-math-policy" placeholder="예) 첫째: 연산 학습지 하루 10분 + 교과 개념·유형. 심화는 주 2회. 분기 회의 때 개념 지도로 점검."></textarea>
+<p class="saved-hint"></p>
+<p class="callout tip">학원 시작·중단 같은 큰 결정은 <a href="../workbook/decision-log.html">결정 로그</a>에 이유와 함께 남겨 두세요.</p>
+
+</div>
+
+<style>
+  .math-ten { padding: 20px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); margin: 0 0 24px; }
+  .math-ten-q { font-weight: 700; font-size: 18px; margin: 0 0 6px; }
+  .math-ten-apples { font-size: 26px; letter-spacing: 2px; margin: 0 0 12px; line-height: 1.4; }
+  .math-ten-opts { display: grid; grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); gap: 8px; }
+  .math-ten-opts .quiz-opt { text-align: center; font-size: 18px; }
+  .math-ten-fb { min-height: 1.6em; margin: 12px 0 0; font-weight: 700; }
+  .math-ten-fb.ok { color: var(--stem); } .math-ten-fb.no { color: var(--accent); }
+  .math-ten-score { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+</style>
+<script>
+(function () {
+  var box = document.getElementById('math-ten');
+  if (!box) return;
+  var q = box.querySelector('[data-q]'), ap = box.querySelector('[data-apples]'), opts = box.querySelector('[data-opts]');
+  var fb = box.querySelector('[data-fb]'), sc = box.querySelector('[data-score]');
+  var n = 0, score = 0, busy = false;
+  try { score = +(localStorage.getItem('subjects-math-ten') || 0) || 0; } catch (e) {}
+  sc.textContent = score;
+  function next() {
+    var prev = n;
+    while (n === prev) { n = 1 + Math.floor(Math.random() * 9); }
+    var s = '';
+    for (var i = 0; i < 10; i++) { s += i < n ? '🍎' : '⚪'; }
+    ap.textContent = s;
+    q.textContent = '사과 ' + n + '개 + ? 개 = 10개';
+    fb.textContent = ''; fb.className = 'math-ten-fb';
+    busy = false;
+  }
+  for (var k = 1; k <= 9; k++) {
+    (function (v) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'quiz-opt'; b.textContent = v;
+      b.addEventListener('click', function () {
+        if (busy) return;
+        if (v + n === 10) {
+          busy = true; score++; sc.textContent = score;
+          try { localStorage.setItem('subjects-math-ten', score); } catch (e) {}
+          fb.className = 'math-ten-fb ok'; fb.textContent = '딩동댕! ' + n + ' + ' + v + ' = 10 🎉';
+          setTimeout(next, 1100);
+        } else {
+          fb.className = 'math-ten-fb no'; fb.textContent = n + ' + ' + v + ' = ' + (n + v) + '. 빈 동그라미 ⚪를 세어 봐!';
+        }
+      });
+      opts.appendChild(b);
+    })(k);
+  }
+  next();
+})();
+</script>

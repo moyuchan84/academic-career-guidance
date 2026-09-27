@@ -1,0 +1,168 @@
+---
+title: 분기별 부부 회의
+parent: 부부 워크북
+nav_order: 1
+summary: 분기 선택 · 안건 5단계 · 인쇄
+---
+<style>
+.qm-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 24px; padding: 14px 16px; border-radius: var(--radius); background: var(--paper-2); }
+.qm-bar select { height: 40px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: 600 15px var(--sans); }
+.qm-bar .qm-status { font-size: 13px; color: var(--muted); }
+.qm-step { margin: 0 0 26px; padding: 18px 20px; border: 1px solid var(--line); border-left: 4px solid var(--c, var(--accent)); border-radius: var(--radius); background: var(--card); }
+.qm-step h3 { margin-top: 0 !important; }
+.qm-step .qm-ex { font-size: 13.5px; color: var(--muted); margin: 0; }
+.qm-two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+@media (max-width: 720px) { .qm-two { grid-template-columns: 1fr; } }
+@media print {
+  .qm-bar button, .qm-noprint { display: none !important; }
+  .qm-bar { background: none; padding: 0; }
+  .qm-step { break-inside: avoid; }
+  .qm-step .memo { resize: none; border: 1px solid #999; }
+}
+</style>
+<header class="page-hero">
+  <p class="kicker">부부 워크북 · 3월 · 6월 · 9월 · 12월</p>
+  <h1>분기별 부부 회의</h1>
+  <p class="lede">30~60분, 차 한 잔 놓고 앉는 정기 회의입니다. 분기를 고르면 그 분기의 회의록이 따로 저장돼요. 목표는 완벽한 계획이 아니라 <strong>아이의 지금을 같이 보는 것</strong>입니다.</p>
+</header>
+
+<div class="qm-bar">
+  <label for="qm-quarter" style="font-weight:700">분기</label>
+  <select id="qm-quarter" aria-label="회의 분기 선택"></select>
+  <button type="button" class="btn sm" id="qm-print">회의록 인쇄</button>
+  <span class="qm-status" id="qm-status"></span>
+</div>
+
+<div class="qm-noprint">
+<div class="timeline">
+  <div class="tl-item" style="--c:var(--root)"><div class="tl-when">5분</div><h3>합의문 소리 내어 읽기</h3><p><a href="../start/philosophy.html">우리 가족 교육 철학</a> 중 한 문항만 읽어도 좋아요.</p></div>
+  <div class="tl-item" style="--c:var(--stem)"><div class="tl-when">10분</div><h3>지난 분기 돌아보기</h3><p>잘된 것 먼저. 지난 회의의 "다음 분기 목표"를 옆에 두고 봅니다.</p></div>
+  <div class="tl-item" style="--c:var(--branch)"><div class="tl-when">15분</div><h3>아이별 상태</h3><p><a href="observation.html">관찰 기록</a>을 근거로. 공부 정서(1~5), 건강, 친구.</p></div>
+  <div class="tl-item" style="--c:var(--fruit)"><div class="tl-when">15분</div><h3>과목 · 예체능 · 사교육</h3><p>유지 / 변경 / 중단. 예산 상한 안에서.</p></div>
+  <div class="tl-item" style="--c:var(--accent)"><div class="tl-when">10분</div><h3>다음 분기 목표 · 결정</h3><p>아이별 1~2개. 결정은 <a href="decision-log.html">결정 로그</a>로 옮겨요.</p></div>
+</div>
+<p class="callout tip">회의 규칙: 상대 의견을 끝까지 듣고 나서 말하기, 아이 이야기는 "사실 → 느낌 → 제안" 순서로, 결론이 안 나면 2주 보류.</p>
+</div>
+
+<h2 id="minutes">회의록 <span id="qm-title" style="color:var(--accent)"></span></h2>
+
+<section class="qm-step" style="--c:var(--root)">
+  <h3>0. 일시 · 참석</h3>
+  <div class="qm-two">
+    <div><label class="memo-label" for="qm-f-date">일시</label><input class="memo qm-f" id="qm-f-date" data-field="date" placeholder="예) 9/20 토 밤 9시"><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="qm-f-attend">참석</label><input class="memo qm-f" id="qm-f-attend" data-field="attend" placeholder="엄마, 아빠 (필요 시 아이)"><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="qm-step" style="--c:var(--stem)">
+  <h3>1. 지난 분기 돌아보기</h3>
+  <div class="qm-two">
+    <div><label class="memo-label" for="qm-f-good">잘된 것</label><textarea class="memo qm-f" id="qm-f-good" data-field="good"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="qm-f-bad">아쉬운 것</label><textarea class="memo qm-f" id="qm-f-bad" data-field="bad"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="qm-step" style="--c:var(--branch)">
+  <h3>2. 아이 상태</h3>
+  <p class="qm-ex">공부 정서 1~5점 (아이에게 "요즘 공부 몇 점?"이라고 물어본 답), 건강·수면, 친구 관계, 요즘 빠져 있는 것.</p>
+  <div class="qm-two">
+    <div><label class="memo-label" for="qm-f-kid1">첫째</label><textarea class="memo qm-f" id="qm-f-kid1" data-field="kid1"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="qm-f-kid2">둘째</label><textarea class="memo qm-f" id="qm-f-kid2" data-field="kid2"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="qm-step" style="--c:var(--fruit)">
+  <h3>3. 과목 · 예체능 · 사교육</h3>
+  <p class="qm-ex">국어·독서 / 수학 / 영어 / 기타. 예체능·학원·학습지는 유지·변경·중단 중 하나로. 예산 상한을 넘지 않는지도 확인.</p>
+  <div class="qm-two">
+    <div><label class="memo-label" for="qm-f-subjects">과목별 점검</label><textarea class="memo qm-f" id="qm-f-subjects" data-field="subjects"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="qm-f-activities">예체능 · 사교육 유지/변경</label><textarea class="memo qm-f" id="qm-f-activities" data-field="activities"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="qm-step" style="--c:var(--accent)">
+  <h3>4. 다음 분기 목표 (아이별 1~2개)</h3>
+  <div class="qm-two">
+    <div><label class="memo-label" for="qm-f-goal1">첫째</label><textarea class="memo qm-f" id="qm-f-goal1" data-field="goal1" placeholder="예) 매일 20분 스스로 읽기"></textarea><p class="saved-hint"></p></div>
+    <div><label class="memo-label" for="qm-f-goal2">둘째</label><textarea class="memo qm-f" id="qm-f-goal2" data-field="goal2"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
+<section class="qm-step" style="--c:var(--note)">
+  <h3>5. 결정 사항</h3>
+  <p class="qm-ex">여기 적은 결정은 <a href="decision-log.html">결정 로그</a>에 이유와 "다시 볼 날짜"와 함께 옮겨 적으세요.</p>
+  <label class="memo-label" for="qm-f-decisions">결정한 것</label><textarea class="memo qm-f" id="qm-f-decisions" data-field="decisions"></textarea><p class="saved-hint"></p>
+  <label class="memo-label" for="qm-f-hold">보류한 것 (2주 뒤 다시)</label><textarea class="memo qm-f" id="qm-f-hold" data-field="hold"></textarea><p class="saved-hint"></p>
+</section>
+
+<p class="callout warning qm-noprint">회의록은 이 브라우저에만 저장돼요. 두 사람이 같은 기록을 보려면 한 기기에서 작성하거나, 인쇄해 두거나, 결정 사항을 결정 로그(JSON 내보내기 지원)로 옮기세요.</p>
+
+<script>
+(function () {
+  var PREFIX = 'memo:workbook-qm-';
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  var sel = document.getElementById('qm-quarter');
+  var status = document.getElementById('qm-status');
+  var title = document.getElementById('qm-title');
+  var fields = document.querySelectorAll('.qm-f');
+  var names = ['3월 목표', '6월 점검', '9월 점검', '12월 회고'];
+  if (!sel) return;
+
+  function hasData(q) {
+    for (var i = 0; i < fields.length; i++) { var v = get(PREFIX + q + '-' + fields[i].getAttribute('data-field')); if (v) return true; }
+    return false;
+  }
+  var now = new Date();
+  var curQ = now.getFullYear() + 'Q' + (Math.floor(now.getMonth() / 3) + 1);
+  var lastYear = Math.max(2037, now.getFullYear() + 1);
+  for (var y = 2026; y <= lastYear; y++) {
+    for (var q = 1; q <= 4; q++) {
+      var id = y + 'Q' + q, o = document.createElement('option');
+      o.value = id;
+      o.textContent = y + '-Q' + q + ' · ' + names[q - 1] + (hasData(id) ? ' ●' : '') + (id === curQ ? ' (이번 분기)' : '');
+      sel.appendChild(o);
+    }
+  }
+  var saved = get('workbook-qm-selected');
+  sel.value = saved && sel.querySelector('option[value="' + saved + '"]') ? saved : curQ;
+  if (!sel.value) sel.selectedIndex = 0;
+
+  function load() {
+    var q = sel.value;
+    if (title) title.textContent = q.replace('Q', '-Q');
+    for (var i = 0; i < fields.length; i++) {
+      var v = get(PREFIX + q + '-' + fields[i].getAttribute('data-field'));
+      fields[i].value = v || '';
+      var hint = fields[i].nextElementSibling; if (hint && hint.className === 'saved-hint') hint.textContent = '';
+    }
+    if (status) status.textContent = hasData(q) ? '저장된 회의록이 있어요' : '새 회의록';
+    set('workbook-qm-selected', q);
+  }
+  sel.addEventListener('change', load);
+
+  for (var i = 0; i < fields.length; i++) {
+    (function (f) {
+      var t;
+      f.addEventListener('input', function () {
+        clearTimeout(t);
+        t = setTimeout(function () {
+          set(PREFIX + sel.value + '-' + f.getAttribute('data-field'), f.value);
+          var hint = f.nextElementSibling;
+          if (hint && hint.className === 'saved-hint') hint.textContent = '이 브라우저에 저장됨 · ' + sel.value.replace('Q', '-Q');
+          var opt = sel.options[sel.selectedIndex];
+          if (opt && opt.textContent.indexOf('●') < 0 && f.value) opt.textContent = opt.textContent.replace(/( \(이번 분기\))?$/, ' ●$1');
+        }, 400);
+      });
+    })(fields[i]);
+  }
+  load();
+
+  var pb = document.getElementById('qm-print');
+  if (pb) pb.addEventListener('click', function () {
+    var ta = document.querySelectorAll('.qm-step textarea');
+    for (var j = 0; j < ta.length; j++) { ta[j].style.height = 'auto'; ta[j].style.height = (ta[j].scrollHeight + 4) + 'px'; }
+    try { window.print(); } catch (e) {}
+  });
+})();
+</script>

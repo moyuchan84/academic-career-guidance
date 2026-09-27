@@ -1,0 +1,145 @@
+---
+title: 사교육 예산
+parent: 학습지·사교육
+nav_order: 4
+summary: 두 아이 월·연 비용 계산기 · 소득 대비 상한
+---
+<header class="page-hero">
+  <p class="kicker">학습지·사교육 · 예산</p>
+  <h1>사교육 예산</h1>
+  <p class="lede">사교육비는 한 과목씩 "이 정도는 괜찮겠지"로 늘어나다가, 합쳐 보면 놀라게 되는 돈입니다. 두 아이의 비용을 한 화면에 모으고, <strong>부부가 미리 정한 상한</strong>과 비교해 보세요. 숫자는 이 브라우저에만 저장됩니다.</p>
+</header>
+
+<h2 id="calc">예산 계산기</h2>
+<p>금액은 <strong>만원</strong> 단위로 적어 주세요 (예: 15만 원 → 15). 빈칸은 0으로 계산합니다.</p>
+<div class="table-wrap bud">
+  <table>
+    <thead><tr><th scope="col">항목</th><th scope="col">첫째 (월)</th><th scope="col">둘째 (월)</th><th scope="col">항목 합계</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">학습지</th><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-ws-1" data-k="ws-1" aria-label="학습지 첫째"></td><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-ws-2" data-k="ws-2" aria-label="학습지 둘째"></td><td class="bud-row" data-row="ws">0</td></tr>
+      <tr><th scope="row">수학</th><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-math-1" data-k="math-1" aria-label="수학 첫째"></td><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-math-2" data-k="math-2" aria-label="수학 둘째"></td><td class="bud-row" data-row="math">0</td></tr>
+      <tr><th scope="row">영어</th><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-eng-1" data-k="eng-1" aria-label="영어 첫째"></td><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-eng-2" data-k="eng-2" aria-label="영어 둘째"></td><td class="bud-row" data-row="eng">0</td></tr>
+      <tr><th scope="row">예체능</th><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-arts-1" data-k="arts-1" aria-label="예체능 첫째"></td><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-arts-2" data-k="arts-2" aria-label="예체능 둘째"></td><td class="bud-row" data-row="arts">0</td></tr>
+      <tr><th scope="row">기타 (교재·체험 등)</th><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-etc-1" data-k="etc-1" aria-label="기타 첫째"></td><td><input class="memo bud-in" type="number" min="0" step="0.5" inputmode="decimal" id="bud-etc-2" data-k="etc-2" aria-label="기타 둘째"></td><td class="bud-row" data-row="etc">0</td></tr>
+    </tbody>
+    <tfoot><tr><th scope="row">아이별 합계</th><td id="bud-sum-1">0</td><td id="bud-sum-2">0</td><td id="bud-sum-all">0</td></tr></tfoot>
+  </table>
+</div>
+
+<div class="form-grid">
+  <div><label class="memo-label" for="bud-income">월 가구 소득 (세후, 만원)</label><input class="memo bud-in" type="number" min="0" step="1" inputmode="decimal" id="bud-income" data-k="income" placeholder="예) 600"></div>
+  <div><label class="memo-label" for="bud-cap">부부가 정한 상한 (소득의 %)</label><input class="memo bud-in" type="number" min="0" max="100" step="1" inputmode="decimal" id="bud-cap" data-k="cap" placeholder="예) 15"></div>
+</div>
+
+<div class="stats" style="margin-top:20px">
+  <div class="stat" style="--c: var(--accent)"><b id="bud-out-month">0</b><span>월 합계 (만원)</span></div>
+  <div class="stat" style="--c: var(--branch)"><b id="bud-out-year">0</b><span>연간 합계 (만원)</span></div>
+  <div class="stat" style="--c: var(--stem)"><b id="bud-out-pct">–</b><span>소득 대비</span></div>
+  <div class="stat" style="--c: var(--root)"><b id="bud-out-cap">–</b><span>상한 금액 (월, 만원)</span></div>
+</div>
+<div class="check-progress bud-meter"><div class="meter" id="bud-meter"><i></i></div><span class="count" id="bud-status">소득과 상한을 입력하면 상한 대비 사용량이 보여요.</span></div>
+<p class="bud-future" id="bud-future"></p>
+<p><button type="button" class="btn ghost sm" id="bud-reset">모두 지우기</button></p>
+
+<p class="callout note">비교가 필요하면 통계청 <strong>「초중고 사교육비 조사」</strong>(매년 발표)의 학교급별 평균을 참고할 수 있어요. 다만 평균은 지역·학년·참여 여부에 따라 크게 달라서, 우리 집 기준은 평균이 아니라 <strong>우리 소득과 우선순위</strong>로 정합니다.</p>
+
+<h2 id="think">숫자를 보고 함께 이야기할 것</h2>
+<div class="cards" style="--min: 220px">
+  <div class="card c-stem"><div class="card-ic">⚖️</div><h3>둘째도 같은 속도라면?</h3><p>첫째에게 한 선택이 둘째에게도 이어지면 비용은 두 배가 됩니다. 형제가 함께 다닐 수 있는 활동도 생각해 보세요.</p></div>
+  <div class="card c-branch"><div class="card-ic">📈</div><h3>학년이 오를수록</h3><p>일반적으로 중·고등으로 갈수록 과목과 시간이 늘어납니다. 초등 때 상한에 여유를 남겨 두는 게 안전해요.</p></div>
+  <div class="card c-fruit"><div class="card-ic">✈️</div><h3>장기 목표 저축</h3><p>해외 진학·교환학생 가능성이 있다면 월 사교육비와 별도로 장기 저축 계획을 세웁니다.</p><span class="card-foot"><a href="../paths/overseas-prep.html">해외 준비 로드맵 →</a></span></div>
+  <div class="card c-accent"><div class="card-ic">🧺</div><h3>돈으로 못 사는 것</h3><p>함께 읽기, 산책, 박물관, 주말 운동. 예산이 줄어도 이 시간은 줄지 않게.</p></div>
+</div>
+
+<label class="memo-label" for="bud-memo">항목별 유지 여부 · 다음 분기 조정 계획</label>
+<textarea class="memo" id="bud-memo" data-key="materials-budget-plan" placeholder="예) 첫째 영어: 유지 (아이 만족 4/5) · 둘째 학습지: 6월에 중단 검토 · 상한 15% 초과 시 예체능부터 조정하지 않기"></textarea>
+<p class="saved-hint"></p>
+
+<p class="callout tip">상한을 넘는 결정은 <a href="../workbook/decision-log.html">결정 로그</a>에 이유를 남기고, 분기별 부부 회의에서 다시 봅니다.</p>
+
+<style>
+  .bud td, .bud th { vertical-align: middle; }
+  .bud td { min-width: 110px; }
+  .bud input.memo { height: 38px; padding: 6px 10px; text-align: right; }
+  .bud .bud-row, .bud tfoot td { font-weight: 700; text-align: right; }
+  .bud-meter .meter { max-width: none; height: 12px; }
+  .bud-meter.is-over .meter > i { background: var(--danger); }
+  .bud-meter.is-over .count { color: var(--danger); font-weight: 700; }
+  .bud-future { color: var(--ink-2); font-size: 14.5px; }
+</style>
+<script>
+(function () {
+  var P = 'budget-';
+  function get(k) { try { return localStorage.getItem(P + k); } catch (e) { return null; } }
+  function set(k, v) { try { localStorage.setItem(P + k, v); } catch (e) {} }
+  function del(k) { try { localStorage.removeItem(P + k); } catch (e) {} }
+  var ins = [].slice.call(document.querySelectorAll('.bud-in'));
+  if (!ins.length) return;
+  var $ = function (id) { return document.getElementById(id); };
+  function num(el) { var v = parseFloat(el.value); return isFinite(v) && v > 0 ? v : 0; }
+  function fmt(v) { return (Math.round(v * 10) / 10).toLocaleString('ko-KR'); }
+  function val(k) { var el = document.querySelector('.bud-in[data-k="' + k + '"]'); return el ? num(el) : 0; }
+  var rows = ['ws', 'math', 'eng', 'arts', 'etc'];
+  function yearsTo(y, m) {
+    var now = new Date(), end = new Date(y, m, 1);
+    var months = (end.getFullYear() - now.getFullYear()) * 12 + (end.getMonth() - now.getMonth());
+    return months > 0 ? months : 0;
+  }
+  function calc() {
+    var s1 = 0, s2 = 0;
+    rows.forEach(function (r) {
+      var a = val(r + '-1'), b = val(r + '-2');
+      s1 += a; s2 += b;
+      var cell = document.querySelector('.bud-row[data-row="' + r + '"]');
+      if (cell) cell.textContent = fmt(a + b);
+    });
+    var tot = s1 + s2;
+    $('bud-sum-1').textContent = fmt(s1);
+    $('bud-sum-2').textContent = fmt(s2);
+    $('bud-sum-all').textContent = fmt(tot);
+    $('bud-out-month').textContent = fmt(tot);
+    $('bud-out-year').textContent = fmt(tot * 12);
+    var inc = val('income'), cap = val('cap');
+    var meterWrap = document.querySelector('.bud-meter'), bar = document.querySelector('#bud-meter > i'), status = $('bud-status');
+    meterWrap.classList.remove('is-over');
+    if (inc > 0) {
+      $('bud-out-pct').textContent = fmt(tot / inc * 100) + '%';
+    } else {
+      $('bud-out-pct').textContent = '–';
+    }
+    if (inc > 0 && cap > 0) {
+      var capAmt = inc * cap / 100;
+      $('bud-out-cap').textContent = fmt(capAmt);
+      var use = capAmt > 0 ? tot / capAmt * 100 : 0;
+      bar.style.setProperty('--v', Math.min(use, 100));
+      if (use > 100) {
+        meterWrap.classList.add('is-over');
+        status.textContent = '상한 대비 ' + fmt(use) + '% · 월 ' + fmt(tot - capAmt) + '만원 초과';
+      } else {
+        status.textContent = '상한 대비 ' + fmt(use) + '% · 월 ' + fmt(capAmt - tot) + '만원 여유';
+      }
+    } else {
+      $('bud-out-cap').textContent = '–';
+      bar.style.setProperty('--v', 0);
+      status.textContent = '소득과 상한을 입력하면 상한 대비 사용량이 보여요.';
+    }
+    var m1 = yearsTo(2036, 10), m2 = yearsTo(2037, 10);
+    if (tot > 0) {
+      $('bud-future').textContent = '참고: 지금 금액 그대로 수능 때까지 이어진다면 첫째 약 ' + fmt(s1 * m1) + '만원(' + Math.round(m1 / 12) + '년), 둘째 약 ' + fmt(s2 * m2) + '만원(' + Math.round(m2 / 12) + '년). 학년 상승·물가는 반영하지 않은 단순 곱셈이에요.';
+    } else {
+      $('bud-future').textContent = '';
+    }
+  }
+  ins.forEach(function (el) {
+    var k = el.getAttribute('data-k');
+    var v = get(k); if (v !== null) el.value = v;
+    el.addEventListener('input', function () { set(k, el.value); calc(); });
+  });
+  $('bud-reset').addEventListener('click', function () {
+    if (!window.confirm('입력한 금액을 모두 지울까요?')) return;
+    ins.forEach(function (el) { el.value = ''; del(el.getAttribute('data-k')); });
+    calc();
+  });
+  calc();
+})();
+</script>

@@ -1,0 +1,198 @@
+---
+title: 오늘 마음 날씨
+parent: 마음 돌봄
+nav_order: 1
+kid: true
+summary: 아이가 매일 고르는 기분 날씨와 7일 기록
+---
+<style>
+  .mood-who, .mood-pick { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+  .mood-who button { padding: 8px 18px; border-radius: 99px; border: 2px solid var(--line); background: var(--card); color: var(--ink-2); font: 600 15px var(--sans); cursor: pointer; }
+  .mood-who button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .mood-pick button { flex: 1 1 96px; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 14px 8px; border-radius: 18px; border: 2px solid var(--line); background: var(--card); color: var(--ink); font: 600 14px var(--sans); cursor: pointer; transition: transform .15s, border-color .15s; }
+  .mood-pick button span { font-size: 38px; line-height: 1.1; }
+  .mood-pick button:hover { transform: translateY(-2px); }
+  .mood-pick button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); transform: scale(1.04); }
+  .mood-msg { min-height: 1.6em; font-weight: 700; color: var(--accent); margin: 0 0 12px; }
+  .mood-strip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin: 0 0 22px; }
+  .mood-strip div { text-align: center; padding: 10px 2px 8px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+  .mood-strip b { display: block; font-size: 26px; line-height: 1.2; min-height: 32px; }
+  .mood-strip small { font-size: 11.5px; color: var(--muted); }
+  .mood-strip .is-today { border: 2px solid var(--accent); }
+  .mood-strip div[title] { cursor: help; }
+  .mood-parent td, .mood-parent th { text-align: center; }
+</style>
+
+<header class="page-hero">
+  <p class="kicker">하루 10초 · 기분을 날씨로</p>
+  <h1>오늘 마음 날씨</h1>
+  <p class="lede">아이가 매일 자기 기분을 날씨로 골라 두는 페이지입니다. 기록은 이 기기의 브라우저에만 남아요. 점수를 매기는 게 아니라 <strong>대화의 문을 여는 도구</strong>입니다.</p>
+</header>
+
+<!-- ================= KID ================= -->
+<div class="kid-only">
+  <div class="kid-box">
+    <div class="mascot" data-stage="stem"></div>
+    <div>
+      <h3>오늘 마음은 어떤 날씨야?</h3>
+      <p>기분이 좋으면 해님, 조금 속상하면 구름, 많이 속상하면 비. 어떤 날씨든 다 괜찮아. 새싹이도 비 오는 날이 있거든!</p>
+    </div>
+  </div>
+
+  <h2 id="kid-who">누구의 마음 날씨?</h2>
+  <div class="mood-who" id="mood-who">
+    <button type="button" data-who="첫째" aria-pressed="true">첫째</button>
+    <button type="button" data-who="둘째" aria-pressed="false">둘째</button>
+  </div>
+
+  <h2 id="kid-pick">오늘의 날씨 고르기</h2>
+  <div class="mood-pick" id="mood-pick">
+    <button type="button" data-w="0" aria-pressed="false"><span>☀️</span>맑음<small>신나!</small></button>
+    <button type="button" data-w="1" aria-pressed="false"><span>🌤️</span>조금 맑음<small>괜찮아</small></button>
+    <button type="button" data-w="2" aria-pressed="false"><span>☁️</span>흐림<small>그냥 그래</small></button>
+    <button type="button" data-w="3" aria-pressed="false"><span>🌧️</span>비<small>속상해</small></button>
+    <button type="button" data-w="4" aria-pressed="false"><span>⛈️</span>천둥번개<small>화나거나 무서워</small></button>
+  </div>
+  <p class="mood-msg" id="mood-msg" aria-live="polite"></p>
+  <label class="memo-label" for="mood-why">왜 그런 날씨야? (안 써도 돼)</label>
+  <input class="memo" id="mood-why" type="text" maxlength="80" placeholder="예) 친구랑 딱지치기 해서 신났어">
+  <p class="saved-hint" id="mood-why-hint"></p>
+
+  <h2 id="kid-week">나의 일주일 날씨</h2>
+  <div class="mood-strip" id="mood-strip-kid"></div>
+
+  <h2 id="kid-tips">비 오는 날 해 볼 것</h2>
+  <div class="cards" style="--min: 190px">
+    <button class="flip" style="min-height:140px"><span class="flip-front"><b>🌬️ 풍선 숨쉬기</b><span>화가 날 때</span></span><span class="flip-back"><b>배에 풍선이 있다고 상상해</b><span>코로 천천히 넷 세며 부풀리고, 입으로 여섯 세며 빼. 다섯 번!</span></span></button>
+    <button class="flip" style="min-height:140px"><span class="flip-front"><b>🤗 꼭 안기</b><span>속상할 때</span></span><span class="flip-back"><b>엄마 아빠한테 "안아 줘"</b><span>말하기 어려우면 그냥 안아 달라고 해도 돼.</span></span></button>
+    <button class="flip" style="min-height:140px"><span class="flip-front"><b>✏️ 그림으로 그리기</b><span>말로 하기 어려울 때</span></span><span class="flip-back"><b>마음을 그려 봐</b><span>오늘 마음을 괴물이나 구름으로 그려 보면 조금 작아져.</span></span></button>
+    <button class="flip" style="min-height:140px"><span class="flip-front"><b>🏃 몸 움직이기</b><span>답답할 때</span></span><span class="flip-back"><b>줄넘기 20번, 동네 한 바퀴</b><span>몸을 움직이면 마음속 먹구름도 같이 움직여.</span></span></button>
+  </div>
+</div>
+
+<!-- ================= PARENT ================= -->
+<div class="parent-only">
+
+<h2 id="read">최근 2주 기록</h2>
+<p>아이가 아이 모드에서 고른 날씨가 여기에 모입니다. 칸에 마우스를 올리면 아이가 적은 "왜?"가 보여요.</p>
+<div class="table-wrap mood-parent"><table>
+  <thead id="mood-p-head"><tr><th>아이</th></tr></thead>
+  <tbody id="mood-p-body"><tr><td>아직 기록이 없어요.</td></tr></tbody>
+</table></div>
+<p class="callout" id="mood-alert" data-label="이번 주 신호" hidden></p>
+
+<h2 id="how">이렇게 읽어요</h2>
+<div class="cards" style="--min: 220px">
+  <div class="card top c-tip"><span class="tag">괜찮아요</span><h3>날씨가 바뀐다</h3><p>맑음과 비가 섞여 있는 게 정상입니다. 비 오는 날이 있다는 건 아이가 솔직하게 기록한다는 뜻이에요.</p></div>
+  <div class="card top c-warn"><span class="tag">대화하기</span><h3>비·천둥이 한 주 3일 이상</h3><p>혼내거나 캐묻지 말고, 산책이나 차 안에서 "요즘 좀 흐린 날이 많네?"로 가볍게 시작합니다.</p></div>
+  <div class="card top c-danger"><span class="tag">점검하기</span><h3>2주 넘게 흐림 이하</h3><p>일정·관계·몸 상태를 함께 봅니다. <a href="burnout.html">번아웃 신호 자가 점검</a>으로 넘어가세요.</p></div>
+</div>
+
+<h2 id="dont">하지 말아야 할 것</h2>
+<div class="compare">
+  <div style="--cs: var(--danger-soft); --c: var(--danger)"><h4>이러면 기록을 멈춰요</h4><ul><li>"왜 또 비야?" 하고 따지기</li><li>맑음을 고르라고 은근히 유도하기</li><li>"왜?" 칸 내용을 식탁에서 꺼내기</li></ul></div>
+  <div style="--cs: var(--tip-soft); --c: var(--tip)"><h4>이러면 계속 써요</h4><ul><li>"알려 줘서 고마워"로 끝내기</li><li>부모도 자기 날씨를 말해 주기</li><li>비 오는 날엔 안아 주고, 해결은 나중에</li></ul></div>
+</div>
+<p class="callout note">두 아이가 같은 기기를 쓰면 아이 모드 위쪽에서 "첫째/둘째"를 먼저 고르게 하세요. 기록은 이 브라우저에만 저장되므로 기기를 바꾸면 이어지지 않습니다.</p>
+
+</div>
+
+<script>
+(function () {
+  var KEY = 'wellbeing-mood';
+  var W = [['☀️', '맑음'], ['🌤️', '조금 맑음'], ['☁️', '흐림'], ['🌧️', '비'], ['⛈️', '천둥번개']];
+  var MSG = ['와, 신나는 날이구나! ☀️', '괜찮은 하루였구나 🌤️', '그런 날도 있지. 알려 줘서 고마워 ☁️', '속상했구나. 엄마 아빠한테 안아 달라고 해 볼까? 🌧️', '많이 힘들었구나. 새싹이가 옆에 있을게. 엄마 아빠한테도 꼭 말해 줘 ⛈️'];
+  var DAYS = ['일', '월', '화', '수', '목', '금', '토'];
+  var $ = function (id) { return document.getElementById(id); };
+  function load() { try { return JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { return {}; } }
+  function save(d) { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {} }
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function ds(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function back(n) { var d = new Date(); d.setDate(d.getDate() - n); return d; }
+  var data = load();
+  var who = '첫째';
+  try { who = localStorage.getItem('wellbeing-mood-who') || '첫째'; } catch (e) {}
+  var today = ds(new Date());
+
+  function entry(w, day) { return (data[w] || {})[day]; }
+  function cell(e, d, isToday) {
+    var div = document.createElement('div');
+    if (isToday) div.className = 'is-today';
+    var b = document.createElement('b'); b.textContent = e ? W[e.w][0] : '·';
+    var s = document.createElement('small'); s.textContent = (d.getMonth() + 1) + '/' + d.getDate() + ' ' + DAYS[d.getDay()];
+    if (e) div.title = W[e.w][1] + (e.why ? ' · ' + e.why : '');
+    div.appendChild(b); div.appendChild(s);
+    return div;
+  }
+  function renderKid() {
+    var strip = $('mood-strip-kid'); if (!strip) return;
+    strip.innerHTML = '';
+    for (var i = 6; i >= 0; i--) { var d = back(i); strip.appendChild(cell(entry(who, ds(d)), d, i === 0)); }
+    var e = entry(who, today);
+    var btns = $('mood-pick').querySelectorAll('button');
+    for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-pressed', e && e.w === j ? 'true' : 'false');
+    $('mood-why').value = e && e.why ? e.why : '';
+    var wb = $('mood-who').querySelectorAll('button');
+    for (var k = 0; k < wb.length; k++) wb[k].setAttribute('aria-pressed', wb[k].getAttribute('data-who') === who ? 'true' : 'false');
+  }
+  function renderParent() {
+    var head = $('mood-p-head'), body = $('mood-p-body'); if (!head) return;
+    var h = '<tr><th>아이</th>', i, d;
+    for (i = 13; i >= 0; i--) { d = back(i); h += '<th>' + (d.getMonth() + 1) + '/' + d.getDate() + '</th>'; }
+    head.innerHTML = h + '</tr>';
+    body.innerHTML = '';
+    var alerts = [];
+    ['첫째', '둘째'].forEach(function (w) {
+      var tr = document.createElement('tr'), th = document.createElement('th'); th.textContent = w; tr.appendChild(th);
+      var rainy = 0, cloudyRun = 0, run = 0;
+      for (i = 13; i >= 0; i--) {
+        d = back(i); var e = entry(w, ds(d)), td = document.createElement('td');
+        td.textContent = e ? W[e.w][0] : '·';
+        if (e) td.title = W[e.w][1] + (e.why ? ' · ' + e.why : '');
+        if (e && i < 7 && e.w >= 3) rainy++;
+        if (e && e.w >= 2) { run++; cloudyRun = Math.max(cloudyRun, run); } else if (e) { run = 0; }
+        tr.appendChild(td);
+      }
+      body.appendChild(tr);
+      if (rainy >= 3) alerts.push(w + ': 최근 7일 중 비·천둥이 ' + rainy + '일이에요. 이번 주 안에 1:1 시간을 만들어 가볍게 이야기해 보세요.');
+      if (cloudyRun >= 10) alerts.push(w + ': 흐림 이하가 오래 이어지고 있어요. 번아웃 신호 자가 점검을 해 보세요.');
+    });
+    var al = $('mood-alert');
+    if (al) {
+      if (alerts.length) { al.hidden = false; al.className = 'callout warning'; al.textContent = alerts.join(' '); }
+      else { al.hidden = true; }
+    }
+  }
+  function set(w) {
+    data[who] = data[who] || {};
+    var prev = data[who][today] || {};
+    data[who][today] = { w: w, why: prev.why || '' };
+    save(data); renderKid(); renderParent();
+    var m = $('mood-msg'); if (m) m.textContent = MSG[w];
+  }
+  var pick = $('mood-pick');
+  if (pick) {
+    var bs = pick.querySelectorAll('button');
+    for (var i = 0; i < bs.length; i++) (function (b) { b.addEventListener('click', function () { set(+b.getAttribute('data-w')); }); })(bs[i]);
+  }
+  var wbs = $('mood-who') ? $('mood-who').querySelectorAll('button') : [];
+  for (var k = 0; k < wbs.length; k++) (function (b) {
+    b.addEventListener('click', function () {
+      who = b.getAttribute('data-who');
+      try { localStorage.setItem('wellbeing-mood-who', who); } catch (e) {}
+      $('mood-msg').textContent = ''; renderKid();
+    });
+  })(wbs[k]);
+  var why = $('mood-why'), timer;
+  if (why) why.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      var e = entry(who, today);
+      if (!e) { $('mood-why-hint').textContent = '먼저 위에서 날씨를 골라 줘!'; return; }
+      e.why = why.value; save(data); renderParent();
+      $('mood-why-hint').textContent = '저장했어!';
+    }, 400);
+  });
+  renderKid(); renderParent();
+})();
+</script>

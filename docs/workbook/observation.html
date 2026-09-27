@@ -1,0 +1,124 @@
+---
+title: 아이 관찰 기록
+parent: 부부 워크북
+nav_order: 3
+summary: 강점 · 관심사 · 어려움 + 날짜별 한 줄 관찰
+---
+<style>
+.obs-add { display: grid; grid-template-columns: 150px 120px 1fr auto; gap: 8px; align-items: end; margin: 6px 0 14px; }
+.obs-add select { height: 42px; padding: 0 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: 14px var(--sans); }
+.obs-list { list-style: none; padding: 0; margin: 0 0 10px; }
+.obs-list li { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.obs-list li:last-child { border-bottom: 0; }
+.obs-list .obs-d { flex: none; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.obs-list .obs-t { flex: 1; white-space: pre-wrap; }
+.obs-list button { border: 0; background: none; color: var(--muted); cursor: pointer; font: 600 12.5px var(--sans); }
+.obs-list button:hover { color: var(--danger); }
+.obs-box { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 4px 6px; margin: 0 0 8px; }
+.obs-empty { color: var(--muted); font-size: 14px; padding: 10px 12px; margin: 0; }
+@media (max-width: 640px) { .obs-add { grid-template-columns: 1fr 1fr; } .obs-add .obs-text { grid-column: 1 / -1; } }
+</style>
+<header class="page-hero">
+  <p class="kicker">부부 워크북 · <span data-grade-now></span></p>
+  <h1>아이 관찰 기록</h1>
+  <p class="lede">성적표보다 정확한 건 부모의 관찰입니다. 무엇에 눈이 반짝이는지, 어디서 막히는지를 <strong>판단 없이 사실로</strong> 짧게 남겨 두세요. 분기 회의의 근거가 되고, 나중에 진로·고교 선택(해외라면 에세이 소재)의 재료가 됩니다.</p>
+</header>
+
+<div class="cards" style="--min: 220px">
+  <div class="card c-tip"><div class="card-ic">✅</div><h3>이렇게 적어요</h3><p>"레고 설명서 없이 1시간 동안 배를 만들었다" — 본 것, 들은 말 그대로.</p></div>
+  <div class="card c-danger"><div class="card-ic">✋</div><h3>이렇게는 말고</h3><p>"집중력이 좋다 / 수학 머리가 없다" — 해석과 딱지는 나중에 둘이서.</p></div>
+  <div class="card c-note"><div class="card-ic">⏱️</div><h3>일주일에 한 줄</h3><p>매일 쓰려다 멈추는 것보다, 주말에 한 줄씩 꾸준히.</p></div>
+</div>
+
+<div class="tabs" data-tabs>
+  <div class="tab-list"><button>첫째</button><button>둘째</button></div>
+
+  <div class="tab-panel">
+    <h2 id="first-profile">첫째 프로필</h2>
+    <div class="form-grid">
+      <div><label class="memo-label" for="obs-first-strengths">강점 · 잘하는 것</label><textarea class="memo" id="obs-first-strengths" data-key="workbook-obs-first-strengths" placeholder="예) 처음 보는 사람에게도 먼저 인사, 설명을 잘 들음"></textarea><p class="saved-hint"></p></div>
+      <div><label class="memo-label" for="obs-first-interests">관심사 · 요즘 빠져 있는 것</label><textarea class="memo" id="obs-first-interests" data-key="workbook-obs-first-interests" placeholder="예) 공룡 이름 외우기, 종이접기"></textarea><p class="saved-hint"></p></div>
+      <div><label class="memo-label" for="obs-first-difficulties">어려워하는 것</label><textarea class="memo" id="obs-first-difficulties" data-key="workbook-obs-first-difficulties" placeholder="예) 받아쓰기 전날 배 아프다고 함"></textarea><p class="saved-hint"></p></div>
+      <div><label class="memo-label" for="obs-first-works">이럴 때 잘 되더라</label><textarea class="memo" id="obs-first-works" data-key="workbook-obs-first-works" placeholder="예) 먼저 놀고 나서 숙제하면 빨리 끝냄"></textarea><p class="saved-hint"></p></div>
+    </div>
+    <h3>날짜별 한 줄 관찰</h3>
+    <div class="obs-add" data-kid="first">
+      <div><label class="memo-label" for="obs-first-date">날짜</label><input class="memo" type="date" id="obs-first-date"></div>
+      <div><label class="memo-label" for="obs-first-cat">분류</label><select id="obs-first-cat"><option>강점</option><option>관심</option><option>어려움</option><option>기타</option></select></div>
+      <div class="obs-text"><label class="memo-label" for="obs-first-text">본 것 · 들은 말</label><input class="memo" id="obs-first-text" placeholder="사실만 한 줄"></div>
+      <button type="button" class="btn">추가</button>
+    </div>
+    <div class="obs-box"><ul class="obs-list" id="obs-first-list"></ul></div>
+  </div>
+
+  <div class="tab-panel">
+    <h2 id="second-profile">둘째 프로필</h2>
+    <div class="form-grid">
+      <div><label class="memo-label" for="obs-second-strengths">강점 · 잘하는 것</label><textarea class="memo" id="obs-second-strengths" data-key="workbook-obs-second-strengths"></textarea><p class="saved-hint"></p></div>
+      <div><label class="memo-label" for="obs-second-interests">관심사 · 요즘 빠져 있는 것</label><textarea class="memo" id="obs-second-interests" data-key="workbook-obs-second-interests"></textarea><p class="saved-hint"></p></div>
+      <div><label class="memo-label" for="obs-second-difficulties">어려워하는 것</label><textarea class="memo" id="obs-second-difficulties" data-key="workbook-obs-second-difficulties"></textarea><p class="saved-hint"></p></div>
+      <div><label class="memo-label" for="obs-second-works">이럴 때 잘 되더라</label><textarea class="memo" id="obs-second-works" data-key="workbook-obs-second-works"></textarea><p class="saved-hint"></p></div>
+    </div>
+    <h3>날짜별 한 줄 관찰</h3>
+    <div class="obs-add" data-kid="second">
+      <div><label class="memo-label" for="obs-second-date">날짜</label><input class="memo" type="date" id="obs-second-date"></div>
+      <div><label class="memo-label" for="obs-second-cat">분류</label><select id="obs-second-cat"><option>강점</option><option>관심</option><option>어려움</option><option>기타</option></select></div>
+      <div class="obs-text"><label class="memo-label" for="obs-second-text">본 것 · 들은 말</label><input class="memo" id="obs-second-text" placeholder="사실만 한 줄"></div>
+      <button type="button" class="btn">추가</button>
+    </div>
+    <div class="obs-box"><ul class="obs-list" id="obs-second-list"></ul></div>
+  </div>
+</div>
+
+<h2 id="prompts">무엇을 볼까? 관찰 질문</h2>
+<details class="acc"><summary>강점<small>시키지 않아도 하는 것</small></summary><div class="acc-body"><p>누가 시키지 않아도 오래 붙잡고 있는 활동은? 친구들이 이 아이에게 부탁하는 것은? 어려운 일을 만났을 때 어떻게 버티나요?</p></div></details>
+<details class="acc"><summary>관심사<small>질문과 수집</small></summary><div class="acc-body"><p>요즘 자주 하는 질문, 모으는 것, 도서관에서 고르는 책 분야, 여행지에서 오래 머문 곳을 적어 보세요. <a href="../trips/index.html">체험·여행</a> 계획의 힌트가 됩니다.</p></div></details>
+<details class="acc"><summary>어려움<small>몸이 먼저 말할 때</small></summary><div class="acc-body"><p>특정 과목 전날의 배앓이, 짜증, 늦장은 신호일 수 있어요. 반복되면 <a href="../wellbeing/burnout.html">번아웃 신호와 대처</a>를 함께 읽고 분기 회의 안건으로 올리세요.</p></div></details>
+
+<p class="callout warning">관찰 기록은 이 브라우저에만 저장되고, 아이의 민감한 정보가 담길 수 있어요. 공유 기기라면 주의하고, 확정된 내용만 인쇄하거나 부부끼리 옮겨 적으세요. 아이 앞에서 기록을 평가처럼 읽어 주지는 않습니다.</p>
+
+<script>
+(function () {
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function today() { var d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  var boxes = document.querySelectorAll('.obs-add[data-kid]');
+  for (var i = 0; i < boxes.length; i++) (function (box) {
+    var kid = box.getAttribute('data-kid');
+    var KEY = 'workbook-obs-notes-' + kid;
+    var date = document.getElementById('obs-' + kid + '-date');
+    var cat = document.getElementById('obs-' + kid + '-cat');
+    var text = document.getElementById('obs-' + kid + '-text');
+    var list = document.getElementById('obs-' + kid + '-list');
+    var btn = box.querySelector('button');
+    if (!list || !btn) return;
+    function load() { try { var a = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+    function save(a) { try { localStorage.setItem(KEY, JSON.stringify(a)); } catch (e) {} }
+    var notes = load();
+    date.value = today();
+    function render() {
+      notes.sort(function (a, b) { return (b.d || '').localeCompare(a.d || ''); });
+      list.innerHTML = '';
+      if (!notes.length) { var p = document.createElement('li'); p.className = 'obs-empty'; p.textContent = '아직 기록이 없어요. 이번 주에 본 것 한 줄부터.'; list.appendChild(p); return; }
+      notes.forEach(function (n) {
+        var li = document.createElement('li');
+        var d = document.createElement('span'); d.className = 'obs-d'; d.textContent = n.d || '';
+        var tg = document.createElement('span'); tg.className = 'tag ' + ({ '강점': 'c-tip', '관심': 'c-branch', '어려움': 'c-warn' }[n.c] || 'c-note'); tg.textContent = n.c || '기타';
+        var t = document.createElement('span'); t.className = 'obs-t'; t.textContent = n.t || '';
+        var del = document.createElement('button'); del.type = 'button'; del.textContent = '삭제';
+        del.addEventListener('click', function () { if (!window.confirm('이 관찰을 삭제할까요?')) return; notes = notes.filter(function (x) { return x !== n; }); save(notes); render(); });
+        li.appendChild(d); li.appendChild(tg); li.appendChild(t); li.appendChild(del);
+        list.appendChild(li);
+      });
+    }
+    function add() {
+      var v = (text.value || '').replace(/^\s+|\s+$/g, '');
+      if (!v) { text.focus(); return; }
+      notes.push({ d: date.value || today(), c: cat.value, t: v });
+      save(notes); text.value = ''; render();
+    }
+    btn.addEventListener('click', add);
+    text.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); add(); } });
+    render();
+  })(boxes[i]);
+})();
+</script>

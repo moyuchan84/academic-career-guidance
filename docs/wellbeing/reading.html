@@ -1,0 +1,102 @@
+---
+title: 독서 습관
+parent: 마음 돌봄
+nav_order: 4
+kid: true
+summary: 가족 독서 시간 · 읽기 사다리 · 독서 빙고
+---
+<header class="page-hero">
+  <p class="kicker">최고의 선행은 독서</p>
+  <h1>독서 습관</h1>
+  <p class="lede">책을 좋아하는 아이는 모든 과목의 문을 스스로 엽니다. 목표는 "많이 읽기"가 아니라 <strong>읽는 게 즐거운 사람으로 자라기</strong>. 그래서 독서를 숙제로 만들지 않는 것이 첫째 원칙이에요.</p>
+</header>
+
+<!-- ================= KID ================= -->
+<div class="kid-only">
+  <div class="kid-box">
+    <div class="mascot" data-stage="branch"></div>
+    <div>
+      <h3>책 읽기 빙고 해 볼까?</h3>
+      <p>여러 가지 책을 읽을 때마다 칸을 눌러 도장을 찍어 봐. 한 줄을 다 채우면 빙고!</p>
+    </div>
+  </div>
+
+  <h2 id="kid-bingo">독서 빙고 <span class="stamp-count" data-stamp-count="wellbeing-reading-bingo"></span></h2>
+  <div class="stamps" data-key="wellbeing-reading-bingo" style="grid-template-columns: repeat(3, 1fr); max-width: 460px">
+    <button class="stamp c-root" data-id="picture"><span class="stamp-ic">🖼️</span>그림책</button>
+    <button class="stamp c-stem" data-id="science"><span class="stamp-ic">🔬</span>과학책</button>
+    <button class="stamp c-branch" data-id="history"><span class="stamp-ic">🏯</span>옛날이야기</button>
+    <button class="stamp c-fruit" data-id="poem"><span class="stamp-ic">🎵</span>동시</button>
+    <button class="stamp c-accent" data-id="library"><span class="stamp-ic">🏛️</span>도서관에서 빌리기</button>
+    <button class="stamp c-tip" data-id="readaloud"><span class="stamp-ic">🗣️</span>가족에게 읽어 주기</button>
+    <button class="stamp c-note" data-id="animal"><span class="stamp-ic">🐾</span>동물 책</button>
+    <button class="stamp c-warn" data-id="again"><span class="stamp-ic">🔁</span>좋은 책 다시 읽기</button>
+    <button class="stamp c-root" data-id="long"><span class="stamp-ic">📖</span>글 많은 책</button>
+  </div>
+
+  <h2 id="kid-log">내가 읽은 책</h2>
+  <label class="memo-label" for="rd-kid-log">책 제목과 한 줄 느낌을 써 봐!</label>
+  <textarea class="memo" id="rd-kid-log" data-key="wellbeing-reading-kid-log" style="min-height:140px" placeholder="예) 9월 27일 · 구름빵 · 나도 구름빵 먹고 날고 싶다!"></textarea>
+  <p class="saved-hint"></p>
+
+  <h2 id="kid-quiz">책 퀴즈</h2>
+  <div class="quiz" data-answer="1">
+    <p class="quiz-q">도서관에서 빌린 책은 어떻게 해야 할까?</p>
+    <div class="quiz-opts"><button class="quiz-opt">내 책이니까 낙서해도 돼</button><button class="quiz-opt">깨끗하게 읽고 날짜 안에 돌려줘</button><button class="quiz-opt">친구한테 선물해</button></div>
+    <p class="quiz-fb" data-ok="정답! 다음 친구도 읽을 수 있게 소중히!" data-no="도서관 책은 모두가 함께 읽는 책이야"></p>
+  </div>
+  <div class="quiz" data-answer="0">
+    <p class="quiz-q">책 제목, 글쓴이, 그린이가 보통 적혀 있는 곳은?</p>
+    <div class="quiz-opts"><button class="quiz-opt">책 표지</button><button class="quiz-opt">책 맨 가운데</button><button class="quiz-opt">아무 데도 없어</button></div>
+    <p class="quiz-fb" data-ok="맞아! 표지를 보면 누가 쓰고 그렸는지 알 수 있어" data-no="책을 처음 볼 때 제일 먼저 보는 곳이야"></p>
+  </div>
+</div>
+
+<!-- ================= PARENT ================= -->
+<div class="parent-only">
+
+<h2 id="ladder">읽기 사다리</h2>
+<figure class="dg" style="--dg-min: 700px">
+  <svg viewBox="0 0 900 200" role="img" aria-label="읽기 사다리: 그림책, 저학년 문고, 고학년 문고, 청소년 문학, 교양서 순서로 올라간다">
+    <defs><marker id="m-rd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <rect x="10" y="120" width="155" height="62" rx="12" class="dg-box c-root"/><text x="87" y="146" text-anchor="middle" class="dg-t">그림책</text><text x="87" y="166" text-anchor="middle" class="dg-t sm">~초1 · 함께 읽기</text>
+    <rect x="190" y="95" width="155" height="62" rx="12" class="dg-box c-stem"/><text x="267" y="121" text-anchor="middle" class="dg-t">저학년 문고</text><text x="267" y="141" text-anchor="middle" class="dg-t sm">초1~3 · 글밥 늘리기</text>
+    <rect x="370" y="70" width="155" height="62" rx="12" class="dg-box c-branch"/><text x="447" y="96" text-anchor="middle" class="dg-t">고학년 문고</text><text x="447" y="116" text-anchor="middle" class="dg-t sm">초3~6 · 혼자 긴 글</text>
+    <rect x="550" y="45" width="155" height="62" rx="12" class="dg-box c-fruit"/><text x="627" y="71" text-anchor="middle" class="dg-t">청소년 문학</text><text x="627" y="91" text-anchor="middle" class="dg-t sm">초6~중 · 공감·생각</text>
+    <rect x="730" y="20" width="155" height="62" rx="12" class="dg-box c-accent"/><text x="807" y="46" text-anchor="middle" class="dg-t">교양서</text><text x="807" y="66" text-anchor="middle" class="dg-t sm">중~고 · 관심 분야</text>
+    <line x1="165" y1="140" x2="188" y2="130" class="dg-line" marker-end="url(#m-rd-arrow)"/>
+    <line x1="345" y1="115" x2="368" y2="105" class="dg-line" marker-end="url(#m-rd-arrow)"/>
+    <line x1="525" y1="90" x2="548" y2="80" class="dg-line" marker-end="url(#m-rd-arrow)"/>
+    <line x1="705" y1="65" x2="728" y2="55" class="dg-line" marker-end="url(#m-rd-arrow)"/>
+    <text x="10" y="30" class="dg-t sm muted">학습만화 · 지식책은 어느 칸에서든 "입구"로 섞어 읽기</text>
+  </svg>
+  <figcaption>학년은 대략적인 기준입니다. 한 칸 올라갔다가 다시 내려와도 괜찮아요. 쉬운 책을 즐겁게 읽는 시간이 다음 칸의 힘이 됩니다.</figcaption>
+</figure>
+
+<h2 id="habits">습관을 만드는 네 가지</h2>
+<div class="cards" style="--min: 220px">
+  <div class="card top c-root"><div class="card-ic">🕗</div><h3>가족 독서 시간 고정</h3><p>예) 저녁 8시 20분. 부모도 휴대폰 대신 책을 듭니다. 아이는 부모가 읽는 모습을 보고 배워요.</p></div>
+  <div class="card top c-stem"><div class="card-ic">🏛️</div><h3>도서관 정기 방문</h3><p>격주 토요일처럼 달력에 고정. 아이 이름의 대출 카드를 만들어 주고 책은 아이가 고릅니다.</p></div>
+  <div class="card top c-branch"><div class="card-ic">📚</div><h3>학습만화는 입구로</h3><p>금지하지 말되 줄글과 균형을 맞춰요. 만화로 흥미가 생긴 주제의 줄글 책을 옆에 놓아 둡니다.</p></div>
+  <div class="card top c-fruit"><div class="card-ic">🗣️</div><h3>독후감 대신 대화</h3><p>"누가 제일 좋았어?", "너라면 어떻게 했을까?" 쓰기를 강요하면 읽기가 싫어집니다.</p></div>
+</div>
+
+<h2 id="aloud">소리 내어 읽어 주기, 언제까지?</h2>
+<p>아이가 혼자 읽을 수 있게 된 뒤에도 읽어 주기를 이어가세요. 듣기 수준은 읽기 수준보다 높아서, 혼자서는 못 읽는 조금 어려운 책을 들으며 어휘와 이야기 구조를 익힙니다. 초등 고학년까지도 잠자리 한 챕터는 좋은 습관이에요.</p>
+
+<details class="acc"><summary>책을 안 읽으려고 해요<small>억지로 시키면 더 멀어집니다</small></summary><div class="acc-body"><p>관심사(공룡, 축구, 게임)에서 시작하세요. 얇은 책, 그림 많은 책, 지식 책도 모두 독서입니다. 끝까지 안 읽어도 된다고 허락해 주면 오히려 더 읽어요.</p></div></details>
+<details class="acc"><summary>같은 책만 계속 읽어요<small>반복은 좋은 신호</small></summary><div class="acc-body"><p>좋아하는 책을 반복하는 건 이해를 깊게 하는 과정입니다. 같은 작가의 다른 책이나 비슷한 주제의 책을 슬쩍 옆에 두세요.</p></div></details>
+<details class="acc"><summary>두 아이 수준이 달라요<small>한 살 차이</small></summary><div class="acc-body"><p>가족 독서 시간은 같이, 책은 각자. 가끔 첫째가 둘째에게 읽어 주는 시간을 만들면 둘 다 좋아합니다.</p></div></details>
+
+<h2 id="check">우리 집 독서 체크</h2>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="rd-check">
+  <li class="task"><label><input type="checkbox"><span>가족 독서 시간을 정해 두었다</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>아이 이름의 도서관 카드가 있다</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>이번 달 도서관에 2번 이상 갔다</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>잠자리 읽어 주기를 이어가고 있다</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>독후감 숙제 대신 책 이야기를 나눴다</span></label></li>
+</ul>
+<p>학년별 추천 도서와 국어 공부는 <a href="../subjects/korean.html">국어·독서 가이드</a>에 있어요. 아이가 기록한 빙고와 책 목록은 아이 모드에서 함께 보세요.</p>
+
+</div>

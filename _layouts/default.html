@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('mode')==='kid')document.documentElement.setAttribute('data-mode','kid')}catch(e){}</script>
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Myeongjo:wght@700;800&family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='12' r='9' fill='%235b8c3a'/%3E%3Crect x='14.5' y='16' width='3' height='12' rx='1.5' fill='%238a5a3b'/%3E%3C/svg%3E">
+</head>
+{%- assign top_pages = site.pages | where_exp: "p", "p.nav_order != nil" | where_exp: "p", "p.parent == nil" | where_exp: "p", "p.url != '/'" | sort: "nav_order" -%}
+{%- if page.parent -%}
+  {%- assign current_section = top_pages | where: "title", page.parent | first -%}
+{%- elsif page.has_children -%}
+  {%- assign current_section = page -%}
+{%- endif -%}
+<body class="{% if page.layout == 'home' %}is-home{% endif %}{% if page.stage %} stage-{{ page.stage }}{% endif %}{% if page.kid %} page-kid{% else %} page-parent{% endif %}">
+<div class="grain" aria-hidden="true"></div>
+
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="{{ '/' | relative_url }}">
+    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="15" r="11" class="bm-crown"/><circle cx="14" cy="13" r="2.4" class="bm-fruit"/><circle cx="25" cy="17" r="2.4" class="bm-fruit"/><rect x="18.3" y="20" width="3.4" height="15" rx="1.7" class="bm-trunk"/></svg>
+    <span><strong class="parent-only-inline">우리 아이</strong><strong class="kid-only-inline">새싹 탐험대</strong><em class="parent-only-inline">교육 로드맵</em><em class="kid-only-inline">함께 자라는 지도</em></span>
+  </a>
+  <nav class="nav" aria-label="목차">
+    <ol>
+    {%- for sec in top_pages -%}
+      {%- assign num = sec.nav_order | prepend: '0' | slice: -2, 2 -%}
+      {%- assign kids = site.pages | where: "parent", sec.title | sort: "nav_order" -%}
+      {%- assign open = false -%}
+      {%- if current_section and current_section.url == sec.url -%}{%- assign open = true -%}{%- endif -%}
+      <li class="nav-sec{% if open %} is-open{% endif %}{% if sec.kid %} kid-ok{% endif %}">
+        <div class="nav-row">
+          <a href="{{ sec.url | relative_url }}" class="nav-link{% if page.url == sec.url %} is-active{% endif %}"><span class="nav-num">{{ num }}</span>{% if sec.kid_title %}<span class="parent-only-inline">{{ sec.title }}</span><span class="kid-only-inline">{{ sec.kid_title }}</span>{% else %}{{ sec.title }}{% endif %}</a>
+          {%- if kids.size > 0 -%}<button class="nav-toggle" aria-label="{{ sec.title }} 펼치기" aria-expanded="{{ open }}"><svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>{%- endif -%}
+        </div>
+        {%- if kids.size > 0 -%}
+        <ul class="nav-kids">
+          {%- for k in kids -%}
+          <li{% if k.kid %} class="kid-ok"{% endif %}><a href="{{ k.url | relative_url }}" class="{% if page.url == k.url %}is-active{% endif %}{% if k.stage %} dot-{{ k.stage }}{% endif %}">{{ k.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+    </ol>
+  </nav>
+  <p class="sidebar-foot parent-only">제도·입시 정보는 해마다 공식 출처로 다시 확인하세요.</p>
+  <p class="sidebar-foot kid-only">궁금한 게 생기면 엄마 아빠한테 물어보자!</p>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<div class="shell">
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="목차 열기" aria-controls="sidebar"><span></span><span></span><span></span></button>
+    <div class="search">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input id="searchInput" type="search" placeholder="검색 (예: 분수, 자사고, 수영)" autocomplete="off" data-index="{{ '/search.json' | relative_url }}">
+      <kbd>/</kbd>
+      <div class="search-results" id="searchResults" role="listbox"></div>
+    </div>
+    <button class="mode-btn" id="modeBtn" aria-pressed="false" title="아이와 함께 보기">
+      <span class="mode-knob"></span><span class="mode-label parent-only-inline">아이 모드</span><span class="mode-label kid-only-inline">아이 모드 ON</span>
+    </button>
+    <button class="theme-btn" id="themeBtn" aria-label="밝기 전환"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg></button>
+  </header>
+
+  {%- if page.layout == 'home' -%}
+  <main class="home">{{ content }}</main>
+  {%- else -%}
+  <main class="page{% if page.wide %} page-wide{% endif %}">
+    <div class="eyebrow">
+      <a href="{{ '/' | relative_url }}">홈</a>
+      {%- if page.parent and current_section -%}<span>/</span><a href="{{ current_section.url | relative_url }}">{{ page.parent }}</a>{%- endif -%}
+    </div>
+
+    {%- unless page.kid -%}
+    <div class="kid-gate">
+      <div class="mascot" data-stage="stem" aria-hidden="true"></div>
+      <div>
+        <b>여기는 엄마 아빠 방이에요!</b>
+        <p>엄마 아빠가 우리를 위해 공부하는 곳이야. 아이 모드를 끄면 볼 수 있어요.</p>
+        <a class="btn" href="{{ '/' | relative_url }}">탐험 지도로 돌아가기</a>
+      </div>
+    </div>
+    {%- endunless -%}
+
+    <article class="prose">
+      {{ content }}
+    </article>
+
+    {%- if page.has_children -%}
+    {%- assign kids = site.pages | where: "parent", page.title | sort: "nav_order" -%}
+    <section class="child-grid">
+      {%- for k in kids -%}
+      <a class="child-card{% if k.stage %} stage-{{ k.stage }}{% endif %}{% if k.kid %} kid-ok{% endif %}" href="{{ k.url | relative_url }}" style="--i: {{ forloop.index0 }}">
+        <span class="child-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+        <span class="child-title">{{ k.title }}{% if k.summary %}<small>{{ k.summary }}</small>{% endif %}</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      {%- endfor -%}
+    </section>
+    {%- endif -%}
+
+    {%- if page.parent -%}
+    {%- assign sibs = site.pages | where: "parent", page.parent | sort: "nav_order" -%}
+    {%- for s in sibs -%}{%- if s.url == page.url -%}{%- assign idx = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+    {%- assign prev_i = idx | minus: 1 -%}{%- assign next_i = idx | plus: 1 -%}
+    <nav class="pager">
+      {%- if idx > 0 -%}<a class="pager-prev" href="{{ sibs[prev_i].url | relative_url }}"><small>이전</small>{{ sibs[prev_i].title }}</a>{%- else -%}<span></span>{%- endif -%}
+      {%- if next_i < sibs.size -%}<a class="pager-next" href="{{ sibs[next_i].url | relative_url }}"><small>다음</small>{{ sibs[next_i].title }}</a>{%- endif -%}
+    </nav>
+    {%- endif -%}
+  </main>
+  {%- endif -%}
+
+  <footer class="footer">
+    <span>우리 가족만의 기록 · 2026년부터 · 체크·메모는 이 브라우저에만 저장돼요</span>
+    <a class="parent-only-inline" href="https://github.com/moyuchan84/academic-career-guidance/edit/main/{{ page.path }}">이 페이지 수정하기 ↗</a>
+  </footer>
+</div>
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/components.js' | relative_url }}"></script>
+</body>
+</html>

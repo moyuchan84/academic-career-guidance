@@ -1,0 +1,243 @@
+---
+title: 정보·코딩·AI
+parent: 과목별 가이드
+nav_order: 6
+kid: true
+summary: 컴퓨팅 사고 · 언플러그드 · 만드는 스크린
+wide: true
+---
+<header class="page-hero">
+  <p class="kicker">과목별 가이드 · 정보·코딩·AI</p>
+  <h1>정보·코딩·AI</h1>
+  <p class="lede">AI 시대의 기본 소양은 코딩 문법이 아니라 <strong>문제를 쪼개고, 규칙을 찾고, 순서대로 해결하는 힘(컴퓨팅 사고)</strong>입니다. 초등 저학년에게는 화면 없이 하는 "언플러그드" 놀이가 가장 좋은 출발이에요.</p>
+</header>
+
+<!-- ================= KID ================= -->
+<div class="kid-only">
+  <div class="kid-box">
+    <div class="mascot" data-stage="stem"></div>
+    <div>
+      <h3>코딩 기지에 온 걸 환영해!</h3>
+      <p>컴퓨터와 로봇은 아주 똑똑해 보이지만, 사실은 우리가 알려 준 <strong>순서</strong>대로만 움직여.</p>
+      <p>로봇 🤖에게 길을 알려 줘서 별 ⭐까지 데려가 볼까? 돌 🪨에 부딪히면 안 돼!</p>
+    </div>
+  </div>
+
+  <h2 id="kid-robot">로봇 길 찾기 퍼즐</h2>
+  <div class="cd-robot" id="cd-robot">
+    <p class="cd-level" data-level></p>
+    <div class="cd-grid" data-grid aria-label="로봇 퍼즐 판"></div>
+    <p class="cd-prog-label">내 명령 순서</p>
+    <div class="cd-prog" data-prog aria-live="polite"></div>
+    <div class="cd-pad">
+      <button type="button" class="quiz-opt" data-cmd="U" aria-label="위로">⬆️</button>
+      <button type="button" class="quiz-opt" data-cmd="D" aria-label="아래로">⬇️</button>
+      <button type="button" class="quiz-opt" data-cmd="L" aria-label="왼쪽으로">⬅️</button>
+      <button type="button" class="quiz-opt" data-cmd="R" aria-label="오른쪽으로">➡️</button>
+    </div>
+    <div class="cd-actions">
+      <button type="button" class="btn sm" data-run>▶ 실행</button>
+      <button type="button" class="btn sm ghost" data-undo>한 칸 지우기</button>
+      <button type="button" class="btn sm ghost" data-clear>모두 지우기</button>
+    </div>
+    <p class="cd-fb" data-fb></p>
+  </div>
+
+  <h2 id="kid-quiz">생각하는 로봇 퀴즈</h2>
+  <div class="quiz" data-answer="0">
+    <p class="quiz-q">라면을 끓이는 순서로 맞는 것은?</p>
+    <div class="quiz-opts"><button class="quiz-opt">물 끓이기 → 면 넣기 → 그릇에 담기</button><button class="quiz-opt">면 넣기 → 그릇에 담기 → 물 끓이기</button><button class="quiz-opt">그릇에 담기 → 물 끓이기 → 면 넣기</button></div>
+    <p class="quiz-fb" data-ok="딩동댕! 순서대로 하는 방법을 '알고리즘'이라고 해" data-no="순서가 바뀌면 라면이 안 돼! 처음에 뭘 해야 할까?"></p>
+  </div>
+  <div class="quiz" data-answer="1">
+    <p class="quiz-q">🔴 🔵 🔴 🔵 🔴 … 다음에 올 것은?</p>
+    <div class="quiz-opts"><button class="quiz-opt">🔴</button><button class="quiz-opt">🔵</button><button class="quiz-opt">🟢</button></div>
+    <p class="quiz-fb" data-ok="맞아! 빨강-파랑이 되풀이되는 규칙(패턴)이야" data-no="색깔이 어떻게 되풀이되는지 봐!"></p>
+  </div>
+  <div class="quiz" data-answer="2">
+    <p class="quiz-q">"앞으로 1칸"을 5번 해야 해. 짧게 말하는 방법은?</p>
+    <div class="quiz-opts"><button class="quiz-opt">앞으로 1칸</button><button class="quiz-opt">앞으로 앞으로 앞으로</button><button class="quiz-opt">5번 반복하기: 앞으로 1칸</button></div>
+    <p class="quiz-fb" data-ok="대단해! 같은 일을 되풀이할 땐 '반복'을 써" data-no="같은 명령을 여러 번 쓰지 않는 방법이 있어!"></p>
+  </div>
+
+  <h2 id="kid-stamps">언플러그드 코딩 스탬프</h2>
+  <p>화면 없이 해 본 놀이를 눌러 봐! <span class="stamp-count" data-stamp-count="subjects-coding"></span></p>
+  <div class="stamps" data-key="subjects-coding">
+    <button class="stamp c-note" data-id="robotgame"><span class="stamp-ic">🧍</span>사람 로봇 놀이<small>명령대로 움직이기</small></button>
+    <button class="stamp c-stem" data-id="lego"><span class="stamp-ic">🧱</span>설명서대로 레고</button>
+    <button class="stamp c-branch" data-id="mybook"><span class="stamp-ic">📝</span>내가 쓴 레고 설명서</button>
+    <button class="stamp c-fruit" data-id="secret"><span class="stamp-ic">🔐</span>비밀 암호 만들기</button>
+    <button class="stamp c-accent" data-id="pattern"><span class="stamp-ic">📿</span>구슬 패턴 꿰기</button>
+    <button class="stamp c-root" data-id="board"><span class="stamp-ic">🎲</span>코딩 보드게임</button>
+  </div>
+</div>
+
+<!-- ================= PARENT ================= -->
+<div class="parent-only">
+
+<div class="cards" style="--min:220px">
+  <div class="card top c-note"><span class="tag">목표</span><h3>컴퓨팅 사고</h3><p>분해 → 패턴 → 추상화 → 알고리즘. 코딩 언어는 바뀌어도 이 힘은 남아요.</p></div>
+  <div class="card top c-stem"><span class="tag">학교</span><h3>정보 교육 확대</h3><p>2022 개정으로 초·중 정보 수업 시간이 늘었고, 고등학교에는 인공지능 기초·데이터 과학 과목이 있어요.</p></div>
+  <div class="card top c-fruit"><span class="tag">가정</span><h3>만드는 스크린 vs 보는 스크린</h3><p>스크린 규칙 안에서 "만드는 시간"은 따로 구분해 주기.</p></div>
+</div>
+
+<h2 id="ct">컴퓨팅 사고 4단계</h2>
+<figure class="dg" style="--dg-min:640px">
+  <svg viewBox="0 0 800 160" role="img" aria-label="컴퓨팅 사고 4단계: 분해, 패턴 인식, 추상화, 알고리즘">
+    <defs><marker id="m-cd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <rect x="10" y="30" width="170" height="90" rx="12" class="dg-box c-root"/><text x="95" y="62" text-anchor="middle" class="dg-t">① 분해</text><text x="95" y="84" text-anchor="middle" class="dg-t sm">큰 문제를 작게 쪼개기</text><text x="95" y="102" text-anchor="middle" class="dg-t sm">예) 방 청소 = 장난감·책·옷</text>
+    <rect x="210" y="30" width="170" height="90" rx="12" class="dg-box c-stem"/><text x="295" y="62" text-anchor="middle" class="dg-t">② 패턴 인식</text><text x="295" y="84" text-anchor="middle" class="dg-t sm">되풀이되는 규칙 찾기</text><text x="295" y="102" text-anchor="middle" class="dg-t sm">예) 구구단의 규칙</text>
+    <rect x="410" y="30" width="170" height="90" rx="12" class="dg-box c-branch"/><text x="495" y="62" text-anchor="middle" class="dg-t">③ 추상화</text><text x="495" y="84" text-anchor="middle" class="dg-t sm">중요한 것만 남기기</text><text x="495" y="102" text-anchor="middle" class="dg-t sm">예) 지하철 노선도</text>
+    <rect x="610" y="30" width="180" height="90" rx="12" class="dg-box c-fruit"/><text x="700" y="62" text-anchor="middle" class="dg-t">④ 알고리즘</text><text x="700" y="84" text-anchor="middle" class="dg-t sm">순서대로 해결 방법 쓰기</text><text x="700" y="102" text-anchor="middle" class="dg-t sm">예) 라면 끓이는 순서</text>
+    <path d="M180 75 H206" class="dg-line" marker-end="url(#m-cd-arrow)"/>
+    <path d="M380 75 H406" class="dg-line" marker-end="url(#m-cd-arrow)"/>
+    <path d="M580 75 H606" class="dg-line" marker-end="url(#m-cd-arrow)"/>
+    <text x="400" y="148" text-anchor="middle" class="dg-t sm muted">초등 저학년은 모두 화면 없이(언플러그드) 놀이로 연습할 수 있어요.</text>
+  </svg>
+</figure>
+
+<h2 id="levels">학년별 진도 계통</h2>
+<div class="tabs" data-tabs id="cd-level-tabs">
+  <div class="tab-list"><button>초1~4</button><button>초5~6</button><button>중학교</button><button>고등학교</button></div>
+  <div class="tab-panel"><p><strong>학교:</strong> 정규 정보 교과는 없지만 창체·학교자율시간에 언플러그드·블록 코딩을 하는 학교가 많아요.</p><p><strong>가정:</strong> 순서 놀이, 보드게임형 코딩 교구, 레고·로봇. 화면 앞 코딩은 짧게.</p></div>
+  <div class="tab-panel"><p><strong>학교:</strong> 실과의 정보 영역에서 엔트리·스크래치 같은 블록 코딩, 간단한 프로그램 만들기.</p><p><strong>가정:</strong> 따라 만들기 다음엔 "우리 가족 퀴즈 게임"처럼 아이가 기획한 작품 하나.</p></div>
+  <div class="tab-panel"><p><strong>학교:</strong> 정보 교과 — 자료와 정보, 알고리즘, 프로그래밍(파이썬 등 텍스트 언어), 컴퓨팅 시스템, 인공지능 기초 개념.</p><p><strong>가정:</strong> 흥미가 있으면 파이썬 입문 도서, 정보올림피아드 기출은 "도전"으로만.</p></div>
+  <div class="tab-panel"><p><strong>학교:</strong> 일반 선택 정보, 진로 선택 인공지능 기초·데이터 과학, 융합 선택 소프트웨어와 생활 등.</p><p><strong>진로:</strong> 컴퓨터·AI 계열 희망이면 수학(확률과 통계, 미적분)과 함께 설계.</p></div>
+</div>
+<p class="callout warning">2022 개정 교육과정에서 정보 교육 시간은 초등 34시간 이상(실과 + 학교자율시간), 중학교 68시간 이상으로 늘었어요(2025년부터 학년별 순차 적용). 학교마다 운영 방식이 다르니 학교 교육과정 설명회에서 확인하세요. AI 관련 교육 정책은 특히 자주 바뀝니다.</p>
+
+<h2 id="stuck">막히는 지점</h2>
+<details class="acc"><summary>따라 만들기만 하고 스스로 설계를 못 해요<small>영상 보고 그대로 따라 하는 코딩</small></summary><div class="acc-body"><p>따라 만든 작품에서 딱 한 가지를 바꿔 보게 하세요. "캐릭터를 하나 더 넣으면?", "점수를 두 배로 하면?" 작은 변형이 설계의 시작입니다.</p></div></details>
+<details class="acc"><summary>코딩 = 게임 시간이 돼요<small>만든다면서 결국 게임만 함</small></summary><div class="acc-body"><p>"만드는 스크린"과 "노는 스크린"의 시간을 따로 정해요. 만드는 시간의 결과물은 가족에게 발표하는 규칙을 두면 목적이 분명해집니다. <a href="../wellbeing/screen.html">스크린타임</a> 참고.</p></div></details>
+<details class="acc"><summary>텍스트 코딩(파이썬)에서 막혀요<small>블록에서 글자로 넘어갈 때</small></summary><div class="acc-body"><p>오타 하나에 멈추는 좌절이 커요. 오류 메시지를 같이 읽고 "컴퓨터가 뭐라고 하는지" 해석하는 연습. 수학의 문자와 식(중1)에 익숙해지면 한결 쉬워집니다.</p></div></details>
+<details class="acc"><summary>AI를 숙제에 그냥 써요<small>생성형 AI 사용 규칙</small></summary><div class="acc-body"><p>금지보다 규칙. "먼저 스스로 생각 → AI에게 묻기 → AI 답이 맞는지 확인 → 내 말로 다시 쓰기". AI가 그럴듯하게 틀릴 수 있다는 걸 직접 확인해 보는 경험이 가장 중요한 AI 교육이에요. 연령 제한이 있는 서비스는 약관을 확인하세요.</p></div></details>
+
+<h2 id="home">가정에서 할 것</h2>
+<div class="cards" style="--min:200px">
+  <div class="card"><div class="card-ic" style="--cs:var(--note-soft);--c:var(--note)">🧍</div><h3>사람 로봇 놀이</h3><p>아이가 명령을 내리고 부모가 그대로만 움직이기. 모호한 명령의 결과를 몸으로 체험.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--stem-soft);--c:var(--stem)">🧱</div><h3>레고·로봇 교구</h3><p>설명서대로 만들기 → 내가 설명서 쓰기. 알고리즘의 입문.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--branch-soft);--c:var(--branch)">🎲</div><h3>코딩 보드게임</h3><p>명령 카드로 말을 움직이는 보드게임은 초1부터 가능해요.</p></div>
+  <div class="card"><div class="card-ic" style="--cs:var(--fruit-soft);--c:var(--fruit)">🖥️</div><h3>엔트리·스크래치 (초3~)</h3><p>무료 블록 코딩. 가족 생일 카드, 퀴즈 게임 만들기.</p></div>
+</div>
+
+<h2 id="trips">체험 연계</h2>
+<div class="cards" style="--min:200px">
+  <a class="card c-note" href="../trips/places.html"><span class="tag">박물관</span><h3>넥슨컴퓨터박물관 (제주)</h3><p>컴퓨터와 게임의 역사를 직접 만져 보는 곳. 제주 여행 때.</p></a>
+  <a class="card c-stem" href="../trips/places.html"><span class="tag">과학관</span><h3>과학관 로봇·AI 전시</h3><p>국립과천과학관 등 과학관의 로봇·AI 체험.</p></a>
+  <a class="card c-branch" href="../trips/places.html"><span class="tag">캠프</span><h3>SW 교육 캠프</h3><p>교육청·대학·지자체 방학 캠프. 공지 확인 후 신청.</p></a>
+</div>
+
+<h2 id="compare">교육특구에서는 vs 우리 집</h2>
+<div class="compare">
+  <div style="--cs:var(--paper-2)"><h4>교육특구에서 흔한 모습</h4><ul><li>초등 코딩 학원, 로봇 교실</li><li>정보올림피아드 준비반, 영재원 정보 분야</li><li>중학생 알고리즘 대회 준비</li></ul></div>
+  <div style="--cs:var(--tip-soft);--c:var(--tip)"><h4>우리 집 기준안</h4><ul><li>필수 선행 아님. 흥미가 있으면 깊게</li><li>초1~4: 언플러그드·보드게임·레고</li><li>초5~6: 블록 코딩으로 스스로 만든 작품 1년에 2~3개</li><li>중학 이후: 아이가 원하면 파이썬·대회 도전</li></ul></div>
+</div>
+
+<h2 id="policy">우리 집 코딩·AI 방침</h2>
+<label class="memo-label" for="cd-policy">만드는 스크린 규칙 · AI 사용 규칙 · 교구·예산</label>
+<textarea class="memo" id="cd-policy" data-key="subjects-coding-policy" placeholder="예) 주말 토요일 오전 30분 = 만드는 스크린. AI는 숙제 확인용으로만, 부모와 함께."></textarea>
+<p class="saved-hint"></p>
+
+</div>
+
+<style>
+  .cd-robot { padding: 20px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); margin: 0 0 24px; }
+  .cd-level { font-weight: 700; margin: 0 0 12px; }
+  .cd-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; max-width: 300px; margin: 0 0 14px; }
+  .cd-grid span { aspect-ratio: 1; display: grid; place-items: center; font-size: 26px; border-radius: 10px; background: var(--paper-2); border: 1px solid var(--line); }
+  .cd-grid span.is-path { background: var(--stem-soft); }
+  .cd-prog-label { font-size: 13px; color: var(--muted); margin: 0 0 4px; }
+  .cd-prog { min-height: 44px; display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; border-radius: 10px; border: 1.5px dashed var(--line); margin: 0 0 10px; font-size: 22px; }
+  .cd-pad { display: grid; grid-template-columns: repeat(4, 64px); gap: 8px; margin: 0 0 10px; }
+  .cd-pad .quiz-opt { text-align: center; font-size: 22px; padding: 8px; }
+  .cd-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cd-fb { min-height: 1.6em; font-weight: 700; margin: 12px 0 0; }
+  .cd-fb.ok { color: var(--stem); } .cd-fb.no { color: var(--accent); }
+</style>
+<script>
+(function () {
+  var box = document.getElementById('cd-robot');
+  if (!box) return;
+  // 5x5 board, [row, col], row 0 = top
+  var LEVELS = [
+    { start: [4, 0], star: [4, 3], rocks: [] },
+    { start: [4, 0], star: [1, 3], rocks: [[3, 1], [1, 1], [2, 3]] },
+    { start: [4, 0], star: [0, 4], rocks: [[4, 2], [2, 1], [1, 3], [3, 3]] }
+  ];
+  var ARROW = { U: '⬆️', D: '⬇️', L: '⬅️', R: '➡️' };
+  var MOVE = { U: [-1, 0], D: [1, 0], L: [0, -1], R: [0, 1] };
+  var grid = box.querySelector('[data-grid]'), progEl = box.querySelector('[data-prog]'), fb = box.querySelector('[data-fb]'), lvEl = box.querySelector('[data-level]');
+  var lv = 0, prog = [], running = false;
+  try { lv = Math.min(+(localStorage.getItem('subjects-coding-level') || 0) || 0, LEVELS.length - 1); } catch (e) {}
+  function isRock(r, c) { var L = LEVELS[lv].rocks; for (var i = 0; i < L.length; i++) if (L[i][0] === r && L[i][1] === c) return true; return false; }
+  function draw(pos, path) {
+    var L = LEVELS[lv], html = '';
+    for (var r = 0; r < 5; r++) for (var c = 0; c < 5; c++) {
+      var ch = '', cls = '';
+      if (path && path[r + ',' + c]) cls = ' class="is-path"';
+      if (isRock(r, c)) ch = '🪨';
+      else if (L.star[0] === r && L.star[1] === c) ch = '⭐';
+      if (pos[0] === r && pos[1] === c) ch = '🤖';
+      html += '<span' + cls + '>' + ch + '</span>';
+    }
+    grid.innerHTML = html;
+  }
+  function showProg() {
+    var s = '';
+    for (var i = 0; i < prog.length; i++) s += '<span>' + ARROW[prog[i]] + '</span>';
+    progEl.innerHTML = s || '<span style="font-size:14px;color:var(--muted)">화살표를 눌러 명령을 넣어 봐</span>';
+  }
+  function reset() {
+    running = false; prog = []; showProg(); fb.textContent = ''; fb.className = 'cd-fb';
+    lvEl.textContent = '레벨 ' + (lv + 1) + ' / ' + LEVELS.length;
+    draw(LEVELS[lv].start, null);
+  }
+  function run() {
+    if (running || !prog.length) return;
+    running = true;
+    var pos = LEVELS[lv].start.slice(), i = 0, path = {};
+    path[pos[0] + ',' + pos[1]] = 1;
+    fb.className = 'cd-fb'; fb.textContent = '로봇이 움직이는 중…';
+    function step() {
+      if (i >= prog.length) {
+        var st = LEVELS[lv].star;
+        if (pos[0] === st[0] && pos[1] === st[1]) {
+          fb.className = 'cd-fb ok';
+          if (lv < LEVELS.length - 1) {
+            fb.textContent = '성공! 별에 도착했어 ⭐ 다음 레벨로 가자!';
+            setTimeout(function () { lv++; try { localStorage.setItem('subjects-coding-level', lv); } catch (e) {} reset(); }, 1400);
+          } else {
+            fb.textContent = '모든 레벨 성공! 너는 진짜 코딩 탐험가야 🏆';
+            running = false;
+          }
+        } else {
+          fb.className = 'cd-fb no'; fb.textContent = '명령이 끝났는데 별에 못 갔어. 순서를 고쳐 볼까?';
+          running = false;
+        }
+        return;
+      }
+      var m = MOVE[prog[i]], nr = pos[0] + m[0], nc = pos[1] + m[1];
+      if (nr < 0 || nr > 4 || nc < 0 || nc > 4 || isRock(nr, nc)) {
+        fb.className = 'cd-fb no';
+        fb.textContent = (i + 1) + '번째 명령에서 ' + (isRock(nr, nc) ? '돌에 쿵!' : '판 밖으로 나갈 뻔!') + ' 어디를 고치면 될까?';
+        running = false; return;
+      }
+      pos = [nr, nc]; path[nr + ',' + nc] = 1; draw(pos, path); i++;
+      setTimeout(step, 420);
+    }
+    setTimeout(step, 300);
+  }
+  var pads = box.querySelectorAll('[data-cmd]');
+  for (var k = 0; k < pads.length; k++) {
+    pads[k].addEventListener('click', function () {
+      if (running || prog.length >= 14) return;
+      prog.push(this.getAttribute('data-cmd')); showProg();
+      draw(LEVELS[lv].start, null); fb.textContent = '';
+    });
+  }
+  box.querySelector('[data-run]').addEventListener('click', run);
+  box.querySelector('[data-undo]').addEventListener('click', function () { if (running) return; prog.pop(); showProg(); draw(LEVELS[lv].start, null); });
+  box.querySelector('[data-clear]').addEventListener('click', function () { if (running) return; reset(); });
+  reset();
+})();
+</script>
