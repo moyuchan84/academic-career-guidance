@@ -1,0 +1,665 @@
+---
+title: 정보 · 중학교 단원 지도
+parent: 과목별 가이드
+nav_order: 61
+summary: 5개 영역 · 파이썬 입문 · 설명시키기와 프로젝트 지원
+wide: true
+---
+<style>
+.unit-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:4px 0 12px}
+.unit-grid>div{padding:12px 14px;border-radius:12px;background:var(--paper-2)}
+.unit-grid h4,.unit-sec{font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--accent);margin:0 0 6px}
+.unit-grid ol,.unit-grid ul{margin:0;padding-left:1.2em;font-size:14.5px}
+.acc-body h5{font-size:13px;font-weight:800;color:var(--ink-2);margin:14px 0 4px}
+.acc-ans{margin:6px 0 0;border:1px dashed var(--line);border-radius:10px;padding:6px 12px;font-size:14px}
+.acc-ans>summary{cursor:pointer;color:var(--forest);font-weight:700}
+@media (max-width:700px){.unit-grid{grid-template-columns:1fr}}
+.cm-code{font-family:ui-monospace,Consolas,monospace;font-size:13.5px;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:6px 0;white-space:pre;overflow-x:auto;display:block}
+</style>
+<header class="page-hero">
+<p class="kicker">과목별 가이드 · 정보 · 중학교</p>
+<h1>정보 · 중학교 단원 지도</h1>
+<p class="lede">중학교에서 정보가 독립 교과로 시작돼요. 5개 영역(컴퓨팅 시스템, 데이터, 알고리즘과 프로그래밍, 인공지능, 디지털 문화)의 대표 단원을 핵심 개념과 확인 질문으로 정리했어요. 부모 역할은 가르치기가 아니라 <strong>설명시키기, 프로젝트 지원, 스크린 균형</strong>이에요. 파이썬을 몰라도 이 페이지의 질문만으로 충분히 도울 수 있어요.</p>
+</header>
+
+<h2 id="how">이 페이지 쓰는 법</h2>
+<div class="cards" style="--min:210px">
+<div class="card top c-note"><span class="tag">1</span><h3>편성 학년 확인</h3><p>정보는 중1~3 중 한두 학년에 몰아서 편성돼요. 학교알리미나 설명회 자료로 “우리 학교는 몇 학년에”를 먼저 확인해요.</p></div>
+<div class="card top c-stem"><span class="tag">2</span><h3>영역 탭 고르기</h3><p>학년 대신 영역별 탭이에요. 아이 교과서 목차와 짝을 지어 지금 배우는 단원만 펼쳐요.</p></div>
+<div class="card top c-branch"><span class="tag">3</span><h3>확인 질문 = 대화</h3><p>“엄마한테 설명해 줄래?”로 확인 질문을 던져요. 답은 ‘답 보기’에 있어요.</p></div>
+<div class="card top c-fruit"><span class="tag">4</span><h3>수행평가 달력</h3><p>정보는 프로젝트·실습형 수행평가 비중이 커요. 학기 초 평가 계획을 받아 두세요.</p></div>
+</div>
+<div class="callout warning" data-label="시수·편성은 꼭 확인">
+<p>2022 개정 교육과정에서 중학교 정보는 <strong>68시간 이상</strong>으로 늘었다고 안내돼요(기존 34시간). 중학교 새 교육과정은 2025년 중1부터 학년별로 적용되고, 정보를 몇 학년에 몇 시간 편성할지는 학교가 정해요(학교자율시간 활용 포함). 정보는 <strong>검정 교과서</strong>라 단원 이름·순서가 출판사마다 달라요. 텍스트 언어로 파이썬을 쓰는 교과서가 많지만 다른 언어나 블록·텍스트 병행인 경우도 있어요.</p>
+<p>아래 단원은 성취기준 기반 <strong>대표 단원</strong>이에요. 첫째는 2031년, 둘째는 2032년에 중학생이 되니 그 사이 정책이 바뀔 수 있어요. 성취기준 원문: <a href="https://www.ncic.re.kr" target="_blank" rel="noopener">NCIC</a>, 학교별 편성: <a href="https://www.schoolinfo.go.kr" target="_blank" rel="noopener">학교알리미</a>.</p>
+</div>
+
+<h2 id="principles">가정 지도의 기본 원칙 (중학교 정보)</h2>
+<div class="cards" style="--min:220px">
+<div class="card c-root"><div class="card-ic">🗣️</div><h3>설명시키기</h3><p>“이 코드 한 줄씩 읽어 줄래?” 부모는 파이썬을 몰라도 돼요. 설명하다 막히는 곳이 아이가 모르는 곳이에요.</p></div>
+<div class="card c-stem"><div class="card-ic">🛠️</div><h3>프로젝트 지원</h3><p>주제 찾기 질문, 테스터 역할, 마감 계획 세우기 돕기. 코드를 대신 고쳐 주지 않아요.</p></div>
+<div class="card c-branch"><div class="card-ic">🐞</div><h3>오류 메시지 같이 읽기</h3><p>빨간 글씨에 멈추는 좌절이 가장 커요. “컴퓨터가 몇 번째 줄에서 뭐라고 해?”만 같이 읽어도 절반은 해결돼요.</p></div>
+<div class="card c-fruit"><div class="card-ic">⚖️</div><h3>스크린 균형</h3><p>“만드는 스크린”도 시간 약속 안에서. 게임·영상과 섞이지 않게 장소와 시간을 나눠요(<a href="../wellbeing/screen.html">스크린타임</a>).</p></div>
+<div class="card c-warn"><div class="card-ic">🤖</div><h3>AI는 도우미, 대필자 아님</h3><p>코드를 AI가 통째로 써 주면 배움이 사라져요. “막힌 한 줄만 묻고, 이해한 뒤 내가 다시 쓰기”.</p></div>
+</div>
+
+<h2 id="units">영역별 단원 지도</h2>
+<p>중학교 정보는 학년군(중1~3)으로 묶여 있어 학년이 아닌 <strong>영역</strong>으로 탭을 나눴어요. 대부분의 교과서가 컴퓨팅 시스템·데이터로 시작해 알고리즘과 프로그래밍에 가장 많은 시간을 쓰고, 인공지능·디지털 문화로 마무리하지만 순서는 다를 수 있어요.</p>
+<figure class="dg" style="--dg-min:600px"><svg viewBox="0 0 1000 256" role="img" aria-label="중학교 정보 영역 흐름도">
+<defs><marker id="m-coding-mid-all-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+<text x="10" y="44" dominant-baseline="middle" class="dg-t">기초</text>
+<rect x="100" y="16" width="431" height="56" rx="10" class="dg-box c-branch"/>
+<text x="315.5" y="44" text-anchor="middle" dominant-baseline="middle" class="dg-t">컴퓨팅 시스템</text>
+<path d="M533 44 H552" class="dg-line" marker-end="url(#m-coding-mid-all-arrow)"/>
+<rect x="555" y="16" width="431" height="56" rx="10" class="dg-box c-branch"/>
+<text x="770.5" y="44" text-anchor="middle" dominant-baseline="middle" class="dg-t">데이터</text>
+<text x="10" y="122" dominant-baseline="middle" class="dg-t">중심</text>
+<rect x="100" y="94" width="203" height="56" rx="10" class="dg-box c-fruit"/>
+<text x="201.5" y="122" text-anchor="middle" dominant-baseline="middle" class="dg-t">알고리즘 설계</text>
+<path d="M305 122 H324" class="dg-line" marker-end="url(#m-coding-mid-all-arrow)"/>
+<rect x="327" y="94" width="203" height="56" rx="10" class="dg-box c-fruit"/>
+<text x="428.5" y="122" text-anchor="middle" dominant-baseline="middle" class="dg-t">파이썬 기초</text>
+<path d="M532 122 H551" class="dg-line" marker-end="url(#m-coding-mid-all-arrow)"/>
+<rect x="554" y="94" width="203" height="56" rx="10" class="dg-box c-fruit"/>
+<text x="655.5" y="122" text-anchor="middle" dominant-baseline="middle" class="dg-t">리스트·함수</text>
+<path d="M759 122 H778" class="dg-line" marker-end="url(#m-coding-mid-all-arrow)"/>
+<rect x="781" y="94" width="203" height="56" rx="10" class="dg-box c-fruit"/>
+<text x="882.5" y="122" text-anchor="middle" dominant-baseline="middle" class="dg-t">프로젝트</text>
+<text x="10" y="200" dominant-baseline="middle" class="dg-t">확장</text>
+<rect x="100" y="172" width="431" height="56" rx="10" class="dg-box c-accent"/>
+<text x="315.5" y="200" text-anchor="middle" dominant-baseline="middle" class="dg-t">인공지능</text>
+<path d="M533 200 H552" class="dg-line" marker-end="url(#m-coding-mid-all-arrow)"/>
+<rect x="555" y="172" width="431" height="56" rx="10" class="dg-box c-accent"/>
+<text x="770.5" y="200" text-anchor="middle" dominant-baseline="middle" class="dg-t">디지털 문화</text>
+</svg><figcaption>중학교 정보 5개 영역의 대표 흐름 (교과서마다 순서가 달라요)</figcaption></figure>
+<div class="tabs" data-tabs id="coding-mid-tabs"><div class="tab-list">
+<button>컴퓨팅 시스템</button>
+<button>데이터</button>
+<button>알고리즘과 프로그래밍</button>
+<button>인공지능</button>
+<button>디지털 문화</button>
+</div>
+
+<!-- ================= 컴퓨팅 시스템 ================= -->
+<div class="tab-panel">
+<p>컴퓨터가 “어떻게 생겼고 어떻게 서로 연결되는지”를 배우는 영역이에요. 하드웨어·소프트웨어·운영체제의 역할, 네트워크, 센서를 쓰는 피지컬 컴퓨팅이 대표 내용이에요.</p>
+<details class="acc"><summary>컴퓨팅 기기의 구성과 동작<small>하드웨어·소프트웨어·운영체제의 역할</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>하드웨어: 입력·출력 장치, 처리 장치(CPU), 기억 장치(주기억 메모리 = 작업대, 보조기억 저장장치 = 서랍).</li>
+<li>소프트웨어: 운영체제(기기 전체 관리, 자원 배분)와 응용 소프트웨어(앱).</li>
+<li>프로그램은 저장장치에 있다가 실행할 때 메모리로 올라와 CPU가 명령을 하나씩 처리해요.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“폰 저장공간은 넉넉한데 왜 앱을 많이 켜면 느려질까?” 질문으로 메모리와 저장장치 차이를 설명하게 해요.</li>
+<li>집 컴퓨터 사양(설정 → 시스템 정보)을 아이가 읽어 주게 해요.</li>
+<li>“운영체제가 없으면 어떤 일이 벌어질까?” 상상 설명 듣기.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>가족 기기 사양 비교표 만들기(CPU·메모리·저장공간).</li>
+<li>작업 관리자로 어떤 앱이 메모리를 많이 쓰는지 같이 보기.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>메모리(RAM)와 저장공간을 같은 것으로 생각해요 → 작업대(RAM)와 서랍(저장장치) 비유.</li>
+<li>운영체제를 앱 중 하나로 생각해요 → 다른 모든 앱이 그 위에서 돌아가는 “관리자”라고 구별해요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>전원을 끄면 내용이 사라지는 기억 장치는?<details class="acc-ans"><summary>답 보기</summary><p>주기억 장치(RAM)예요. 저장장치(SSD 등)는 전원이 꺼져도 남아요.</p></details></li>
+<li>운영체제가 하는 일 두 가지는?<details class="acc-ans"><summary>답 보기</summary><p>예: 하드웨어 자원(CPU·메모리) 관리, 파일 관리, 사용자와 기기 연결(화면·입력).</p></details></li>
+<li>프로그램을 실행하면 어디에서 어디로 옮겨질까?<details class="acc-ans"><summary>답 보기</summary><p>저장장치에서 주기억 장치로 올라와 CPU가 처리해요.</p></details></li>
+</ol>
+<h5>연결</h5><p>초5 실과 컴퓨터와 소프트웨어(<a href="coding-elem.html">초등 단원 지도</a>) → 이 단원 → 고등 정보 컴퓨팅 시스템.</p>
+</div></details>
+<details class="acc"><summary>네트워크와 인터넷<small>데이터가 어떻게 오가는가</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>네트워크는 기기들이 서로 데이터를 주고받도록 연결된 것, 인터넷은 전 세계 네트워크의 네트워크예요.</li>
+<li>데이터는 작은 조각(패킷)으로 나뉘어 주소(IP)를 보고 전달되고, 도착해서 다시 합쳐져요.</li>
+<li>유선·무선(와이파이) 연결, 공유기의 역할, 공용 와이파이의 보안 위험.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“영상 통화할 때 할머니 얼굴은 어떤 길로 오는 걸까?” 설명하게 해요.</li>
+<li>집 공유기를 같이 보며 “우리 집 네트워크 지도”를 그려 보게 해요.</li>
+<li>카페 와이파이에서 은행 앱을 쓰지 않는 이유를 이야기해요.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>종이 패킷 놀이: 편지를 여러 조각에 번호 붙여 나눠 보내고 다시 맞추기.</li>
+<li>우리 집 네트워크 지도 그리기(공유기, 연결된 기기).</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>와이파이 = 인터넷이라고 생각해요 → 와이파이는 기기와 공유기 사이의 무선 연결일 뿐이에요.</li>
+<li>데이터가 한 덩어리로 간다고 생각해요 → 조각나서 다른 길로 가기도 한다는 걸 패킷 놀이로.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>패킷이란?<details class="acc-ans"><summary>답 보기</summary><p>전송을 위해 작게 나눈 데이터 조각이에요. 순서 번호와 주소 정보가 붙어요.</p></details></li>
+<li>와이파이와 인터넷의 차이는?<details class="acc-ans"><summary>답 보기</summary><p>와이파이는 공유기까지의 무선 연결 방식, 인터넷은 전 세계 네트워크의 연결이에요.</p></details></li>
+<li>공용 와이파이에서 주의할 점은?<details class="acc-ans"><summary>답 보기</summary><p>다른 사람이 데이터를 엿볼 수 있어 로그인·결제 같은 민감한 작업은 피해요.</p></details></li>
+</ol>
+<h5>연결</h5><p>이 단원 → 디지털 문화(정보보호) → 고등 정보 네트워크.</p>
+</div></details>
+<details class="acc"><summary>피지컬 컴퓨팅<small>센서 입력 → 프로그램 → 출력 장치</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>센서(빛·온도·거리·소리) 값을 읽어 조건에 따라 LED·모터·스피커를 제어해요.</li>
+<li>센서 값은 숫자라서 기준값(임계값)을 정하는 것이 핵심이에요.</li>
+<li>입력-처리-출력 구조로 생활 문제(자동 조명, 화분 물 알림)를 해결하는 작품을 설계해요.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“우리 집에 필요한 자동 장치가 뭘까?” 주제 찾기 대화.</li>
+<li>작품 시연 때 테스터가 되어 “이럴 때는 어떻게 돼?” 예외 상황 질문하기(너무 밝을 때, 센서를 가렸을 때).</li>
+<li>교구 구입은 학교 수업 뒤 아이 흥미가 이어질 때만.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>생활 속 센서 기기 분석 보고서(자동문, 스마트 체중계).</li>
+<li>무료 시뮬레이터로 교육용 보드 코딩 체험.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>기준값을 한 번 재고 정해서 환경이 바뀌면 오작동 → 여러 조건에서 값을 재어 표로 정리하고 정해요.</li>
+<li>배선·배터리 안전 무시 → 정해진 전원만, 단락 주의.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>거리 센서로 “가까이 오면 경고음”을 만들 때 필요한 구조는?<details class="acc-ans"><summary>답 보기</summary><p>반복하며 거리 값을 읽고, 만약 거리 &lt; 기준값이면 소리 출력.</p></details></li>
+<li>임계값(기준값)은 어떻게 정하면 좋을까?<details class="acc-ans"><summary>답 보기</summary><p>실제 환경에서 센서 값을 여러 번 측정해 보고 정해요.</p></details></li>
+<li>피지컬 컴퓨팅의 입력·처리·출력 예를 하나 들어 볼래?<details class="acc-ans"><summary>답 보기</summary><p>예: 토양 수분 센서(입력) → “마르면” 판단(처리) → LED·알림(출력).</p></details></li>
+</ol>
+<h5>연결</h5><p>초6 센서와 피지컬 → 이 단원 → 고등 소프트웨어와 생활(피지컬·메이킹).</p>
+</div></details>
+<h4>영역 이해 체크리스트</h4>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="coding-mid-sys-check">
+<li class="task"><label><input type="checkbox"><span>CPU·주기억·보조기억과 운영체제의 역할을 비유로 설명할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>데이터가 패킷으로 나뉘어 전달되는 과정과 공용 와이파이 위험을 설명할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>센서 값과 기준값으로 출력 장치를 제어하는 구조를 설명할 수 있다</span></label></li>
+</ul>
+</div>
+
+<!-- ================= 데이터 ================= -->
+<div class="tab-panel">
+<p>세상의 정보가 0과 1로 바뀌는 방법, 그리고 데이터를 모으고 정리하고 그래프로 보며 의미를 찾는 방법을 배워요. 수학 “자료의 정리와 해석”과 짝꿍 영역이에요.</p>
+<details class="acc"><summary>디지털 데이터 표현<small>수·문자·이미지·소리를 0과 1로</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>비트(0/1)와 바이트(8비트). n비트로 2ⁿ가지를 나타낼 수 있어요.</li>
+<li>문자는 약속된 코드(유니코드 등)로, 이미지는 픽셀과 색 값으로, 소리는 일정 간격으로 잰 값(표본화)으로 나타내요.</li>
+<li>압축: 데이터 크기를 줄이는 방법. 원래대로 되돌릴 수 있는 무손실, 일부 정보를 버리는 손실 압축.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“사진 한 장이 왜 몇 MB나 될까?” 해상도 × 색 정보로 설명하게 해요.</li>
+<li>초3 이진수 카드를 꺼내 동생에게 가르쳐 보게 해요(설명시키기의 좋은 기회).</li>
+<li>같은 사진을 다른 품질로 저장해 크기·화질 비교하기.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>파일 크기 탐정: 글·사진·음악·영상 파일 크기 비교표.</li>
+<li>반복 글자 압축 놀이: “AAAABBB” → “A4B3”.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>비트 수를 1 늘리면 표현 개수가 1 늘어난다고 생각해요 → 2배가 된다는 걸 표로 확인.</li>
+<li>손실 압축도 원본으로 되돌릴 수 있다고 생각해요 → 버린 정보는 복구 못 해요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>3비트로 나타낼 수 있는 경우의 수는?<details class="acc-ans"><summary>답 보기</summary><p>2³ = 8가지.</p></details></li>
+<li>이미지 해상도를 가로·세로 2배로 늘리면 픽셀 수는?<details class="acc-ans"><summary>답 보기</summary><p>4배가 돼요.</p></details></li>
+<li>손실 압축과 무손실 압축의 차이는?<details class="acc-ans"><summary>답 보기</summary><p>무손실은 원래대로 복원 가능, 손실은 일부 정보를 버려 더 작지만 복원이 안 돼요.</p></details></li>
+</ol>
+<h5>연결</h5><p>초3 이진수·픽셀 → 이 단원 → 고등 정보 데이터 표현. 수학 중2 거듭제곱과 연결.</p>
+</div></details>
+<details class="acc"><summary>데이터 수집·관리·분석<small>표로 정리하고 그래프로 의미 찾기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>문제 해결에 필요한 데이터를 정하고 모으기(설문, 측정, 공공데이터).</li>
+<li>표(행 = 한 사례, 열 = 속성)로 구조화하고, 빠진 값·잘못된 값을 정리해요.</li>
+<li>스프레드시트로 정렬·필터·합계·평균, 알맞은 그래프(막대·꺾은선·원)로 시각화하고 해석해요.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>진짜 가족 데이터를 줘요: 한 달 전기요금, 가족 수면 시간, 용돈 기록.</li>
+<li>“이 그래프로 무엇을 말하고 싶어?” 한 문장 결론을 먼저 말하게 해요.</li>
+<li>“다른 그래프로 그리면 더 잘 보일까?” 선택 이유를 묻기.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>가족 수면·스크린 시간 2주 기록 → 그래프 → 가족 회의 자료.</li>
+<li>공공데이터(기온, 미세먼지)로 우리 동네 그래프 만들기.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>한 칸에 여러 정보를 넣어요(“7시간, 늦게 잠”) → 한 칸 한 값 원칙.</li>
+<li>변화를 원그래프로 그려요 → 시간에 따른 변화는 꺾은선, 비율은 원그래프.</li>
+<li>상관을 원인으로 해석해요 → “같이 늘었다”와 “때문에 늘었다”를 구별하게 해요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>한 달 동안 기온 변화를 보여 주기 좋은 그래프는?<details class="acc-ans"><summary>답 보기</summary><p>꺾은선그래프예요.</p></details></li>
+<li>표에서 행과 열은 각각 무엇을 나타낼까?<details class="acc-ans"><summary>답 보기</summary><p>보통 행은 한 사례(한 사람, 하루), 열은 속성(이름, 기온)이에요.</p></details></li>
+<li>아이스크림 판매와 물놀이 사고가 함께 늘면 아이스크림이 사고 원인일까?<details class="acc-ans"><summary>답 보기</summary><p>아니에요. 둘 다 더운 날씨 때문에 함께 늘었을 수 있어요(상관 ≠ 인과).</p></details></li>
+</ol>
+<h5>연결</h5><p>수학 중1 자료의 정리와 해석(<a href="math-mid.html">수학 중학교</a>) ↔ 이 단원 → 인공지능(데이터로 학습) → 고등 데이터 과학.</p>
+</div></details>
+<h4>영역 이해 체크리스트</h4>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="coding-mid-data-check">
+<li class="task"><label><input type="checkbox"><span>비트 수와 표현 가능한 개수, 이미지·소리의 디지털 표현과 압축을 설명할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>데이터를 표로 구조화하고 알맞은 그래프로 시각화해 한 문장 결론을 낼 수 있다</span></label></li>
+</ul>
+</div>
+
+<!-- ================= 알고리즘과 프로그래밍 ================= -->
+<div class="tab-panel">
+<p>중학교 정보에서 가장 많은 시간을 쓰는 영역이에요. 알고리즘을 설계하고, 블록에서 <strong>텍스트 언어(주로 파이썬)</strong>로 넘어가 변수·입출력 → 조건 → 반복 → 리스트 → 함수 → 프로젝트 순서로 배워요. 부모는 코드를 몰라도 “설명해 줄래?”와 “오류 메시지 같이 읽기”로 충분해요.</p>
+<p class="callout note">아래 코드 예시는 부모가 아이 설명을 들을 때 “대충 이런 모양”을 알아보기 위한 것이에요. 외우거나 가르칠 필요는 없어요.</p>
+<details class="acc"><summary>문제 분석과 알고리즘 설계<small>순서도·의사코드, 탐색과 정렬</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>문제 분석: 입력(주어진 것)·출력(구할 것)·조건을 정리해요.</li>
+<li>알고리즘 표현: 순서도, 의사코드(우리말로 쓴 코드 같은 글).</li>
+<li>대표 알고리즘: 순차 탐색, (정렬된 자료의) 이진 탐색, 간단한 정렬. 같은 문제도 알고리즘에 따라 단계 수가 달라요.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“코딩 전에 종이에 먼저 써 봤어?” 습관 질문.</li>
+<li>업다운 게임을 다시 하며 “이진 탐색을 엄마한테 설명해 줘”.</li>
+<li>생활 문제(가족 여행 최단 경로, 장보기 순서)를 순서도로 그려 달라고 부탁해요.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>카드 정렬 대결: 서로 다른 방법으로 정렬하며 비교 횟수 세기.</li>
+<li>의사코드로 “아침 루틴” 쓰기.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>바로 코딩부터 해서 헤매요 → 입력·출력·조건 세 줄 정리부터.</li>
+<li>정렬 안 된 자료에 이진 탐색을 쓰려 해요 → 이진 탐색은 정렬이 전제라는 걸 확인.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>1~1000 사이 숫자를 이진 탐색으로 찾으면 최대 몇 번쯤?<details class="acc-ans"><summary>답 보기</summary><p>약 10번(2¹⁰ = 1024).</p></details></li>
+<li>의사코드란?<details class="acc-ans"><summary>답 보기</summary><p>특정 언어 문법 없이 알고리즘을 사람의 말로 코드처럼 적은 것이에요.</p></details></li>
+<li>순서도에서 반복은 어떻게 나타날까?<details class="acc-ans"><summary>답 보기</summary><p>판단(마름모)에서 앞 단계로 되돌아가는 화살표로 나타나요.</p></details></li>
+</ol>
+<h5>연결</h5><p>초4 정렬·초5 절차적 문제 해결 → 이 단원 → 파이썬 단원들 → 고등 정보 알고리즘 효율.</p>
+</div></details>
+<details class="acc"><summary>파이썬 ① 변수·자료형·입출력<small>블록에서 글자로, 첫 프로그램</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>변수에 값을 대입해요: <code>score = 0</code>. 여기서 <code>=</code>는 “같다”가 아니라 “오른쪽 값을 왼쪽 이름에 저장”이에요.</li>
+<li>자료형: 정수, 실수, 문자열("안녕"), 논리값(True/False). <code>input()</code>으로 받은 값은 문자열이라 계산하려면 <code>int()</code>로 바꿔요.</li>
+<li>연산자: 산술(+ − * / // %), 비교(== != &lt; &gt;), 논리(and or not).</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>아이가 첫 프로그램(이름 묻고 인사하기)을 보여 주면 “한 줄씩 읽어 줄래?”</li>
+<li>“<code>=</code>랑 <code>==</code>는 뭐가 달라?” 질문 하나면 핵심을 확인할 수 있어요.</li>
+<li>오류가 나면 빨간 글씨의 마지막 줄과 줄 번호를 같이 읽어요.</li>
+</ol></div>
+</div>
+<span class="cm-code">name = input("이름은? ")
+age = int(input("나이는? "))
+print(name, "님, 내년엔", age + 1, "살!")</span>
+<h5>집에서 하는 활동</h5><ul>
+<li>용돈 계산기, 섭씨↔화씨 변환기 만들기.</li>
+<li>가족에게 “이름 묻고 인사하는 프로그램” 시연.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li><code>=</code>를 수학의 등호로 읽어 <code>x = x + 1</code>이 이상하다고 해요 → “오른쪽을 계산해서 왼쪽에 넣는다”로 읽기.</li>
+<li><strong>변수를 값이 쌓이는 상자로 생각</strong>해요 → 새로 대입하면 이전 값은 사라져요. 이름표 비유로 다시 설명.</li>
+<li><code>input()</code> 값을 바로 더해 "3"+"4" = "34"가 나와요 → 문자열과 정수의 차이를 확인.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li><code>x = 3</code> 다음 <code>x = x + 2</code>를 실행하면 x는?<details class="acc-ans"><summary>답 보기</summary><p>5예요.</p></details></li>
+<li><code>"3" + "4"</code>의 결과는?<details class="acc-ans"><summary>답 보기</summary><p>"34"(문자열 이어 붙이기). 정수로 바꾸면 7.</p></details></li>
+<li><code>7 // 2</code>와 <code>7 % 2</code>의 값은?<details class="acc-ans"><summary>답 보기</summary><p>3(몫)과 1(나머지).</p></details></li>
+</ol>
+<h5>연결</h5><p>초6 변수와 데이터 → 이 단원 → 조건문. 수학 중1 문자와 식(<a href="math-mid.html">수학 중학교</a>)에 익숙하면 훨씬 쉬워요.</p>
+</div></details>
+<details class="acc"><summary>파이썬 ② 조건문<small>if · elif · else, 들여쓰기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li><code>if 조건:</code> 아래 들여쓴 줄은 조건이 참일 때만 실행돼요. <code>elif</code>는 “아니면 만약”, <code>else</code>는 “나머지 모두”.</li>
+<li>파이썬은 <strong>들여쓰기</strong>로 “어디까지가 이 조건 안인지”를 구별해요.</li>
+<li>조건은 위에서부터 검사하고, 참인 첫 번째만 실행해요.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“점수에 따라 등급을 매기는 규칙을 먼저 말로 해 줄래?” → 그다음 코드.</li>
+<li>테스터 역할: 경계값(정확히 90점, 0점, 음수)을 넣어 보라고 제안해요.</li>
+<li>들여쓰기 오류는 줄 맞추기만 보면 된다고 안심시켜요.</li>
+</ol></div>
+</div>
+<span class="cm-code">if score &gt;= 90:
+    print("A")
+elif score &gt;= 80:
+    print("B")
+else:
+    print("다음엔 더 잘할 수 있어!")</span>
+<h5>집에서 하는 활동</h5><ul>
+<li>날씨·기온을 입력하면 옷차림 추천하는 프로그램.</li>
+<li>가위바위보 게임(컴퓨터 무작위 선택 + 승패 판정).</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>조건 순서를 거꾸로 써서(80 이상을 먼저) 95점이 B가 돼요 → 위에서부터 검사한다는 것을 손으로 따라가 보기.</li>
+<li><code>if</code>와 반복을 혼동해 “조건이 맞는 동안 계속”이라고 생각해요 → if는 한 번 검사, 계속 검사는 while.</li>
+<li><code>=</code>와 <code>==</code> 혼동.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>위 예시에서 score가 85이면 출력은?<details class="acc-ans"><summary>답 보기</summary><p>B.</p></details></li>
+<li>if와 elif를 여러 개 쓸 때 조건 순서가 중요한 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>위에서부터 검사해 참인 첫 번째만 실행하기 때문이에요.</p></details></li>
+<li>짝수인지 판단하는 조건식은?<details class="acc-ans"><summary>답 보기</summary><p><code>n % 2 == 0</code>.</p></details></li>
+</ol>
+<h5>연결</h5><p>초5 선택과 이벤트 → 이 단원 → 반복문.</p>
+</div></details>
+<details class="acc"><summary>파이썬 ③ 반복문<small>for · range · while, 무한 반복 주의</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li><code>for i in range(5):</code>는 i가 0, 1, 2, 3, 4일 때 5번 반복(횟수가 정해진 반복).</li>
+<li><code>while 조건:</code>은 조건이 참인 동안 반복(끝나는 시점이 조건에 달린 반복). 조건이 영원히 참이면 무한 반복.</li>
+<li>누적 패턴: <code>total = 0</code>으로 시작해 반복마다 더하기.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“range(1, 11)은 몇부터 몇까지야?” 한 질문으로 가장 흔한 실수를 점검.</li>
+<li>프로그램이 멈추지 않으면 당황하지 말고 중지(Ctrl+C 등) 후 “while 조건이 언제 거짓이 돼?” 묻기.</li>
+<li>구구단 출력처럼 결과가 눈에 보이는 과제를 제안해요.</li>
+</ol></div>
+</div>
+<span class="cm-code">total = 0
+for i in range(1, 11):
+    total = total + i
+print(total)   # 55</span>
+<h5>집에서 하는 활동</h5><ul>
+<li>구구단 전체 출력, 1부터 100까지 짝수 합.</li>
+<li>숫자 맞히기 게임(while로 맞힐 때까지 반복).</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>range 끝 값이 포함된다고 생각해요 → <code>range(1, 11)</code>은 10까지.</li>
+<li>while 안에서 조건 변수를 바꾸지 않아 무한 반복 → “반복할 때마다 무엇이 바뀌어 끝나게 돼?”</li>
+<li>누적 변수를 반복 안에서 0으로 초기화해 매번 리셋 → 초기화는 반복 밖에서.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li><code>range(3)</code>이 만드는 수는?<details class="acc-ans"><summary>답 보기</summary><p>0, 1, 2.</p></details></li>
+<li>for와 while은 언제 각각 쓸까?<details class="acc-ans"><summary>답 보기</summary><p>반복 횟수가 정해져 있으면 for, 조건이 만족될 때까지면 while.</p></details></li>
+<li>위 예시에서 <code>total = 0</code>을 반복 안에 넣으면?<details class="acc-ans"><summary>답 보기</summary><p>매번 0으로 초기화돼 마지막 값 10만 남아요.</p></details></li>
+</ol>
+<h5>연결</h5><p>초5 순차와 반복 → 이 단원 → 리스트(반복과 짝꿍).</p>
+</div></details>
+<details class="acc"><summary>파이썬 ④ 리스트<small>여러 값을 한 이름으로, 인덱스와 반복</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>리스트는 여러 값을 순서대로 담아요: <code>scores = [80, 95, 70]</code>.</li>
+<li>인덱스는 0부터 시작: <code>scores[0]</code>은 80. <code>len()</code>으로 개수, <code>append()</code>로 추가.</li>
+<li><code>for s in scores:</code>로 모든 값을 차례로 처리해요(합계·최댓값·개수 세기).</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>가족 데이터(가족 키, 이번 주 걸음 수)를 리스트로 만들어 평균·최댓값을 구해 달라고 부탁해요.</li>
+<li>“첫 번째 값은 몇 번 칸이야?” 0부터 세는 것만 확인.</li>
+<li>결과를 가족 단톡방에 공유하는 즐거움 주기.</li>
+</ol></div>
+</div>
+<span class="cm-code">steps = [5200, 8100, 6400, 9900]
+print(max(steps), sum(steps) / len(steps))</span>
+<h5>집에서 하는 활동</h5><ul>
+<li>가족 걸음 수 통계, 단어장 퀴즈(리스트에서 무작위 출제).</li>
+<li>할 일 목록 프로그램(추가·삭제·보기).</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>인덱스를 1부터 세서 마지막 칸에서 오류(IndexError) → 0부터, 마지막은 len−1.</li>
+<li>변수와 리스트를 구별 못 해요 → 변수는 값 하나, 리스트는 번호 붙은 칸 여러 개.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li><code>a = [3, 6, 9]</code>에서 <code>a[2]</code>는?<details class="acc-ans"><summary>답 보기</summary><p>9.</p></details></li>
+<li>리스트 길이가 5면 마지막 인덱스는?<details class="acc-ans"><summary>답 보기</summary><p>4.</p></details></li>
+<li>리스트의 모든 값을 더하는 방법 두 가지는?<details class="acc-ans"><summary>답 보기</summary><p><code>sum(a)</code>, 또는 누적 변수와 for 반복.</p></details></li>
+</ol>
+<h5>연결</h5><p>반복문·데이터 영역 → 이 단원 → 함수 → 고등 정보 2차원 리스트·데이터 분석.</p>
+</div></details>
+<details class="acc"><summary>파이썬 ⑤ 함수<small>이름 붙인 코드 묶음, 매개변수와 반환값</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>함수는 자주 쓰는 코드를 묶어 이름을 붙인 것: <code>def</code>로 정의하고 이름으로 호출해요.</li>
+<li>매개변수로 값을 받고, <code>return</code>으로 결과를 돌려줘요.</li>
+<li>함수로 나누면 읽기 쉽고, 고치기 쉽고, 다시 쓸 수 있어요(분해·추상화).</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“이 함수는 무엇을 받아서 무엇을 돌려줘?” 한 문장 설명 요청.</li>
+<li>레시피 비유: “라면 끓이기(물 양)”처럼 재료(매개변수)를 넣으면 결과가 나오는 것.</li>
+<li>긴 코드를 보면 “여기를 함수로 나누면 어때?” 제안만.</li>
+</ol></div>
+</div>
+<span class="cm-code">def average(nums):
+    return sum(nums) / len(nums)
+
+print(average([80, 90, 100]))   # 90.0</span>
+<h5>집에서 하는 활동</h5><ul>
+<li>게임 코드 속 반복되는 부분을 함수로 정리하기.</li>
+<li>나만의 도구 함수 모음(단위 변환, 평균).</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li><code>print</code>와 <code>return</code>을 같은 것으로 생각해요 → print는 화면에 보여 주기, return은 값을 돌려줘 다른 계산에 쓸 수 있게.</li>
+<li>함수를 정의만 하고 호출하지 않아 아무 일도 안 일어나요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>함수를 쓰면 좋은 점 두 가지는?<details class="acc-ans"><summary>답 보기</summary><p>같은 코드를 반복해 쓰지 않아도 되고, 읽고 고치기 쉬워요.</p></details></li>
+<li>print와 return의 차이는?<details class="acc-ans"><summary>답 보기</summary><p>print는 화면 출력, return은 호출한 곳에 값을 돌려줘요.</p></details></li>
+<li><code>def</code>만 쓰고 아무 일도 안 일어나는 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>함수를 호출하지 않았기 때문이에요.</p></details></li>
+</ol>
+<h5>연결</h5><p>리스트 → 이 단원 → 프로젝트 → 고등 정보 모듈화.</p>
+</div></details>
+<details class="acc"><summary>프로그래밍 프로젝트<small>생활 문제를 코드로 해결하고 발표</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>문제 발견 → 분석(입력·출력) → 설계(알고리즘·함수 나누기) → 구현 → 테스트·디버깅 → 공유.</li>
+<li>테스트: 보통 값, 경계값, 잘못된 값을 넣어 보기.</li>
+<li>협업 프로젝트는 역할 나누기와 코드 합치기가 핵심이에요.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>주제 찾기 질문: “요즘 불편한 게 뭐야? 반 친구들은?”</li>
+<li>마감 거꾸로 계획표를 함께: 발표일 → 테스트 주 → 구현 주 → 설계 주.</li>
+<li>가족이 테스터·청중이 되어 주기. “여기 이상한 값 넣으면 어떻게 돼?”</li>
+<li>코드는 대신 고치지 않기. 수행평가라면 AI 사용 규칙도 학교 기준에 맞는지 확인.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>반 친구 퀴즈 앱, 급식 메뉴 추천기, 공부 타이머.</li>
+<li>프로젝트 일지: 날짜 / 한 일 / 만난 버그 / 해결.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>마감 전날 몰아 하다 디버깅 시간이 없어요 → 계획표의 절반을 테스트·수정에.</li>
+<li>디버깅이 길어지면 “나는 코딩이 안 맞아”로 결론 → 프로 개발자도 시간의 상당 부분을 디버깅에 쓴다고 알려 주고, 해결한 버그를 기록해 성장으로 보여 줘요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>프로젝트 테스트에서 넣어 볼 값 세 종류는?<details class="acc-ans"><summary>답 보기</summary><p>보통 값, 경계값(0, 최댓값), 잘못된 값(문자, 음수).</p></details></li>
+<li>코딩 전에 해야 할 설계 두 가지는?<details class="acc-ans"><summary>답 보기</summary><p>입력·출력 정리, 알고리즘(순서도·의사코드)과 함수 나누기.</p></details></li>
+<li>친구와 함께 할 때 가장 먼저 정할 것은?<details class="acc-ans"><summary>답 보기</summary><p>역할 분담과 합치는 방법(함수 이름·약속).</p></details></li>
+</ol>
+<h5>연결</h5><p>초6 프로젝트 → 이 단원 → 고등 정보·소프트웨어와 생활 프로젝트.</p>
+</div></details>
+<h4>영역 이해 체크리스트</h4>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="coding-mid-prog-check">
+<li class="task"><label><input type="checkbox"><span>문제의 입력·출력을 정리하고 순서도·의사코드로 알고리즘을 설계할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>대입(=)과 비교(==), 문자열과 정수의 차이를 설명할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>if·elif·else의 검사 순서와 들여쓰기의 의미를 설명할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>for와 while을 구별해 쓰고 무한 반복을 피할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>리스트 인덱스와 반복으로 합계·최댓값을 구할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>매개변수와 반환값이 있는 함수를 만들고 print와 return을 구별할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>테스트와 디버깅을 거쳐 프로젝트 하나를 완성하고 발표할 수 있다</span></label></li>
+</ul>
+</div>
+
+<!-- ================= 인공지능 ================= -->
+<div class="tab-panel">
+<p>AI를 “쓰는 사람”을 넘어 AI가 어떻게 배우고 어디서 틀리는지 이해하는 영역이에요. 수식보다 체험과 토론이 중심이에요.</p>
+<details class="acc"><summary>인공지능의 이해<small>규칙 기반 vs 학습 기반, AI가 잘하는 것과 못하는 것</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>규칙 기반: 사람이 조건을 직접 적어요(if 규칙). 학습 기반(기계학습): 데이터에서 규칙을 찾아요.</li>
+<li>AI가 쓰이는 곳: 인식(이미지·음성), 추천, 번역, 생성(글·그림).</li>
+<li>AI의 한계: 학습 데이터 밖의 상황, 그럴듯한 오답, 이유를 설명하기 어려움.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>“영상 추천은 어떻게 내 취향을 알까?” 설명해 달라고 하기.</li>
+<li>스팸 필터를 규칙으로 만들면 어떤 문제가 생길지 토론.</li>
+<li>생성형 AI가 틀린 답을 낸 경험을 서로 이야기하기.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>우리 집 AI 찾기: 스마트 스피커, 사진 앱 얼굴 분류, 번역기.</li>
+<li>추천 알고리즘 실험: 새 계정(또는 기록 삭제)으로 추천이 어떻게 바뀌는지 관찰.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li><strong>AI는 항상 정확하고 중립적이다</strong> → 데이터와 설계에 따라 틀리고 치우칠 수 있어요.</li>
+<li>모든 자동화 = AI라고 생각해요 → 단순 규칙(if) 프로그램과 학습하는 AI를 구별해요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>규칙 기반과 기계학습의 차이는?<details class="acc-ans"><summary>답 보기</summary><p>규칙 기반은 사람이 규칙을 적고, 기계학습은 데이터에서 규칙을 찾아요.</p></details></li>
+<li>생성형 AI 답을 그대로 믿으면 안 되는 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>사실이 아닌 내용을 그럴듯하게 만들어 낼 수 있기 때문이에요.</p></details></li>
+<li>AI가 쓰이는 예 두 가지는?<details class="acc-ans"><summary>답 보기</summary><p>예: 음성 인식, 번역, 추천, 이미지 분류.</p></details></li>
+</ol>
+<h5>연결</h5><p>초6 인공지능 체험 → 이 단원 → 기계학습 체험 → 고등 인공지능 기초.</p>
+</div></details>
+<details class="acc"><summary>기계학습 체험과 AI의 영향<small>데이터로 학습시키기, 편향과 책임</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>지도학습: 정답(레이블)이 붙은 데이터로 학습 → 새 데이터를 분류·예측.</li>
+<li>학습 데이터와 평가(테스트) 데이터를 나눠 성능을 확인해요.</li>
+<li>데이터 편향은 결과 편향으로 이어져요. AI 결정의 책임은 만든 사람과 쓰는 사람에게 있어요.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>아이가 만든 분류 모델을 시연하면 “일부러 틀리게 만들어 볼 수 있어?”라고 물어요.</li>
+<li>뉴스 속 AI 채용·얼굴 인식 편향 사례를 함께 읽고 의견 나누기.</li>
+<li>“AI가 잘못 판단하면 누구 책임일까?” 정답 없는 대화.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>교육용 기계학습 도구로 재활용품 분류 모델 만들기.</li>
+<li>데이터 양·다양성을 바꿔 정확도 비교 실험 기록.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>학습에 쓴 데이터로 평가해 정확도가 높다고 착각 → 새 데이터로 확인해야 해요.</li>
+<li>데이터가 많으면 편향이 없다고 생각 → 양보다 고르게 대표하는지가 중요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>학습 데이터와 테스트 데이터를 나누는 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>처음 보는 데이터에서도 잘 맞히는지 공정하게 확인하려고요.</p></details></li>
+<li>한 피부색 사진만으로 학습한 얼굴 인식 AI의 문제는?<details class="acc-ans"><summary>답 보기</summary><p>다른 피부색의 얼굴을 잘 인식하지 못하는 편향이 생길 수 있어요.</p></details></li>
+<li>지도학습에서 “레이블”이란?<details class="acc-ans"><summary>답 보기</summary><p>데이터에 붙인 정답(예: 이 사진은 “고양이”).</p></details></li>
+</ol>
+<h5>연결</h5><p>데이터 영역 → 이 단원 → 고등 인공지능 기초·데이터 과학.</p>
+</div></details>
+<h4>영역 이해 체크리스트</h4>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="coding-mid-ai-check">
+<li class="task"><label><input type="checkbox"><span>규칙 기반과 기계학습의 차이, AI의 한계를 설명할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>지도학습·레이블·테스트 데이터의 뜻과 데이터 편향의 영향을 설명할 수 있다</span></label></li>
+</ul>
+</div>
+
+<!-- ================= 디지털 문화 ================= -->
+<div class="tab-panel">
+<p>디지털 사회에서 건강하고 책임 있게 사는 법을 다뤄요. 초등에서 쌓은 시민성을 법·권리·보안 수준으로 끌어올리는 단계예요.</p>
+<details class="acc"><summary>정보보호와 보안<small>개인정보, 인증, 악성 프로그램</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>개인정보의 종류와 가치, 유출 경로(피싱, 스미싱, 악성 앱, 공용 기기).</li>
+<li>보안 습관: 길고 서로 다른 비밀번호, 2단계 인증, 업데이트, 앱 권한 점검.</li>
+<li>암호화의 기본 아이디어: 정해진 사람만 읽을 수 있게 바꾸기.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>가족 계정 보안 점검의 날: 아이가 “보안 담당”이 되어 부모 계정 설정을 점검해 줘요.</li>
+<li>실제 받은 스미싱 문자를 보여 주며 어디가 수상한지 찾게 해요(링크는 누르지 않기).</li>
+<li>비밀번호 관리 방법을 가족 규칙으로 정해요.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>시저 암호로 가족 비밀 편지.</li>
+<li>분기 1회 앱 권한·업데이트 점검.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>여러 사이트에 같은 비밀번호 → 하나가 털리면 모두 위험.</li>
+<li>“내 정보는 별로 가치가 없다” → 사칭·계정 도용에 쓰일 수 있어요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>2단계 인증이 안전한 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>비밀번호가 유출돼도 두 번째 확인(휴대폰 등) 없이는 로그인할 수 없어요.</p></details></li>
+<li>스미싱이란?<details class="acc-ans"><summary>답 보기</summary><p>문자 메시지 속 링크로 악성 앱 설치나 정보 입력을 유도하는 사기예요.</p></details></li>
+<li>같은 비밀번호를 여러 곳에 쓰면 위험한 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>한 곳이 유출되면 다른 계정도 함께 뚫릴 수 있어요.</p></details></li>
+</ol>
+<h5>연결</h5><p>초3 비밀번호·초5 정보 보호 → 이 단원 → 고등 정보 디지털 문화.</p>
+</div></details>
+<details class="acc"><summary>저작권과 디지털 윤리<small>공정 이용, 생성형 AI, 사이버 폭력</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>저작권, 오픈소스·공유 저작물(이용 허락 표시), 출처 표시.</li>
+<li>생성형 AI 산출물 사용 시 학교·플랫폼 규칙 확인, 사용 사실 밝히기.</li>
+<li>사이버 폭력, 딥페이크, 혐오 표현의 피해와 법적 책임.</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>아이가 만든 영상·발표 자료의 음악·이미지 출처를 함께 확인해요.</li>
+<li>“AI로 만든 과제는 어디까지 괜찮을까?” 학교 규칙을 같이 읽어요.</li>
+<li>사이버 폭력 뉴스는 비난보다 “너라면 어떻게 할래?”로.</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>무료로 쓸 수 있는 이미지·음악 자료 목록 만들기.</li>
+<li>가족 AI 사용 규칙 중학생 버전으로 업데이트.</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>“출처만 쓰면 무엇이든 가능” → 이용 허락 범위를 확인해야 해요.</li>
+<li>“단톡방은 사적 공간” → 캡처·유포로 공개될 수 있고 책임도 따라요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>이용 허락 표시가 있는 저작물을 쓸 때 확인할 것은?<details class="acc-ans"><summary>답 보기</summary><p>출처 표시 조건, 상업적 이용 가능 여부, 변경 허용 여부 등.</p></details></li>
+<li>AI로 과제를 도움받았다면 어떻게 해야 할까?<details class="acc-ans"><summary>답 보기</summary><p>학교 규칙을 따르고, 어떤 부분에 썼는지 밝혀요.</p></details></li>
+<li>딥페이크 합성물이 문제가 되는 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>당사자 동의 없이 명예·인격을 해치고, 한 번 퍼지면 되돌리기 어려우며 처벌 대상이 될 수 있어요.</p></details></li>
+</ol>
+<h5>연결</h5><p>초4 저작권·초6 AI 윤리 → 이 단원 → 고등 정보·인공지능 기초의 사회적 영향.</p>
+</div></details>
+<details class="acc"><summary>디지털 건강과 진로<small>과몰입 조절, 디지털 세상의 직업</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4><ul>
+<li>디지털 과몰입의 신호(수면 부족, 일상 소홀)와 스스로 조절하는 전략.</li>
+<li>디지털 기술이 바꾸는 사회와 일자리, 정보 관련 진로(개발, 데이터, 보안, 디자인 등).</li>
+<li>디지털 격차와 접근성(누구나 쓸 수 있는 기술).</li>
+</ul></div>
+<div><h4>부모 역할 · 이렇게 도와요</h4><ol>
+<li>스크린 시간 통계를 아이가 직접 분석해 목표를 정하게 해요(<a href="../wellbeing/screen.html">스크린타임</a>).</li>
+<li>잠자리에 기기 두지 않기는 부모도 함께.</li>
+<li>진로 이야기는 “그 직업은 하루에 뭘 할까?” 탐색으로, 결정 압박 없이(<a href="https://www.career.go.kr" target="_blank" rel="noopener">커리어넷</a>).</li>
+</ol></div>
+</div>
+<h5>집에서 하는 활동</h5><ul>
+<li>일주일 디지털 디톡스 실험 후 소감 나누기.</li>
+<li>할머니·할아버지 기기 사용 도와드리기(접근성 체험).</li>
+</ul>
+<h5>자주 틀리는 곳</h5><ul>
+<li>코딩하는 시간은 무제한이어도 된다 → 만드는 스크린도 수면·운동과 균형.</li>
+<li>정보 진로 = 프로그래머뿐 → 기획·디자인·보안·데이터·교육 등 다양해요.</li>
+</ul>
+<h5>확인 질문</h5><ol>
+<li>디지털 과몰입의 신호 두 가지는?<details class="acc-ans"><summary>답 보기</summary><p>예: 수면 시간이 줄어듦, 해야 할 일을 미룸, 기기가 없으면 불안함.</p></details></li>
+<li>디지털 격차란?<details class="acc-ans"><summary>답 보기</summary><p>기기·인터넷 접근이나 활용 능력 차이로 생기는 정보 불평등이에요.</p></details></li>
+<li>정보 관련 직업 세 가지는?<details class="acc-ans"><summary>답 보기</summary><p>예: 소프트웨어 개발자, 데이터 분석가, 정보보안 전문가, UX 디자이너.</p></details></li>
+</ol>
+<h5>연결</h5><p>이 단원 → 고등 과목 선택과 진로(<a href="coding-high.html">고등 단원 지도</a>).</p>
+</div></details>
+<h4>영역 이해 체크리스트</h4>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="coding-mid-culture-check">
+<li class="task"><label><input type="checkbox"><span>피싱·스미싱을 구별하고 2단계 인증 등 보안 습관을 설명할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>저작권·이용 허락, 생성형 AI 사용 규칙, 사이버 폭력의 책임을 설명할 수 있다</span></label></li>
+<li class="task"><label><input type="checkbox"><span>자신의 스크린 사용을 분석해 조절 목표를 세울 수 있다</span></label></li>
+</ul>
+</div>
+</div>
+
+<h2 id="exam">시험·수행평가 루틴</h2>
+<div class="cards" style="--min:240px">
+<div class="card c-root"><span class="tag">수행평가</span><h3>프로젝트형이 많아요</h3><p>프로그램 만들기, 데이터 분석 보고서, 발표가 흔해요. 평가 계획의 마감일을 가족 달력에 적고 거꾸로 계획해요.</p></div>
+<div class="card c-stem"><span class="tag">지필</span><h3>개념 + 코드 읽기</h3><p>코드 실행 결과 예측, 빈칸 채우기, 알고리즘 순서가 자주 나와요. 교과서 예제를 “실행 전에 결과 예상 → 실행 확인”으로 복습.</p></div>
+<div class="card c-branch"><span class="tag">자료</span><h3>교과서 · EBS</h3><p>교과서 예제와 실습이 기본. 복습은 <a href="https://mid.ebs.co.kr" target="_blank" rel="noopener">EBS 중학</a> 등 무료 자료로 충분해요.</p></div>
+</div>
+<p class="callout warning">중학교 정보의 평가 방식(지필 여부, 수행평가 비율)은 학교마다 달라요. 자유학기(중1) 운영과 겹치면 지필평가가 없을 수도 있어요. 학기 초 학교 평가 계획을 확인하세요(<a href="../system/assessment.html">평가 방식</a>).</p>
+
+<h2 id="with-academy">학원과 함께 쓸 때</h2>
+<div class="compare">
+<div style="--cs:var(--paper-2)"><h4>코딩 학원·대회반이 잘하는 것</h4><ul><li>문법 진도를 빠르게 나가기</li><li>알고리즘 문제 풀이 훈련</li><li>대회 기출과 시간 관리</li></ul></div>
+<div style="--cs:var(--tip-soft);--c:var(--tip)"><h4>집에서 부모가 할 것</h4><ul><li>“설명해 줄래?”로 이해 확인</li><li>프로젝트 주제 찾기·마감 계획·테스터</li><li>AI 사용 규칙과 스크린 균형</li><li>흥미가 이어지는지 관찰(<a href="../workbook/observation.html">아이 관찰 기록</a>)</li></ul></div>
+</div>
+<p class="callout tip">중학교 정보도 학교 수업과 무료 자료로 충분히 따라갈 수 있어요. 정보올림피아드 같은 대회는 아이가 알고리즘 문제를 “재미있어할 때”의 도전 과제이지, 모두가 해야 하는 코스가 아니에요. 학원·대회 준비를 고민한다면 <a href="../workbook/decision-log.html">결정 로그</a>에 이유와 기대를 적고 부부가 함께 정해요. 이전 단계는 <a href="coding-elem.html">초등 단원 지도</a>, 다음 단계는 <a href="coding-high.html">고등 단원 지도</a>.</p>
+
+<h2 id="memo">우리 아이 정보 메모</h2>
+<label class="memo-label" for="coding-mid-memo">정보 편성 학년 · 수행평가 일정 · 만든 프로젝트 · 막힌 개념</label>
+<textarea class="memo" id="coding-mid-memo" data-key="subjects-coding-mid-memo" placeholder="예) 우리 학교 정보: 중2 1·2학기 / 5월 파이썬 미니 프로젝트 / range 끝 값 계속 헷갈림"></textarea>
+<p class="saved-hint"></p>
