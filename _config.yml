@@ -1,0 +1,22 @@
+title: 우리 아이 교육 로드맵
+description: 초1·2 아이를 키우는 부부가 초·중·고 12년과 그 이후를 함께 설계하는 공간
+lang: ko
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+search_enabled: true
+search:
+  heading_level: 3
+  tokenizer_separator: /[\s/]+/
+heading_anchors: true
+back_to_top: true
+back_to_top_text: "맨 위로"
+color_scheme: light
+footer_content: "우리 가족만의 기록입니다. 제도·입시 정보는 반드시 공식 출처로 다시 확인하세요."
+callouts:
+  note:     { title: 메모, color: blue }
+  warning:  { title: 확인 필요, color: yellow }
+  tip:      { title: 우리 집 방침, color: green }
+  danger:   { title: 주의, color: red }
+exclude: [README.md, Gemfile, Gemfile.lock]
