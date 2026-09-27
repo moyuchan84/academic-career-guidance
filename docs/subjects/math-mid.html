@@ -1,0 +1,1296 @@
+---
+title: 수학 · 중학교 단원 지도
+parent: 과목별 가이드
+nav_order: 21
+summary: 중1~중3 · 단원별 핵심 개념 · 설명 시키기와 오답 코칭
+wide: true
+---
+<style>
+.unit-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:4px 0 12px}
+.unit-grid>div{padding:12px 14px;border-radius:12px;background:var(--paper-2)}
+.unit-grid h4,.unit-sec{font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--accent);margin:0 0 6px}
+.unit-grid ol,.unit-grid ul{margin:0;padding-left:1.2em;font-size:14.5px}
+.acc-body h5{font-size:13px;font-weight:800;color:var(--ink-2);margin:14px 0 4px}
+.acc-ans{margin:6px 0 0;border:1px dashed var(--line);border-radius:10px;padding:6px 12px;font-size:14px}
+.acc-ans>summary{cursor:pointer;color:var(--forest);font-weight:700}
+@media (max-width:700px){.unit-grid{grid-template-columns:1fr}}
+</style>
+<header class="page-hero">
+  <p class="kicker">과목별 가이드 · 수학 · 중학교</p>
+  <h1>수학 · 중학교 단원 지도</h1>
+  <p class="lede">중학교부터 부모는 <strong>선생님이 아니라 “질문하는 청중”</strong>이 됩니다. 이 페이지는 중1~중3 단원마다 아이가 꼭 이해해야 할 개념, 부모가 던질 질문, 막혔을 때 돌아갈 초등 단원을 정리했어요. 아이 교과서 목차를 옆에 펴 놓고 해당 단원만 열어 보세요.</p>
+</header>
+
+<h2 id="how">이 페이지 쓰는 법</h2>
+<div class="cards" style="--min:220px">
+  <div class="card top c-branch"><span class="tag">1</span><h3>학년 탭 → 단원 열기</h3><p>지금 배우는 단원의 “핵심 개념”을 먼저 읽고, 아이에게 “이렇게 지도해요”의 질문을 하나만 던져 보세요.</p></div>
+  <div class="card top c-fruit"><span class="tag">2</span><h3>확인 질문 3개</h3><p>단원이 끝날 무렵 확인 질문을 말로 물어봐요. 답은 “답 보기”에 있어 부모가 수학을 몰라도 됩니다.</p></div>
+  <div class="card top c-accent"><span class="tag">3</span><h3>막히면 거꾸로</h3><p>“연결”에 적힌 앞 단원, 특히 <a href="math-elem.html">초등 단원</a>으로 내려가 구멍을 메워요.</p></div>
+</div>
+<p class="callout warning">2022 개정 교육과정 기준입니다(중1 2025년, 중2 2026년, 중3 2027년부터 적용). 중학교 수학 교과서는 <strong>검정</strong>이라 출판사마다 단원 이름·순서·학기 배치가 다르고, 교육과정은 “중1~3 학년군” 성취기준으로 정해져 있어요. 여기 적은 것은 <strong>성취기준에 기반한 대표 단원</strong>이니, 학기 초 아이 교과서 목차와 맞춰 보세요. 첫째가 중학생이 되는 2031년까지 교육과정이 부분 개정될 수도 있습니다.</p>
+
+<h2 id="changes">2015 → 2022 개정, 달라진 배치</h2>
+<p>선배 부모의 조언, 중고 문제집, 오래된 선행 교재는 2015 개정 기준일 수 있어요. 아래 단원은 특히 학년이 달라졌거나 교과서마다 위치가 다릅니다.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>내용</th><th>2015 개정</th><th>2022 개정(대표 배치)</th><th>부모가 알아 둘 점</th></tr></thead>
+<tbody>
+<tr><td>대푯값(평균·중앙값·최빈값)</td><td>중3</td><td>중1 자료의 정리와 해석</td><td>초5 평균 바로 다음에 이어져 연결이 쉬워졌어요.</td></tr>
+<tr><td>피타고라스 정리</td><td>중2 2학기</td><td>중3 (삼각비 앞)</td><td>오래된 중2 문제집에 들어 있을 수 있어요.</td></tr>
+<tr><td>상자그림</td><td>없음</td><td>중3 통계(신설)</td><td>사분위수 개념이 새로 필요해요.</td></tr>
+<tr><td>유리수와 순환소수</td><td>중2 첫 단원</td><td>교과서마다 다룸(중2 또는 중3 무리수 도입부)</td><td>다루는 깊이가 줄었다는 안내가 있어요. 목차로 확인.</td></tr>
+<tr><td>경우의 수와 확률</td><td>중2</td><td>중2</td><td>대부분 중2 2학기 마지막 단원이에요.</td></tr>
+<tr><td>공학 도구·통계적 탐구</td><td>일부</td><td>전 학년 강조</td><td>스프레드시트·그래프 도구 활용 수행평가가 늘 수 있어요.</td></tr>
+</tbody>
+</table></div>
+<p class="callout warning">위 표는 2022 개정 성취기준과 교과서 안내를 바탕으로 정리한 것이지만, 세부 배치(특히 순환소수, 원의 성질 심화 범위)는 출판사마다 차이가 있어 <strong>확정 정보가 아니에요</strong>. 학교 교과서와 학교알리미의 평가 계획으로 확인하세요.</p>
+
+<h2 id="principles">중학교 가정 지도의 기본 원칙</h2>
+<div class="cards" style="--min:210px">
+  <div class="card top c-branch"><div class="card-ic">🗣️</div><h3>설명 시키기</h3><p>부모가 다시 가르치지 않아요. “오늘 배운 거 나한테 가르쳐 줄래?” 아이가 막히는 문장이 곧 구멍입니다.</p></div>
+  <div class="card top c-fruit"><div class="card-ic">🔍</div><h3>오답 코칭 3단계</h3><p>표시 → 원인 분류(개념·계산·독해) → 3일 뒤·1주 뒤 다시 풀기. 정답을 알려 주지 않는 게 핵심이에요.</p></div>
+  <div class="card top c-root"><div class="card-ic">↩️</div><h3>막히면 내려가기</h3><p>중학 수학 구멍의 상당수는 초5~6 분수·비율에 있어요. 부끄러운 일이 아니라 가장 빠른 길이라고 말해 주세요.</p></div>
+  <div class="card top c-accent"><div class="card-ic">📘</div><h3>교과서가 1순위</h3><p>시험은 교과서에서 나와요. 교과서 개념 설명과 단원 끝 문제를 먼저, 문제집은 그다음.</p></div>
+  <div class="card top c-tip"><div class="card-ic">🌱</div><h3>정서가 먼저</h3><p>중학생은 부모의 평가에 예민해요. 점수보다 과정을 묻고, 잔소리 대신 질문 하나. <a href="../wellbeing/study-emotion.html">공부 정서 지키기</a></p></div>
+</div>
+
+<h3>오답 코칭 3단계</h3>
+<figure class="dg" style="--dg-min:640px">
+  <svg viewBox="0 0 900 170" role="img" aria-label="오답 코칭 흐름: 틀린 곳 표시, 원인 분류, 다시 풀기, 설명하기">
+    <defs><marker id="m-mathmid-wrong" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <rect x="20" y="30" width="190" height="70" rx="12" class="dg-box c-note"/><text x="115" y="56" text-anchor="middle" class="dg-t">1 어디서 틀렸나</text><text x="115" y="80" text-anchor="middle" class="dg-t sm muted">틀린 줄에 표시만</text>
+    <rect x="245" y="30" width="190" height="70" rx="12" class="dg-box c-branch"/><text x="340" y="56" text-anchor="middle" class="dg-t">2 원인 분류</text><text x="340" y="80" text-anchor="middle" class="dg-t sm muted">개념·계산·독해·시간</text>
+    <rect x="470" y="30" width="190" height="70" rx="12" class="dg-box c-fruit"/><text x="565" y="56" text-anchor="middle" class="dg-t">3 다시 풀기</text><text x="565" y="80" text-anchor="middle" class="dg-t sm muted">3일 뒤 · 1주 뒤</text>
+    <rect x="695" y="30" width="185" height="70" rx="12" class="dg-box c-accent"/><text x="787" y="56" text-anchor="middle" class="dg-t">+ 설명하기</text><text x="787" y="80" text-anchor="middle" class="dg-t sm muted">부모에게 말로</text>
+    <path d="M210 65 H241" class="dg-line" marker-end="url(#m-mathmid-wrong)"/>
+    <path d="M435 65 H466" class="dg-line" marker-end="url(#m-mathmid-wrong)"/>
+    <path d="M660 65 H691" class="dg-line" marker-end="url(#m-mathmid-wrong)"/>
+    <path d="M340 100 V135 H115 V104" class="dg-line dash" marker-end="url(#m-mathmid-wrong)"/>
+    <text x="228" y="152" text-anchor="middle" class="dg-t sm muted">개념 원인이면 앞 단원·초등 단원으로 되돌아가기</text>
+  </svg>
+  <figcaption>부모 역할은 1단계 질문(“어느 줄부터 달라졌어?”)과 2단계 분류 확인까지. 풀이는 아이 몫이에요.</figcaption>
+</figure>
+<details class="acc"><summary>오답 코칭 대화 예시<small>정답을 말하지 않고 돕기</small></summary><div class="acc-body">
+<ol>
+<li>“이 문제 어느 줄까지는 확실해?” (틀린 위치를 스스로 찾게)</li>
+<li>“여기서 쓴 규칙이 뭐야? 교과서에서 그 규칙 찾아 줄래?” (개념 확인)</li>
+<li>“개념을 몰랐던 거야, 알았는데 계산이 틀린 거야, 문제를 잘못 읽은 거야?” (원인 분류)</li>
+<li>“그럼 이 문제 옆에 원인을 한 단어로 적어 두자. 수요일에 다시 풀어 볼까?” (다시 풀기 예약)</li>
+<li>다시 풀어 맞히면 “이번엔 어디가 달랐어?”로 마무리. 칭찬은 결과보다 과정에.</li>
+</ol>
+</div></details>
+
+<h2 id="back-to-elem">막혔을 때 돌아갈 초등 단원</h2>
+<p>중학 단원이 반복해서 막히면, 그 단원을 더 푸는 것보다 아래 초등 단원을 1~2주 짧게 복습하는 게 빠른 경우가 많아요. 자세한 지도법은 <a href="math-elem.html">수학 · 초등 단원 지도</a>에 있어요.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>중학 단원</th><th>먼저 확인할 초등 단원</th><th>확인 질문</th></tr></thead>
+<tbody>
+<tr><td>소인수분해</td><td><a href="math-elem.html">초5 약수와 배수</a>, 곱셈구구</td><td>“12의 약수를 빠짐없이 말해 볼래?”</td></tr>
+<tr><td>정수와 유리수</td><td><a href="math-elem.html">초5 약분과 통분, 분수의 덧셈·뺄셈</a></td><td>“2/3 + 1/4을 그림으로 보여 줄래?”</td></tr>
+<tr><td>문자와 식, 일차방정식</td><td><a href="math-elem.html">규칙과 대응, 초6 비례식</a></td><td>“□ × 3 + 2 = 14에서 □는 어떻게 찾았어?”</td></tr>
+<tr><td>정비례·반비례, 일차함수</td><td><a href="math-elem.html">초6 비와 비율</a></td><td>“100원당 3개면 500원에 몇 개야? 비율로 말해 볼래?”</td></tr>
+<tr><td>평면도형, 입체도형</td><td><a href="math-elem.html">초4 각도, 초6 원의 넓이·입체도형</a></td><td>“원의 넓이 공식이 왜 반지름×반지름×3.14야?”</td></tr>
+<tr><td>도형의 닮음</td><td><a href="math-elem.html">초6 비례식과 비례배분</a></td><td>“지도에서 1cm가 500m면 3cm는?”</td></tr>
+<tr><td>자료·통계, 확률</td><td><a href="math-elem.html">초5 평균과 가능성, 초6 비율그래프</a></td><td>“평균이 뭔지 ‘고르게 하기’로 설명해 볼래?”</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="grades">학년별 단원 지도</h2>
+<div class="tabs" data-tabs id="math-mid-grade-tabs">
+  <div class="tab-list"><button>중1</button><button>중2</button><button>중3</button></div>
+<div class="tab-panel">
+<p>중1 수학은 <strong>“산수에서 수학으로” 넘어가는 해</strong>예요. 음수와 문자가 등장해 계산의 규칙이 바뀌고, 도형은 “재는 것”에서 “성질을 말하는 것”으로 바뀝니다. 자유학기(또는 자유학년)로 지필 시험이 없거나 적을 수 있어 <strong>구멍이 드러나지 않은 채 지나가기 쉬운 해</strong>이니, 집에서 “설명하기”로 점검해 주세요.</p>
+<figure class="dg" style="--dg-min:640px">
+  <svg viewBox="0 0 930 172" role="img" aria-label="중1 수학 단원 흐름: 1학기 소인수분해, 정수와 유리수, 문자와 식, 일차방정식, 좌표·정비례, 2학기 기본 도형·작도, 다각형·부채꼴, 입체도형, 자료의 정리">
+    <defs><marker id="m-mathmid-m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <text x="14" y="41" dominant-baseline="middle" class="dg-t sm muted">1학기</text>
+    <rect x="100" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="170" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">소인수분해</text>
+    <path d="M240 41 H261" class="dg-line" marker-end="url(#m-mathmid-m1)"/>
+    <rect x="264" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="334" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">정수와 유리수</text>
+    <path d="M404 41 H425" class="dg-line" marker-end="url(#m-mathmid-m1)"/>
+    <rect x="428" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="498" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">문자와 식</text>
+    <path d="M568 41 H589" class="dg-line" marker-end="url(#m-mathmid-m1)"/>
+    <rect x="592" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="662" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">일차방정식</text>
+    <path d="M732 41 H753" class="dg-line" marker-end="url(#m-mathmid-m1)"/>
+    <rect x="756" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="826" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">좌표·정비례</text>
+    <path d="M826 62 V84 H170 V107" class="dg-line dash" marker-end="url(#m-mathmid-m1)"/>
+    <text x="14" y="131" dominant-baseline="middle" class="dg-t sm muted">2학기</text>
+    <rect x="100" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="170" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">기본 도형·작도</text>
+    <path d="M240 131 H261" class="dg-line" marker-end="url(#m-mathmid-m1)"/>
+    <rect x="264" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="334" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">다각형·부채꼴</text>
+    <path d="M404 131 H425" class="dg-line" marker-end="url(#m-mathmid-m1)"/>
+    <rect x="428" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="498" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">입체도형</text>
+    <path d="M568 131 H589" class="dg-line" marker-end="url(#m-mathmid-m1)"/>
+    <rect x="592" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="662" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">자료의 정리</text>
+  </svg>
+  <figcaption>중1 대표 단원 흐름. 학기 배치와 단원 이름은 교과서마다 조금씩 달라요.</figcaption>
+</figure>
+<h3>1학기</h3>
+<details class="acc"><summary>소인수분해<small>자연수를 소수의 곱으로 쪼개고 최대공약수·최소공배수 구하기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>소수: 약수가 1과 자기 자신 2개뿐인 수. 합성수: 약수가 3개 이상. <b>1은 소수도 합성수도 아님</b></li>
+<li>거듭제곱 표현(2×2×2 = 2³, 밑과 지수)</li>
+<li>소인수분해: 합성수를 소인수만의 곱으로 나타내기. 곱하는 순서를 무시하면 결과는 한 가지뿐</li>
+<li>최대공약수 = 공통인 소인수를 지수가 <b>작은</b> 쪽으로 곱한 것, 최소공배수 = 모든 소인수를 지수가 <b>큰</b> 쪽으로 곱한 것</li>
+<li>서로소: 최대공약수가 1인 두 수</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>정의부터 말하게 해요. “소수가 뭔지 한 문장으로 말해 줄래? 그럼 1은?”</li>
+<li>72를 가지치기(나무 그림)로 쪼개는 과정을 소리 내어 설명하게 하고, 부모는 받아 적기만 해요.</li>
+<li>초등식(공약수로 나누기)과 소인수분해식 두 방법으로 같은 문제를 풀게 한 뒤 “두 방법이 왜 같은 답이 나올까?”</li>
+<li>틀린 문제는 “쪼개기에서 틀렸어, 지수 고르기에서 틀렸어?” 어느 단계인지만 표시하게 해요.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>버스 두 대가 12분, 18분 간격으로 같이 출발했어요. 다음에 동시에 출발하는 건 몇 분 뒤? (최소공배수 36분)</li>
+<li>사탕 48개와 젤리 36개를 남김없이 똑같이 봉지에 나누면 최대 몇 봉지? (최대공약수 12)</li>
+<li>1~100 수표에 함께 색칠하며 에라토스테네스의 체로 소수 찾기</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>1을 소수라고 함 → “약수가 몇 개야?”로 정의에 돌아가기</li>
+<li>2는 짝수라서 소수가 아니라고 생각 → 2는 유일한 짝수 소수</li>
+<li>최대공약수에서 지수가 큰 쪽을 고름(최소공배수와 혼동) → “둘 다 공통으로 가진 만큼만” 말로 정리</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>1은 소수인가요?<details class="acc-ans"><summary>답 보기</summary>아니요. 약수가 1 하나뿐이라 소수(약수 2개)의 정의에 맞지 않아요.</details></li>
+<li>60을 소인수분해하세요.<details class="acc-ans"><summary>답 보기</summary>2²×3×5</details></li>
+<li>2²×3과 2×3²×5의 최대공약수와 최소공배수는?<details class="acc-ans"><summary>답 보기</summary>최대공약수 2×3 = 6, 최소공배수 2²×3²×5 = 180</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초5 약수와 배수</a> → 소인수분해 → 중2 유한소수 판별, 중3 근호 간단히 하기(√72 = 6√2). 막히면: 초5 약수와 배수, 곱셈구구 속도부터 확인.</p>
+</div></details>
+<details class="acc"><summary>정수와 유리수<small>음수를 이해하고 부호가 있는 수의 사칙계산 하기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>양수·음수: 기준(0)에 대해 서로 반대 방향의 양</li>
+<li>정수(양의 정수, 0, 음의 정수) ⊂ 유리수(분수 a/b 꼴, b≠0)</li>
+<li>절댓값 = 수직선에서 0까지의 거리. 음수끼리는 절댓값이 클수록 작다</li>
+<li>뺄셈은 빼는 수의 부호를 바꾸어 더하기. 곱셈·나눗셈은 음수가 짝수 개면 +, 홀수 개면 −</li>
+<li>계산 순서: 거듭제곱 → 괄호 → 곱셈·나눗셈 → 덧셈·뺄셈</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>생활 질문으로 열어요. “영하 3도에서 5도 오르면 몇 도야?”</li>
+<li>수직선을 그리게 하고 “−3 + 5를 수직선에서 보여 줄래?” 이동으로 설명하게 해요.</li>
+<li>“빼기 음수가 왜 더하기가 될까?” 빚(−)을 없애 주면 재산이 늘어나는 이야기로 스스로 말해 보게.</li>
+<li>(−)×(−)=(+)는 패턴 표로: 3×(−2), 2×(−2), 1×(−2), 0×(−2) … 다음은? 커지는 규칙을 아이가 찾게 해요.</li>
+<li>오답을 “부호 실수 / 계산 순서 실수 / 분수 계산 실수”로 나눠 표시해요. 분수 실수가 많으면 초등으로.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>엘리베이터: 지하 2층에서 5층 올라가면? 5층에서 7층 내려가면? (층수)</li>
+<li>가계부·통장 놀이: 입금 +, 출금 −로 한 달 용돈 흐름 기록</li>
+<li>일기예보의 최고·최저 기온 차 구하기 (예: 3도와 −4도의 차는 7도)</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>−5 &gt; −2라고 함 → 수직선에서 오른쪽에 있는 수가 크다</li>
+<li>−3²과 (−3)² 혼동 → −9와 9. 괄호가 “무엇을” 제곱하는지 말로 확인</li>
+<li>뺄셈을 덧셈으로 바꿀 때 기호만 바꾸고 뒤 수의 부호는 그대로 둠</li>
+<li>분수 통분·약분이 느림 → 초5로 내려가 보충</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>|−7|과 |3| 중 큰 것은?<details class="acc-ans"><summary>답 보기</summary>|−7| = 7</details></li>
+<li>(−2)×(−3)×(−1)은?<details class="acc-ans"><summary>답 보기</summary>음수가 3개(홀수)이므로 −6</details></li>
+<li>−3² − (−2)³을 계산하세요.<details class="acc-ans"><summary>답 보기</summary>−9 − (−8) = −9 + 8 = −1</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초5~6 분수의 덧셈·뺄셈·곱셈·나눗셈</a> → 정수와 유리수 → 문자와 식, 일차방정식(모든 계산이 부호 위에서). 막히면: 초5 약분과 통분, 초6 분수의 나눗셈.</p>
+</div></details>
+<details class="acc"><summary>문자와 식<small>문자로 수량을 나타내고 일차식을 계산하기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>문자를 쓰면 여러 경우를 한 식으로 나타낼 수 있다</li>
+<li>곱셈 기호 생략 규칙: 수를 문자 앞에, 1은 생략, 같은 문자는 거듭제곱. 나눗셈은 분수 꼴로</li>
+<li>식의 값 = 문자에 수를 대입해 계산한 값(음수는 괄호에 넣어 대입)</li>
+<li>항·상수항·계수·차수, 일차식</li>
+<li>동류항끼리만 더하고 뺀다, 분배법칙 2(x+3) = 2x + 6</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“초등학교 때 □ 넣기 문제 기억나? 그 □에 이름을 붙인 게 x야.”로 연결해요.</li>
+<li>생활 수량을 식으로 쓰게 해요. “한 개 x원짜리 과자 3개랑 500원짜리 음료 하나는?” → 3x + 500</li>
+<li>대입해 보게: “과자가 1200원이면 얼마야?”</li>
+<li>동류항: “사과 3개 + 배 2개 + 사과 1개를 간단히 말하면?” 말로 먼저, 식은 나중에.</li>
+<li>오답은 괄호 앞 음수 분배 실수인지 먼저 확인해요.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>휴대폰 요금제를 식으로: 기본료 + (추가 1GB당 요금) × x</li>
+<li>레시피를 x인분으로 바꾸기(2인분 기준 재료 → x인분 식)</li>
+<li>가족 나이를 문자로: 내가 a살이면 동생은? 엄마는?</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>3x + 2 = 5x로 합침 → 문자가 다른 항(상수항)은 합칠 수 없음</li>
+<li>−(x − 3) = −x − 3 → 괄호 안 모든 항에 −1을 곱하기</li>
+<li>x × x를 2x로 씀 → x²</li>
+<li>음수를 대입할 때 괄호를 안 씀</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>a × (−2) × b를 곱셈 기호를 생략해 쓰세요.<details class="acc-ans"><summary>답 보기</summary>−2ab</details></li>
+<li>x = −2일 때 3x² − x의 값은?<details class="acc-ans"><summary>답 보기</summary>3×4 − (−2) = 12 + 2 = 14</details></li>
+<li>2(x − 3) − (3x − 1)을 간단히 하세요.<details class="acc-ans"><summary>답 보기</summary>2x − 6 − 3x + 1 = −x − 5</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초등 규칙과 대응</a> → 문자와 식 → 일차방정식, 중2 식의 계산. 막히면: 초등 규칙과 대응(두 양 사이의 관계를 □, △로 나타내기).</p>
+</div></details>
+<details class="acc"><summary>일차방정식<small>등식의 성질로 방정식을 풀고 활용 문제를 식으로 세우기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>방정식: x의 값에 따라 참·거짓이 달라지는 등식. 항등식: x에 어떤 값을 넣어도 참</li>
+<li>해(근): 방정식을 참이 되게 하는 값</li>
+<li>등식의 성질: 양변에 같은 수를 더하거나 빼거나 곱하거나, 0이 아닌 같은 수로 나누어도 등식은 성립</li>
+<li>이항: 등식의 성질을 이용해 항을 반대편으로 옮기며 부호를 바꾸기</li>
+<li>계수가 분수·소수면 양변에 적당한 수를 곱해 정수로 바꾼 뒤 풀기</li>
+<li>활용: 미지수 정하기 → 식 세우기 → 풀기 → 답 확인(조건·단위)</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>양팔 저울로 설명하게: “양쪽에 똑같이 하면 왜 균형이 유지될까?”</li>
+<li>한 문제를 풀면서 각 줄마다 “이 줄에서 어떤 성질을 썼어?”라고만 물어요.</li>
+<li>활용 문제는 풀기 전에 “무엇을 x로 할래?”부터 말하게 해요. 식 세우기가 핵심이에요.</li>
+<li>답을 원래 문제에 넣어 확인하는 습관 만들기</li>
+<li>틀린 문제는 “식 세우기에서 / 계산에서” 중 어디인지 나눠요.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>가족 나이 문제 만들기: “엄마 나이가 네 나이의 3배가 되는 건 몇 년 전(뒤)일까?”</li>
+<li>용돈 저금: 지금 5000원, 매주 2000원씩 모으면 몇 주 뒤 25000원?</li>
+<li>아이가 문제를 만들고 부모가 풀기(역할 바꾸기)</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>이항할 때 부호를 안 바꿈</li>
+<li>분수 계수 방정식에서 양변에 수를 곱할 때 상수항에 곱하는 걸 빠뜨림</li>
+<li>답을 구하고 조건(자연수, 음수 불가)을 확인하지 않음</li>
+<li>방정식과 항등식 구별 못 함</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>2x + 3 = x − 1의 해는?<details class="acc-ans"><summary>답 보기</summary>x = −4</details></li>
+<li>x/2 − 1 = x/3을 푸세요.<details class="acc-ans"><summary>답 보기</summary>양변에 6을 곱하면 3x − 6 = 2x, x = 6</details></li>
+<li>연속하는 세 자연수의 합이 48일 때 세 수는?<details class="acc-ans"><summary>답 보기</summary>x − 1, x, x + 1로 두면 3x = 48, x = 16 → 15, 16, 17</details></li>
+</ol>
+<h5>연결</h5>
+<p>문자와 식 → 일차방정식 → 중2 일차부등식·연립방정식. 막히면: <a href="math-elem.html">초6 비례식(비례식의 성질)과 초등 □ 구하기</a>.</p>
+</div></details>
+<details class="acc"><summary>좌표평면과 그래프<small>순서쌍과 좌표, 상황 그래프 해석, 정비례·반비례</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>순서쌍 (x, y)와 좌표, 원점, 제1~4사분면</li>
+<li>그래프로 두 양의 변화(증가·감소·일정) 읽기와 해석</li>
+<li>정비례 y = ax (a≠0): x가 2배, 3배 되면 y도 2배, 3배. 원점을 지나는 직선</li>
+<li>반비례 y = a/x (a≠0): x가 2배 되면 y는 1/2배, xy = a로 일정. 축에 닿지 않는 한 쌍의 곡선</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>영화관 좌석, 지도 격자로 시작: “(3, −2)는 어디야? 직접 찍어 줄래?”</li>
+<li>상황 그래프를 보여 주고 “이 그래프는 무슨 이야기야?” 이야기를 지어 보게 해요.</li>
+<li>정비례·반비례는 표 먼저: “x가 2배가 되면 y는?” → 식 → 그래프 순서로.</li>
+<li>“같이 커지면 다 정비례야?” y = x + 1 같은 반례를 아이가 찾게 해요.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>집에서 학교까지 이동을 시간-거리 그래프로 그리기(멈춘 구간은 평평)</li>
+<li>같은 속력이면 시간과 거리는 정비례, 같은 거리면 속력과 시간은 반비례</li>
+<li>피자 한 판을 나누는 사람 수와 한 사람 몫(반비례)</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>(x, y) 순서를 뒤바꿈</li>
+<li>y = x + 1도 정비례라고 생각 → 원점을 지나는지, 비가 일정한지 확인</li>
+<li>반비례 그래프가 축에 닿게 그림</li>
+<li>그래프의 높이만 보고 기울기(변화 빠르기)는 안 봄</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>제2사분면 위의 점은 x, y의 부호가 각각?<details class="acc-ans"><summary>답 보기</summary>x &lt; 0, y &gt; 0</details></li>
+<li>y가 x에 정비례하고 x = 3일 때 y = 12이면 식은?<details class="acc-ans"><summary>답 보기</summary>y = 4x</details></li>
+<li>y = 12/x에서 x = −4일 때 y는?<details class="acc-ans"><summary>답 보기</summary>−3</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초6 비와 비율, 비례식</a> → 좌표평면과 그래프 → 중2 일차함수. 막히면: 초6 비와 비율, 초등 규칙과 대응.</p>
+</div></details>
+<h3>2학기</h3>
+<details class="acc"><summary>기본 도형과 작도·합동<small>점·선·면·각, 위치 관계, 평행선의 성질, 작도와 삼각형의 합동</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>직선·반직선·선분의 구별, 맞꼭지각은 크기가 같다</li>
+<li>수직과 수선, 공간에서의 위치 관계(평행, 한 점에서 만남, 꼬인 위치)</li>
+<li>평행선에서 동위각·엇각의 크기는 같다(역도 성립)</li>
+<li>작도: 눈금 없는 자와 컴퍼스만 사용</li>
+<li>삼각형이 하나로 정해지는 조건: 세 변 / 두 변과 끼인각 / 한 변과 양 끝각</li>
+<li>합동 조건 SSS, SAS, ASA</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>정의를 말로: “반직선 AB와 반직선 BA는 같아? 왜?”</li>
+<li>“방 안에서 꼬인 위치에 있는 두 모서리를 찾아 줄래?”</li>
+<li>컴퍼스로 정삼각형 작도를 아이가 부모에게 시연하며 설명하게 해요.</li>
+<li>“두 변과 한 각이 같은데 왜 합동이 아닐 수도 있어?” (끼인각이 아닐 때) 그림으로 반례 찾기</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>방 모서리에서 평행·수직·꼬인 위치 찾기 게임</li>
+<li>자와 컴퍼스로 정육각형 그리기</li>
+<li>길이가 다른 빨대 3개로 삼각형 만들기 → 가장 긴 변 &lt; 나머지 두 변의 합일 때만 가능</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>반직선의 방향(시작점) 혼동</li>
+<li>평행하지 않은 두 직선에서도 엇각이 같다고 씀</li>
+<li>두 변과 끼인각이 아닌 각(SSA)을 합동 조건으로 씀</li>
+<li>작도에서 자의 눈금을 사용</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>세 변의 길이가 3, 4, 8인 삼각형을 만들 수 있나요?<details class="acc-ans"><summary>답 보기</summary>없어요. 3 + 4 = 7 &lt; 8</details></li>
+<li>평행한 두 직선에서 동위각이 70°이면 엇각은?<details class="acc-ans"><summary>답 보기</summary>70°</details></li>
+<li>삼각형의 합동 조건 세 가지는?<details class="acc-ans"><summary>답 보기</summary>SSS(세 변), SAS(두 변과 끼인각), ASA(한 변과 양 끝각)</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초4 각도, 초5 합동과 대칭</a> → 기본 도형 → 중2 삼각형·사각형의 성질(증명). 막히면: 초4 각도와 수직·평행, 초5 합동.</p>
+</div></details>
+<details class="acc"><summary>평면도형: 다각형, 원과 부채꼴<small>다각형의 내각·외각, 부채꼴의 호의 길이와 넓이</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>n각형의 대각선 수 = n(n−3)/2</li>
+<li>내각의 합 = 180°×(n−2), 외각의 합 = 360°(항상)</li>
+<li>부채꼴의 호의 길이·넓이는 중심각의 크기에 정비례</li>
+<li>원주율 π: 호의 길이 2πr × (x/360), 넓이 πr² × (x/360) = ½ × r × (호의 길이)</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“내각의 합에 왜 (n−2)가 나와?” 한 꼭짓점에서 대각선을 그어 삼각형으로 나누어 보이게 해요.</li>
+<li>외각의 합 360°는 “도형 둘레를 한 바퀴 걸으면 몸이 몇 도 돌지?”로.</li>
+<li>“초6 때 쓴 3.14 대신 왜 π를 쓸까?” 정확한 값을 기호로 남긴다는 걸 말하게.</li>
+<li>부채꼴은 피자 조각: “전체 원의 몇 분의 몇이야?”부터 묻기</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>피자 8조각 중 3조각의 넓이 = 원 넓이의 3/8</li>
+<li>축구공의 오각형·육각형 관찰</li>
+<li>바닥 타일: 정육각형 3개가 한 점에 모이면 120°×3 = 360°라 빈틈이 없어요</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>내각의 합과 한 내각의 크기 혼동</li>
+<li>부채꼴 넓이에서 x/360을 빠뜨림</li>
+<li>π를 3.14로 바꿔 답의 형태가 틀림(문제 조건 확인)</li>
+<li>대각선 수에서 2로 나누지 않음</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>정팔각형의 한 내각의 크기는?<details class="acc-ans"><summary>답 보기</summary>180°×6 ÷ 8 = 135°</details></li>
+<li>반지름 6, 중심각 60°인 부채꼴의 호의 길이는?<details class="acc-ans"><summary>답 보기</summary>2π×6×(60/360) = 2π</details></li>
+<li>오각형의 대각선은 몇 개?<details class="acc-ans"><summary>답 보기</summary>5×2/2 = 5개</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초4 다각형, 초6 원의 넓이</a> → 이 단원 → 중3 원의 성질. 막히면: 초6 원주와 원의 넓이.</p>
+</div></details>
+<details class="acc"><summary>입체도형<small>다면체·회전체의 성질과 겉넓이·부피</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>다면체(각기둥·각뿔·각뿔대), 정다면체는 5가지뿐</li>
+<li>회전체(원기둥·원뿔·원뿔대·구), 회전축을 품은 단면은 선대칭도형</li>
+<li>기둥의 부피 = 밑넓이 × 높이, 뿔의 부피 = ⅓ × 밑넓이 × 높이</li>
+<li>구: 겉넓이 4πr², 부피 (4/3)πr³</li>
+<li>원뿔의 옆면을 펼치면 부채꼴(반지름 = 모선)</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>전개도를 실제로 오려 접어 보게 해요.</li>
+<li>“원기둥 옆면을 펼치면 무슨 모양이야? 가로 길이는?” 공식을 말로 유도하게.</li>
+<li>“뿔의 부피는 왜 ⅓일까?” 같은 밑면·높이의 뿔과 기둥 모양 그릇에 쌀을 부어 확인</li>
+<li>공식 암기보다 “왜 그런지 한 줄 설명”을 요구해요.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>원통형 캔의 라벨을 떼어 직사각형 확인(가로 = 원의 둘레)</li>
+<li>고깔모자 만들기로 원뿔 전개도</li>
+<li>종이컵(원뿔대) 관찰</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>뿔의 부피에서 ⅓을 빠뜨림</li>
+<li>겉넓이(cm²)와 부피(cm³) 단위 혼동</li>
+<li>원뿔 옆넓이 계산에 모선 대신 높이를 사용</li>
+<li>정다면체를 5개보다 많이 적음</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>정다면체 5가지는?<details class="acc-ans"><summary>답 보기</summary>정사면체, 정육면체, 정팔면체, 정십이면체, 정이십면체</details></li>
+<li>반지름 3, 높이 4인 원뿔의 부피는?<details class="acc-ans"><summary>답 보기</summary>⅓ × 9π × 4 = 12π</details></li>
+<li>반지름 3인 구의 겉넓이는?<details class="acc-ans"><summary>답 보기</summary>4π × 9 = 36π</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초6 각기둥과 각뿔, 원기둥·원뿔·구, 직육면체의 부피</a> → 입체도형 → 고등 기하(공간도형). 막히면: 초6 입체도형의 겉넓이와 부피.</p>
+</div></details>
+<details class="acc"><summary>자료의 정리와 해석<small>대푯값, 줄기와 잎 그림, 도수분포표·히스토그램, 상대도수</small></summary><div class="acc-body">
+<p class="callout warning">2015 개정에서는 대푯값(평균·중앙값·최빈값)을 중3에서 배웠지만, 2022 개정에서는 중1로 내려왔어요. 교과서마다 순서가 달라 “통계” 단원 이름으로 묶이기도 합니다.</p>
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>대푯값: 평균·중앙값·최빈값. 극단적인 값이 있으면 평균보다 중앙값이 자료를 더 잘 대표할 수 있다</li>
+<li>줄기와 잎 그림, 계급·계급의 크기·도수, 도수분포표</li>
+<li>히스토그램과 도수분포다각형(둘의 넓이는 같다)</li>
+<li>상대도수 = 계급의 도수 ÷ 도수의 총합, 합은 1. 크기가 다른 두 집단 비교에 사용</li>
+<li>공학 도구(스프레드시트 등)로 자료 정리</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>가족 데이터로 시작해요(걸음 수, 수면 시간).</li>
+<li>“평균이랑 중앙값 중 뭐가 우리 가족을 더 잘 나타내? 왜?” 판단 이유를 말하게.</li>
+<li>“전교생과 우리 반을 비교하려면 도수로는 왜 안 될까?” 상대도수의 필요성</li>
+<li>스프레드시트로 히스토그램을 직접 만들어 보게 해요.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>가족 일주일 걸음 수 기록 → 평균·중앙값·최빈값 구하기</li>
+<li>뉴스의 “평균 소득” 이야기: 아주 큰 값 하나가 평균을 어떻게 끌어올리는지</li>
+<li>인원이 다른 두 모임의 비율 비교</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>자료를 크기순으로 정렬하지 않고 가운데 값을 중앙값으로 씀</li>
+<li>자료 개수가 짝수일 때 중앙값 = 가운데 두 값의 평균임을 잊음</li>
+<li>히스토그램을 막대그래프처럼 띄워 그림(계급은 연속)</li>
+<li>상대도수의 합을 100이라고 씀</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>2, 3, 3, 5, 100의 평균·중앙값·최빈값은? 어느 것이 대표값으로 알맞을까요?<details class="acc-ans"><summary>답 보기</summary>평균 22.6, 중앙값 3, 최빈값 3. 100이라는 극단값 때문에 중앙값(또는 최빈값)이 더 알맞아요.</details></li>
+<li>전체 40명 중 도수가 10인 계급의 상대도수는?<details class="acc-ans"><summary>답 보기</summary>0.25</details></li>
+<li>도수분포다각형과 가로축으로 둘러싸인 넓이는 무엇과 같나요?<details class="acc-ans"><summary>답 보기</summary>히스토그램의 직사각형 넓이의 합</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초5 평균과 가능성, 초6 띠·원그래프</a> → 자료의 정리와 해석 → 중3 산포도·상자그림·상관관계. 막히면: 초5 평균.</p>
+</div></details>
+<h3>중1 단원 이해 체크리스트</h3>
+<p>아이가 부모에게 <strong>설명할 수 있으면</strong> 체크해요. 문제를 맞힌 것과 설명할 수 있는 것은 다릅니다.</p>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="math-mid-m1-check">
+<li class="task"><label><input type="checkbox"><span><b>소인수분해</b>: 자연수를 소수의 곱으로 쪼개고 최대공약수·최소공배수 구하기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>정수와 유리수</b>: 음수를 이해하고 부호가 있는 수의 사칙계산 하기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>문자와 식</b>: 문자로 수량을 나타내고 일차식을 계산하기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>일차방정식</b>: 등식의 성질로 방정식을 풀고 활용 문제를 식으로 세우기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>좌표평면과 그래프</b>: 순서쌍과 좌표, 상황 그래프 해석, 정비례·반비례</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>기본 도형과 작도·합동</b>: 점·선·면·각, 위치 관계, 평행선의 성질, 작도와 삼각형의 합동</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>평면도형: 다각형, 원과 부채꼴</b>: 다각형의 내각·외각, 부채꼴의 호의 길이와 넓이</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>입체도형</b>: 다면체·회전체의 성질과 겉넓이·부피</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>자료의 정리와 해석</b>: 대푯값, 줄기와 잎 그림, 도수분포표·히스토그램, 상대도수</span></label></li>
+</ul>
+<div class="cards" style="--min:260px">
+<div class="card c-tip"><span class="tag">중1 가정 학습 루틴</span><h3>주 5회 30~40분 스스로</h3><p>부모는 주 2회 10분 “오늘 배운 것 설명 듣기” + 주말 15분 오답 표시 확인. 자유학기라도 교과서 단원 끝 문제는 꼭 풀게 해요.</p></div>
+</div>
+</div>
+<div class="tab-panel">
+<p>중2는 <strong>중학 수학의 분수령</strong>입니다. 연립방정식·일차함수로 “식과 그래프를 오가는 힘”이 필요해지고, 2학기에는 증명 서술이 본격화돼요. 첫 정기 시험 성적에 흔들리기 쉬운 해라, 결과보다 <strong>오답의 원인</strong>을 함께 보는 데 집중해 주세요.</p>
+<figure class="dg" style="--dg-min:640px">
+  <svg viewBox="0 0 766 172" role="img" aria-label="중2 수학 단원 흐름: 1학기 수와 식의 계산, 일차부등식, 연립방정식, 일차함수, 2학기 삼각형의 성질, 사각형의 성질, 도형의 닮음, 경우의 수·확률">
+    <defs><marker id="m-mathmid-m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <text x="14" y="41" dominant-baseline="middle" class="dg-t sm muted">1학기</text>
+    <rect x="100" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="170" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">수와 식의 계산</text>
+    <path d="M240 41 H261" class="dg-line" marker-end="url(#m-mathmid-m2)"/>
+    <rect x="264" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="334" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">일차부등식</text>
+    <path d="M404 41 H425" class="dg-line" marker-end="url(#m-mathmid-m2)"/>
+    <rect x="428" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="498" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">연립방정식</text>
+    <path d="M568 41 H589" class="dg-line" marker-end="url(#m-mathmid-m2)"/>
+    <rect x="592" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="662" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">일차함수</text>
+    <path d="M662 62 V84 H170 V107" class="dg-line dash" marker-end="url(#m-mathmid-m2)"/>
+    <text x="14" y="131" dominant-baseline="middle" class="dg-t sm muted">2학기</text>
+    <rect x="100" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="170" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">삼각형의 성질</text>
+    <path d="M240 131 H261" class="dg-line" marker-end="url(#m-mathmid-m2)"/>
+    <rect x="264" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="334" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">사각형의 성질</text>
+    <path d="M404 131 H425" class="dg-line" marker-end="url(#m-mathmid-m2)"/>
+    <rect x="428" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="498" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">도형의 닮음</text>
+    <path d="M568 131 H589" class="dg-line" marker-end="url(#m-mathmid-m2)"/>
+    <rect x="592" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="662" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">경우의 수·확률</text>
+  </svg>
+  <figcaption>중2 대표 단원 흐름. 학기 배치와 단원 이름은 교과서마다 조금씩 달라요.</figcaption>
+</figure>
+<h3>1학기</h3>
+<details class="acc"><summary>수와 식: 유리수와 순환소수 · 식의 계산<small>유한소수·순환소수의 판별, 지수법칙과 다항식의 계산</small></summary><div class="acc-body">
+<p class="callout warning">2015 개정에서는 중2 첫 단원이 “유리수와 순환소수”였어요. 2022 개정에서는 순환소수를 다루는 깊이와 위치(중2 또는 중3 무리수 도입부)가 교과서마다 다르다는 안내가 있으니 목차로 확인하세요.</p>
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>기약분수의 분모의 소인수가 2나 5뿐이면 유한소수, 아니면 순환소수</li>
+<li>순환소수는 모두 유리수(분수로 나타낼 수 있음)</li>
+<li>지수법칙: aᵐ×aⁿ = aᵐ⁺ⁿ, (aᵐ)ⁿ = aᵐⁿ, aᵐ÷aⁿ, (ab)ⁿ = aⁿbⁿ</li>
+<li>단항식의 곱셈·나눗셈(나눗셈은 역수의 곱)</li>
+<li>다항식의 덧셈·뺄셈, 이차식, 단항식 × 다항식</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“2³×2⁴가 왜 2⁷이야? 풀어 써 볼래?” 곱하는 개수를 세게 해요.</li>
+<li>(aᵐ)ⁿ과 aᵐ×aⁿ을 헷갈리면 규칙을 다시 외우지 말고 풀어 쓰기로 돌아가요.</li>
+<li>계산기로 1/3, 1/7을 나눠 보며 “반복되는 부분이 어디야?”</li>
+<li>틀린 문제는 부호·계수·지수 중 무엇을 놓쳤는지 표시</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>종이 접기 두께: 한 번 접을 때마다 2배 → 10번이면 2¹⁰ = 1024겹</li>
+<li>계산기로 1/7의 순환마디 찾기(142857)</li>
+<li>두 배씩 늘어나는 세균 이야기로 지수 감각 키우기</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>aᵐ×aⁿ = aᵐⁿ으로 씀</li>
+<li>(−2a)³에서 부호나 계수를 세제곱하지 않음 → −8a³</li>
+<li>단항식 나눗셈에서 역수를 곱하지 않음</li>
+<li>기약분수로 만들지 않고 분모만 보고 유한소수를 판단</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>7/20은 유한소수인가요?<details class="acc-ans"><summary>답 보기</summary>20 = 2²×5라서 유한소수(0.35)</details></li>
+<li>(x²)³ × x를 간단히 하세요.<details class="acc-ans"><summary>답 보기</summary>x⁶ × x = x⁷</details></li>
+<li>6a²b ÷ 2ab는?<details class="acc-ans"><summary>답 보기</summary>3a</details></li>
+</ol>
+<h5>연결</h5>
+<p>중1 소인수분해, 문자와 식 → 이 단원 → 중3 다항식의 곱셈과 인수분해. 막히면: <a href="math-elem.html">초5 약분, 초6 소수의 나눗셈</a>.</p>
+</div></details>
+<details class="acc"><summary>일차부등식<small>부등식의 성질로 일차부등식을 풀고 활용하기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>부등호 &lt;, &gt;, ≤, ≥와 “초과·미만·이상·이하”</li>
+<li>부등식의 해: 부등식을 참이 되게 하는 x의 값 전체</li>
+<li>양변에 같은 음수를 곱하거나 나누면 부등호 방향이 바뀐다</li>
+<li>수직선 표시: 포함(●), 불포함(○)</li>
+<li>활용: 해가 자연수·정수여야 하는 조건 확인</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“3 &lt; 5의 양변에 −1을 곱하면?” 직접 계산해 확인하게 해요.</li>
+<li>규칙을 아이 말로 정리: “음수를 곱하면 왜 뒤집혀?” 수직선에서 좌우가 바뀌는 것으로.</li>
+<li>활용 문제에서 “이상/초과” 같은 말에 동그라미 치게 해요.</li>
+<li>마지막에 답이 문제 조건(개수는 자연수)에 맞는지 확인</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>택배 무게 구간별 요금표 읽기</li>
+<li>용돈 예산: “간식을 x개 사고 버스비 1500원은 남겨야 해”</li>
+<li>놀이기구 키 제한 “○○cm 이상”을 부등식으로</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>음수로 나눌 때 부등호 방향을 안 바꿈</li>
+<li>이상/초과의 수직선 점(●/○)을 바꿔 씀</li>
+<li>해가 정수·자연수라는 조건을 무시</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>−2x &gt; 6의 해는?<details class="acc-ans"><summary>답 보기</summary>x &lt; −3</details></li>
+<li>3x − 1 ≤ 2x + 4의 해는?<details class="acc-ans"><summary>답 보기</summary>x ≤ 5</details></li>
+<li>한 개 700원인 과자를 5000원 이하로 사면 최대 몇 개?<details class="acc-ans"><summary>답 보기</summary>700x ≤ 5000, x ≤ 7.14… → 7개</details></li>
+</ol>
+<h5>연결</h5>
+<p>중1 일차방정식 → 일차부등식 → 고1 여러 가지 부등식. 막히면: 중1 일차방정식(등식의 성질)부터.</p>
+</div></details>
+<details class="acc"><summary>연립일차방정식<small>미지수가 2개인 연립방정식을 가감법·대입법으로 풀기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>미지수가 2개인 일차방정식의 해는 순서쌍이고 여러 개일 수 있다</li>
+<li>연립방정식의 해 = 두 방정식을 동시에 만족하는 순서쌍</li>
+<li>가감법(한 문자를 없애기), 대입법(한 식을 다른 식에 넣기)</li>
+<li>활용: 미지수 2개를 정하고 조건 2개로 식 2개 세우기</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“해가 왜 한 쌍만 남을까?” 각 식의 해를 표로 나열해 공통인 것을 찾게 해요.</li>
+<li>“이 문제는 가감법이 편해, 대입법이 편해? 왜?” 방법 선택의 이유를 말하게.</li>
+<li>활용 문제: “모르는 게 두 개네. 각각 뭐라고 둘래?”</li>
+<li>구한 해를 두 식 모두에 넣어 확인</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>놀이공원 입장료: 어른 2명 + 아이 1명 = ○원, 어른 1명 + 아이 2명 = △원 → 각각 얼마?</li>
+<li>닭과 토끼 문제: 머리 10개, 다리 28개</li>
+<li>음료 두 종류 가격 맞히기 게임</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>가감법에서 한 식의 일부 항에만 수를 곱함</li>
+<li>대입할 때 괄호를 빠뜨려 부호 실수</li>
+<li>x만 구하고 y를 안 구함</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>x + y = 5, x − y = 1의 해는?<details class="acc-ans"><summary>답 보기</summary>x = 3, y = 2</details></li>
+<li>2x + y = 7, y = x + 1의 해는?<details class="acc-ans"><summary>답 보기</summary>2x + x + 1 = 7 → x = 2, y = 3</details></li>
+<li>닭과 토끼가 모두 10마리, 다리가 28개이면?<details class="acc-ans"><summary>답 보기</summary>닭 6마리, 토끼 4마리</details></li>
+</ol>
+<h5>연결</h5>
+<p>중1 일차방정식 → 연립방정식 → 일차함수(두 직선의 교점), 고1 연립이차방정식.</p>
+</div></details>
+<details class="acc"><summary>일차함수와 그래프<small>함수의 뜻, 기울기·절편, 일차함수와 일차방정식의 관계</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>함수: x의 값 하나에 y의 값이 하나씩 정해지는 관계</li>
+<li>일차함수 y = ax + b (a≠0), 기울기 a = (y의 증가량)/(x의 증가량)은 항상 일정</li>
+<li>y절편·x절편, y = ax의 그래프를 y축 방향으로 b만큼 평행이동</li>
+<li>a &gt; 0이면 오른쪽 위로, a &lt; 0이면 오른쪽 아래로. 기울기가 같고 절편이 다르면 평행</li>
+<li>일차방정식 ax + by + c = 0의 그래프는 직선, 연립방정식의 해 = 두 직선의 교점</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>표 → 그래프 → 식, 세 가지 표현을 오가게 해요. “이 표에서 x가 1 늘면 y는 얼마 늘어?”</li>
+<li>“기울기가 초6 때 배운 비율이랑 같은 거야?” 연결을 아이가 말하게.</li>
+<li>요금제 비교 문제를 식으로 세우고 그래프로 그려 교점을 찾게 해요.</li>
+<li>“이 교점은 무슨 뜻이야?” 두 요금이 같아지는 지점이라는 걸 말로.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>요금제 비교: 기본료가 높고 단가가 낮은 A vs 기본료가 낮고 단가가 높은 B. 몇 GB부터 A가 유리할까? (두 직선의 교점)</li>
+<li>물통에 물을 받을 때 시간과 물 높이 기록 → 그래프</li>
+<li>자전거 대여 요금(기본 + 시간당)을 식으로</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>기울기를 (x의 변화)/(y의 변화)로 거꾸로 계산</li>
+<li>x절편과 y절편 혼동</li>
+<li>평행(기울기 같고 절편 다름)과 일치(둘 다 같음) 혼동</li>
+<li>x = 2 같은 식을 일차함수라고 함</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>두 점 (1, 3), (3, 7)을 지나는 직선의 식은?<details class="acc-ans"><summary>답 보기</summary>기울기 (7−3)/(3−1) = 2, y = 2x + 1</details></li>
+<li>y = −3x + 6의 x절편은?<details class="acc-ans"><summary>답 보기</summary>y = 0을 넣으면 x = 2</details></li>
+<li>y = 2x + 1과 y = −x + 4의 교점은?<details class="acc-ans"><summary>답 보기</summary>2x + 1 = −x + 4 → x = 1, 교점 (1, 3)</details></li>
+</ol>
+<h5>연결</h5>
+<p>중1 정비례·좌표평면, 연립방정식 → 일차함수 → 중3 이차함수, 고1 직선의 방정식. 막히면: <a href="math-elem.html">초6 비와 비율</a>(기울기 = 비율).</p>
+</div></details>
+<h3>2학기</h3>
+<details class="acc"><summary>삼각형의 성질<small>이등변삼각형, 직각삼각형의 합동, 외심과 내심</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>이등변삼각형: 두 밑각의 크기가 같고, 꼭지각의 이등분선은 밑변을 수직이등분</li>
+<li>직각삼각형의 합동 조건: RHA(빗변과 한 예각), RHS(빗변과 다른 한 변)</li>
+<li>외심: 세 변의 수직이등분선의 교점, 세 꼭짓점까지 거리가 같다(외접원의 중심). 직각삼각형은 빗변의 중점</li>
+<li>내심: 세 내각의 이등분선의 교점, 세 변까지 거리가 같다(내접원의 중심)</li>
+<li>증명: 가정과 결론을 구분하고, 근거(합동 조건, 성질)를 쓰기</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>증명은 “왜냐하면…”으로 말하게 해요. 쓰기 전에 말로.</li>
+<li>“이 문제의 가정은 뭐고 결론은 뭐야?” 먼저 구분하게.</li>
+<li>외심·내심이 헷갈리면: “외접원은 밖에서 꼭짓점을 지나는 원, 내접원은 안에서 변에 닿는 원” 그림 그리기</li>
+<li>서술형 오답은 “빠진 근거 한 줄”을 찾게 해요.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>종이 삼각형을 접어 각의 이등분선·변의 수직이등분선 만들고 교점 찾기</li>
+<li>“세 마을에서 같은 거리에 우물을 파려면?” (외심)</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>외심과 내심의 성질을 뒤바꿈</li>
+<li>둔각삼각형의 외심이 삼각형 밖에 있다는 것을 모름</li>
+<li>증명에서 결론을 근거로 사용</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>이등변삼각형의 꼭지각이 40°이면 한 밑각은?<details class="acc-ans"><summary>답 보기</summary>(180° − 40°) ÷ 2 = 70°</details></li>
+<li>직각삼각형의 외심은 어디에 있나요?<details class="acc-ans"><summary>답 보기</summary>빗변의 중점</details></li>
+<li>내심에서 세 변까지 거리가 같은 이유는?<details class="acc-ans"><summary>답 보기</summary>각의 이등분선 위의 점은 그 각의 두 변까지 거리가 같기 때문</details></li>
+</ol>
+<h5>연결</h5>
+<p>중1 작도와 합동 → 삼각형의 성질 → 사각형의 성질, 중3 원의 성질. 막히면: 중1 합동 조건.</p>
+</div></details>
+<details class="acc"><summary>사각형의 성질<small>평행사변형의 성질과 조건, 여러 가지 사각형 사이의 관계</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>평행사변형: 두 쌍의 대변이 각각 평행하고 길이가 같다, 두 쌍의 대각의 크기가 같다, 두 대각선이 서로를 이등분</li>
+<li>평행사변형이 되는 조건(성질의 역)</li>
+<li>직사각형(대각선 길이 같음), 마름모(대각선이 서로 수직이등분), 정사각형, 등변사다리꼴</li>
+<li>포함 관계: 정사각형 ⊂ 직사각형·마름모 ⊂ 평행사변형 ⊂ 사다리꼴</li>
+<li>평행선과 넓이: 밑변이 같고 높이가 같으면 넓이가 같다</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>초4 사각형 분류를 끌어와요. “정사각형은 마름모야? 마름모는 정사각형이야?”</li>
+<li>포함 관계를 벤 다이어그램으로 그리게 해요.</li>
+<li>성질과 조건 구분: “성질은 ‘평행사변형이면 이렇다’, 조건은 ‘이러면 평행사변형이다’.”</li>
+<li>대각선 성질 표를 아이가 직접 만들게</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>막대 4개(빨대+할핀)로 평행사변형을 만들어 모양 바꾸기: 언제 직사각형이 될까?</li>
+<li>집 안 물건에서 사각형 종류 찾기</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>포함 관계를 거꾸로 씀</li>
+<li>대각선 성질을 섞음(마름모는 수직, 직사각형은 길이 같음)</li>
+<li>등변사다리꼴을 평행사변형으로 착각</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>두 대각선이 서로를 수직이등분하는 사각형은?<details class="acc-ans"><summary>답 보기</summary>마름모(정사각형 포함)</details></li>
+<li>평행사변형의 한 각이 70°이면 이웃한 각은?<details class="acc-ans"><summary>답 보기</summary>110°</details></li>
+<li>직사각형이면서 마름모인 사각형은?<details class="acc-ans"><summary>답 보기</summary>정사각형</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초4 여러 가지 사각형</a> → 사각형의 성질 → 도형의 닮음. 막히면: 초4 수직과 평행, 사각형 분류.</p>
+</div></details>
+<details class="acc"><summary>도형의 닮음<small>닮음의 뜻과 조건, 평행선과 선분의 길이의 비</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>닮음: 한 도형을 일정한 비율로 확대·축소하면 다른 도형과 합동</li>
+<li>닮음비 m : n이면 넓이의 비 m² : n², 부피의 비 m³ : n³</li>
+<li>삼각형의 닮음 조건: SSS, SAS, AA</li>
+<li>삼각형에서 평행선과 선분의 길이의 비, 두 변의 중점을 연결한 선분(나머지 변과 평행, 길이는 절반)</li>
+<li>평행선 사이에 생기는 선분의 길이의 비</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“닮음비가 2:1이면 넓이는 왜 4배야?” 모눈종이에 그려 세어 보게 해요.</li>
+<li>닮음 조건을 말하게 하고 합동 조건과 비교: “뭐가 달라졌어?”</li>
+<li>초6 비례식과 연결: 선분 비 문제는 비례식을 세우는 문제</li>
+<li>대응하는 꼭짓점 순서를 맞춰 쓰는 습관</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>그림자로 나무·건물 높이 재기: 내 키 : 내 그림자 = 나무 높이 : 나무 그림자</li>
+<li>지도의 축척으로 실제 거리 구하기</li>
+<li>사진을 A4 → A3로 확대 복사하면 넓이는 몇 배?</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>넓이의 비를 닮음비 그대로 씀</li>
+<li>대응 순서를 틀리게 써서 비가 엉킴</li>
+<li>평행선 문제에서 어떤 선분끼리 비가 같은지 잘못 대응</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>닮음비가 2 : 3이면 넓이의 비는?<details class="acc-ans"><summary>답 보기</summary>4 : 9</details></li>
+<li>키 160cm인 사람의 그림자가 2m일 때, 그림자가 10m인 나무의 높이는?<details class="acc-ans"><summary>답 보기</summary>1.6 : 2 = x : 10 → x = 8m</details></li>
+<li>삼각형 두 변의 중점을 이은 선분의 길이는?<details class="acc-ans"><summary>답 보기</summary>나머지 한 변의 길이의 1/2</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초6 비례식과 비례배분</a>, 중1 합동 → 닮음 → 중3 피타고라스 정리·삼각비. 막히면: 초6 비와 비율, 비례식.</p>
+</div></details>
+<details class="acc"><summary>경우의 수와 확률<small>합의 법칙·곱의 법칙, 확률의 뜻과 기본 성질</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>사건과 경우의 수, 빠짐없이 중복 없이 세기(수형도, 표)</li>
+<li>합의 법칙: 두 사건이 동시에 일어나지 않을 때 더하기. 곱의 법칙: 동시에(잇달아) 일어날 때 곱하기</li>
+<li>확률 = (사건이 일어나는 경우의 수)/(모든 경우의 수), 각 경우가 일어날 가능성이 같을 때</li>
+<li>0 ≤ p ≤ 1, 일어나지 않을 확률 = 1 − p</li>
+<li>확률의 덧셈·곱셈(범위는 교과서 확인)</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>나뭇가지 그림(수형도)을 먼저 그리게 해요. 공식보다 그림.</li>
+<li>“‘또는’이야, ‘그리고’야?” 한 가지 질문으로 합·곱의 법칙을 구분하게.</li>
+<li>실험: 주사위 두 개를 36번 던져 합을 표에 기록 → 이론값과 비교</li>
+<li>“적어도 하나”가 나오면 “반대 경우를 세는 게 쉬울까?” 물어요.</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>주사위 두 개의 합 중 7이 가장 잘 나오는 이유 실험</li>
+<li>옷 코디 수: 상의 3벌 × 하의 2벌</li>
+<li>가위바위보에서 비길 확률 구하기</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>중복해서 세거나 빠뜨림</li>
+<li>합의 법칙과 곱의 법칙 혼동</li>
+<li>“적어도 하나” 문제를 직접 세다가 실수</li>
+<li>동전 뒷면이 5번 나왔으니 다음엔 앞면 확률이 크다고 생각(각 시행은 독립)</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>주사위 두 개를 던져 합이 7일 확률은?<details class="acc-ans"><summary>답 보기</summary>6/36 = 1/6</details></li>
+<li>동전 3개를 던질 때 적어도 하나가 앞면일 확률은?<details class="acc-ans"><summary>답 보기</summary>1 − 1/8 = 7/8</details></li>
+<li>상의 3벌, 하의 4벌로 입는 방법의 수는?<details class="acc-ans"><summary>답 보기</summary>12가지</details></li>
+</ol>
+<h5>연결</h5>
+<p><a href="math-elem.html">초5~6 일이 일어날 가능성</a> → 경우의 수와 확률 → 고1 경우의 수(순열·조합), 고2~3 확률과 통계. 막히면: 초등 가능성, 분수 계산.</p>
+</div></details>
+<h3>중2 단원 이해 체크리스트</h3>
+<p>아이가 부모에게 <strong>설명할 수 있으면</strong> 체크해요. 문제를 맞힌 것과 설명할 수 있는 것은 다릅니다.</p>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="math-mid-m2-check">
+<li class="task"><label><input type="checkbox"><span><b>수와 식: 유리수와 순환소수 · 식의 계산</b>: 유한소수·순환소수의 판별, 지수법칙과 다항식의 계산</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>일차부등식</b>: 부등식의 성질로 일차부등식을 풀고 활용하기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>연립일차방정식</b>: 미지수가 2개인 연립방정식을 가감법·대입법으로 풀기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>일차함수와 그래프</b>: 함수의 뜻, 기울기·절편, 일차함수와 일차방정식의 관계</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>삼각형의 성질</b>: 이등변삼각형, 직각삼각형의 합동, 외심과 내심</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>사각형의 성질</b>: 평행사변형의 성질과 조건, 여러 가지 사각형 사이의 관계</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>도형의 닮음</b>: 닮음의 뜻과 조건, 평행선과 선분의 길이의 비</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>경우의 수와 확률</b>: 합의 법칙·곱의 법칙, 확률의 뜻과 기본 성질</span></label></li>
+</ul>
+<div class="cards" style="--min:260px">
+<div class="card c-tip"><span class="tag">중2 가정 학습 루틴</span><h3>주 5회 40~50분 스스로</h3><p>부모는 주 1회 20분 오답 코칭(원인 분류 확인) + 시험 3주 전 루틴 점검. 증명 단원은 “말로 증명하기” 5분을 가끔 청해 보세요.</p></div>
+</div>
+</div>
+<div class="tab-panel">
+<p>중3은 <strong>고등 수학의 직접적인 토대</strong>가 완성되는 해예요. 인수분해·이차방정식·이차함수는 고1 공통수학1의 거의 모든 단원에 쓰입니다. 고등 선행을 고민한다면 먼저 <strong>이 세 단원이 빠르고 정확한지</strong> 확인하는 것이 우리 집 기준이에요.</p>
+<figure class="dg" style="--dg-min:640px">
+  <svg viewBox="0 0 766 172" role="img" aria-label="중3 수학 단원 흐름: 1학기 제곱근과 실수, 곱셈공식·인수분해, 이차방정식, 이차함수, 2학기 피타고라스 정리, 삼각비, 원의 성질, 산포도·상관">
+    <defs><marker id="m-mathmid-m3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <text x="14" y="41" dominant-baseline="middle" class="dg-t sm muted">1학기</text>
+    <rect x="100" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="170" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">제곱근과 실수</text>
+    <path d="M240 41 H261" class="dg-line" marker-end="url(#m-mathmid-m3)"/>
+    <rect x="264" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="334" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">곱셈공식·인수분해</text>
+    <path d="M404 41 H425" class="dg-line" marker-end="url(#m-mathmid-m3)"/>
+    <rect x="428" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="498" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">이차방정식</text>
+    <path d="M568 41 H589" class="dg-line" marker-end="url(#m-mathmid-m3)"/>
+    <rect x="592" y="20" width="140" height="42" rx="9" class="dg-box c-branch"/><text x="662" y="41" text-anchor="middle" dominant-baseline="middle" class="dg-t">이차함수</text>
+    <path d="M662 62 V84 H170 V107" class="dg-line dash" marker-end="url(#m-mathmid-m3)"/>
+    <text x="14" y="131" dominant-baseline="middle" class="dg-t sm muted">2학기</text>
+    <rect x="100" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="170" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">피타고라스 정리</text>
+    <path d="M240 131 H261" class="dg-line" marker-end="url(#m-mathmid-m3)"/>
+    <rect x="264" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="334" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">삼각비</text>
+    <path d="M404 131 H425" class="dg-line" marker-end="url(#m-mathmid-m3)"/>
+    <rect x="428" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="498" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">원의 성질</text>
+    <path d="M568 131 H589" class="dg-line" marker-end="url(#m-mathmid-m3)"/>
+    <rect x="592" y="110" width="140" height="42" rx="9" class="dg-box c-fruit"/><text x="662" y="131" text-anchor="middle" dominant-baseline="middle" class="dg-t">산포도·상관</text>
+  </svg>
+  <figcaption>중3 대표 단원 흐름. 학기 배치와 단원 이름은 교과서마다 조금씩 달라요.</figcaption>
+</figure>
+<h3>1학기</h3>
+<details class="acc"><summary>제곱근과 실수<small>제곱근의 뜻과 성질, 무리수, 근호를 포함한 식의 계산</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>a의 제곱근: 제곱해서 a가 되는 수. a &gt; 0이면 ±√a 두 개</li>
+<li>√(a²) = |a| (a가 음수면 −a)</li>
+<li>무리수: 순환하지 않는 무한소수, 분수로 나타낼 수 없는 수. 유리수 + 무리수 = 실수</li>
+<li>실수는 수직선을 빈틈없이 채운다, 대소 비교</li>
+<li>√a × √b = √(ab), 근호 밖으로 꺼내기(√12 = 2√3), 분모의 유리화, 덧셈·뺄셈은 같은 무리수끼리</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“넓이가 2인 정사각형의 한 변은?” 모눈종이에 대각선으로 그려 보게 해요.</li>
+<li>계산기로 √2를 구해 “끝나지도 반복되지도 않네?” 관찰</li>
+<li>“√2 + √3이 √5가 아닌 이유를 보여 줄래?” 근삿값으로 확인하게</li>
+<li>오답은 “제곱근 뜻 / 성질 / 계산” 중 어디인지 분류</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>A4 용지의 긴 변 : 짧은 변 ≈ √2 : 1. 반으로 접어도 비율이 유지되는지 자로 재어 확인</li>
+<li>정사각형 타일의 대각선 길이 재기(한 변 × 약 1.414)</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>“4의 제곱근”(±2)과 “√4”(2)를 혼동</li>
+<li>√(a²) = a로만 씀(a &lt; 0일 때 틀림)</li>
+<li>√a + √b = √(a+b)로 계산</li>
+<li>분모의 유리화에서 분자에 곱하는 것을 빠뜨림</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>9의 제곱근과 √9는 각각?<details class="acc-ans"><summary>답 보기</summary>9의 제곱근은 ±3, √9는 3</details></li>
+<li>√12를 간단히 하세요.<details class="acc-ans"><summary>답 보기</summary>2√3</details></li>
+<li>1/√2의 분모를 유리화하세요.<details class="acc-ans"><summary>답 보기</summary>√2/2</details></li>
+</ol>
+<h5>연결</h5>
+<p>중1 소인수분해, 중2 순환소수 → 제곱근과 실수 → 이차방정식(근의 공식), 피타고라스 정리. 막히면: 중1 소인수분해, <a href="math-elem.html">초등 정사각형의 넓이</a>.</p>
+</div></details>
+<details class="acc"><summary>다항식의 곱셈과 인수분해<small>곱셈 공식을 이해하고 그 역인 인수분해 하기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>곱셈 공식: (a+b)² = a² + 2ab + b², (a−b)², (a+b)(a−b) = a² − b², (x+a)(x+b) = x² + (a+b)x + ab, (ax+b)(cx+d)</li>
+<li>인수분해 = 다항식을 인수의 곱으로 나타내기(곱셈 공식의 역)</li>
+<li>순서: 공통인수 먼저 → 완전제곱식·합차·x² + (a+b)x + ab 꼴</li>
+<li>인수분해 후 다시 전개해 검산</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>넓이 모델: 한 변이 a+b인 정사각형 종이를 잘라 a², ab, ab, b² 네 조각을 확인하게 해요.</li>
+<li>“인수분해는 곱셈을 거꾸로 하는 거야” 아이가 예를 들어 설명하게.</li>
+<li>속도보다 검산 습관: “다시 전개하면 원래 식이 나와?”</li>
+<li>틀린 문제는 부호 조합 실수인지, 공통인수 누락인지 표시</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>색종이로 대수 타일(x², x, 1) 만들어 x² + 5x + 6을 직사각형으로 배열 → (x+2)(x+3)</li>
+<li>암산 놀이: 99 × 101 = 100² − 1, 51² = 2500 + 100 + 1</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>(a+b)² = a² + b²로 씀</li>
+<li>공통인수를 먼저 빼지 않아 끝까지 인수분해하지 못함</li>
+<li>x² − x − 6에서 부호 조합을 틀림</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>(x+3)²을 전개하세요.<details class="acc-ans"><summary>답 보기</summary>x² + 6x + 9</details></li>
+<li>x² − 9를 인수분해하세요.<details class="acc-ans"><summary>답 보기</summary>(x+3)(x−3)</details></li>
+<li>x² − x − 6을 인수분해하세요.<details class="acc-ans"><summary>답 보기</summary>(x−3)(x+2)</details></li>
+</ol>
+<h5>연결</h5>
+<p>중2 식의 계산 → 곱셈 공식·인수분해 → 이차방정식, 이차함수, 고1 다항식. 막히면: 중2 식의 계산(분배법칙), <a href="math-elem.html">초등 직사각형의 넓이</a>.</p>
+</div></details>
+<details class="acc"><summary>이차방정식<small>인수분해·완전제곱식·근의 공식으로 풀고 활용하기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>ax² + bx + c = 0 (a≠0)</li>
+<li>AB = 0이면 A = 0 또는 B = 0 → 인수분해로 풀기, 중근</li>
+<li>제곱근을 이용한 풀이, 완전제곱식 만들기</li>
+<li>근의 공식 x = (−b ± √(b² − 4ac)) / 2a</li>
+<li>활용: 답이 문제 조건(길이 &gt; 0 등)에 맞는지 확인</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“AB = 0이면 왜 둘 중 하나는 0이야?”</li>
+<li>근의 공식이 완전제곱식에서 나오는 과정을 아이가 부모에게 칠판 수업하듯 설명하게 해요.</li>
+<li>인수분해가 되는지 먼저 보고, 안 되면 근의 공식: 방법 선택 이유를 말하게</li>
+<li>활용 문제의 답 두 개 중 버릴 것을 이유와 함께 고르게</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>넓이가 정해진 텃밭(가로가 세로보다 2m 긴 넓이 24m²)의 가로·세로 구하기</li>
+<li>종이 상자 만들기: 네 귀퉁이를 잘라 접을 때 밑넓이 조건</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>양변을 x로 나눠 근 x = 0을 잃음</li>
+<li>근의 공식에서 −b나 2a의 부호·범위 실수</li>
+<li>활용 문제에서 음수 답을 버리지 않음</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>x² − 5x + 6 = 0의 해는?<details class="acc-ans"><summary>답 보기</summary>x = 2 또는 x = 3</details></li>
+<li>x² = 2x의 해는?<details class="acc-ans"><summary>답 보기</summary>x(x − 2) = 0 → x = 0 또는 x = 2 (양변을 x로 나누면 0을 잃어요)</details></li>
+<li>x² + 2x − 1 = 0의 해는?<details class="acc-ans"><summary>답 보기</summary>x = −1 ± √2</details></li>
+</ol>
+<h5>연결</h5>
+<p>인수분해, 제곱근 → 이차방정식 → 이차함수, 고1 복소수와 이차방정식. 막히면: 중3 인수분해, 중1 일차방정식.</p>
+</div></details>
+<details class="acc"><summary>이차함수와 그래프<small>포물선의 모양, 꼭짓점과 축, 평행이동</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>이차함수 y = ax² + bx + c (a≠0), 그래프는 포물선(축, 꼭짓점)</li>
+<li>a &gt; 0이면 아래로 볼록, a &lt; 0이면 위로 볼록, |a|가 클수록 폭이 좁다</li>
+<li>y = a(x−p)² + q: y = ax²을 x축 방향 p, y축 방향 q만큼 평행이동, 꼭짓점 (p, q)</li>
+<li>일반형 → 표준형(완전제곱식) 변환, y절편, x축과의 교점(이차방정식의 근)</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>표로 점을 찍어 그리게 해요(손으로 한 번은 꼭).</li>
+<li>“a가 음수가 되면 어떻게 바뀔 것 같아?” 예상을 먼저 말하게.</li>
+<li>그래프 그리기 도구에서 a, p, q를 바꿔 보며 관찰 → 규칙을 아이 말로</li>
+<li>일반형 → 표준형 변환 풀이를 말로 설명하게</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>분수대 물줄기, 농구공 궤적 사진에서 포물선 찾기</li>
+<li>그래프 도구의 슬라이더로 “꼭짓점 맞히기” 게임</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>y = (x−2)²을 왼쪽으로 2만큼 이동이라고 함</li>
+<li>꼭짓점 좌표의 부호 실수</li>
+<li>완전제곱식 변환 계산 실수</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>y = 2(x−1)² + 3의 꼭짓점은?<details class="acc-ans"><summary>답 보기</summary>(1, 3)</details></li>
+<li>y = −x²의 그래프는 어느 쪽으로 볼록?<details class="acc-ans"><summary>답 보기</summary>위로 볼록</details></li>
+<li>y = x² − 4x + 1을 y = a(x−p)² + q 꼴로 바꾸세요.<details class="acc-ans"><summary>답 보기</summary>y = (x−2)² − 3</details></li>
+</ol>
+<h5>연결</h5>
+<p>중2 일차함수, 중3 이차방정식 → 이차함수 → 고1 이차방정식과 이차함수. 막히면: 중2 일차함수(평행이동), 중3 인수분해.</p>
+</div></details>
+<h3>2학기</h3>
+<details class="acc"><summary>피타고라스 정리<small>직각삼각형의 세 변의 관계와 활용</small></summary><div class="acc-body">
+<p class="callout warning">2015 개정에서는 중2 2학기(닮음 뒤)에 있었지만, 2022 개정에서는 중3(삼각비 앞)으로 옮겨졌어요. 선행 교재나 오래된 문제집은 중2에 넣어 둔 경우가 있으니 주의하세요.</p>
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>직각삼각형에서 빗변 c에 대해 a² + b² = c²</li>
+<li>역: 세 변이 a² + b² = c²을 만족하면 빗변 c의 대각이 직각인 직각삼각형</li>
+<li>피타고라스 수 (3, 4, 5), (5, 12, 13) …</li>
+<li>활용: 직사각형 대각선, 좌표평면 위 두 점 사이 거리(교과서에 따라 고1에서 본격적으로)</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>직각삼각형 세 변에 정사각형을 붙여 넓이를 비교하는 종이 활동</li>
+<li>“왜 빗변에만 c를 둘까? 가장 긴 변은 어디야?”</li>
+<li>역을 쓸 때 “가장 긴 변을 먼저 찾았어?” 확인</li>
+<li>계산 후 제곱근을 취했는지 확인하는 습관</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>TV·모니터 크기(인치)는 대각선 길이 → 가로·세로를 재서 확인해 보기</li>
+<li>벽에 기댄 사다리 높이 구하기</li>
+<li>방의 대각선 길이를 줄자로 재고 계산과 비교</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>빗변이 아닌 변을 c에 넣음</li>
+<li>c²까지만 구하고 제곱근을 안 취함</li>
+<li>역 판별에서 가장 긴 변을 고르지 않음</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>두 변이 6, 8인 직각삼각형의 빗변은?<details class="acc-ans"><summary>답 보기</summary>10</details></li>
+<li>세 변이 7, 24, 25이면 직각삼각형인가요?<details class="acc-ans"><summary>답 보기</summary>49 + 576 = 625 = 25² 이므로 예</details></li>
+<li>한 변이 1인 정사각형의 대각선 길이는?<details class="acc-ans"><summary>답 보기</summary>√2</details></li>
+</ol>
+<h5>연결</h5>
+<p>중3 제곱근, 중2 닮음 → 피타고라스 정리 → 삼각비, 고1 두 점 사이의 거리·원의 방정식. 막히면: <a href="math-elem.html">초등 정사각형·직각삼각형의 넓이</a>, 중3 제곱근.</p>
+</div></details>
+<details class="acc"><summary>삼각비<small>sin·cos·tan의 뜻, 특수각의 삼각비, 높이·거리 구하기</small></summary><div class="acc-body">
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>직각삼각형에서 sin A = 높이/빗변, cos A = 밑변/빗변, tan A = 높이/밑변</li>
+<li>닮은 직각삼각형이면 크기와 상관없이 삼각비는 같다(각에 따라 결정)</li>
+<li>30°, 45°, 60°의 삼각비, 삼각비의 표</li>
+<li>활용: 높이·거리 구하기, 삼각형의 넓이(교과서에 따라)</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“삼각형 크기가 달라도 sin 30°는 왜 같아?” 닮음과 연결해 설명하게</li>
+<li>정삼각형 반쪽, 직각이등변삼각형을 직접 그려 특수각 값을 유도하게 해요(암기 대신).</li>
+<li>활용 문제는 그림부터, 기준각에 표시</li>
+<li>기준각이 바뀌면 “높이”와 “밑변”이 바뀐다는 걸 확인</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>휴대폰 기본 수평계(각도 측정)로 경사로 각도를 재고 tan 값 계산</li>
+<li>각도와 거리를 재서 나무 높이 추정하기</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>기준각에 대한 대변·이웃변 혼동</li>
+<li>특수각 값을 외우기만 해서 섞어 씀</li>
+<li>tan를 빗변 기준으로 계산</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>sin 30°의 값은?<details class="acc-ans"><summary>답 보기</summary>1/2</details></li>
+<li>tan 45°의 값은?<details class="acc-ans"><summary>답 보기</summary>1</details></li>
+<li>빗변이 10이고 한 예각이 30°인 직각삼각형에서 그 각의 대변의 길이는?<details class="acc-ans"><summary>답 보기</summary>10 × sin 30° = 5</details></li>
+</ol>
+<h5>연결</h5>
+<p>닮음, 피타고라스 정리 → 삼각비 → 고2 대수의 삼각함수. 막히면: 중2 닮음, 중3 피타고라스 정리.</p>
+</div></details>
+<details class="acc"><summary>원의 성질<small>현과 접선의 성질, 원주각</small></summary><div class="acc-body">
+<p class="callout warning">원주각의 활용 범위(원에 내접하는 사각형 등)는 교과서마다 다룰 수 있는 깊이가 달라요. 학교 교과서 목차와 수행평가 범위를 확인하세요.</p>
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>원의 중심에서 현에 내린 수선은 그 현을 이등분한다</li>
+<li>중심에서 같은 거리에 있는 두 현의 길이는 같다</li>
+<li>접선은 접점을 지나는 반지름과 수직, 원 밖의 한 점에서 그은 두 접선의 길이는 같다</li>
+<li>원주각 = 같은 호에 대한 중심각의 ½, 한 호에 대한 원주각은 모두 같다, 반원에 대한 원주각은 90°</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>컴퍼스로 원을 그리고 여러 위치에서 원주각을 각도기로 재어 “같아?” 확인하게</li>
+<li>“원주각이 왜 중심각의 반일까?” 이등변삼각형을 찾아 설명하게</li>
+<li>중심각·원주각을 서로 다른 색으로 표시하는 습관</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>원형 접시의 지름 찾기: 종이의 직각 모서리를 원 둘레에 대면 두 교점이 지름의 양 끝(반원의 원주각 90°)</li>
+<li>원형 테이블 둘레에 앉은 사람들이 같은 그림을 보는 각이 같은 이유 이야기</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>중심각과 원주각 혼동</li>
+<li>접선과 반지름이 수직이라는 것을 활용하지 못함</li>
+<li>같은 호인지 확인하지 않고 원주각이 같다고 씀</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>중심각이 100°인 호에 대한 원주각은?<details class="acc-ans"><summary>답 보기</summary>50°</details></li>
+<li>지름에 대한 원주각은?<details class="acc-ans"><summary>답 보기</summary>90°</details></li>
+<li>원 밖의 한 점에서 그은 두 접선의 길이는?<details class="acc-ans"><summary>답 보기</summary>같다</details></li>
+</ol>
+<h5>연결</h5>
+<p>중1 부채꼴, 중2 삼각형의 성질(외심) → 원의 성질 → 고1 원의 방정식.</p>
+</div></details>
+<details class="acc"><summary>통계: 산포도·상자그림·상관관계<small>자료가 흩어진 정도, 상자그림, 산점도와 상관관계</small></summary><div class="acc-body">
+<p class="callout warning">2022 개정에서 상자그림이 새로 들어오고, 대푯값은 중1로 옮겨졌어요. 공학 도구를 쓰는 통계적 탐구(문제 설정 → 수집 → 분석 → 해석)도 강조됩니다.</p>
+<div class="unit-grid">
+<div><h4>핵심 개념</h4>
+<ul>
+<li>편차 = 변량 − 평균, 편차의 합은 항상 0</li>
+<li>분산 = 편차²의 평균, 표준편차 = √분산. 클수록 흩어져 있다</li>
+<li>사분위수와 상자그림(최솟값, 제1사분위수, 중앙값, 제3사분위수, 최댓값)</li>
+<li>산점도, 양의 상관관계·음의 상관관계·상관관계 없음</li>
+<li>상관관계는 인과관계가 아니다</li>
+</ul>
+</div>
+<div><h4>이렇게 지도해요</h4>
+<ol>
+<li>“평균이 같은 두 반 중 어느 반 점수가 더 고르지?”로 산포도의 필요성을 말하게</li>
+<li>“편차의 합이 왜 늘 0이야?” 이유를 설명하게(평균의 뜻)</li>
+<li>상관 ≠ 인과: 여름에 아이스크림 판매와 물놀이 사고가 함께 늘어나는 예로 “진짜 원인은?”</li>
+<li>스프레드시트로 분산·상자그림을 직접 만들어 보게</li>
+</ol>
+</div>
+</div>
+<h5>집에서 하는 활동</h5>
+<ul>
+<li>가족 키와 발 크기 산점도 그리기</li>
+<li>두 도시의 월별 기온 자료(기상청)로 표준편차 비교</li>
+<li>뉴스 기사 속 “○○와 관련 있다” 표현이 인과인지 상관인지 함께 따져 보기</li>
+</ul>
+<h5>자주 틀리는 곳</h5>
+<ul>
+<li>편차를 제곱하지 않고 분산을 구함</li>
+<li>표준편차에서 제곱근을 빠뜨림</li>
+<li>상관관계를 인과관계로 해석</li>
+<li>상자그림의 상자 길이가 자료의 개수를 뜻한다고 오해</li>
+</ul>
+<h5>확인 질문</h5>
+<ol>
+<li>편차의 합은?<details class="acc-ans"><summary>답 보기</summary>항상 0</details></li>
+<li>분산이 4이면 표준편차는?<details class="acc-ans"><summary>답 보기</summary>2</details></li>
+<li>상자그림에서 상자(제1~제3사분위수)가 나타내는 것은?<details class="acc-ans"><summary>답 보기</summary>가운데 약 50%의 자료가 퍼져 있는 범위</details></li>
+</ol>
+<h5>연결</h5>
+<p>중1 대푯값·도수분포 → 산포도·상자그림·상관 → 고2~3 확률과 통계. 막히면: 중1 자료의 정리와 해석, <a href="math-elem.html">초5 평균</a>.</p>
+</div></details>
+<h3>중3 단원 이해 체크리스트</h3>
+<p>아이가 부모에게 <strong>설명할 수 있으면</strong> 체크해요. 문제를 맞힌 것과 설명할 수 있는 것은 다릅니다.</p>
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="math-mid-m3-check">
+<li class="task"><label><input type="checkbox"><span><b>제곱근과 실수</b>: 제곱근의 뜻과 성질, 무리수, 근호를 포함한 식의 계산</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>다항식의 곱셈과 인수분해</b>: 곱셈 공식을 이해하고 그 역인 인수분해 하기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>이차방정식</b>: 인수분해·완전제곱식·근의 공식으로 풀고 활용하기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>이차함수와 그래프</b>: 포물선의 모양, 꼭짓점과 축, 평행이동</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>피타고라스 정리</b>: 직각삼각형의 세 변의 관계와 활용</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>삼각비</b>: sin·cos·tan의 뜻, 특수각의 삼각비, 높이·거리 구하기</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>원의 성질</b>: 현과 접선의 성질, 원주각</span></label></li>
+<li class="task"><label><input type="checkbox"><span><b>통계: 산포도·상자그림·상관관계</b>: 자료가 흩어진 정도, 상자그림, 산점도와 상관관계</span></label></li>
+</ul>
+<div class="cards" style="--min:260px">
+<div class="card c-tip"><span class="tag">중3 가정 학습 루틴</span><h3>주 5회 50분 스스로</h3><p>부모는 주 1회 20분 설명 듣기·오답 확인. 겨울방학에는 선행보다 중1~3 전 범위 복습(특히 인수분해·이차함수)을 먼저. 선행 범위는 부부가 함께 정해 결정 로그에 남겨요.</p></div>
+</div>
+</div>
+</div>
+
+<h2 id="exam">정기 시험 대비 루틴 (3주)</h2>
+<p>중학교 수학 성적은 성취평가(A~E, 절대평가)로 기록돼요. 지필 시험과 수행평가 비율, 서술형 비중은 학교마다 다르니 학기 초 학교 평가 계획을 꼭 확인하세요. 자세한 평가 제도는 <a href="../system/assessment.html">평가 방식</a>에 있어요.</p>
+<div class="timeline">
+  <div class="tl-item" style="--c:var(--branch)"><div class="tl-when">D−21</div><h3>교과서 개념 다시 읽기</h3><p>시험 범위 단원의 개념을 부모에게 5분씩 설명. 설명이 막히는 단원에 표시.</p></div>
+  <div class="tl-item" style="--c:var(--fruit)"><div class="tl-when">D−14</div><h3>교과서·익힘 문제 + 학교 프린트</h3><p>선생님이 나눠 준 자료가 가장 중요해요. 유형 문제집은 틀린 유형 위주로.</p></div>
+  <div class="tl-item" style="--c:var(--accent)"><div class="tl-when">D−7</div><h3>오답 다시 풀기 · 서술형</h3><p>그동안 표시한 오답만 다시. 서술형은 풀이를 “문장으로” 써 보는 연습.</p></div>
+  <div class="tl-item" style="--c:var(--note)"><div class="tl-when">D−2</div><h3>시간 재고 한 번</h3><p>실전처럼 45분. 모르는 문제 넘어가기 연습. 잠은 평소대로.</p></div>
+  <div class="tl-item" style="--c:var(--tip)"><div class="tl-when">시험 후</div><h3>결과보다 원인</h3><p>“몇 점이야?” 대신 “틀린 것 중 개념 문제는 몇 개였어?” 다음 학기 계획에 반영해요.</p></div>
+</div>
+
+<h2 id="resources">교과서·EBS 활용</h2>
+<div class="cards" style="--min:220px">
+  <div class="card c-branch"><span class="tag">교과서</span><h3>개념 설명 원본</h3><p>개념 설명 부분을 소리 내어 읽고 “이 문장을 네 말로 바꿔 볼래?”가 가장 좋은 복습이에요.</p></div>
+  <div class="card c-fruit"><span class="tag">EBS 중학</span><h3>무료 개념 강의</h3><p>설명 듣기로 막힌 단원만 골라 보기. 전 강좌를 다 들으려 하지 않아요. <a href="https://mid.ebs.co.kr">EBS 중학</a></p></div>
+  <div class="card c-accent"><span class="tag">공학 도구</span><h3>그래프·통계 도구</h3><p>함수 그래프와 통계 단원은 그래프 그리기 도구, 스프레드시트로 직접 만들어 보면 이해가 빨라요.</p></div>
+  <div class="card c-note"><span class="tag">학년 가이드</span><h3>학년 전체 그림</h3><p><a href="../grades/m1.html">중1</a> · <a href="../grades/m2.html">중2</a> · <a href="../grades/m3.html">중3</a> 가이드에서 자유학기·시험·진로를 함께 보세요.</p></div>
+</div>
+
+<h2 id="academy">학원과 함께 쓸 때</h2>
+<div class="compare">
+  <div style="--cs:var(--paper-2)"><h4>학원이 하는 것</h4><ul><li>진도와 유형 문제 훈련</li><li>시험 기간 내신 대비 자료</li><li>정기 테스트와 반 편성</li><li>선행 진도(우리 집 기준을 넘지 않게)</li></ul></div>
+  <div style="--cs:var(--tip-soft);--c:var(--tip)"><h4>부모가 집에서 할 것</h4><ul><li>“오늘 배운 것 설명해 줄래?” 주 2회</li><li>오답 원인 분류가 되고 있는지 확인</li><li>학원 진도와 학교 진도가 따로 놀지 않는지 점검</li><li>수면·정서 살피기, 과부하 신호 보면 부부가 함께 조정</li></ul></div>
+</div>
+<p class="callout tip">학원 진도가 학교보다 1년 이상 앞서면, 학교 단원의 “확인 질문”에 답할 수 있는지 먼저 보세요. 선행이 현행의 구멍을 가리고 있을 수 있어요. 학원 선택은 <a href="../materials/academies.html">학원 고르기</a>, 큰 결정은 <a href="../workbook/decision-log.html">결정 로그</a>에 남겨요.</p>
+
+<h2 id="memo">우리 집 중학 수학 메모</h2>
+<label class="memo-label" for="math-mid-memo">막힌 단원 · 되돌아간 초등 단원 · 오답 원인 패턴 · 다음 학기 계획</label>
+<textarea class="memo" id="math-mid-memo" data-key="subjects-math-mid-memo" placeholder="예) 중2 1학기: 일차함수 기울기에서 막힘 → 초6 비율 1주 복습. 오답 원인은 주로 부호 실수."></textarea>
+<p class="saved-hint"></p>
