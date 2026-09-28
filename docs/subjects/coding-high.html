@@ -96,6 +96,53 @@ wide: true
 <li>피지컬 시스템에서 “액추에이터”란?<details class="acc-ans"><summary>답 보기</summary><p>모터·스피커·LED처럼 실제로 움직이거나 반응을 내는 출력 장치.</p></details></li>
 </ol>
 <h5>연결</h5><p>중학교 컴퓨팅 시스템(<a href="coding-mid.html">중학교 단원 지도</a>) → 이 단원 → 소프트웨어와 생활.</p>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 운영체제는 CPU·메모리를 여러 프로세스에 나눠 주는 관리자예요. CPU는 짧은 시간 조각을 번갈아 배정해 동시에 도는 것처럼 보이게 해요(시분할). 클라우드는 데이터센터의 서버예요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“컴퓨터가 여러 일을 동시에 하는 비밀 설명하기”</p></div>
+      <div><b>준비물</b><p>휴대폰, 종이</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“음악 틀고 메신저 하면서 지도도 켜 놨잖아. CPU가 진짜 동시에 하는 거야?”</p>
+        <p class="say kid"><b>아이 예상</b>“번갈아 하는 건가?”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>작업 A(3조각)·B(1)·C(2)를 한 조각씩 돌아가며 실행하면 각각 언제 끝날까?</p><ol><li>1바퀴 A→B→C: B가 시각 2에 끝.</li><li>2바퀴 A→C: C가 시각 5에 끝.</li><li>A가 시각 6에 끝. 짧은 작업이 오래 기다리지 않아요.</li></ol><pre><code>jobs = {"A": 3, "B": 1, "C": 2}
+t = 0
+while jobs:
+    for name in list(jobs):
+        jobs[name] -= 1
+        t += 1
+        if jobs[name] == 0:
+            print(name, t)
+            del jobs[name]
+# B 2 / C 5 / A 6</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>운영체제가 하는 일 두 가지는? <details class="acc-ans"><summary>답 보기</summary>CPU 시간 관리, 메모리 관리(파일·입출력 관리도 정답).</details></li><li>프로그램과 프로세스의 차이는? <details class="acc-ans"><summary>답 보기</summary>저장된 코드 vs 실행 중인 프로그램.</details></li><li>클라우드 사진은 실제로 어디에 있어? <details class="acc-ans"><summary>답 보기</summary>데이터센터 서버. 어디서나 접근되지만 네트워크·보안에 의존해요.</details></li><li>센서 장치가 안 되면 어디부터 확인해? <details class="acc-ans"><summary>답 보기</summary>배선 → 센서값 출력 → 코드, 한 부분씩 따로 시험해요.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 제작 수행평가는 오류 해결 기록을 남기게 해요. 세특에는 “고장 원인을 어떻게 찾았나”가 좋아요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“그냥 동시에 하는 거지.”</td><td>“코어가 하나라면?”으로 좁혀 물어요.</td></tr><tr><td>“클라우드는 하늘에 있어.”</td><td>데이터센터 사진을 함께 찾아봐요.</td></tr><tr><td>“쓸 데 없어.”</td><td>공유기·백업 점검 “우리 집 IT 담당”을 맡겨요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>용어만 말해요.</div>
+      <div><b>거의</b>시분할은 설명하나 추적에서 헷갈려요.</div>
+      <div><b>완벽</b>작업 순서를 추적하고 점검 순서도 말해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b><a href="coding-mid.html">중학교 단원 지도</a>의 컴퓨팅 시스템.</div>
+      <div><b>잘하면 (심화)</b>우선순위 스케줄링 조사하기.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>데이터<small>구조화, 압축·암호화, 분석과 시각화</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -124,6 +171,53 @@ wide: true
 <li>시각화에서 축 범위를 조작하면 생기는 문제는?<details class="acc-ans"><summary>답 보기</summary><p>작은 차이가 크게 보이는 등 오해를 불러요.</p></details></li>
 </ol>
 <h5>연결</h5><p>중학교 데이터 → 이 단원 → 데이터 과학.</p>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 압축은 무손실(ZIP, PNG)과 손실(JPEG, MP3), 암호는 대칭키와 공개키 방식이 있어요. 분석에서 가장 흔한 실수는 상관을 인과로 단정하는 거예요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“데이터를 줄이고, 지키고, 읽는 법 설명하기”</p></div>
+      <div><b>준비물</b><p>뉴스 그래프 1개, KOSIS(무료)</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“압축했는데 화질이 그대로인 사진도, 떨어지는 사진도 있어. 왜 그럴까?”</p>
+        <p class="say kid"><b>아이 예상</b>“손실 압축이랑 무손실 압축이 달라서?”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>같은 글자가 이어지면 “글자+개수”로 줄이는 런 길이 부호화(RLE)를 만들자.</p><ol><li>같은 글자가 몇 개 이어지는지 센다.</li><li>“글자+개수”를 붙이고 다음 글자로 건너뛴다.</li><li>ABABAB는 오히려 길어져요. 데이터 특성에 따라 효과가 달라요.</li></ol><pre><code>def rle(s):
+    out, i = "", 0
+    while i &lt; len(s):
+        j = i
+        while j &lt; len(s) and s[j] == s[i]:
+            j += 1
+        out += s[i] + str(j - i)
+        i = j
+    return out
+print(rle("AAAAABBB"))   # A5B3</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>무손실·손실 압축 예 하나씩? <details class="acc-ans"><summary>답 보기</summary>ZIP·PNG / JPEG·MP3.</details></li><li>대칭키 암호의 약점은? <details class="acc-ans"><summary>답 보기</summary>같은 키를 안전하게 전달하기 어려워요. 공개키 방식이 이를 풀어요.</details></li><li>데이터 정제가 왜 필요해? <details class="acc-ans"><summary>답 보기</summary>빠진 값·잘못된 값이 결과를 왜곡해서요.</details></li><li>아이스크림 판매와 물놀이 사고가 같이 늘면 인과야? <details class="acc-ans"><summary>답 보기</summary>아니요. 기온이라는 제3의 요인일 수 있어요.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> “원리 한 줄 + 예 하나”로 노트 정리. 분석 보고서엔 출처·정제 방법·한계를 꼭 적게 해요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“공개키가 공개되면 다 풀려.”</td><td>“자물쇠는 누구나, 열쇠는 나만” 비유를 건네요.</td></tr><tr><td>“같이 오르니 원인이지.”</td><td>“둘 다 올리는 제3의 요인은?”만 묻고 기다려요.</td></tr><tr><td>“코드는 되는데 설명을 못 해.”</td><td>결과 예측 → 실행 → 변형 순서를 권해요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>용어만 알아요.</div>
+      <div><b>거의</b>원리는 말하나 상관·인과를 섞어요.</div>
+      <div><b>완벽</b>압축 효과 차이와 인과 여부를 스스로 따져요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b><a href="coding-mid.html">중학교 단원 지도</a>의 데이터.</div>
+      <div><b>잘하면 (심화)</b>공공데이터로 그래프 1개 + 한계 한 줄 보고서.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>알고리즘과 프로그래밍<small>탐색·정렬 효율, 2차원 리스트, 모듈화</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -153,6 +247,56 @@ wide: true
 <li>모듈화의 장점은?<details class="acc-ans"><summary>답 보기</summary><p>나눠서 만들고, 고치고, 다시 쓰기 쉬워요. 협업에도 유리해요.</p></details></li>
 </ol>
 <h5>연결</h5><p>중학교 파이썬 → 이 단원 → 대학 전공 기초(자료구조·알고리즘).</p>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 핵심은 효율 비교예요. 순차 탐색은 최악 n번, 정렬된 데이터의 이진 탐색은 절반씩 줄여 100만 개도 약 20번이면 찾아요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“두 알고리즘의 효율을 단계 수로 비교하기”</p></div>
+      <div><b>준비물</b><p>1~100 숫자 맞히기 놀이, 무료 온라인 파이썬</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“1부터 100 중 내가 생각한 숫자, 몇 번 만에 맞힐 수 있어?”</p>
+        <p class="say kid"><b>아이 예상</b>“50부터 반씩 줄이면 7번 안에 돼.”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>1~100 정렬 리스트에서 73을 이진 탐색하면 비교 몇 번?</p><ol><li>가운데와 비교해 절반을 버린다.</li><li>6번째 비교에서 찾아요(순차 탐색은 73번).</li><li>조건: 정렬되어 있어야 해요.</li></ol><pre><code>def binary_search(arr, target):
+    lo, hi, count = 0, len(arr) - 1, 0
+    while lo &lt;= hi:
+        mid = (lo + hi) // 2
+        count += 1
+        if arr[mid] == target:
+            return mid, count
+        elif arr[mid] &lt; target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1, count
+print(binary_search(list(range(1, 101)), 73))   # (72, 6)</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>이진 탐색의 조건은? <details class="acc-ans"><summary>답 보기</summary>데이터가 정렬되어 있어야 해요.</details></li><li>grid = [[1, 2, 3], [4, 5, 6]]에서 grid[1][2]는? <details class="acc-ans"><summary>답 보기</summary>6. 두 번째 행의 세 번째 값.</details></li><li>모든 쌍 비교는 데이터 10배면? <details class="acc-ans"><summary>답 보기</summary>약 100배 느려져요(n²).</details></li><li>함수로 나누면 뭐가 좋아? <details class="acc-ans"><summary>답 보기</summary>고치고 다시 쓰기 쉽고 협업에 유리해요.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 예제는 “예측 → 실행 → 변형”. 개선 전후 비교 기록이 세특 근거예요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“돌아가면 됐지.”</td><td>“데이터가 100배면?” 직접 재 보게 해요.</td></tr><tr><td>“인덱스가 헷갈려.”</td><td>종이 표에 “행 먼저, 열 다음”.</td></tr><tr><td>“막혀서 짜증 나.”</td><td>쉬었다가 확실한 부분까지 말로 정리해요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>결과를 예측 못 해요.</div>
+      <div><b>거의</b>원리는 알지만 추적에서 실수해요.</div>
+      <div><b>완벽</b>효율을 n으로 비교하고 코드를 개선해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b><a href="coding-mid.html">중학교 단원 지도</a>의 파이썬 기초.</div>
+      <div><b>잘하면 (심화)</b>버블·병합 정렬 실행 시간 비교.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>인공지능<small>기계학습 원리와 활용 프로젝트</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -181,6 +325,47 @@ wide: true
 <li>AI 결과를 사람이 검토해야 하는 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>편향·오류 가능성이 있고, 결과에 대한 책임은 사람에게 있기 때문이에요.</p></details></li>
 </ol>
 <h5>연결</h5><p>중학교 인공지능 → 이 단원 → 인공지능 기초(진로선택).</p>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 정답(레이블)이 있는 데이터로 배우면 지도학습(분류: 범주, 회귀: 수치), 정답 없이 비슷한 것끼리 묶으면 비지도학습(군집)이에요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“지도·비지도학습을 구분하고 모델이 틀리는 경우 설명하기”</p></div>
+      <div><b>준비물</b><p>티처블 머신 등 무료 도구(선택)</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“스팸 거르는 AI는 뭘 보고 배웠을까?”</p>
+        <p class="say kid"><b>아이 예상</b>“스팸이라고 표시된 메일들?”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>몸무게와 정답이 붙은 데이터로, 새 동물을 가장 가까운 예시의 정답으로 분류하자(최근접 이웃).</p><ol><li>정답이 있으니 지도학습.</li><li>새 입력과 가장 차이가 작은 예시를 고른다.</li><li>12kg은 5kg(차이 7)이 더 가까워 고양이. 특성이 하나뿐이라 틀릴 수 있어요.</li></ol><pre><code>data = [(4, "고양이"), (5, "고양이"), (20, "개"), (25, "개")]
+def predict(w):
+    return min(data, key=lambda d: abs(d[0] - w))[1]
+print(predict(6), predict(18), predict(12))   # 고양이 개 고양이</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>분류와 회귀의 차이는? <details class="acc-ans"><summary>답 보기</summary>분류는 범주, 회귀는 수치를 예측해요.</details></li><li>군집은 지도학습이야? <details class="acc-ans"><summary>답 보기</summary>아니요, 정답 없는 비지도학습.</details></li><li>위 모델은 언제 틀릴까? <details class="acc-ans"><summary>답 보기</summary>큰 고양이·작은 개. 특성·데이터를 늘려 개선해요.</details></li><li>AI 결과를 왜 사람이 검토해? <details class="acc-ans"><summary>답 보기</summary>편향·오류가 있고 책임은 사람에게 있어서요.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 결과 캡처 대신 “왜 그렇게 나왔나” 한 단락. 틀린 사례 분석이 세특 차별점이에요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“AI가 알아서 해.”</td><td>“데이터는 누가 준비했어?”</td></tr><tr><td>“정답 유무가 헷갈려.”</td><td>예시 카드를 정답표 있음/없음으로 나눠요.</td></tr><tr><td>“만들었으니 끝.”</td><td>가족이 써 보며 틀린 사례를 찾아 줘요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>“데이터로 배운다”만 말해요.</div>
+      <div><b>거의</b>구분은 하나 한계를 몰라요.</div>
+      <div><b>완벽</b>틀린 사례와 개선책을 근거로 말해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b><a href="coding-mid.html">중학교 단원 지도</a>의 인공지능.</div>
+      <div><b>잘하면 (심화)</b>과대적합 개념을 자기 모델에 적용.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>디지털 문화<small>정보보안, 저작권·라이선스, 디지털 사회</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -208,6 +393,44 @@ wide: true
 <li>디지털 시민의 책임 한 가지는?<details class="acc-ans"><summary>답 보기</summary><p>예: 정보를 확인하고 공유하기, 타인의 권리 존중, 보안 수칙 지키기.</p></details></li>
 </ol>
 <h5>연결</h5><p>중학교 디지털 문화 → 이 단원 → 인공지능 기초의 사회적 영향.</p>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 보안 위협과 대응, 라이선스, 디지털 사회가 핵심이에요. MIT는 고지만 포함하면 되고, GPL 코드를 넣어 배포하면 내 프로그램도 GPL로 소스를 공개해야 해요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“보안·라이선스를 사례로 설명하고 내 기준 세우기”</p></div>
+      <div><b>준비물</b><p>KISA 피싱 사례 자료(무료)</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>““폰 고장 나서 친구 폰이야. 인증번호 알려 줘” 문자가 오면?”</p>
+        <p class="say kid"><b>아이 예상</b>“안 알려 주고 원래 번호로 전화해 봐야지.”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>인터넷의 오픈소스 코드를 내 앱에 넣어 배포하려면?</p><ol><li>LICENSE 파일을 찾는다. 없으면 쓰지 않는 게 원칙.</li><li>MIT → 고지 포함. GPL → 내 프로그램도 소스 공개.</li><li>보고서에 출처·라이선스를 적고, 학교의 AI·외부 코드 규칙도 확인.</li></ol></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>오픈소스는 조건 없이 써도 돼? <details class="acc-ans"><summary>답 보기</summary>아니요. 출처 표시, 같은 조건 공개 등 조건이 있어요.</details></li><li>랜섬웨어 대비 최고의 습관은? <details class="acc-ans"><summary>답 보기</summary>중요 파일을 따로 백업.</details></li><li>사회공학적 해킹이란? <details class="acc-ans"><summary>답 보기</summary>사람의 신뢰를 노리는 방법. 예: 사칭 전화로 인증번호 요구.</details></li><li>AI로 사라지거나 생길 일은? <details class="acc-ans"><summary>답 보기</summary>예: 단순 사무 감소, 데이터 관련 일 증가. 근거가 있으면 정답.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> “위협 → 대응”, “라이선스 → 조건” 표로 정리. 우리 집 보안 점검 실천이 세특에 설득력 있어요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“난 안 속아.”</td><td>실제 피싱 사례에서 가장 그럴듯한 걸 고르게 해요.</td></tr><tr><td>“라이선스는 복잡해.”</td><td>MIT “고지만” vs GPL “소스 공개”부터.</td></tr><tr><td>“일자리 얘긴 답이 없어.”</td><td>이득·위험·책임 세 칸으로 정리해요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>수칙을 나열만 해요.</div>
+      <div><b>거의</b>사례는 말하나 라이선스를 구분 못 해요.</div>
+      <div><b>완벽</b>사례로 설명하고 행동 기준까지 말해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b><a href="coding-mid.html">중학교 단원 지도</a>의 디지털 문화.</div>
+      <div><b>잘하면 (심화)</b>오픈소스 라이선스 원문 세 줄 요약.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <h4>과목 이해 체크리스트</h4>
 <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
@@ -248,6 +471,56 @@ wide: true
 <li>규칙 기반 AI의 한계는?<details class="acc-ans"><summary>답 보기</summary><p>모든 상황의 규칙을 사람이 미리 쓰기 어렵고 예외에 약해요.</p></details></li>
 <li>“탐색”으로 풀 수 있는 문제 예는?<details class="acc-ans"><summary>답 보기</summary><p>미로 찾기, 최단 경로, 퍼즐·게임의 다음 수.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. AI는 규칙 기반 → 기계학습 → 딥러닝·생성형 AI로 발전했어요. 문제를 상태·행동·목표로 표현해 찾는 탐색이 오래된 기초예요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“AI 발전 흐름 설명하고 길 찾기를 탐색으로 풀기”</p></div>
+      <div><b>준비물</b><p>종이에 그린 장소 연결도</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“길 찾기 앱은 AI일까, 알고리즘일까?”</p>
+        <p class="say kid"><b>아이 예상</b>“경로 찾는 건 알고리즘, 막힘 예측은 AI?”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>집 → 역, 거치는 곳이 가장 적은 길을 너비 우선 탐색(BFS)으로 찾자.</p><ol><li>상태 = 장소, 행동 = 이동, 목표 = 역.</li><li>1단계 거리부터 넓혀 가며 본 곳은 건너뛴다.</li><li>집 → 공원 → 역(2번)이 학교 쪽(3번)보다 짧아요.</li></ol><pre><code>from collections import deque
+graph = {"집": ["학교", "공원"], "학교": ["도서관"], "공원": ["역"], "도서관": ["역"], "역": []}
+def bfs(start, goal):
+    q, seen = deque([[start]]), {start}
+    while q:
+        path = q.popleft()
+        if path[-1] == goal:
+            return path
+        for nxt in graph[path[-1]]:
+            if nxt not in seen:
+                seen.add(nxt)
+                q.append(path + [nxt])
+print(bfs("집", "역"))   # ['집', '공원', '역']</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>규칙 기반 AI의 한계는? <details class="acc-ans"><summary>답 보기</summary>모든 규칙을 미리 쓰기 어렵고 예외에 약해요.</details></li><li>딥러닝이 급성장한 이유 두 가지? <details class="acc-ans"><summary>답 보기</summary>대량의 데이터, GPU 등 계산 능력.</details></li><li>탐색으로 풀 문제 예는? <details class="acc-ans"><summary>답 보기</summary>미로, 최단 경로, 게임의 다음 수.</details></li><li>튜링 테스트의 한계는? <details class="acc-ans"><summary>답 보기</summary>사람처럼 보이는 것과 이해하는 것은 달라요.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 시기별 장점·한계 연표 한 장. 생활 문제를 탐색으로 표현하는 탐구도 좋아요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“요즘 AI는 다 딥러닝.”</td><td>“신호등 제어는?”으로 규칙 기반을 떠올리게 해요.</td></tr><tr><td>“BFS 코드가 어려워.”</td><td>종이에 단계별 색칠부터.</td></tr><tr><td>“역사는 지루해.”</td><td>시기별 대표 사례 영상 하나씩.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>“똑똑한 프로그램”으로만 설명해요.</div>
+      <div><b>거의</b>흐름은 말하나 탐색 표현을 못 해요.</div>
+      <div><b>완벽</b>새 문제를 상태·행동·목표로 표현해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>정보 “알고리즘과 프로그래밍”의 탐색.</div>
+      <div><b>잘하면 (심화)</b>거리가 있는 최단 경로 조사.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>데이터와 기계학습<small>특성, 학습·평가, 신경망의 아이디어</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -275,6 +548,48 @@ wide: true
 <li>특성(feature)의 예를 “집값 예측”에서 들어 볼래?<details class="acc-ans"><summary>답 보기</summary><p>면적, 방 수, 위치, 준공 연도 등.</p></details></li>
 <li>신경망은 무엇을 조정하며 학습할까?<details class="acc-ans"><summary>답 보기</summary><p>연결의 가중치를 오차가 줄어드는 방향으로 조정해요.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 학습·테스트 데이터를 나누는 건 처음 보는 데이터에서의 성능을 보기 위해서예요. 학습 데이터에만 맞춰지면 과대적합. 신경망은 가중치를 오차가 줄도록 조정해요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“정확도 뒤에 숨은 문제 찾기”</p></div>
+      <div><b>준비물</b><p>종이, 무료 온라인 파이썬</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“기출 답만 외운 친구가 새 문제에서 망했어. AI에선 뭐랑 비슷해?”</p>
+        <p class="say kid"><b>아이 예상</b>“과대적합!”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>100명 중 환자 1명. 모두 “정상”이라 답하는 모델의 정확도와 찾은 환자 수는?</p><ol><li>99명 맞힘 → 정확도 99%.</li><li>찾은 환자 0명. 목적을 못 해요.</li><li>불균형 데이터는 틀린 경우를 따로 봐요.</li></ol><pre><code>y_true = [1] + [0] * 99
+y_pred = [0] * 100
+acc = sum(a == b for a, b in zip(y_true, y_pred)) / 100
+found = sum(a == b == 1 for a, b in zip(y_true, y_pred))
+print(acc, found)   # 0.99 0</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>훈련 99%, 테스트 60%면? <details class="acc-ans"><summary>답 보기</summary>과대적합.</details></li><li>집값 예측의 특성 세 가지? <details class="acc-ans"><summary>답 보기</summary>면적, 방 수, 위치 등.</details></li><li>k-NN은 어떻게 분류해? <details class="acc-ans"><summary>답 보기</summary>가장 가까운 k개의 다수결.</details></li><li>신경망은 무엇을 조정해? <details class="acc-ans"><summary>답 보기</summary>가중치를 오차가 줄도록.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> “특성 → 분리 → 평가 → 과대적합” 흐름도 한 장. 보고서엔 틀린 사례 표를 넣게 해요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“정확도 높으면 좋은 거지.”</td><td>환자 예시를 직접 계산하게 해요.</td></tr><tr><td>“신경망 수학이 어려워.”</td><td>“가중치를 조금씩 고친다”만 알아도 충분해요.</td></tr><tr><td>“성능이 안 올라.”</td><td>데이터·특성 바꾸기도 개선이라고 알려 줘요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>예를 못 들어요.</div>
+      <div><b>거의</b>과대적합은 알지만 정확도 함정을 놓쳐요.</div>
+      <div><b>완벽</b>틀린 사례까지 분석해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>정보 “인공지능” 단원의 분류·회귀.</div>
+      <div><b>잘하면 (심화)</b>정밀도·재현율 조사.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>인공지능의 사회적 영향<small>편향, 책임, 저작권, 일자리</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -301,6 +616,44 @@ wide: true
 <li>“설명 가능한 AI”가 중요한 분야 예는?<details class="acc-ans"><summary>답 보기</summary><p>의료 진단, 대출 심사, 채용처럼 결정이 사람에게 큰 영향을 주는 분야.</p></details></li>
 <li>생성형 AI로 인한 허위 정보에 대응하는 개인의 습관은?<details class="acc-ans"><summary>답 보기</summary><p>출처 확인, 교차 검증, 공유 전 한 번 더 확인.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. AI 편향은 대부분 치우친 학습 데이터에서 생겨요. 의료·채용처럼 영향이 큰 분야일수록 설명 가능성이 중요해요. 저작권 문제는 법이 정비 중이라 정답이 없어요. 부모 의견보다 아이의 근거를 끌어내요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“AI 쟁점에 근거를 들어 의견 말하기”</p></div>
+      <div><b>준비물</b><p>AI 뉴스 기사 1개</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“자율주행차 사고는 누구 책임이라고 생각해?”</p>
+        <p class="say kid"><b>아이 예상</b>“회사? 탄 사람? 잘 모르겠어.”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>과거 합격자 데이터로 학습한 채용 AI가 특정 성별을 낮게 평가했다. 원인과 대책은?</p><ol><li>원인: 과거 데이터의 편향을 그대로 배웠을 가능성.</li><li>영향: 사람의 기회가 걸려 설명 가능성·사람 검토가 필요.</li><li>대책: 데이터 보완, 집단별 결과 비교. 결론은 “주장 + 근거 + 한계”로.</li></ol></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>AI 편향의 주된 원인은? <details class="acc-ans"><summary>답 보기</summary>치우친 데이터, 설계자의 가정, 평가 기준.</details></li><li>설명 가능한 AI가 중요한 분야는? <details class="acc-ans"><summary>답 보기</summary>의료, 대출, 채용.</details></li><li>생성형 AI 결과를 과제에 쓸 때는? <details class="acc-ans"><summary>답 보기</summary>사실 확인, 규칙에 따라 사용 사실 밝히기.</details></li><li>AI 글과 네 글, 선생님은 어떻게 구별해야 할까? <details class="acc-ans"><summary>답 보기</summary>정답 없음. 예: 초안 기록 제출. 근거가 있으면 좋은 답.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> “쟁점 → 이해관계자 → 근거 → 반론 → 결론” 틀 한 장이 토론·논술 수행평가 대비가 돼요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“AI는 도구일 뿐이야.”</td><td>채용 AI 사례를 보여 줘요.</td></tr><tr><td>“정답이 없잖아.”</td><td>그래서 근거가 중요하다고 말해 줘요.</td></tr><tr><td>“엄마 생각이랑 달라.”</td><td>“네 근거는?”만 묻고 설득하지 않아요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>좋다/나쁘다로만 말해요.</div>
+      <div><b>거의</b>근거가 하나뿐이에요.</div>
+      <div><b>완벽</b>여러 입장을 비교해 결론을 내요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>정보 “디지털 문화”의 디지털 시민 책임.</div>
+      <div><b>잘하면 (심화)</b>다른 나라 AI 가이드라인 비교.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <h4>과목 이해 체크리스트</h4>
 <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
@@ -339,6 +692,50 @@ wide: true
 <li>이상값을 무조건 지우면 안 되는 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>실제 의미 있는 사례일 수 있어 원인을 먼저 확인해야 해요.</p></details></li>
 <li>비식별화란?<details class="acc-ans"><summary>답 보기</summary><p>개인을 알아볼 수 없도록 이름·연락처 등을 지우거나 바꾸는 처리.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 분석은 구체적이고 데이터로 답할 수 있는 질문에서 시작해요. 정제는 중복 제거, 표기 통일, 결측값 처리, 이상값 확인이에요. 이상값은 원인부터 보고, 개인정보는 비식별화해요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“지저분한 데이터를 다듬고 고친 이유 기록하기”</p></div>
+      <div><b>준비물</b><p>가족 설문 응답, 공공데이터포털(무료)</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“우리 반만 설문하고 “전국 고등학생은 이렇다”고 써도 될까?”</p>
+        <p class="say kid"><b>아이 예상</b>“안 되지. 대표할 수 없어.”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>설문 3줄의 중복·이상값·표기 불일치를 정리하자.</p><ol><li>같은 줄은 하나만 남긴다.</li><li>나이 250은 지우지 않고 “확인 필요(None)”로.</li><li>서울시·서울특별시 → “서울”. 처리 방법을 기록해요.</li></ol><pre><code>rows = [("민지", 16, "서울시"), ("준호", 250, "서울특별시"), ("민지", 16, "서울시")]
+clean = []
+for name, age, city in dict.fromkeys(rows):   # 중복 제거
+    if not 0 &lt; age &lt; 120:
+        age = None
+    clean.append((name, age, "서울"))
+print(clean)   # [('민지', 16, '서울'), ('준호', None, '서울')]</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>표본이 대표성이 없으면? <details class="acc-ans"><summary>답 보기</summary>전체로 일반화할 수 없어요.</details></li><li>이상값을 바로 지우면 안 되는 까닭은? <details class="acc-ans"><summary>답 보기</summary>의미 있는 사례일 수 있어서요.</details></li><li>빈칸은 어떻게 처리해? <details class="acc-ans"><summary>답 보기</summary>빼거나 적절히 채우고 방법을 기록.</details></li><li>비식별화란? <details class="acc-ans"><summary>답 보기</summary>개인을 알아볼 수 없게 처리하는 것.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 정제 과정을 “문제 → 처리 → 이유” 표로 기록하면 보고서 뼈대이자 세특 근거가 돼요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“빈칸엔 0 넣으면 돼.”</td><td>“평균이 어떻게 될까?” 묻기.</td></tr><tr><td>“정제는 지루해.”</td><td>정제 전·후 그래프를 비교하게 해요.</td></tr><tr><td>“질문을 모르겠어.”</td><td>관심사에 “언제·어디서·얼마나”를 붙여요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>그대로 분석해요.</div>
+      <div><b>거의</b>처리 근거를 못 대요.</div>
+      <div><b>완벽</b>처리와 이유를 기록해 설명해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>정보 “데이터” 단원의 정제.</div>
+      <div><b>잘하면 (심화)</b>정제 전·후 평균 비교.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>분석·시각화·모델<small>기술 통계, 관계 분석, 예측</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -365,6 +762,46 @@ wide: true
 <li>상관계수가 0에 가깝다는 뜻은?<details class="acc-ans"><summary>답 보기</summary><p>두 변수 사이에 직선적 관계가 거의 없다는 뜻이에요.</p></details></li>
 <li>분석 보고서에 “한계”를 쓰는 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>결론을 어디까지 믿을 수 있는지 독자가 판단하게 하려고요.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 극단값이 있으면 평균이 끌려가서 중앙값이 나을 때가 많아요. 상관계수는 직선 관계 정도일 뿐 인과가 아니에요. 그래프는 목적에 맞게, 예측엔 한계를 함께 써요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“알맞은 대표값·그래프를 고르고 한계 말하기”</p></div>
+      <div><b>준비물</b><p>가족 걸음 수·수면 기록</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“뉴스 속 “평균 연봉”은 왜 체감보다 높을까?”</p>
+        <p class="say kid"><b>아이 예상</b>“엄청 버는 사람이 평균을 올려서?”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>월급(만 원) 200, 220, 250, 260, 3000의 평균과 중앙값은?</p><ol><li>평균 = 3930 ÷ 5 = 786.</li><li>중앙값 = 가운데 값 250.</li><li>4명이 260 이하이니 중앙값이 더 잘 대표해요.</li></ol><pre><code>import statistics as st
+pay = [200, 220, 250, 260, 3000]
+print(st.mean(pay), st.median(pay))   # 786 250</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>변화·비교·관계에 알맞은 그래프는? <details class="acc-ans"><summary>답 보기</summary>꺾은선, 막대, 산점도.</details></li><li>상관계수가 0에 가까우면? <details class="acc-ans"><summary>답 보기</summary>직선적 관계가 거의 없어요.</details></li><li>세로축을 0이 아닌 곳에서 시작하면? <details class="acc-ans"><summary>답 보기</summary>작은 차이가 크게 보여요.</details></li><li>보고서에 한계를 쓰는 까닭은? <details class="acc-ans"><summary>답 보기</summary>결론을 어디까지 믿을지 판단하게 하려고.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 확률과 통계 진도와 맞춰 복습. 산점도 1개에 “관계 + 한계” 쓰기가 수행평가 대비예요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“평균이 제일 정확해.”</td><td>월급 예시를 직접 계산하게 해요.</td></tr><tr><td>“그래프를 감으로 골라.”</td><td>목적 카드와 그래프 짝짓기.</td></tr><tr><td>“예측이 이상해.”</td><td>그것도 한계로 쓰면 된다고 알려 줘요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>평균만 써요.</div>
+      <div><b>거의</b>결과를 인과로 해석해요.</div>
+      <div><b>완벽</b>한계까지 스스로 서술해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>앞 단원 “데이터 수집과 정제”.</div>
+      <div><b>잘하면 (심화)</b>걸음·수면 회귀선과 한계 세 가지.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>데이터 기반 문제 해결 프로젝트<small>질문 → 분석 → 제안</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -391,6 +828,44 @@ wide: true
 <li>좋은 프로젝트 질문의 조건은?<details class="acc-ans"><summary>답 보기</summary><p>구체적이고, 구할 수 있는 데이터로 답할 수 있는 질문.</p></details></li>
 <li>데이터 제안이 윤리적인지 확인할 점은?<details class="acc-ans"><summary>답 보기</summary><p>개인정보 보호, 특정 집단에 불리한 편향이 없는지.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 질문 → 수집 → 정제 → 분석 → 결론·한계 → 제안의 프로젝트예요. 핵심은 근거 있는 제안과 재현 가능성. 부모는 대신하지 않고 발표의 첫 청중이면 돼요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“동네·학교 문제를 데이터로 분석해 1분 제안하기”</p></div>
+      <div><b>준비물</b><p>공공데이터포털(무료), 가족 회의 10분</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“결과를 구청 담당자에게 1분 안에 말한다면 첫 문장은?”</p>
+        <p class="say kid"><b>아이 예상</b>““이 정류장이 제일 붐벼요”?”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>“학교 앞 정류장 혼잡” 흐름</p><ol><li>질문: 등교 시간대 이용객은 다른 시간보다 얼마나 많을까?</li><li>공공데이터 승하차 자료를 추리고 정제 방법 기록.</li><li>시간대별 막대그래프로 집중 확인.</li><li>“등교 시간 증편 제안. 단, 계절 차이는 미반영.” 출처·코드 공개.</li></ol></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>좋은 질문의 조건은? <details class="acc-ans"><summary>답 보기</summary>구체적이고 데이터로 답할 수 있음.</details></li><li>재현 가능성을 높이려면? <details class="acc-ans"><summary>답 보기</summary>출처·과정·코드를 기록·공개.</details></li><li>제안이 윤리적인지 확인할 점은? <details class="acc-ans"><summary>답 보기</summary>개인정보, 특정 집단에 불리한 편향.</details></li><li>결론과 제안의 차이는? <details class="acc-ans"><summary>답 보기</summary>결론은 사실, 제안은 그 근거로 한 행동.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 주마다 한 단계 끝내는 계획표를 붙이고 주말 5분 점검. 세특엔 동기, 막힌 곳, 한계가 드러나게.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“주제를 못 정하겠어.”</td><td>요즘 불편했던 것 세 가지부터.</td></tr><tr><td>“예상과 달라서 망했어.”</td><td>“왜 달랐을까?”가 최고의 탐구예요.</td></tr><tr><td>“팀원이 안 도와줘.”</td><td>역할표를 다시 짜고, 필요하면 선생님과 상의.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>결과만 나열해요.</div>
+      <div><b>거의</b>한계·기록이 빠져요.</div>
+      <div><b>완벽</b>1분 안에 논리적으로 전달해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>앞 두 단원 체크리스트.</div>
+      <div><b>잘하면 (심화)</b>시민 제안 창구에 낼 수준으로 다듬기(결정은 아이가).</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <h4>과목 이해 체크리스트</h4>
 <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
@@ -428,6 +903,50 @@ wide: true
 <li>모델이 현실과 다를 수 있는 까닭은?<details class="acc-ans"><summary>답 보기</summary><p>단순화하면서 일부 요소를 빼거나 가정을 했기 때문이에요.</p></details></li>
 <li>시뮬레이션 결과를 믿을 만하게 하려면?<details class="acc-ans"><summary>답 보기</summary><p>실제 데이터와 비교해 검증하고 가정을 밝혀요.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 모델링은 핵심 요소만 뽑아 규칙으로 만드는 것, 시뮬레이션은 조건을 바꿔 컴퓨터로 실험하는 거예요. 빠진 요소가 있으니 실제 데이터와 비교해 검증해요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“모델의 가정을 밝히고 결과를 이론과 비교하기”</p></div>
+      <div><b>준비물</b><p>주사위 2개, 무료 온라인 파이썬</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“주사위 두 개를 던지면 합이 몇이 제일 많이 나올까?”</p>
+        <p class="say kid"><b>아이 예상</b>“7? 경우의 수가 제일 많으니까.”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>두 주사위 합을 1만 번 시뮬레이션해 합 7의 비율을 이론값과 비교하자.</p><ol><li>이론: 36가지 중 6가지 → 약 0.167.</li><li>1만 번 반복해 합별 횟수를 센다.</li><li>최빈값 7, 비율 약 0.17(시드마다 조금 달라요). 횟수를 늘리면 이론값에 가까워져요.</li></ol><pre><code>import random
+random.seed(1)
+counts = {}
+for _ in range(10000):
+    s = random.randint(1, 6) + random.randint(1, 6)
+    counts[s] = counts.get(s, 0) + 1
+print(max(counts, key=counts.get), round(counts[7] / 10000, 3))   # 7 0.168</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>단순화가 필요한 까닭은? <details class="acc-ans"><summary>답 보기</summary>핵심만 남겨야 실험·이해할 수 있어요.</details></li><li>시뮬레이션의 장점은? <details class="acc-ans"><summary>답 보기</summary>위험한 실험을 안전하게 반복.</details></li><li>감염 모델에서 접촉을 줄이면? <details class="acc-ans"><summary>답 보기</summary>확산이 느려져요.</details></li><li>결과를 믿을 만하게 하려면? <details class="acc-ans"><summary>답 보기</summary>실제 데이터와 비교하고 가정을 밝혀요.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 보고서에 “가정 목록”과 “빠진 요소”를 꼭 쓰게 해요. 조건을 바꾼 실험 과정이 세특 깊이예요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“시뮬레이션이니 정확해.”</td><td>“모델에서 뺀 건 뭐야?”</td></tr><tr><td>“할 때마다 달라.”</td><td>시드 고정과 횟수 늘리기를 비교해요.</td></tr><tr><td>“너무 쉬워.”</td><td>간단한 감염 모델로 도전해요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>결과를 그대로 믿어요.</div>
+      <div><b>거의</b>이론과 비교하지 않아요.</div>
+      <div><b>완벽</b>가정·한계를 밝혀 해석해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>반복문과 경우의 수 복습.</div>
+      <div><b>잘하면 (심화)</b>접촉률을 바꾼 확산 모델 그래프.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>피지컬 컴퓨팅과 메이킹<small>생활 문제를 장치로 해결</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -449,6 +968,48 @@ wide: true
 <li>디자인 사고의 첫 단계는?<details class="acc-ans"><summary>답 보기</summary><p>사용자와 문제를 관찰·공감하는 것.</p></details></li>
 <li>접근성을 고려한 설계 예는?<details class="acc-ans"><summary>답 보기</summary><p>큰 글씨·음성 안내·색약 친화 색상 등.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 관찰 → 아이디어 → 시제품 → 테스트 → 개선을 반복하는 디자인 사고가 핵심이에요. 안전: 전원을 끄고 배선하고, 합선과 3D 프린터 열에 주의해요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“사용자 불편에서 출발해 장치를 만들고 개선하기”</p></div>
+      <div><b>준비물</b><p>집 안 불편 목록, 학교·공공 메이커 스페이스 보드</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“우리 집에서 자동으로 됐으면 하는 게 뭐야?”</p>
+        <p class="say kid"><b>아이 예상</b>“밤에 화장실 불 켜기.”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>자동 조명: 어둡고(조도 300 미만) 움직임이 있으면 켠다.</p><ol><li>입력: 밝기·움직임, 출력: LED.</li><li>보드 연결 전에 판단 함수부터 테스트해요.</li><li>가족 의견(“너무 빨리 꺼져”)으로 개선. 기준값 300은 예시라 직접 측정해요.</li></ol><pre><code>def lamp(light, motion):
+    if light &lt; 300 and motion:
+        return "켜기"
+    return "끄기"
+print(lamp(120, True), lamp(120, False), lamp(800, True))   # 켜기 끄기 끄기</code></pre></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>디자인 사고의 첫 단계는? <details class="acc-ans"><summary>답 보기</summary>사용자 관찰·공감.</details></li><li>시제품을 빨리 만드는 까닭은? <details class="acc-ans"><summary>답 보기</summary>문제를 일찍 찾아 고치려고.</details></li><li>코드 문제인지 배선 문제인지 어떻게 구별해? <details class="acc-ans"><summary>답 보기</summary>센서값 출력, 함수에 값 넣기로 따로 시험.</details></li><li>접근성 설계 예는? <details class="acc-ans"><summary>답 보기</summary>큰 글씨, 음성 안내, 색약 친화 색.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 인터뷰·시제품·개선 3회차 사진 기록이 포트폴리오가 돼요. 늦은 밤보다 주말 낮 작업을 권해요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“인터뷰는 귀찮아.”</td><td>먼저 만들어 써 보게 하는 것도 관찰이에요.</td></tr><tr><td>“다 연결했는데 안 돼!”</td><td>전원 끄고 센서값부터 확인.</td></tr><tr><td>“재료가 없어.”</td><td>도서관·공공 메이커 스페이스를 찾아봐요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>누구를 위한 건지 몰라요.</div>
+      <div><b>거의</b>개선 기록이 없어요.</div>
+      <div><b>완벽</b>변경 이유를 설명해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>정보 “컴퓨팅 시스템”의 센서·액추에이터.</div>
+      <div><b>잘하면 (심화)</b>휴대폰 알림 추가와 보안 문제 조사.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <details class="acc"><summary>소프트웨어로 바꾸는 세상<small>사회 문제 해결 프로젝트와 협업</small></summary><div class="acc-body">
 <div class="unit-grid">
@@ -469,6 +1030,44 @@ wide: true
 <li>공익 소프트웨어의 예를 하나 들면?<details class="acc-ans"><summary>답 보기</summary><p>예: 재난 알림, 대중교통 안내, 장애인 접근성 앱.</p></details></li>
 <li>프로젝트 발표에서 꼭 넣을 것은?<details class="acc-ans"><summary>답 보기</summary><p>해결하려는 문제, 해결 방법, 결과와 한계, 개선 계획.</p></details></li>
 </ol>
+
+<details class="lesson">
+  <summary>📘 자세한 지도안 <small>부모용 배경지식 · 회차별 진행 · 아이 반응별 대처 · 이해도 기준</small></summary>
+  <div class="lesson-body">
+    <div class="lesson-bg"><h6>부모가 먼저 알아 둘 것</h6><p>부모가 내용을 다 알 필요는 없어요. 가르치기보다 “설명해 볼래?”라고 묻는 첫 청중이 되어 주세요. 공익 소프트웨어를 분석하고 팀 프로젝트를 해요. 역할 분담, 버전 관리, 발표가 핵심. 부모는 팀 이야기를 들어 주면 충분해요.</p></div>
+    <div class="lesson-meta">
+      <div><b>오늘의 목표 (아이에게 이렇게)</b><p>“팀 프로젝트에서 내 역할과 배운 점 설명하기”</p></div>
+      <div><b>준비물</b><p>평소 쓰는 공익 앱 1개</p></div>
+      <div><b>시간</b><p>회당 20분 × 3회</p></div>
+    </div>
+    <ol class="lesson-steps">
+      <li><b>개념 질문</b>
+        <p class="say"><b>부모</b>“버스 도착 안내 앱이 없으면 누가 제일 불편할까?”</p>
+        <p class="say kid"><b>아이 예상</b>“어르신이나 처음 온 사람?”</p>
+      </li>
+      <li><b>함께 풀기</b>
+        <div class="worked"><b>대표 문제 풀이 흐름</b><p>“학교 분실물 찾기 웹페이지” 흐름</p><ol><li>친구 10명 설문으로 문제 정의.</li><li>기획·설계·개발·테스트·발표 역할 분담, 버전 관리로 수정 기록.</li><li>친구 5명 테스트 후 개선.</li><li>발표: 문제 → 방법 → 결과·한계 → 개선 계획.</li></ol></div>
+      </li>
+      <li><b>점검과 계획</b>
+        <div class="practice"><b>아이에게 물어볼 질문 4개</b><ol><li>버전 관리가 왜 필요해? <details class="acc-ans"><summary>답 보기</summary>수정 기록을 남기고 합치며 되돌릴 수 있어서.</details></li><li>공익 소프트웨어 예와 대상은? <details class="acc-ans"><summary>답 보기</summary>재난 알림(주민), 접근성 앱(장애인) 등.</details></li><li>발표에 꼭 넣을 것은? <details class="acc-ans"><summary>답 보기</summary>문제, 방법, 결과와 한계, 개선 계획.</details></li><li>팀 갈등은 어떻게 풀었어? <details class="acc-ans"><summary>답 보기</summary>정답 없음. 구체적 경험이면 좋은 답.</details></li></ol></div>
+        <p><b>수행평가·세특 팁</b> 주 1회 “팀에서 한 일 3줄” 듣기. 역할표·회의록이 수행평가 근거, 갈등 해결 과정이 세특 이야기예요.</p>
+        <p class="say"><b>부모</b>“한 문장으로 정리하면?”</p>
+      </li>
+    </ol>
+    <h6>아이가 이렇게 말하면</h6>
+    <table class="react"><thead><tr><th>아이 반응</th><th>이렇게 도와주세요</th></tr></thead><tbody><tr><td>“코딩 못 해서 도움이 안 돼.”</td><td>기획·테스트·발표도 핵심 역할이에요.</td></tr><tr><td>“팀원이랑 싸웠어.”</td><td>판정 말고 “사용자라면 어느 쪽?”</td></tr><tr><td>“너무 작은 프로젝트야.”</td><td>사용자 한 명의 반응을 떠올리게 해요.</td></tr></tbody></table>
+    <h6>이해도 확인</h6>
+    <div class="levels">
+      <div><b>아직</b>결과만 말해요.</div>
+      <div><b>거의</b>협업 과정을 설명 못 해요.</div>
+      <div><b>완벽</b>역할·과정·한계를 발표해요.</div>
+    </div>
+    <div class="lesson-next">
+      <div><b>어려워하면 (보충)</b>“피지컬 컴퓨팅과 메이킹”의 디자인 사고.</div>
+      <div><b>잘하면 (심화)</b>청소년 해커톤 발표 관람 후 개선점 3가지.</div>
+    </div>
+  </div>
+</details>
 </div></details>
 <h4>과목 이해 체크리스트</h4>
 <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>

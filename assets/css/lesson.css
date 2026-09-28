@@ -1,0 +1,45 @@
+/* ============================================================
+   📘 자세한 지도안 (lesson plan inside each unit)
+   ============================================================ */
+details.lesson { margin: 14px 0 6px; border: 2px solid color-mix(in srgb, var(--note) 35%, var(--line)); border-radius: 16px; background: color-mix(in srgb, var(--note) 5%, var(--card)); }
+details.lesson > summary { list-style: none; cursor: pointer; padding: 12px 44px 12px 16px; font-weight: 800; font-size: 15.5px; position: relative; color: var(--ink); }
+details.lesson > summary::-webkit-details-marker { display: none; }
+details.lesson > summary small { display: block; font-weight: 500; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+details.lesson > summary::after { content: ""; position: absolute; right: 18px; top: 50%; width: 8px; height: 8px; margin-top: -6px; border: solid var(--note); border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform .2s; }
+details.lesson[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
+.lesson-body { padding: 0 16px 16px; font-size: 15px; }
+.lesson-body h6 { font-size: 13px; font-weight: 800; letter-spacing: .04em; color: var(--note); margin: 16px 0 6px; }
+.lesson-body p { margin: 0 0 8px; }
+.lesson-bg { padding: 12px 14px; border-radius: 12px; background: var(--card); border: 1px dashed var(--line); }
+.lesson-bg h6 { margin-top: 0; }
+.lesson-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; margin: 12px 0; }
+.lesson-meta > div { padding: 10px 12px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+.lesson-meta b { display: block; font-size: 12px; color: var(--muted); font-weight: 800; margin-bottom: 2px; }
+.lesson-meta p { margin: 0; font-weight: 600; }
+.lesson-steps { list-style: none; padding: 0 !important; margin: 10px 0 !important; counter-reset: ls; }
+.lesson-steps > li { counter-increment: ls; position: relative; padding: 12px 14px 12px 50px; margin: 0 0 10px !important; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+.lesson-steps > li::before { content: counter(ls) "회"; position: absolute; left: 10px; top: 12px; width: 32px; height: 32px; border-radius: 50%; background: var(--note); color: #fff; font-size: 11.5px; font-weight: 800; display: grid; place-items: center; }
+.lesson-steps > li > b:first-child { display: block; font-size: 15.5px; margin-bottom: 6px; }
+.say { display: flex; gap: 8px; align-items: flex-start; margin: 6px 0 !important; }
+.say > b { flex: none; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 99px; background: var(--note-soft); color: var(--note); margin-top: 2px; }
+.say.kid > b { background: var(--accent-soft); color: var(--accent); }
+.say.kid { color: var(--ink-2); font-style: italic; }
+.worked, .practice { margin: 10px 0; padding: 12px 14px; border-radius: 12px; }
+.worked { background: color-mix(in srgb, var(--tip) 8%, var(--card)); border: 1px solid color-mix(in srgb, var(--tip) 30%, var(--line)); }
+.practice { background: color-mix(in srgb, var(--warn) 8%, var(--card)); border: 1px solid color-mix(in srgb, var(--warn) 30%, var(--line)); }
+.worked > b:first-child, .practice > b:first-child { display: block; font-size: 12.5px; font-weight: 800; letter-spacing: .04em; margin-bottom: 6px; }
+.worked > b:first-child { color: var(--tip); } .practice > b:first-child { color: var(--warn); }
+.worked ol, .practice ol { margin: 4px 0 0 !important; padding-left: 1.3em; }
+.practice li { margin: 6px 0; }
+.react { width: 100%; border-collapse: collapse; font-size: 14px; margin: 6px 0 10px; }
+.react th, .react td { padding: 8px 10px; border-bottom: 1px solid var(--line-soft); vertical-align: top; text-align: left; }
+.react th { background: var(--paper-2); font-size: 12.5px; }
+.levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 6px 0 10px; }
+.levels > div { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); font-size: 14px; }
+.levels > div > b { display: block; font-size: 13px; margin-bottom: 4px; }
+.levels > div:nth-child(1) > b { color: var(--danger); } .levels > div:nth-child(2) > b { color: var(--warn); } .levels > div:nth-child(3) > b { color: var(--tip); }
+.lesson-next { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.lesson-next > div { padding: 10px 12px; border-radius: 12px; background: var(--paper-2); font-size: 14px; }
+.lesson-next > div > b { display: block; font-size: 12.5px; color: var(--ink-2); margin-bottom: 4px; }
+@media (max-width: 640px) { .levels, .lesson-next { grid-template-columns: 1fr; } .lesson-steps > li { padding-left: 14px; padding-top: 50px; } }
+@media print { details.lesson { break-inside: avoid; } }
