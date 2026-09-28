@@ -26,6 +26,7 @@ wide: true
   <div class="card top c-accent"><span class="tag">1</span><h3>가르치지 말고 물어보기</h3><p>단원을 열고 “부모가 던질 질문” 하나만 골라 저녁에 물어보세요. 답이 맞는지는 “답 보기”로 확인하면 돼요.</p></div>
   <div class="card top c-fruit"><span class="tag">2</span><h3>막히면 중학으로</h3><p>고1에서 막히는 원인의 상당수는 중학 단원이에요. 각 단원의 링크로 <a href="math-mid.html">중학교 단원 지도</a>를 열어요.</p></div>
   <div class="card top c-note"><span class="tag">3</span><h3>관리 · 수면 · 정서</h3><p>계획이 돌아가는지, 오답노트가 쌓이는지, 잠은 자는지. 이 세 가지가 부모의 핵심 역할이에요.</p></div>
+  <div class="card top c-tip"><div class="card-ic">🎮</div><h3>아이와 해 보기</h3><p>공통수학1·2와 선택 과목 단원 안에 단원마다 “체험 연계”와 5분 개념 확인 게임이 들어 있어요. 부모는 옆에서 “어떻게 알았어?”만 물어 주세요. 모든 게임 종류는 <a href="games.html">학습 놀이터</a>에서 미리 해 볼 수 있어요.</p></div>
 </div>
 <p class="callout warning">2022 개정 교육과정 기준입니다(고1은 2025년부터 적용). 고등 교과서는 검정이라 단원 이름·순서가 교과서마다 다르고, 공통수학1·2의 학기 배치와 선택 과목 개설은 학교마다 달라요. 여기 적은 것은 성취기준에 기반한 대표 단원이니 아이 교과서 목차와 학교 교육과정 편성표로 확인하세요. 첫째가 고등학생이 되는 2034년 무렵에는 교육과정이나 대입 제도가 다시 바뀌어 있을 수 있어요.</p>
 
@@ -116,6 +117,15 @@ wide: true
 <ul>
 <li>수학을 몰라도 돼요. 아이가 설명하는 동안 “그 줄은 왜 그렇게 돼?”만 반복해 주면 충분해요.</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>쌓기 블록으로 한 변이 (a + b)인 정육면체를 만들고 조각 8개(a³ 1개, a²b 3개, ab² 3개, b³ 1개)로 나눠 보기</span></li>
+  <li><b>책·영상</b><span>EBS 고교 강의에서 조립제법 부분을 함께 보고, 아이가 부모에게 과정 설명하기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="match" data-id="h1-1-poly-match"><script type="application/json" class="game-data">{"title":"곱셈 공식 짝 맞추기","pairs":[["(a + b)³","a³ + 3a²b + 3ab² + b³"],["(a − b)³","a³ − 3a²b + 3ab² − b³"],["(a + b)(a² − ab + b²)","a³ + b³"],["(a − b)(a² + ab + b²)","a³ − b³"],["(a + b + c)²","a² + b² + c² + 2ab + 2bc + 2ca"],["(a + b)² − (a − b)²","4ab"]]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>곱셈 공식 부호 실수, 빈 차수 자리에 0을 안 채우고 나눗셈</li>
@@ -147,6 +157,15 @@ wide: true
 <li>“f(1) = 0인 걸 보고 어떤 인수를 찾은 거야?”</li>
 </ul>
 </div>
+</div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>“오늘이 월요일이면 100일 뒤는 무슨 요일?” — 7로 나눈 나머지(100 = 7 × 14 + 2)로 달력 없이 맞히기</span></li>
+  <li><b>생활</b><span>바코드·ISBN의 마지막 “검증 숫자”는 나머지 계산으로 오류를 잡아요 — 책 뒤표지 ISBN으로 확인해 보기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h1-2-remainder-choice"><script type="application/json" class="game-data">{"title":"나머지정리 퀴즈","items":[{"q":"x³ − 2x + 1을 x − 1로 나눈 나머지는?","options":["0","1","−1","2"],"answer":0,"why":"f(1) = 1 − 2 + 1"},{"q":"x² + 3x + 5를 x + 2로 나눈 나머지는?","options":["3","15","5","−3"],"answer":0,"why":"f(−2) = 4 − 6 + 5"},{"q":"x − 2가 x³ + ax − 4의 인수일 때 a는?","options":["−2","2","4","−4"],"answer":0,"why":"f(2) = 8 + 2a − 4 = 0"},{"q":"x에 대한 항등식인 것은?","options":["(x + 1)² = x² + 2x + 1","x² = 1","2x + 1 = 0","x² + 1 = 0"],"answer":0},{"q":"ax + b = 3x − 2가 x에 대한 항등식이면?","options":["a = 3, b = −2","a = −2, b = 3","a = 3, b = 2","a = 0, b = 0"],"answer":0},{"q":"x³ − 1을 인수분해하면?","options":["(x − 1)(x² + x + 1)","(x − 1)³","(x − 1)(x² − x + 1)","(x + 1)(x² − x + 1)"],"answer":0}]}</script></div>
 </div>
 <h5>자주 틀리는 곳</h5>
 <ul>
@@ -181,6 +200,15 @@ wide: true
 </ul>
 </div>
 </div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>책·영상</b><span>도서관 수학사 교양서 코너에서 16세기 삼차방정식 풀이와 함께 허수가 처음 등장한 이야기 찾아 읽기</span></li>
+  <li><b>생활</b><span>복소수는 교류 전기 회로·신호 처리 같은 공학에서 실제로 쓰여요 — 관심 있는 전공과 연결해 이야기하기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h1-3-complex-choice"><script type="application/json" class="game-data">{"title":"복소수·판별식 퀴즈","items":[{"q":"i²은?","options":["−1","1","i","−i"],"answer":0},{"q":"i⁴은?","options":["1","−1","i","−i"],"answer":0},{"q":"(2 + i)(2 − i)는?","options":["5","3","4","4 − i"],"answer":0,"why":"4 − i² = 4 + 1"},{"q":"√(−4)는?","options":["2i","−2","2","±2"],"answer":0},{"q":"x² + x + 1 = 0의 근은?","options":["서로 다른 두 허근","서로 다른 두 실근","중근"],"answer":0,"why":"D = 1 − 4 \u003c 0"},{"q":"x² − 4x + 4 = 0의 근은?","options":["중근","서로 다른 두 실근","서로 다른 두 허근"],"answer":0,"why":"D/4 = 4 − 4 = 0"},{"q":"x² − 5x + 3 = 0의 두 근의 합은?","options":["5","−5","3","−3"],"answer":0},{"q":"x² − 5x + 3 = 0의 두 근의 곱은?","options":["3","−3","5","−5"],"answer":0}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>√(−2) × √(−3) = √6으로 계산(실제는 −√6)</li>
@@ -213,6 +241,15 @@ wide: true
 </ul>
 </div>
 </div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>분수대 물줄기·농구 슛의 가장 높은 점(꼭짓점) 찾기, “가격을 올리면 판매량이 줄 때 매출이 최대인 가격” 같은 최대·최소 문제를 가족 가게 놀이로</span></li>
+  <li><b>생활</b><span>그래프 그리기 공학 도구로 y = x² + k의 k를 바꿔 가며 x축과 만나는 점이 2개 → 1개 → 0개로 바뀌는 순간 관찰하기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h1-4-quadfn-choice"><script type="application/json" class="game-data">{"title":"그래프와 x축 퀴즈","items":[{"q":"y = x² − 4x + 3의 그래프와 x축의 교점 수는?","options":["2개","1개","0개"],"answer":0,"why":"D = 16 − 12 > 0"},{"q":"y = x² + 2x + 1의 그래프와 x축의 교점 수는?","options":["1개 (접해요)","2개","0개"],"answer":0},{"q":"y = x² + x + 3의 그래프와 x축의 교점 수는?","options":["0개","1개","2개"],"answer":0,"why":"D = 1 − 12 \u003c 0"},{"q":"y = x²과 직선 y = x + 2의 교점 수는?","options":["2개","1개","0개"],"answer":0,"why":"x² − x − 2 = 0, D = 9 > 0"},{"q":"1 ≤ x ≤ 4에서 y = (x − 2)² + 1의 최솟값은?","options":["1","2","5","0"],"answer":0},{"q":"1 ≤ x ≤ 4에서 y = (x − 2)² + 1의 최댓값은?","options":["5","2","1","10"],"answer":0,"why":"꼭짓점에서 먼 쪽 끝 x = 4"}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>꼭짓점이 범위 밖일 때도 꼭짓점을 최솟값으로 씀</li>
@@ -244,6 +281,15 @@ wide: true
 <li>“답이 범위로 나오는 문제는 수직선을 그렸어?”</li>
 </ul>
 </div>
+</div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>택배·수하물 규격(“가로 + 세로 + 높이 ○cm 이하”)을 실제 안내문에서 찾아 부등식으로 쓰고, 집에 있는 상자가 되는지 재 보기</span></li>
+  <li><b>생활</b><span>온도·혈압·수면 시간처럼 “정상 범위”가 있는 값 — |x − a| < b 꼴로 나타내 보기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h1-5-ineq-choice"><script type="application/json" class="game-data">{"title":"부등식 퀴즈","items":[{"q":"x² − 5x + 6 \u003c 0의 해는?","options":["2 \u003c x \u003c 3","x \u003c 2 또는 x > 3","x \u003c 2","x > 3"],"answer":0},{"q":"x² − 1 ≥ 0의 해는?","options":["x ≤ −1 또는 x ≥ 1","−1 ≤ x ≤ 1","x ≥ 1","모든 실수"],"answer":0},{"q":"|x − 1| \u003c 2의 해는?","options":["−1 \u003c x \u003c 3","x \u003c 3","−3 \u003c x \u003c 1","x \u003c −1 또는 x > 3"],"answer":0},{"q":"x² + 1 > 0의 해는?","options":["모든 실수","해가 없어요","x > −1","x > 1"],"answer":0},{"q":"x³ = 8의 실근은?","options":["x = 2","x = ±2","x = 8/3","실근이 없어요"],"answer":0,"why":"x³ − 8 = (x − 2)(x² + 2x + 4), 뒤의 식은 허근"}]}</script></div>
 </div>
 <h5>자주 틀리는 곳</h5>
 <ul>
@@ -281,6 +327,15 @@ wide: true
 <ul>
 <li>가족 여행 코스 3곳 방문 순서 정하기(순열) vs 가져갈 간식 3개 고르기(조합) 대화</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>스포츠 리그 경기 수 계산하기: 팀 수로 “모든 팀이 한 번씩 만나는” 경기 수(조합) 구하고 실제 일정표와 비교</span></li>
+  <li><b>생활</b><span>가족 여행 코스 순서 정하기(순열) vs 가져갈 간식 고르기(조합) — 순서가 중요한가?를 먼저 묻기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h1-6-perm-choice"><script type="application/json" class="game-data">{"title":"순열·조합 퀴즈","items":[{"q":"5명을 한 줄로 세우는 방법은?","options":["120가지","25가지","60가지","5가지"],"answer":0,"why":"5! = 5 × 4 × 3 × 2 × 1"},{"q":"5명 중 3명을 뽑아 순서대로 세우는 방법(₅P₃)은?","options":["60가지","10가지","15가지","125가지"],"answer":0},{"q":"5명 중 대표 3명을 뽑는 방법(₅C₃)은?","options":["10가지","60가지","15가지","20가지"],"answer":0},{"q":"₆C₂는?","options":["15","30","12","36"],"answer":0},{"q":"₇C₅는?","options":["21","42","35","2520"],"answer":0,"why":"₇C₅ = ₇C₂"},{"q":"8팀이 서로 한 번씩 경기하는 리그의 총 경기 수는?","options":["28경기","56경기","16경기","64경기"],"answer":0,"why":"₈C₂"},{"q":"서로 다른 숫자 4개로 만드는 4자리 비밀번호(0~9 사용) 수는?","options":["5040가지","10000가지","210가지","40가지"],"answer":0,"why":"₁₀P₄ = 10 × 9 × 8 × 7"}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>순열과 조합 구분 실패</li>
@@ -319,6 +374,15 @@ wide: true
 <ul>
 <li>두 가게의 과일 값 표 × 우리 집 구매 수량 = 가게별 총액: 행렬 곱의 의미를 생활로</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>가게별 과일 값 표 × 우리 집 구매 수량 = 가게별 총액 — 장보기 영수증으로 행렬 곱 만들기</span></li>
+  <li><b>생활</b><span>디지털 사진은 픽셀 숫자의 표(행렬), 스프레드시트의 표도 행렬 — 컴퓨터가 행렬로 그림을 다루는 이야기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h1-7-matrix-choice"><script type="application/json" class="game-data">{"title":"행렬 퀴즈","help":"행렬은 (1행; 2행)처럼 적었어요.","items":[{"q":"(2×3 행렬) × (3×4 행렬)의 결과는 몇 × 몇 행렬?","options":["2×4","3×3","2×3","곱할 수 없어요"],"answer":0},{"q":"(2×3 행렬) × (2×3 행렬)은?","options":["곱할 수 없어요","2×3 행렬","2×2 행렬","3×3 행렬"],"answer":0,"why":"앞 행렬의 열 수와 뒤 행렬의 행 수가 같아야 해요."},{"q":"두 행렬 A, B에 대해 일반적으로 AB와 BA는?","options":["같지 않을 수 있어요","항상 같아요","항상 0이에요"],"answer":0},{"q":"(1 2; 3 4) + (1 0; 0 1) = ?","options":["(2 2; 3 5)","(1 0; 0 4)","(2 2; 4 5)","(1 2; 3 4)"],"answer":0},{"q":"2 × (1 −1; 0 3) = ?","options":["(2 −2; 0 6)","(3 1; 2 5)","(2 −1; 0 3)","(2 −2; 0 3)"],"answer":0},{"q":"(1 2; 3 4) × (1; 1) = ?","options":["(3; 7)","(4; 6)","(1 2; 3 4)","(2; 2)"],"answer":0,"why":"1행: 1 + 2, 2행: 3 + 4"}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>곱셈이 가능한 조건 확인 없이 계산</li>
@@ -392,6 +456,15 @@ wide: true
 </ul>
 </div>
 </div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>지도 앱에서 두 친구 집의 위치를 좌표로 잡고 중간 약속 장소(중점), 1 : 2 지점(내분점) 찾기</span></li>
+  <li><b>장소</b><span>국립중앙과학관·국립과천과학관 — 위치·지도·GPS 관련 전시가 있으면 “좌표로 위치를 나타내는 방법” 찾아보기 (<a href="../trips/places.html">장소 더 보기</a>)</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h2-1-coord-choice"><script type="application/json" class="game-data">{"title":"거리·내분점 퀴즈","items":[{"q":"두 점 (1, 2), (4, 6) 사이의 거리는?","options":["5","7","√7","25"],"answer":0,"why":"√(3² + 4²)"},{"q":"원점과 점 (−3, 4) 사이의 거리는?","options":["5","1","7","√7"],"answer":0},{"q":"두 점 (−2, 5), (4, −1)의 중점은?","options":["(1, 2)","(2, 4)","(3, −3)","(1, 3)"],"answer":0},{"q":"A(2, 1), B(8, 7)에서 선분 AB를 1 : 2로 내분하는 점은?","options":["(4, 3)","(6, 5)","(5, 4)","(3, 2)"],"answer":0,"why":"A에 더 가까워요: ((8 + 2×2)/3, (7 + 2×1)/3)"},{"q":"A(2, 1), B(8, 7)에서 선분 AB를 2 : 1로 내분하는 점은?","options":["(6, 5)","(4, 3)","(5, 4)","(7, 6)"],"answer":0}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>거리 공식이 기억 안 나면 <a href="math-mid.html">중3 피타고라스 정리</a>, 내분은 <a href="math-mid.html">중2 닮음</a>(평행선과 선분의 비)</li>
@@ -420,6 +493,15 @@ wide: true
 <li>“중2 때 일차함수랑 뭐가 달라졌어?”</li>
 </ul>
 </div>
+</div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>바둑판처럼 반듯한 도시 도로(격자형 도로)에서 서로 평행한 길·수직인 길 찾기, 지하철 노선도와 실제 지도 비교</span></li>
+  <li><b>생활</b><span>그래프 그리기 공학 도구에 두 직선을 넣고 기울기를 바꿔 가며 평행·수직이 되는 순간 찾기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="sort" data-id="h2-2-lines-sort"><script type="application/json" class="game-data">{"title":"두 직선의 관계는?","help":"기울기가 같으면 평행(절편은 달라야 해요), 기울기의 곱이 −1이면 수직이에요.","buckets":["평행","수직","둘 다 아님"],"items":[{"t":"y = 2x + 1 과 y = 2x − 3","b":0},{"t":"y = 2x + 1 과 y = −(1/2)x + 4","b":1,"why":"2 × (−1/2) = −1"},{"t":"y = 3x 과 y = −3x","b":2,"why":"3 × (−3) = −9"},{"t":"y = −x + 2 과 y = x − 5","b":1},{"t":"2x − y + 1 = 0 과 4x − 2y + 7 = 0","b":0,"why":"둘 다 기울기 2, y절편은 1과 7/2"},{"t":"x + 2y = 3 과 2x − y = 1","b":1,"why":"기울기 −1/2과 2"},{"t":"y = x/3 + 1 과 y = 3x","b":2,"why":"1/3 × 3 = 1, −1이 아니에요."},{"t":"x = 2 와 y = 5","b":1,"why":"세로선과 가로선"},{"t":"x = 1 과 x = −4","b":0}]}</script></div>
 </div>
 <h5>자주 틀리는 곳</h5>
 <ul>
@@ -452,6 +534,15 @@ wide: true
 </ul>
 </div>
 </div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>휴대폰 기지국·와이파이·블루투스 스피커의 “닿는 범위”를 원으로 그려 보기, 끈과 연필로 큰 원 그리기</span></li>
+  <li><b>생활</b><span>지진의 진앙 찾기: 관측소 세 곳에서의 거리로 원 세 개를 그리면 만나는 점이 진앙 — 원의 방정식이 실제로 쓰이는 예</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h2-3-circle-choice"><script type="application/json" class="game-data">{"title":"원의 방정식 퀴즈","items":[{"q":"(x − 1)² + (y + 2)² = 9의 중심과 반지름은?","options":["중심 (1, −2), 반지름 3","중심 (−1, 2), 반지름 3","중심 (1, −2), 반지름 9","중심 (1, 2), 반지름 3"],"answer":0},{"q":"x² + y² − 4x + 6y = 0의 중심과 반지름은?","options":["중심 (2, −3), 반지름 √13","중심 (−2, 3), 반지름 √13","중심 (2, −3), 반지름 13","중심 (4, −6), 반지름 √13"],"answer":0,"why":"(x − 2)² + (y + 3)² = 13"},{"q":"원 x² + y² = 25와 직선 y = 5는?","options":["접해요","두 점에서 만나요","만나지 않아요"],"answer":0},{"q":"원 x² + y² = 4와 직선 y = x는?","options":["두 점에서 만나요","접해요","만나지 않아요"],"answer":0,"why":"직선이 원의 중심을 지나요."},{"q":"원 x² + y² = 1과 직선 x + y = 3은?","options":["만나지 않아요","접해요","두 점에서 만나요"],"answer":0,"why":"중심에서 직선까지 거리 3/√2 > 1"},{"q":"중심에서 직선까지의 거리 d가 반지름 r보다 작으면?","options":["두 점에서 만나요","접해요","만나지 않아요"],"answer":0}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>완전제곱식 변형이 느리면 <a href="math-mid.html">중3 이차함수(표준형 변환)</a></li>
@@ -480,6 +571,15 @@ wide: true
 <li>“y = x 대칭은 x와 y를 바꾸는 거네. 그래프로 확인해 볼래?”</li>
 </ul>
 </div>
+</div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>데칼코마니·거울로 대칭이동, 게임 캐릭터를 “오른쪽 3칸, 아래 2칸” 움직이는 평행이동을 좌표로 말해 보기</span></li>
+  <li><b>장소</b><span>경복궁·창덕궁 — 단청·창살 무늬에서 대칭과 평행이동으로 반복되는 부분 찾기 (<a href="../trips/places.html">장소 더 보기</a>)</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h2-4-move-choice"><script type="application/json" class="game-data">{"title":"이동한 점은 어디?","items":[{"q":"점 (2, 3)을 x축에 대하여 대칭이동하면?","options":["(2, −3)","(−2, 3)","(−2, −3)","(3, 2)"],"answer":0},{"q":"점 (2, 3)을 y축에 대하여 대칭이동하면?","options":["(−2, 3)","(2, −3)","(−2, −3)","(3, 2)"],"answer":0},{"q":"점 (2, 3)을 원점에 대하여 대칭이동하면?","options":["(−2, −3)","(2, −3)","(−2, 3)","(−3, −2)"],"answer":0},{"q":"점 (2, 3)을 직선 y = x에 대하여 대칭이동하면?","options":["(3, 2)","(−3, −2)","(2, −3)","(−2, 3)"],"answer":0},{"q":"점 (1, −1)을 x축 방향으로 3, y축 방향으로 −2만큼 평행이동하면?","options":["(4, −3)","(−2, 1)","(4, 1)","(3, −2)"],"answer":0},{"q":"직선 y = 2x를 x축 방향으로 1만큼 평행이동하면?","options":["y = 2x − 2","y = 2x + 2","y = 2x + 1","y = 2x − 1"],"answer":0,"why":"x 대신 x − 1을 넣어요: y = 2(x − 1)"},{"q":"원 x² + y² = 1을 y축 방향으로 3만큼 평행이동하면?","options":["x² + (y − 3)² = 1","x² + (y + 3)² = 1","(x − 3)² + y² = 1","x² + y² = 4"],"answer":0}]}</script></div>
 </div>
 <h5>자주 틀리는 곳</h5>
 <ul>
@@ -516,6 +616,15 @@ wide: true
 <ul>
 <li>가족 중 “고양이를 좋아하는 사람”과 “개를 좋아하는 사람” 벤 다이어그램 그리기</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>가족이 좋아하는 음식으로 벤 다이어그램 그리기, 반 친구 설문(“축구 좋아함”, “농구 좋아함”)으로 둘 다 좋아하는 사람 수 구하기</span></li>
+  <li><b>생활</b><span>인터넷 검색의 AND·OR 조건 = 교집합·합집합 — 도서관 검색창에서 두 낱말로 검색해 결과 수 비교하기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h2-5-set-choice"><script type="application/json" class="game-data">{"title":"집합 퀴즈","help":"A = {1, 2, 3}, B = {2, 3, 4}","items":[{"q":"A ∩ B는?","options":["{2, 3}","{1, 2, 3, 4}","{1}","{4}"],"answer":0},{"q":"A ∪ B는?","options":["{1, 2, 3, 4}","{2, 3}","{1, 4}","{1, 2, 2, 3, 3, 4}"],"answer":0},{"q":"A − B는?","options":["{1}","{4}","{2, 3}","∅"],"answer":0},{"q":"집합 {1, 2, 3}의 부분집합의 개수는?","options":["8개","6개","7개","3개"],"answer":0,"why":"2³, ∅와 자기 자신도 포함"},{"q":"옳은 것은?","options":["{2} ⊂ {1, 2, 3}","{2} ∈ {1, 2, 3}","2 ⊂ {1, 2, 3}","∅ ∈ {1, 2, 3}"],"answer":0,"why":"원소는 ∈, 집합끼리는 ⊂"},{"q":"n(A) = 10, n(B) = 7, n(A ∩ B) = 3이면 n(A ∪ B)는?","options":["14","17","20","11"],"answer":0,"why":"10 + 7 − 3"},{"q":"공집합 ∅은 모든 집합의 부분집합이다.","options":["참","거짓"],"answer":0}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>교집합을 중복해서 셈</li>
@@ -552,6 +661,15 @@ wide: true
 <ul>
 <li>광고·뉴스 문장에서 “~이면 ~이다”를 찾아 역·대우 말해 보기(말놀이처럼)</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>광고·뉴스 속 “○○하면 △△한다” 문장을 골라 참·거짓, 역·대우를 따져 보는 저녁 식탁 토론</span></li>
+  <li><b>책·영상</b><span>도서관 논리 퍼즐 책(참말·거짓말 퍼즐)으로 가족 퀴즈 — 대우를 쓰면 쉽게 풀리는 문제 찾기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h2-6-logic-choice"><script type="application/json" class="game-data">{"title":"명제 퀴즈","help":"명제 p: “x = 2이면 x² = 4이다”","items":[{"q":"명제 p의 역은?","options":["x² = 4이면 x = 2이다","x ≠ 2이면 x² ≠ 4이다","x² ≠ 4이면 x ≠ 2이다"],"answer":0},{"q":"명제 p의 대우는?","options":["x² ≠ 4이면 x ≠ 2이다","x² = 4이면 x = 2이다","x ≠ 2이면 x² ≠ 4이다"],"answer":0},{"q":"명제 p의 역은 참일까?","options":["거짓 (x = −2가 반례)","참"],"answer":0},{"q":"명제가 참이면 그 대우는?","options":["항상 참","항상 거짓","알 수 없어요"],"answer":0},{"q":"“x > 2”는 “x > 1”이기 위한 무슨 조건?","options":["충분조건","필요조건","필요충분조건"],"answer":0,"why":"x > 2이면 반드시 x > 1"},{"q":"“x² = 1”은 “x = 1”이기 위한 무슨 조건?","options":["필요조건","충분조건","필요충분조건"],"answer":0,"why":"x = 1이면 x² = 1이지만, 거꾸로는 x = −1도 있어요."},{"q":"“모든 실수 x에 대하여 x² ≥ 0”의 부정은?","options":["어떤 실수 x에 대하여 x² \u003c 0","모든 실수 x에 대하여 x² \u003c 0","어떤 실수 x에 대하여 x² ≥ 0"],"answer":0},{"q":"명제가 아닌 것은?","options":["수학은 재미있다","2는 소수이다","3 > 5","모든 정삼각형은 이등변삼각형이다"],"answer":0,"why":"명제는 참·거짓을 분명히 가릴 수 있는 문장이에요. (3 > 5는 거짓인 명제)"}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>역과 대우 혼동</li>
@@ -585,6 +703,15 @@ wide: true
 </ul>
 </div>
 </div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>자판기: 버튼(입력) 하나에 음료(출력) 하나 — 버튼 하나에 음료가 두 개 나오면 함수가 아니에요. 집 안에서 “함수 기계” 찾기</span></li>
+  <li><b>생활</b><span>글자를 3칸씩 미는 암호(시저 암호)로 쪽지 주고받기 → 푸는 방법이 곧 역함수</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h2-7-function-choice"><script type="application/json" class="game-data">{"title":"함수 퀴즈","help":"f(x) = 2x + 1, g(x) = x²","items":[{"q":"(g∘f)(1)은?","options":["9","3","5","4"],"answer":0,"why":"f(1) = 3, g(3) = 9"},{"q":"(f∘g)(1)은?","options":["3","9","5","4"],"answer":0,"why":"g(1) = 1, f(1) = 3"},{"q":"f의 역함수 f⁻¹(x)는?","options":["(x − 1)/2","2x − 1","(x + 1)/2","1/(2x + 1)"],"answer":0},{"q":"실수 전체에서 실수 전체로의 일대일대응은?","options":["y = 3x − 1","y = x²","y = 5","y = |x|"],"answer":0},{"q":"대응이 함수가 아니게 되는 경우는?","options":["X의 한 원소에 Y의 원소가 두 개 대응할 때","Y의 원소 중 대응받지 않는 것이 있을 때","X의 서로 다른 원소가 같은 원소에 대응할 때"],"answer":0},{"q":"역함수의 그래프는 원래 함수의 그래프와 어떤 관계?","options":["직선 y = x에 대하여 대칭","x축에 대하여 대칭","원점에 대하여 대칭"],"answer":0}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>합성 순서 혼동</li>
@@ -615,6 +742,15 @@ wide: true
 <li>“무리함수는 왜 그래프가 한쪽으로만 그려져?”</li>
 </ul>
 </div>
+</div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>같은 거리를 갈 때 속력과 시간(y = k/x), 피자 한 판을 나누는 사람 수와 한 사람 몫 — 반비례를 유리함수 그래프로</span></li>
+  <li><b>장소</b><span>과학관의 진자 체험물 — 진자의 주기는 길이의 제곱근에 비례해요(흔들림이 작을 때). 줄 길이를 4배로 하면 주기는 2배 (<a href="../trips/places.html">장소 더 보기</a>)</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h2-8-ratfn-choice"><script type="application/json" class="game-data">{"title":"유리·무리함수 퀴즈","items":[{"q":"y = 1/x의 점근선은?","options":["x = 0, y = 0","x = 1, y = 1","y = x","없어요"],"answer":0},{"q":"y = 2/(x − 1) + 3의 점근선은?","options":["x = 1, y = 3","x = −1, y = 3","x = 1, y = −3","x = 3, y = 1"],"answer":0},{"q":"y = √(x − 2)의 정의역은?","options":["x ≥ 2","x > 2","x ≥ −2","실수 전체"],"answer":0},{"q":"y = √x + 1의 치역은?","options":["y ≥ 1","y ≥ 0","y > 1","실수 전체"],"answer":0},{"q":"y = √x와 y = x² (x ≥ 0)의 관계는?","options":["서로 역함수","같은 함수","관계없어요"],"answer":0}]}</script></div>
 </div>
 <h5>자주 틀리는 곳</h5>
 <ul>
@@ -689,6 +825,16 @@ wide: true
 <ul>
 <li>은행 복리, 두 배씩 늘어나는 세균(지수), 지진 규모·소리의 데시벨(로그), 관람차 높이 변화(삼각함수) 이야기</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>장소</b><span>한국은행 화폐박물관 — 돈과 경제 전시를 보고 “이자가 이자를 낳는” 복리를 등비수열로 계산해 보기 (<a href="../trips/places.html">장소 더 보기</a>)</span></li>
+  <li><b>생활</b><span>지진 규모·소리의 데시벨·산성도(pH)는 로그 눈금 — 뉴스에서 찾아 “1 커지면 몇 배일까?” 이야기하기</span></li>
+  <li><b>생활</b><span>관람차·밀물과 썰물처럼 되풀이되는 현상을 삼각함수 그래프 모양으로 그려 보기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h3-1-algebra-choice"><script type="application/json" class="game-data">{"title":"지수·로그·수열 퀴즈","items":[{"q":"log₂ 8은?","options":["3","4","16","1/3"],"answer":0},{"q":"2⁻²은?","options":["1/4","−4","−1/4","4"],"answer":0},{"q":"등차수열 3, 7, 11, …의 10번째 항은?","options":["39","43","40","35"],"answer":0,"why":"3 + 9 × 4"},{"q":"등비수열 2, 6, 18, …의 5번째 항은?","options":["162","54","486","30"],"answer":0,"why":"2 × 3⁴"},{"q":"1 + 2 + 3 + … + 100은?","options":["5050","5000","10100","5100"],"answer":0},{"q":"해마다 10%씩 늘어나면(복리) 3년 뒤에는 처음의 몇 배?","options":["1.331배","1.3배","1.33배","1.1배"],"answer":0,"why":"1.1³"},{"q":"sin(π/6)은?","options":["1/2","√3/2","1","0"],"answer":0}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>지수법칙은 <a href="math-mid.html">중2 식의 계산</a>, 삼각비는 <a href="math-mid.html">중3 삼각비</a>, 함수 이동은 공통수학2 도형의 이동에서 막혀요</li>
@@ -724,6 +870,15 @@ wide: true
 <ul>
 <li>자동차 계기판 속도(순간변화율)와 평균 속력의 차이 이야기</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>자동차 계기판의 속력(순간변화율)과 내비게이션의 평균 속력 비교하기, 달리기 앱의 구간 기록으로 평균변화율 구하기</span></li>
+  <li><b>생활</b><span>욕조에 물을 받을 때 “지금 물이 차오르는 빠르기”와 “지금까지 찬 물의 양” — 미분과 적분의 관계 이야기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h3-2-calc-choice"><script type="application/json" class="game-data">{"title":"미분·적분 퀴즈","items":[{"q":"f(x) = x³ − 3x이면 f′(x)는?","options":["3x² − 3","3x² − 3x","x² − 3","3x²"],"answer":0},{"q":"미분계수 f′(a)의 기하적 의미는?","options":["x = a에서의 접선의 기울기","x = a까지 곡선 아래 넓이","x = a에서의 함숫값","평균값"],"answer":0},{"q":"lim(x→2) (x² − 4)/(x − 2)는?","options":["4","0","2","존재하지 않아요"],"answer":0,"why":"(x − 2)(x + 2)/(x − 2) = x + 2"},{"q":"위치가 x(t) = t²일 때 t = 3에서의 속도는?","options":["6","9","3","2"],"answer":0},{"q":"∫₀² 2x dx는?","options":["4","2","8","1"],"answer":0},{"q":"f′(a) = 0이면 x = a에서 반드시 극값을 가질까?","options":["아니요 (예: f(x) = x³, a = 0)","네"],"answer":0}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>그래프 감각 없이 계산만 함</li>
@@ -760,6 +915,16 @@ wide: true
 <ul>
 <li>선거·여론조사 기사에서 표본 수와 오차 범위 함께 읽기</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>여론조사 기사에서 “표본 수, 신뢰수준 95%, 오차범위 ±○%p”를 찾아 무슨 뜻인지 설명하기</span></li>
+  <li><b>생활</b><span>스포츠 통계 — 타율·자유투 성공률로 “다음 5번 중 3번 성공할 확률”을 이항분포로 계산해 보기</span></li>
+  <li><b>책·영상</b><span>국가통계포털(KOSIS)에서 관심 주제의 통계표를 골라 평균·분산 이야기하기</span></li>
+</ul>
+<div class="game-box">
+  <div class="game-head">아이와 해 보기 <small>5분 · 부모가 옆에서 “어떻게 알았어?” 물어 주세요</small></div>
+  <div class="game" data-game="choice" data-id="h3-3-probstat-choice"><script type="application/json" class="game-data">{"title":"확률과 통계 퀴즈","items":[{"q":"동전을 3번 던질 때 앞면이 정확히 2번 나올 확률은?","options":["3/8","1/4","1/2","3/4"],"answer":0,"why":"₃C₂ × (1/2)³"},{"q":"(a + b)⁴을 전개하면 항은 몇 개?","options":["5개","4개","6개","8개"],"answer":0},{"q":"1, 2, 3 중에서 중복을 허락해 2개를 뽑아 일렬로 세우는 방법은?","options":["9가지","6가지","3가지","8가지"],"answer":0,"why":"3²"},{"q":"이항분포 B(100, 1/2)의 평균은?","options":["50","25","100","5"],"answer":0},{"q":"이항분포 B(100, 1/2)의 분산은?","options":["25","50","5","10"],"answer":0,"why":"np(1 − p) = 100 × 1/2 × 1/2"},{"q":"정규분포 곡선의 특징은?","options":["평균에 대하여 좌우 대칭","항상 왼쪽으로 치우쳐 있어요","곡선 아래 넓이가 2"],"answer":0},{"q":"표본의 크기가 커지면 표본평균의 표준편차는?","options":["작아져요","커져요","변하지 않아요"],"answer":0}]}</script></div>
+</div>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>문장 해석 실수가 가장 많아요(국어 독해력)</li>
@@ -793,6 +958,11 @@ wide: true
 </ul>
 </div>
 </div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>공이 튈 때마다 높이가 절반씩 줄면 총 이동 거리는? — 무한등비급수가 유한한 값이 되는 예를 가족과 계산하기</span></li>
+  <li><b>책·영상</b><span>EBS 고교 강의·대학 공개 강의에서 자연상수 e와 연속 복리 이야기 찾아보기</span></li>
+</ul>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>미적분Ⅰ과 대수(지수·로그·삼각함수)가 약하면 바로 막혀요. 두 과목부터 확인</li>
@@ -827,6 +997,12 @@ wide: true
 <ul>
 <li>실과 압정 두 개로 타원 그리기(두 초점까지 거리의 합이 일정)</li>
 </ul>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>생활</b><span>위성 안테나·손전등 반사경은 포물선의 초점 성질(평행하게 들어온 빛이 초점에 모임) — 집에서 반사경 모양 관찰하기</span></li>
+  <li><b>장소</b><span>지역 시민천문대 — 행성이 태양을 한 초점으로 하는 타원 궤도를 돈다는 이야기(케플러 법칙) 듣기 (<a href="../trips/places.html">장소 더 보기</a>)</span></li>
+  <li><b>생활</b><span>비행기·배의 속도와 바람·물살을 화살표(벡터)로 더해 실제 이동 방향 그려 보기</span></li>
+</ul>
 <h5>자주 틀리는 곳</h5>
 <ul>
 <li>공통수학2 도형의 방정식, <a href="math-mid.html">중3 피타고라스 정리</a>가 기초</li>
@@ -856,6 +1032,11 @@ wide: true
 </ul>
 </div>
 </div>
+<h5>체험 연계</h5>
+<ul class="exp-list">
+  <li><b>장소</b><span>한국잡월드 — 데이터·금융·공학 직업 체험에서 “이 일에는 어떤 수학이 쓰일까?” 물어보기 (<a href="../trips/places.html">장소 더 보기</a>)</span></li>
+  <li><b>생활</b><span>가계부·적금 계산(경제 수학), 추천 알고리즘 이야기(인공지능 수학)처럼 관심 진로와 수학을 연결하는 대화</span></li>
+</ul>
 <h5>확인 질문</h5>
 <ol>
 <li>인공지능 수학은 어떤 내용을 다루나요?<details class="acc-ans"><summary>답 보기</summary>자료의 표현, 분류와 예측, 최적화 등 AI에 쓰이는 수학</details></li>

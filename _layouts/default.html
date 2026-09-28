@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/games.css' | relative_url }}">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='12' r='9' fill='%235b8c3a'/%3E%3Crect x='14.5' y='16' width='3' height='12' rx='1.5' fill='%238a5a3b'/%3E%3C/svg%3E">
 </head>
 {%- assign top_pages = site.pages | where_exp: "p", "p.nav_order != nil" | where_exp: "p", "p.parent == nil" | where_exp: "p", "p.url != '/'" | sort: "nav_order" -%}
@@ -127,5 +128,6 @@
 </div>
 <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/components.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/games.js' | relative_url }}"></script>
 </body>
 </html>
