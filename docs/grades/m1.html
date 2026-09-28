@@ -6,6 +6,35 @@ stage: fruit
 kid: true
 summary: 자유학기 · 중학 적응 · 공부법 정착
 ---
+<style>
+.gm-units { list-style: none; padding: 0 !important; margin: 8px 0 16px !important; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 10px; }
+.gm-units li { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--card, var(--paper)); margin: 0 !important; }
+.gm-units .gm-h { font-weight: 800; line-height: 1.4; }
+.gm-units .gm-tags { display: inline-flex; gap: 4px; flex-wrap: wrap; vertical-align: 1px; }
+.gm-units .gm-tags .tag { font-size: 11px; padding: 0 7px; }
+.gm-units p { margin: 4px 0 0 !important; font-size: 14px; line-height: 1.55; }
+.gm-units .gm-g { color: var(--ink-2); }
+.gm-units .gm-k b { font-size: 12px; color: var(--muted); margin-right: 4px; }
+.gm-units .gm-trap b { color: var(--warn); }
+.gm-sem { font-size: 15px; margin: 18px 0 4px !important; }
+.gm-cal .card { gap: 4px; }
+.gm-cal .gm-m { font-family: var(--serif); font-weight: 800; font-size: 24px; line-height: 1.1; color: var(--c); }
+.gm-cal .gm-ch { font-size: 11.5px; font-weight: 800; letter-spacing: .08em; color: var(--muted); margin: 8px 0 0 !important; }
+.gm-cal ul { margin: 2px 0 0 !important; padding-left: 18px; }
+.gm-cal li { font-size: 14px; }
+.gm-cal .card.is-now { border: 2px solid var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.gm-cal .gm-now { display: none; }
+.gm-cal .card.is-now .gm-now { display: inline-flex; }
+.gm-script { display: grid; gap: 6px; margin: 8px 0 4px; }
+.gm-script p { margin: 0 !important; padding: 8px 12px; border-radius: 12px; font-size: 15px; }
+.gm-script .p { background: var(--tip-soft); }
+.gm-script .k { background: var(--paper-2); margin-left: 24px !important; }
+.gm-script .x { background: var(--danger-soft); text-decoration: line-through; opacity: .8; }
+.gm-script b { font-size: 12px; margin-right: 6px; color: var(--muted); }
+.gm-week td, .gm-week th { font-size: 13.5px; }
+.gm-jump { margin: 6px 0 22px; }
+.gm-jump a { text-decoration: none; }
+</style>
 <header class="page-hero">
   <p class="kicker">4단계 열매 · 만 12~13세 · 첫째 2031년 · 둘째 2032년</p>
   <h1>중학교 1학년</h1>
@@ -65,6 +94,24 @@ summary: 자유학기 · 중학 적응 · 공부법 정착
     <button class="stamp c-warn" data-id="athlete"><span class="stamp-ic">🏅</span>운동선수</button>
   </div>
   <p class="callout tip">지금 할 수 있는 최고의 준비는? 좋아하는 책 많이 읽고, 신나게 뛰어놀기!</p>
+
+  <h2 id="kid-explore">중1 형·누나가 올해 탐험하는 것들</h2>
+  <p>중학교 1학년이 되면 이런 신기한 걸 배워. 뒤집어서 구경해 볼까?</p>
+  <div class="cards" style="--min: 200px">
+    <button class="flip" style="min-height:160px"><span class="flip-front"><b>🔢 수학</b><span>0보다 작은 수가 있다고?</span></span><span class="flip-back"><b>음수의 세계</b><span>영하 3도, 지하 2층! 0보다 작은 수로 온도와 층을 나타내. 도형을 컴퍼스로 똑같이 그리는 법도 배워.</span></span></button>
+    <button class="flip" style="min-height:160px"><span class="flip-front"><b>🔬 과학</b><span>얼음은 왜 녹을까?</span></span><span class="flip-back"><b>작은 알갱이(입자)의 춤</b><span>물질은 아주 작은 알갱이로 되어 있어. 따뜻해지면 알갱이가 신나게 움직여서 얼음이 물이 돼!</span></span></button>
+    <button class="flip" style="min-height:160px"><span class="flip-front"><b>🌍 사회</b><span>사막 사람들은 어떤 집에 살까?</span></span><span class="flip-back"><b>세계의 기후와 생활</b><span>더운 곳, 추운 곳, 비가 많은 곳마다 집과 옷과 음식이 달라.</span></span></button>
+    <button class="flip" style="min-height:160px"><span class="flip-front"><b>💻 정보</b><span>컴퓨터에게 글자로 명령하기</span></span><span class="flip-back"><b>파이썬 첫 프로그램</b><span>블록 대신 글자로 코딩해. print("안녕")이라고 쓰면 컴퓨터가 인사해!</span></span></button>
+    <button class="flip" style="min-height:160px"><span class="flip-front"><b>🔤 영어</b><span>어제 한 일을 영어로!</span></span><span class="flip-back"><b>과거형 이야기</b><span>play는 played, go는 went! 어제 있었던 일을 영어로 말하는 법을 배워.</span></span></button>
+    <button class="flip" style="min-height:160px"><span class="flip-front"><b>🏃 체육</b><span>내 체력은 몇 점?</span></span><span class="flip-back"><b>체력 측정과 육상</b><span>오래달리기, 멀리뛰기로 내 몸을 알아보고, 조금씩 기록을 늘려 가.</span></span></button>
+  </div>
+
+  <h2 id="kid-game">동물 분류 놀이</h2>
+  <p>중1 과학에서는 생물을 무리 지어 나눠 봐. 등뼈가 있는 동물과 없는 동물, 너도 나눌 수 있을까?</p>
+  <div class="game-box">
+    <div class="game-head">엄마 아빠랑 해 보기 <small>5분 · 헷갈리면 "등뼈가 있을까?" 같이 생각해 봐요</small></div>
+    <div class="game" data-game="sort" data-id="m1-kid-animal-sort"><script type="application/json" class="game-data">{"title":"척추동물일까, 무척추동물일까?","buckets":["척추동물 (등뼈 있음)","무척추동물 (등뼈 없음)"],"items":[{"t":"고등어","b":0},{"t":"개구리","b":0},{"t":"뱀","b":0},{"t":"참새","b":0},{"t":"박쥐","b":0,"why":"박쥐는 날개가 있지만 새가 아니라 포유류, 척추동물이에요."},{"t":"고래","b":0,"why":"고래는 물고기가 아닌 포유류지만 역시 척추동물이에요."},{"t":"오징어","b":1},{"t":"불가사리","b":1},{"t":"지렁이","b":1},{"t":"거미","b":1},{"t":"해파리","b":1},{"t":"달팽이","b":1}]}</script></div>
+  </div>
 </div>
 
 <!-- ================= PARENT ================= -->
@@ -74,6 +121,17 @@ summary: 자유학기 · 중학 적응 · 공부법 정착
   <div class="card top c-fruit"><span class="tag">키워드 1</span><h3>중학 적응</h3><p>과목별 교사, 45분 수업, 늘어난 과목 수. 첫 학기의 피로는 정상입니다.</p></div>
   <div class="card top c-stem"><span class="tag">키워드 2</span><h3>자유학기</h3><p>지필고사 없는 한 학기. "노는 학기"가 아니라 진로 탐색과 공부법을 실험하는 학기예요.</p></div>
   <div class="card top c-branch"><span class="tag">키워드 3</span><h3>공부법 정착</h3><p>노트 정리, 오답 관리, 시험 계획. 이때 만든 방법이 고등학교까지 갑니다.</p></div>
+</div>
+
+<div class="tags gm-jump"><a class="tag c-fruit" href="#learn">과목별 단원</a><a class="tag c-stem" href="#jayu">자유학기</a><a class="tag c-branch" href="#month">월별 캘린더</a><a class="tag c-accent" href="#week">주간 루틴</a><a class="tag c-note" href="#semester">학기별 준비</a><a class="tag c-tip" href="#grow">성장 체크</a><a class="tag c-warn" href="#mind">마음·관계</a><a class="tag c-root" href="#reading">독서</a></div>
+
+<h2 id="coach">부모는 코치: 중1 코칭의 네 가지 도구</h2>
+<p>초등까지는 옆에서 같이 달려 주는 "러닝메이트"였다면, 중학교부터 부모는 <strong>사이드라인의 코치</strong>예요. 뛰는 건 아이, 코치는 관찰하고 질문하고 환경을 만듭니다.</p>
+<div class="cards" style="--min: 210px">
+  <div class="card c-stem"><div class="card-ic">👀</div><h3>관찰</h3><p>성적보다 먼저 보는 것: 잠드는 시각, 숙제 시작 시각, 표정. 매주 한 줄로 <a href="#record">기록</a>해요.</p></div>
+  <div class="card c-fruit"><div class="card-ic">❓</div><h3>질문</h3><p>"다 했어?" 대신 "오늘 수업 중에 제일 헷갈린 거 하나만?" 답을 주지 않고 생각을 꺼내게 합니다.</p></div>
+  <div class="card c-branch"><div class="card-ic">🔁</div><h3>피드백</h3><p>결과보다 과정: "계획표대로 수학 먼저 한 거 좋았다." 고칠 점은 한 번에 하나만.</p></div>
+  <div class="card c-tip"><div class="card-ic">🏠</div><h3>환경</h3><p>책상 위 폰 없음, 밤 10시 반 이후 거실 충전, 주말 하루는 쉬는 날. 규칙은 짧고 확실하게.</p></div>
 </div>
 
 <h2 id="change">초등에서 중학으로, 무엇이 바뀌나</h2>
@@ -111,80 +169,466 @@ summary: 자유학기 · 중학 적응 · 공부법 정착
 </figure>
 <p class="callout warning">자유학기를 1학년 몇 학기에 두는지, 1학년에 지필고사를 몇 번 보는지는 시·도교육청과 학교마다 다르고 해마다 바뀔 수 있어요. 입학 후 학교 교육과정 안내와 <a href="https://www.schoolinfo.go.kr" target="_blank" rel="noopener">학교알리미</a>에서 확인하세요.</p>
 
-<h2 id="learn">이번 학년에 배우는 것</h2>
-<div class="tabs" data-tabs>
-  <div class="tab-list"><button>수학</button><button>국어·영어</button><button>과학</button><button>사회·정보</button><button>자유학기</button></div>
+<h2 id="learn">이번 학년 과목별 단원 한눈에</h2>
+<p>과목을 고르면 올해 배우는 단원이 학기별로 나와요. 단원 이름을 누르면 단원 지도(핵심 개념, 지도법, 집에서 하는 활동, 게임, 자세한 지도안)로 바로 이동합니다. <span class="tag c-tip">🎮 게임</span> 아이와 5분 개념 점검 놀이가 있는 단원, <span class="tag c-stem">📘 지도안</span> 자세한 지도안이 있는 단원.</p>
+<div class="tabs" data-tabs id="m1-units-tabs">
+  <div class="tab-list"><button>국어</button><button>수학</button><button>영어</button><button>사회·역사·도덕</button><button>과학</button><button>정보</button><button>음악</button><button>미술</button><button>체육</button></div>
   <div class="tab-panel">
-    <ul>
-      <li>소인수분해, 정수와 유리수 (음수의 등장)</li>
-      <li>문자와 식, 일차방정식</li>
-      <li>좌표평면과 그래프, 정비례·반비례</li>
-      <li>기본 도형, 작도와 합동, 평면도형·입체도형의 성질</li>
-      <li>자료의 정리와 해석 (줄기와 잎 그림, 도수분포표, 히스토그램)</li>
-    </ul>
-    <p class="callout tip">음수와 문자는 "초등 수학과 다른 언어"예요. 막히면 대부분 초등 분수·소수 연산의 정확도 문제입니다. 선행보다 이 부분 재점검이 먼저.</p>
+<p>문학(비유·상징, 소설의 갈등), 읽기(요약, 설명 방법), 문법(품사, 어휘 체계)이 본격적으로 시작돼요. 서술형과 수행평가(발표·글쓰기) 비중이 커지니 "글로 설명하기"를 집에서도 연습합니다.</p>
+<h4 class="gm-sem">1학기 (대표 배치)</h4>
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/korean-mid.html#korean-mid-u1">비유와 상징 문학</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">시의 표현 방법과 효과 해석</p><p class="gm-k"><b>핵심</b> 비유: 직유(~처럼), 은유(A는 B), 의인(사람처럼), 활유(생물처럼)</p><p class="gm-k gm-trap"><b>걸림돌</b> 은유와 상징 혼동 → 원관념이 문장 안에 있으면 은유</p></li>
+<li><div class="gm-h"><a href="../subjects/korean-mid.html#korean-mid-u2">소설의 구성 요소와 갈등 문학</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">인물·사건·배경과 갈등으로 소설 읽기</p><p class="gm-k"><b>핵심</b> 구성 요소: 인물·사건·배경, 구성 단계(발단-전개-위기-절정-결말)</p><p class="gm-k gm-trap"><b>걸림돌</b> 절정과 위기 혼동 → 절정은 갈등이 최고조 + 해결 방향이 정해지는 곳</p></li>
+<li><div class="gm-h"><a href="../subjects/korean-mid.html#korean-mid-u3">요약하며 읽기 읽기</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">글의 구조를 파악하고 핵심 정보 정리</p><p class="gm-k"><b>핵심</b> 요약 규칙: 삭제(예시·반복) · 선택(중심 문장) · 일반화(상위어) · 재구성(내 말로)</p><p class="gm-k gm-trap"><b>걸림돌</b> 첫 문단만 길게 요약 → 문단마다 한 줄 규칙</p></li>
+<li><div class="gm-h"><a href="../subjects/korean-mid.html#korean-mid-u4">설명 방법 읽기·쓰기</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">정의·예시·비교·대조·분류·분석·인과</p><p class="gm-k"><b>핵심</b> 정의(A는 B이다), 예시, 비교(공통점), 대조(차이점), 분류(기준으로 나눔), 분석(부분으로 나눔), 인과, 과정</p><p class="gm-k gm-trap"><b>걸림돌</b> 분류/분석 혼동(가장 흔함)</p></li>
+</ul>
+<h4 class="gm-sem">2학기 (대표 배치)</h4>
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/korean-mid.html#korean-mid-u5">품사 문법</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">9품사를 형태·기능·의미로 분류</p><p class="gm-k"><b>핵심</b> 9품사: 명사·대명사·수사(체언) / 동사·형용사(용언) / 관형사·부사(수식언) / 조사(관계언) / 감탄사(독립언)</p><p class="gm-k gm-trap"><b>걸림돌</b> ‘있다·없다’ 품사 혼동 → 교과서 설명 기준을 따르게(보통 형용사, ‘있다’는 동사로도 쓰임)</p></li>
+<li><div class="gm-h"><a href="../subjects/korean-mid.html#korean-mid-u6">어휘의 체계와 양상 문법</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">고유어·한자어·외래어와 사회·지역 방언</p><p class="gm-k"><b>핵심</b> 어휘 체계: 고유어, 한자어, 외래어(외국어와 구분)</p><p class="gm-k gm-trap"><b>걸림돌</b> 외래어와 외국어 혼동 → 우리말처럼 굳어 쓰이면 외래어(버스)</p></li>
+<li><div class="gm-h"><a href="../subjects/korean-mid.html#korean-mid-u7">면담과 발표 듣기·말하기·매체</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">목적에 맞는 질문과 매체 자료 활용</p><p class="gm-k"><b>핵심</b> 면담: 목적 → 질문 준비 → 면담 → 정리 (예의, 약속 잡기)</p><p class="gm-k gm-trap"><b>걸림돌</b> “네/아니요” 질문만 → 열린 질문(“어떻게, 왜”)</p></li>
+</ul>
+<p><a class="btn sm ghost" href="../subjects/korean-mid.html">국어 단원 지도 전체 보기 →</a></p>
   </div>
   <div class="tab-panel">
-    <ul>
-      <li>국어: 문학 갈래, 설명문·논설문 읽기, 문법 영역이 본격 시작 (품사 등)</li>
-      <li>영어: 말하기 중심 → 문법·독해 중심으로 전환 (시제, 조동사, to부정사 입문 등)</li>
-      <li>서술형·수행평가(발표, 글쓰기, 포트폴리오)의 비중이 커요</li>
-    </ul>
-    <p class="callout note">영어는 초등 '말하기' → 중학 '문법·내신'으로 넘어가며 충격을 받는 아이가 많아요. 문법 용어를 미리 익혀 두는 정도면 충분합니다.</p>
+<p>음수와 문자가 처음 등장해 "초등 수학과 다른 언어"가 시작됩니다. 1학기는 수와 식, 2학기는 도형과 통계가 중심이에요.</p><p class="callout tip">음수·문자에서 막히면 대부분 초등 분수·소수 연산의 정확도 문제입니다. 선행보다 이 부분 재점검이 먼저.</p>
+<h4 class="gm-sem">1학기 (대표 배치)</h4>
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u2">소인수분해</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">자연수를 소수의 곱으로 쪼개고 최대공약수·최소공배수 구하기</p><p class="gm-k"><b>핵심</b> 소수: 약수가 1과 자기 자신 2개뿐인 수. 합성수: 약수가 3개 이상. 1은 소수도 합성수도 아님</p><p class="gm-k gm-trap"><b>걸림돌</b> 1을 소수라고 함 → “약수가 몇 개야?”로 정의에 돌아가기</p></li>
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u3">정수와 유리수</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">음수를 이해하고 부호가 있는 수의 사칙계산 하기</p><p class="gm-k"><b>핵심</b> 양수·음수: 기준(0)에 대해 서로 반대 방향의 양</p><p class="gm-k gm-trap"><b>걸림돌</b> −5 &gt; −2라고 함 → 수직선에서 오른쪽에 있는 수가 크다</p></li>
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u4">문자와 식</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">문자로 수량을 나타내고 일차식을 계산하기</p><p class="gm-k"><b>핵심</b> 문자를 쓰면 여러 경우를 한 식으로 나타낼 수 있다</p><p class="gm-k gm-trap"><b>걸림돌</b> 3x + 2 = 5x로 합침 → 문자가 다른 항(상수항)은 합칠 수 없음</p></li>
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u5">일차방정식</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">등식의 성질로 방정식을 풀고 활용 문제를 식으로 세우기</p><p class="gm-k"><b>핵심</b> 방정식: x의 값에 따라 참·거짓이 달라지는 등식. 항등식: x에 어떤 값을 넣어도 참</p><p class="gm-k gm-trap"><b>걸림돌</b> 이항할 때 부호를 안 바꿈</p></li>
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u6">좌표평면과 그래프</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">순서쌍과 좌표, 상황 그래프 해석, 정비례·반비례</p><p class="gm-k"><b>핵심</b> 순서쌍 (x, y)와 좌표, 원점, 제1~4사분면</p><p class="gm-k gm-trap"><b>걸림돌</b> (x, y) 순서를 뒤바꿈</p></li>
+</ul>
+<h4 class="gm-sem">2학기 (대표 배치)</h4>
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u7">기본 도형과 작도·합동</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">점·선·면·각, 위치 관계, 평행선의 성질, 작도와 삼각형의 합동</p><p class="gm-k"><b>핵심</b> 직선·반직선·선분의 구별, 맞꼭지각은 크기가 같다</p><p class="gm-k gm-trap"><b>걸림돌</b> 반직선의 방향(시작점) 혼동</p></li>
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u8">평면도형: 다각형, 원과 부채꼴</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">다각형의 내각·외각, 부채꼴의 호의 길이와 넓이</p><p class="gm-k"><b>핵심</b> n각형의 대각선 수 = n(n−3)/2</p><p class="gm-k gm-trap"><b>걸림돌</b> 내각의 합과 한 내각의 크기 혼동</p></li>
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u9">입체도형</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">다면체·회전체의 성질과 겉넓이·부피</p><p class="gm-k"><b>핵심</b> 다면체(각기둥·각뿔·각뿔대), 정다면체는 5가지뿐</p><p class="gm-k gm-trap"><b>걸림돌</b> 뿔의 부피에서 ⅓을 빠뜨림</p></li>
+<li><div class="gm-h"><a href="../subjects/math-mid.html#math-mid-u10">자료의 정리와 해석</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">대푯값, 줄기와 잎 그림, 도수분포표·히스토그램, 상대도수</p><p class="gm-k"><b>핵심</b> 대푯값: 평균·중앙값·최빈값. 극단적인 값이 있으면 평균보다 중앙값이 자료를 더 잘 대표할 수 있다</p><p class="gm-k gm-trap"><b>걸림돌</b> 자료를 크기순으로 정렬하지 않고 가운데 값을 중앙값으로 씀</p></li>
+</ul>
+<p class="callout tip">막힌 문제를 같이 볼 때는 답 대신 질문으로: <a href="../subjects/math-mid.html#math-mid-u1">오답 코칭 대화 예시</a></p>
+<p><a class="btn sm ghost" href="../subjects/math-mid.html">수학 단원 지도 전체 보기 →</a></p>
   </div>
   <div class="tab-panel">
-    <ul>
-      <li>생물의 구성과 다양성, 물질의 상태 변화, 힘의 작용, 열, 기체의 성질 등</li>
-      <li>실험 보고서 쓰기, 관찰 기록이 수행평가로 이어짐</li>
-    </ul>
-    <p>물리 계산(속력, 힘)에서 막히면 과학이 아니라 수학(비례식) 결손인 경우가 많아요.</p>
+<p>말하기 중심이던 초등 영어가 <strong>문법·독해·서술형 중심</strong>으로 바뀌는 해예요. 동사 두 종류, 시제, 조동사, 비교, 문장 형식이 1학년의 큰 줄기입니다.</p><p class="callout note">문법 충격을 받는 아이가 많아요. 문법 용어(주어·동사·목적어)를 미리 익혀 두는 정도면 충분하고, 교과서 본문을 소리 내어 읽는 습관이 가장 강력합니다.</p>
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/english-mid.html#english-mid-u1">be동사와 일반동사</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">두 종류 동사를 구분하고 부정문·의문문 만들기</p><p class="gm-k"><b>핵심</b> be동사(am/are/is): “~이다, ~에 있다”</p><p class="gm-k gm-trap"><b>걸림돌</b> “I am play soccer.” → be동사와 일반동사 겹쳐 쓰기. I play soccer.</p></li>
+<li><div class="gm-h"><a href="../subjects/english-mid.html#english-mid-u2">시제: 진행형과 과거</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">현재·과거·진행을 구분해 쓰기</p><p class="gm-k"><b>핵심</b> 현재진행 be + -ing: 지금 하고 있는 일</p><p class="gm-k gm-trap"><b>걸림돌</b> “I was go.” → I went.</p></li>
+<li><div class="gm-h"><a href="../subjects/english-mid.html#english-mid-u3">조동사와 미래 표현</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">조동사의 의미 차이와 미래 표현 쓰기</p><p class="gm-k"><b>핵심</b> 조동사 + 동사원형, 부정은 조동사 + not</p><p class="gm-k gm-trap"><b>걸림돌</b> “He cans swim.” → can은 -s 없음</p></li>
+<li><div class="gm-h"><a href="../subjects/english-mid.html#english-mid-u4">비교: 원급·비교급·최상급</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">두세 대상을 비교하는 세 가지 틀</p><p class="gm-k"><b>핵심</b> 원급: as + 원급 + as (~만큼 …한)</p><p class="gm-k gm-trap"><b>걸림돌</b> more taller → taller</p></li>
+<li><div class="gm-h"><a href="../subjects/english-mid.html#english-mid-u5">문장의 형식 ① 감각동사·수여동사</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">동사 뒤에 무엇이 오는지로 문장 뼈대 보기</p><p class="gm-k"><b>핵심</b> 감각동사 look/sound/feel/smell/taste + 형용사(You look happy.)</p><p class="gm-k gm-trap"><b>걸림돌</b> “You look happily.” → happy</p></li>
+<li><div class="gm-h"><a href="../subjects/english-mid.html#english-mid-u6">접속사 기초</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">문장과 문장을 이어 긴 문장 만들기</p><p class="gm-k"><b>핵심</b> 등위: and, but, or, so</p><p class="gm-k gm-trap"><b>걸림돌</b> “If it will rain tomorrow” → If it rains tomorrow</p></li>
+</ul>
+<p class="callout tip">수행평가(말하기·쓰기)를 대신 써 주지 않고 돕는 법: <a href="../subjects/english-mid.html#english-mid-u19">부모가 도울 수 있는 것</a></p>
+<p><a class="btn sm ghost" href="../subjects/english-mid.html">영어 단원 지도 전체 보기 →</a></p>
   </div>
   <div class="tab-panel">
-    <ul>
-      <li>사회: 지리·일반사회 영역 (지도 읽기, 기후, 문화, 정치 기초)</li>
-      <li>역사: 학교에 따라 1학년 또는 2~3학년에 편성</li>
-      <li>정보: 2022 개정으로 수업 시간이 늘었어요. 알고리즘, 프로그래밍 기초(블록 → 텍스트 언어)</li>
-      <li>도덕, 기술·가정, 체육, 음악, 미술, 선택 과목(한문·제2외국어 등)</li>
-    </ul>
+<p>사회는 지리(지도·기후·지형)와 일반사회(사회화·문화·정치) 영역, 역사는 세계사·한국사 영역으로 나뉩니다. 중1에는 사회① 계열(지리·일반사회 일부)을 배우는 학교가 많지만 학교마다 달라요.</p>
+<p class="callout warning">이 과목은 교육과정이 <b>중1~3 학년군</b>으로 묶여 있어서, 어느 단원을 몇 학년에 배울지는 학교가 정해요. 전체 목록을 그대로 보여 드리니 학기 초 교과서 목차·학교 교육과정 편성표에서 올해 배우는 부분을 찾아 아래 메모에 적어 두세요.</p>
+<details class="acc"><summary>사회 · 지리<small>10개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u1">지리적 속성과 공간 관계</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">위치·지도·지리 정보로 세상을 읽는 법</p><p class="gm-k"><b>핵심</b> 위치 표현: 수리적 위치(위도·경도), 관계적 위치(주변 대륙·해양·국가와의 관계)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u2">기후 환경과 인간 생활</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">세계의 기후 지역과 그에 맞춘 생활 방식</p><p class="gm-k"><b>핵심</b> 기후 요소(기온·강수·바람)와 기후 요인(위도·해발 고도·수륙 분포·해류)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u3">지형 경관과 인간 생활</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">다양한 지형이 만들어진 원리와 이용</p><p class="gm-k"><b>핵심</b> 산지 지형(습곡·화산), 해안 지형(갯벌, 해식애, 사빈), 카르스트·빙하·건조 지형 등</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u4">자연재해와 인간 생활</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">자연재해의 원인·피해와 대응</p><p class="gm-k"><b>핵심</b> 기후적 재해(홍수, 가뭄, 태풍, 폭염, 폭설)와 지형적 재해(지진, 화산, 쓰나미)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u5">자원과 지속가능성</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">자원의 분포·갈등과 지속가능한 이용</p><p class="gm-k"><b>핵심</b> 자원의 특성: 유한성(고갈), 편재성(특정 지역에 몰림), 가변성(기술·가치에 따라 달라짐)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u6">인구 변화와 인구 문제</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">인구 분포·이동과 저출생·고령화</p><p class="gm-k"><b>핵심</b> 인구 분포에 영향을 주는 자연적·인문적 요인</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u7">도시 발달과 도시 문제</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">도시화, 도시 내부 구조, 살기 좋은 도시</p><p class="gm-k"><b>핵심</b> 도시화 과정(초기-가속화-종착 단계)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u8">세계화와 경제 공간의 변화</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">다국적 기업, 농업·서비스업의 세계화</p><p class="gm-k"><b>핵심</b> 세계화와 지역화, 경제 활동의 세계화</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u9">환경 문제와 지속가능한 환경</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">지구적 환경 문제와 해결 노력</p><p class="gm-k"><b>핵심</b> 기후 변화(지구 온난화)의 원인과 영향</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u10">우리나라의 영역과 세계 속의 우리나라</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">영역·독도, 통일, 세계 속 지역</p><p class="gm-k"><b>핵심</b> 영역: 영토·영해(기선, 통상기선·직선기선, 12해리)·영공, 배타적 경제 수역(EEZ, 200해리)</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>사회 · 일반사회<small>12개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u11">개인과 사회생활</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">사회화, 지위와 역할, 사회 집단</p><p class="gm-k"><b>핵심</b> 사회화: 사회 구성원으로 필요한 언어·규범·가치를 배우는 과정. 사회화 기관(가족, 학교, 또래, 대중 매체)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u12">문화의 이해</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">문화의 속성과 문화를 바라보는 태도</p><p class="gm-k"><b>핵심</b> 문화의 의미(넓은 의미: 생활 양식 전체)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u13">정치 생활과 민주주의</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">정치의 의미, 민주주의의 발전과 원리, 정부 형태</p><p class="gm-k"><b>핵심</b> 정치의 의미(좁은: 국가 권력 획득·행사 / 넓은: 집단의 갈등 조정)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u14">정치 과정과 시민 참여</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">정치 주체, 선거, 지방 자치</p><p class="gm-k"><b>핵심</b> 정치 과정: 요구 → 정책 결정 → 집행 → 평가(환류)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u15">인권과 헌법</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">인권의 의미, 기본권과 제한, 인권 침해 구제</p><p class="gm-k"><b>핵심</b> 인권: 천부적·보편적·항구적·불가침 권리</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u16">헌법과 국가 기관</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">국회·대통령과 행정부·법원·헌법 재판소</p><p class="gm-k"><b>핵심</b> 국회: 입법(법률 제·개정), 재정(예산 심의·확정), 일반 국정 통제(국정 감사·조사, 탄핵 소추 의결)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u17">일상생활과 법</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">법의 목적과 종류, 재판의 종류</p><p class="gm-k"><b>핵심</b> 법의 목적: 정의 실현, 공공복리, 법적 안정성</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u18">경제생활과 선택</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">희소성, 기회비용, 합리적 선택, 경제 체제, 금융 생활</p><p class="gm-k"><b>핵심</b> 경제 활동: 생산·분배·소비, 경제 주체(가계·기업·정부)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u19">시장 경제와 가격</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">수요·공급 법칙과 균형 가격의 변동</p><p class="gm-k"><b>핵심</b> 시장의 의미와 종류(생산물 시장, 생산 요소 시장)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u20">국민 경제와 국제 거래</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">GDP, 물가·실업, 국제 거래와 환율</p><p class="gm-k"><b>핵심</b> 국내 총생산(GDP): 일정 기간 한 나라 안에서 새로 생산된 최종 생산물의 시장 가치 합, 한계(가사 노동·여가·환경 반영 못 함)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u21">국제 사회와 국제 정치</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">국제 사회의 특징과 행위 주체, 우리나라의 외교</p><p class="gm-k"><b>핵심</b> 국제 사회의 특징: 자국 이익 추구, 힘의 논리 + 국제법·국제 협력</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u22">사회 변동과 사회 문제</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">사회 변동의 요인, 오늘날의 사회 문제</p><p class="gm-k"><b>핵심</b> 사회 변동의 요인: 기술 발달, 인구 변화, 가치관 변화 등</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>역사 · 세계사<small>6개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u23">문명의 발생과 고대 세계</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">4대 문명과 고대 제국</p><p class="gm-k"><b>핵심</b> 선사 시대에서 문명으로: 농경, 청동기, 문자, 도시·국가</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u24">세계 종교의 확산과 지역 문화</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">불교·힌두교·크리스트교·이슬람교와 지역 세계</p><p class="gm-k"><b>핵심</b> 불교·힌두교의 발전과 동남아시아·동아시아 전파</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u25">교류의 확대와 전통 사회의 발전</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">몽골 제국, 명·청, 이슬람 제국들, 유럽의 변화</p><p class="gm-k"><b>핵심</b> 송의 발전과 몽골 제국(원)의 동서 교류</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u26">제국주의 침략과 국민 국가 건설 운동</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">시민 혁명, 산업 혁명, 제국주의와 저항</p><p class="gm-k"><b>핵심</b> 시민 혁명: 영국 명예혁명(1688), 미국 독립 혁명(1776 독립 선언), 프랑스 혁명(1789)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u27">세계 대전과 사회 변동</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">두 차례 세계 대전, 대공황, 전후 질서</p><p class="gm-k"><b>핵심</b> 제1차 세계 대전(1914~1918)과 러시아 혁명(1917), 베르사유 체제</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u28">현대 세계의 전개</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">냉전과 해체, 세계화, 오늘날의 과제</p><p class="gm-k"><b>핵심</b> 냉전: 미국 중심 자본주의 진영 vs 소련 중심 공산주의 진영</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>역사 · 한국사<small>6개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u29">선사 문화와 고대 국가의 형성</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">선사 시대, 고조선, 여러 나라, 삼국과 가야</p><p class="gm-k"><b>핵심</b> 구석기·신석기·청동기(초5 복습, 도구·생활·사회 변화)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u30">남북국 시대의 전개</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">통일 신라와 발해</p><p class="gm-k"><b>핵심</b> 신라의 삼국 통일 과정과 의의·한계(외세 이용, 고구려 옛 땅 상실)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u31">고려의 성립과 변천</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">후삼국 통일부터 원 간섭기·고려 말까지</p><p class="gm-k"><b>핵심</b> 왕건의 후삼국 통일(936), 광종(노비안검법, 과거제)·성종(유교 정치) 체제 정비</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u32">조선의 성립과 발전</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">건국, 통치 체제, 세종, 사림, 양난</p><p class="gm-k"><b>핵심</b> 조선 건국(1392), 한양 천도, 통치 체제(의정부·6조, 경국대전)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u33">조선 사회의 변동</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">조선 후기 정치·경제·사회·문화의 변화</p><p class="gm-k"><b>핵심</b> 영조·정조의 탕평 정치, 정조의 개혁(규장각, 수원 화성)</p></li>
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u34">근·현대 사회의 전개</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">개항부터 오늘날 대한민국까지</p><p class="gm-k"><b>핵심</b> 흥선 대원군의 정책, 개항(강화도 조약 1876), 개화 운동(갑신정변 1884)</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>도덕<small>학년군 · 학교가 배치</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/social-mid.html#social-mid-u35">도덕 · 중학교 (도덕①·②)</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">자신·타인·사회 공동체·자연과의 관계에서 윤리적으로 판단하기</p><p class="gm-k"><b>핵심</b> 4개 영역: 자신과의 관계, 타인과의 관계, 사회·공동체와의 관계, 자연과의 관계</p></li>
+</ul>
+</div></details>
+<p><a class="btn sm ghost" href="../subjects/social-mid.html">사회·역사·도덕 단원 지도 전체 보기 →</a></p>
   </div>
   <div class="tab-panel">
-    <ul>
-      <li>주제선택: 학교가 개설한 탐구·융합 프로그램 중 골라서 참여</li>
-      <li>진로탐색: 직업인 특강, 진로 검사, 현장 직업 체험</li>
-      <li>예술·체육 활동, 동아리</li>
-    </ul>
-    <p class="callout tip">자유학기에 할 일 세 가지: ① 커리어넷 진로 검사 함께 보기 ② 직업 체험 1~2곳 ③ 시험이 없는 동안 <strong>노트 정리·오답 관리 방법을 연습</strong>.</p>
+<p>과학 탐구 방법, 생물의 다양성, 열, 물질의 상태 변화, 힘, 기체의 성질. 실험 보고서와 관찰 기록이 수행평가로 이어집니다.</p><p class="callout tip">물리 계산(힘, 보일 법칙)에서 막히면 과학이 아니라 수학(비례·반비례) 결손인 경우가 많아요.</p>
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/science-mid.html#science-mid-u1">과학과 인류의 지속가능한 삶</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">과학 탐구 과정과 과학·기술·사회의 관계</p><p class="gm-k"><b>핵심</b> 과학 탐구 과정: 문제 인식 → 가설 설정 → 실험 설계(변인 통제) → 실험·자료 수집 → 자료 해석 → 결론 → (새 문제).</p><p class="gm-k gm-trap"><b>걸림돌</b> 가설 = 예상 결과만 쓰는 것 → “○○하면 △△할 것이다, 왜냐하면 …”처럼 까닭을 포함해요.</p></li>
+<li><div class="gm-h"><a href="../subjects/science-mid.html#science-mid-u2">생물의 구성과 다양성</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">세포에서 개체까지, 생물다양성과 분류</p><p class="gm-k"><b>핵심</b> 생물의 구성 단계: 동물은 세포 → 조직 → 기관 → 기관계 → 개체, 식물은 세포 → 조직 → 조직계 → 기관 → 개체.</p><p class="gm-k gm-trap"><b>걸림돌</b> 세포벽과 세포막을 혼동 → 세포막은 모든 세포에, 세포벽은 식물 세포(와 균류·세균)에 있어요.</p></li>
+<li><div class="gm-h"><a href="../subjects/science-mid.html#science-mid-u3">열</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">온도와 입자 운동, 전도·대류·복사, 열평형, 비열, 열팽창</p><p class="gm-k"><b>핵심</b> 온도는 물질을 이루는 입자의 운동이 활발한 정도예요. 온도가 높을수록 입자 운동이 활발해요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 열과 온도를 같은 것으로 여김 → 온도는 상태(입자 운동 정도), 열은 이동하는 에너지예요.</p></li>
+<li><div class="gm-h"><a href="../subjects/science-mid.html#science-mid-u4">물질의 상태 변화</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">입자 모형, 확산과 증발, 상태 변화와 열에너지</p><p class="gm-k"><b>핵심</b> 물질은 매우 작은 입자로 되어 있고 입자는 스스로 끊임없이 움직여요. 증거: 확산(향기가 퍼짐), 증발.</p><p class="gm-k gm-trap"><b>걸림돌</b> 상태 변화하면 입자 크기가 변한다 → 입자 사이 거리만 변해요.</p></li>
+<li><div class="gm-h"><a href="../subjects/science-mid.html#science-mid-u5">힘의 작용</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">힘의 표현, 중력·탄성력·마찰력·부력, 무게와 질량</p><p class="gm-k"><b>핵심</b> 힘은 물체의 모양이나 운동 상태(빠르기·방향)를 변하게 하는 원인. 단위 N(뉴턴). 화살표로 크기·방향·작용점을 나타내요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 무게와 질량은 같다 → 질량은 kg(변하지 않음), 무게는 N(중력의 크기, 장소에 따라 변함).</p></li>
+<li><div class="gm-h"><a href="../subjects/science-mid.html#science-mid-u6">기체의 성질</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">기체 압력, 보일 법칙(반비례), 샤를 법칙</p><p class="gm-k"><b>핵심</b> 기체 압력: 기체 입자가 끊임없이 운동하며 용기 벽에 충돌해 생기는 힘.</p><p class="gm-k gm-trap"><b>걸림돌</b> 압력을 높이면 입자가 작아진다 → 입자 크기는 그대로, 입자 사이 거리가 줄어요.</p></li>
+</ul>
+<p><a class="btn sm ghost" href="../subjects/science-mid.html">과학 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+<p>2022 개정 교육과정으로 정보 수업 시간이 늘었고, 블록 코딩에서 파이썬 같은 텍스트 언어로 넘어갑니다. 몇 학년에 배우는지는 학교가 정해요.</p>
+<p class="callout warning">이 과목은 교육과정이 <b>중1~3 학년군</b>으로 묶여 있어서, 어느 단원을 몇 학년에 배울지는 학교가 정해요. 전체 목록을 그대로 보여 드리니 학기 초 교과서 목차·학교 교육과정 편성표에서 올해 배우는 부분을 찾아 아래 메모에 적어 두세요.</p>
+<details class="acc"><summary>컴퓨팅 시스템<small>3개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u1">컴퓨팅 기기의 구성과 동작</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">하드웨어·소프트웨어·운영체제의 역할</p><p class="gm-k"><b>핵심</b> 하드웨어: 입력·출력 장치, 처리 장치(CPU), 기억 장치(주기억 메모리 = 작업대, 보조기억 저장장치 = 서랍).</p><p class="gm-k gm-trap"><b>걸림돌</b> 메모리(RAM)와 저장공간을 같은 것으로 생각해요 → 작업대(RAM)와 서랍(저장장치) 비유.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u2">네트워크와 인터넷</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">데이터가 어떻게 오가는가</p><p class="gm-k"><b>핵심</b> 네트워크는 기기들이 서로 데이터를 주고받도록 연결된 것, 인터넷은 전 세계 네트워크의 네트워크예요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 와이파이 = 인터넷이라고 생각해요 → 와이파이는 기기와 공유기 사이의 무선 연결일 뿐이에요.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u3">피지컬 컴퓨팅</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">센서 입력 → 프로그램 → 출력 장치</p><p class="gm-k"><b>핵심</b> 센서(빛·온도·거리·소리) 값을 읽어 조건에 따라 LED·모터·스피커를 제어해요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 기준값을 한 번 재고 정해서 환경이 바뀌면 오작동 → 여러 조건에서 값을 재어 표로 정리하고 정해요.</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>데이터<small>2개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u4">디지털 데이터 표현</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">수·문자·이미지·소리를 0과 1로</p><p class="gm-k"><b>핵심</b> 비트(0/1)와 바이트(8비트). n비트로 2ⁿ가지를 나타낼 수 있어요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 비트 수를 1 늘리면 표현 개수가 1 늘어난다고 생각해요 → 2배가 된다는 걸 표로 확인.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u5">데이터 수집·관리·분석</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">표로 정리하고 그래프로 의미 찾기</p><p class="gm-k"><b>핵심</b> 문제 해결에 필요한 데이터를 정하고 모으기(설문, 측정, 공공데이터).</p><p class="gm-k gm-trap"><b>걸림돌</b> 한 칸에 여러 정보를 넣어요(“7시간, 늦게 잠”) → 한 칸 한 값 원칙.</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>알고리즘과 프로그래밍<small>7개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u6">문제 분석과 알고리즘 설계</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">순서도·의사코드, 탐색과 정렬</p><p class="gm-k"><b>핵심</b> 문제 분석: 입력(주어진 것)·출력(구할 것)·조건을 정리해요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 바로 코딩부터 해서 헤매요 → 입력·출력·조건 세 줄 정리부터.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u7">파이썬 ① 변수·자료형·입출력</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">블록에서 글자로, 첫 프로그램</p><p class="gm-k"><b>핵심</b> 변수에 값을 대입해요: score = 0. 여기서 =는 “같다”가 아니라 “오른쪽 값을 왼쪽 이름에 저장”이에요.</p><p class="gm-k gm-trap"><b>걸림돌</b> =를 수학의 등호로 읽어 x = x + 1이 이상하다고 해요 → “오른쪽을 계산해서 왼쪽에 넣는다”로 읽기.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u8">파이썬 ② 조건문</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">if · elif · else, 들여쓰기</p><p class="gm-k"><b>핵심</b> if 조건: 아래 들여쓴 줄은 조건이 참일 때만 실행돼요. elif는 “아니면 만약”, else는 “나머지 모두”.</p><p class="gm-k gm-trap"><b>걸림돌</b> 조건 순서를 거꾸로 써서(80 이상을 먼저) 95점이 B가 돼요 → 위에서부터 검사한다는 것을 손으로 따라가 보기.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u9">파이썬 ③ 반복문</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">for · range · while, 무한 반복 주의</p><p class="gm-k"><b>핵심</b> for i in range(5):는 i가 0, 1, 2, 3, 4일 때 5번 반복(횟수가 정해진 반복).</p><p class="gm-k gm-trap"><b>걸림돌</b> range 끝 값이 포함된다고 생각해요 → range(1, 11)은 10까지.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u10">파이썬 ④ 리스트</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">여러 값을 한 이름으로, 인덱스와 반복</p><p class="gm-k"><b>핵심</b> 리스트는 여러 값을 순서대로 담아요: scores = [80, 95, 70].</p><p class="gm-k gm-trap"><b>걸림돌</b> 인덱스를 1부터 세서 마지막 칸에서 오류(IndexError) → 0부터, 마지막은 len−1.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u11">파이썬 ⑤ 함수</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">이름 붙인 코드 묶음, 매개변수와 반환값</p><p class="gm-k"><b>핵심</b> 함수는 자주 쓰는 코드를 묶어 이름을 붙인 것: def로 정의하고 이름으로 호출해요.</p><p class="gm-k gm-trap"><b>걸림돌</b> print와 return을 같은 것으로 생각해요 → print는 화면에 보여 주기, return은 값을 돌려줘 다른 계산에 쓸 수 있게.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u12">프로그래밍 프로젝트</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">생활 문제를 코드로 해결하고 발표</p><p class="gm-k"><b>핵심</b> 문제 발견 → 분석(입력·출력) → 설계(알고리즘·함수 나누기) → 구현 → 테스트·디버깅 → 공유.</p><p class="gm-k gm-trap"><b>걸림돌</b> 마감 전날 몰아 하다 디버깅 시간이 없어요 → 계획표의 절반을 테스트·수정에.</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>인공지능<small>2개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u13">인공지능의 이해</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">규칙 기반 vs 학습 기반, AI가 잘하는 것과 못하는 것</p><p class="gm-k"><b>핵심</b> 규칙 기반: 사람이 조건을 직접 적어요(if 규칙). 학습 기반(기계학습): 데이터에서 규칙을 찾아요.</p><p class="gm-k gm-trap"><b>걸림돌</b> AI는 항상 정확하고 중립적이다 → 데이터와 설계에 따라 틀리고 치우칠 수 있어요.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u14">기계학습 체험과 AI의 영향</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">데이터로 학습시키기, 편향과 책임</p><p class="gm-k"><b>핵심</b> 지도학습: 정답(레이블)이 붙은 데이터로 학습 → 새 데이터를 분류·예측.</p><p class="gm-k gm-trap"><b>걸림돌</b> 학습에 쓴 데이터로 평가해 정확도가 높다고 착각 → 새 데이터로 확인해야 해요.</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>디지털 문화<small>3개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u15">정보보호와 보안</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">개인정보, 인증, 악성 프로그램</p><p class="gm-k"><b>핵심</b> 개인정보의 종류와 가치, 유출 경로(피싱, 스미싱, 악성 앱, 공용 기기).</p><p class="gm-k gm-trap"><b>걸림돌</b> 여러 사이트에 같은 비밀번호 → 하나가 털리면 모두 위험.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u16">저작권과 디지털 윤리</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">공정 이용, 생성형 AI, 사이버 폭력</p><p class="gm-k"><b>핵심</b> 저작권, 오픈소스·공유 저작물(이용 허락 표시), 출처 표시.</p><p class="gm-k gm-trap"><b>걸림돌</b> “출처만 쓰면 무엇이든 가능” → 이용 허락 범위를 확인해야 해요.</p></li>
+<li><div class="gm-h"><a href="../subjects/coding-mid.html#coding-mid-u17">디지털 건강과 진로</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">과몰입 조절, 디지털 세상의 직업</p><p class="gm-k"><b>핵심</b> 디지털 과몰입의 신호(수면 부족, 일상 소홀)와 스스로 조절하는 전략.</p><p class="gm-k gm-trap"><b>걸림돌</b> 코딩하는 시간은 무제한이어도 된다 → 만드는 스크린도 수면·운동과 균형.</p></li>
+</ul>
+</div></details>
+<p><a class="btn sm ghost" href="../subjects/coding-mid.html">정보 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+<p>변성기가 시작되는 시기라 가창 수행평가에 부담을 느끼는 아이가 있어요. 자유학기에 예술 활동이 늘어나는 학교도 많습니다.</p>
+<p class="callout warning">이 과목은 교육과정이 <b>중1~3 학년군</b>으로 묶여 있어서, 어느 단원을 몇 학년에 배울지는 학교가 정해요. 전체 목록을 그대로 보여 드리니 학기 초 교과서 목차·학교 교육과정 편성표에서 올해 배우는 부분을 찾아 아래 메모에 적어 두세요.</p>
+<details class="acc"><summary>중 · 연주<small>6개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u1">발성과 변성기</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">몸이 바뀌는 시기의 노래</p><p class="gm-k"><b>핵심</b> 발성의 기본: 자세 → 복식 호흡(옆구리·등까지 부풀기) → 열린 목(하품하듯 입 안 넓히기) → 공명.</p><p class="gm-k gm-trap"><b>걸림돌</b> 높은 음에서 턱과 목에 힘을 줘요 → 턱을 가볍게 내리고, 음이 높을수록 “더 여리게” 연습.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u2">가곡·민요 가창</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">가사 전달과 음악적 표현</p><p class="gm-k"><b>핵심</b> 가곡은 시에 곡을 붙인 노래라 가사(시)의 뜻과 발음 전달이 중요해요(한국 가곡, 독일 가곡 등).</p><p class="gm-k gm-trap"><b>걸림돌</b> 가사가 뭉개져요 → 받침·끝소리를 또렷하게, 가사만 읽는 연습.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u3">합창</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">성부의 균형과 화음 듣기</p><p class="gm-k"><b>핵심</b> 성부: 소프라노·알토(여성·높은 목소리), 테너·베이스(남성·낮은 목소리). 중학교에선 변성기 때문에 2~3부 편성이 많아요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 다른 성부에 끌려가요 → 자기 성부만 여러 번 → 다른 성부와 함께, 순서 지키기.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u4">관악기: 리코더·단소·소금</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">운지·호흡·텅잉의 정확도</p><p class="gm-k"><b>핵심</b> 관악기 공통 원리: 바른 자세 → 일정한 호흡 → 정확한 운지 → 텅잉(음의 시작).</p><p class="gm-k gm-trap"><b>걸림돌</b> 단소 소리가 안 나요 → 입김 방향과 좁은 입술. 초등 단소 소리 내기 단계부터 다시(초등 단원 지도 초6 탭).</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u5">코드 반주: 우쿨렐레·기타</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">코드 네임과 스트로크</p><p class="gm-k"><b>핵심</b> 코드 네임: C(도·미·솔), F(파·라·도), G(솔·시·레), G7(솔·시·레·파), Am(라·도·미). 알파벳은…</p><p class="gm-k gm-trap"><b>걸림돌</b> 손가락 끝이 아파요 → 처음 1~2주는 정상. 짧게 자주.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u6">모둠 합주와 무대 발표</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">역할 분담, 연습 계획, 무대 긴장</p><p class="gm-k"><b>핵심</b> 모둠 합주 평가는 결과만이 아니라 역할 분담·연습 과정·협력을 함께 보는 경우가 많아요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 모둠 무임승차 갈등 → 부모가 개입하기보다 역할과 기록(누가 무엇을)을 남기게 코칭.</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>중 · 요소·국악<small>6개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u7">음정과 조성</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">두 음의 거리, 조표와 나란한조</p><p class="gm-k"><b>핵심</b> 음정: 두 음 사이의 거리. 같은 음을 1도로 세어요(도-미 = 3도, 도-솔 = 5도, 도-도 = 8도).</p><p class="gm-k gm-trap"><b>걸림돌</b> 음정을 셀 때 시작음을 빼요 → 시작음을 1도로 세요.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u8">화음과 코드</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">3화음, 주요 3화음, 마침꼴</p><p class="gm-k"><b>핵심</b> 3화음: 한 음 위에 3도씩 두 음을 쌓은 것. 장3화음(C: 도·미·솔), 단3화음(Am: 라·도·미).</p><p class="gm-k gm-trap"><b>걸림돌</b> Am과 C의 공통음을 몰라요 → 도·미가 겹쳐서 잘 어울린다는 걸 건반으로.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u9">나타냄말과 도돌이표</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">악보의 약속 읽기</p><p class="gm-k"><b>핵심</b> 아티큘레이션: 스타카토(짧게 끊어서), 레가토(부드럽게 이어서), 테누토(음 길이를 충분히), 악센트(그 음을 세게), 늘임표(페르마타…</p><p class="gm-k gm-trap"><b>걸림돌</b> D.C.와 D.S.를 헷갈려요 → C는 Capo(머리, 처음), S는 Segno(표).</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u10">장단의 종류</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">느린 장단에서 빠른 장단까지</p><p class="gm-k"><b>핵심</b> 느린 것부터: 진양조(가장 느림) → 중모리 → 중중모리 → 자진모리 → 휘모리(가장 빠름).</p><p class="gm-k gm-trap"><b>걸림돌</b> 장단 순서를 외우기만 해요 → 소리를 듣고 “느리다/빠르다”로 순서 맞추기.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u11">정간보와 율명</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">우리 악보 읽기</p><p class="gm-k"><b>핵심</b> 정간보: 세종 때 만들어진 것으로 알려진, 칸(정간)으로 시간을 나타내는 악보. 세로로 위에서 아래, 오른쪽 줄에서 왼쪽 줄로 읽어요. 한…</p><p class="gm-k gm-trap"><b>걸림돌</b> 가로로 읽어요 → 세로 방향과 오른쪽부터를 표시해 두기.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u12">국악기와 국악 갈래</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">팔음 분류, 정악과 민속악</p><p class="gm-k"><b>핵심</b> 팔음: 재료로 나눈 국악기 분류. 금(쇠: 편종·징·꽹과리), 석(돌: 편경), 사(명주실: 가야금·거문고), 죽(대나무:…</p><p class="gm-k gm-trap"><b>걸림돌</b> 연주법 분류(관·현·타)와 재료 분류(팔음)를 섞어요 → 두 기준을 표 두 개로 따로.</p></li>
+</ul>
+</div></details>
+<details class="acc"><summary>중 · 감상·창작<small>6개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u13">서양 음악사와 감상</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">시대별 특징을 소리로 구별하기</p><p class="gm-k"><b>핵심</b> 바로크(대략 1600~1750): 바흐·헨델·비발디. 통주저음, 푸가, 협주곡. 화려한 꾸밈과 일정한 리듬.</p><p class="gm-k gm-trap"><b>걸림돌</b> 연도·작곡가 암기만 해요 → 시대마다 “소리의 특징 한 줄”을 먼저.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u14">국악 감상</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">판소리·산조·정악을 듣는 법</p><p class="gm-k"><b>핵심</b> 판소리: 소리꾼·고수, 소리·아니리·발림, 추임새. 장면에 따라 장단이 바뀌어요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 가사를 못 알아들어 흥미를 잃어요 → 자막 영상, 줄거리 먼저.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u15">대중음악 · 영화음악 · 세계 음악</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">가까운 음악을 음악 요소로 듣기</p><p class="gm-k"><b>핵심</b> 대중음악도 음악 요소로 분석할 수 있어요: 형식(인트로·벌스·후렴·브리지), 코드 진행, 리듬, 음색(악기·음향 효과).</p><p class="gm-k gm-trap"><b>걸림돌</b> 좋아하는 음악만 인정하고 다른 장르를 무시해요 → 부모도 아이 음악을 존중하는 모습을 먼저.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u16">감상문 · 비평문 쓰기</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">들은 것 → 느낀 것 → 까닭 → 판단</p><p class="gm-k"><b>핵심</b> 좋은 감상문 구조: ① 곡 정보(제목·작곡가·시대·연주 형태) ② 들린 것(음악 요소: 빠르기·셈여림·악기·형식) ③ 느낌과 그 까닭 ④…</p><p class="gm-k gm-trap"><b>걸림돌</b> 줄거리나 작곡가 생애만 길게 써요 → ②·③(들린 것과 까닭)이 중심이 되게.</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u17">가락 · 노랫말 창작과 편곡</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">동기 발전, 코드 위 가락, 편곡</p><p class="gm-k"><b>핵심</b> 동기(2마디 짧은 아이디어)를 반복·변형(리듬 바꾸기, 높이 옮기기)해 가락을 키워요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 완성도 욕심에 시간을 다 써요 → 마감 역산 계획(아이디어-초안-수정-제출).</p></li>
+<li><div class="gm-h"><a href="../subjects/music-secondary.html#music-secondary-u18">음악 생활화와 진로</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">평생 즐기는 음악, 음악 관련 진로</p><p class="gm-k"><b>핵심</b> 음악은 스트레스 해소·정서 조절·관계에 도움이 되는 평생 활동이에요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 시험 기간에 음악 활동을 일괄 금지해요 → 짧은 음악 휴식은 오히려 회복에 도움. 번아웃 신호는 번아웃 신호와 대처 참고.</p></li>
+</ul>
+</div></details>
+<p><a class="btn sm ghost" href="../subjects/music-secondary.html">음악 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+<p>중학교 미술은 "잘 그리기"보다 <strong>주제 탐색 → 발상 → 표현 → 비평</strong>의 과정을 평가해요. 과정 기록(아이디어 스케치, 자기 평가)이 점수에 들어갑니다.</p>
+<p class="callout warning">이 과목은 교육과정이 <b>중1~3 학년군</b>으로 묶여 있어서, 어느 단원을 몇 학년에 배울지는 학교가 정해요. 전체 목록을 그대로 보여 드리니 학기 초 교과서 목차·학교 교육과정 편성표에서 올해 배우는 부분을 찾아 아래 메모에 적어 두세요.</p>
+<details class="acc"><summary>중학교 (학년군)<small>11개 단원</small></summary><div class="acc-body">
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u1">시각 문화 읽기</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">광고·SNS·영상 이미지를 비판적으로 읽기</p><p class="gm-k"><b>핵심</b> 시각 문화: 광고, 웹툰, 게임, SNS 이미지, 간판처럼 일상에서 보는 모든 이미지.</p><p class="gm-k gm-trap"><b>걸림돌</b> “그냥 광고잖아”로 넘겨요 → 아이가 좋아하는 분야(게임·아이돌)의 이미지로 하면 훨씬 깊이 들어가요.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u2">미술과 사회·공동체</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">미술이 공동체의 문제·기억·다양성을 다루는 방식 이해</p><p class="gm-k"><b>핵심</b> 미술은 환경, 인권, 역사적 기억, 지역 공동체 같은 사회 문제를 다루기도 해요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 메시지만 강조해 표현이 설명문처럼 돼요 → 상징(하나의 이미지로 뜻 전하기)을 찾아보게 해요.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u3">주제 탐색과 발상</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">주제를 정하고 아이디어를 넓혔다 좁혀 계획하기</p><p class="gm-k"><b>핵심</b> 표현은 “무엇을 말할지(주제)”에서 시작해요. 기법은 그다음이에요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 시작을 못 하고 마감 전날 몰아서 해요 → 주제 발표 당일 “섬네일 3개”까지만 하게 하면 부담이 줄어요.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u4">드로잉 — 투시 원근법과 명암</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">1점·2점 투시와 명암 단계로 공간과 입체감 표현</p><p class="gm-k"><b>핵심</b> 선 원근법(투시 원근법): 평행한 선들이 멀어질수록 한 점(소실점)으로 모여 보여요. 소실점은 눈높이(수평선) 위에 있어요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 소실점을 여러 개 찍어 공간이 뒤틀려요 → 먼저 눈높이 선을 긋고, 모든 선이 한(두) 점으로 모이는지 자로 확인.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u5">색채 — 대비·조화·색채 심리</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">색의 대비와 조화를 의도적으로 쓰기</p><p class="gm-k"><b>핵심</b> 색의 대비: 색상 대비, 명도 대비, 채도 대비, 보색 대비 — 옆 색에 따라 같은 색도 다르게 보여요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 색을 “예쁜 색”으로만 골라 의도가 안 보여요 → 주제와 색의 관계를 한 문장으로 쓰게 해요.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u6">회화·판화 매체와 기법</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">재료의 성질을 알고 주제에 맞는 기법 고르기</p><p class="gm-k"><b>핵심</b> 수채화(투명, 밝은 곳부터·물 조절), 아크릴(빨리 마르고 덧칠 가능), 파스텔, 먹(수묵 — 농담·번짐) 등 재료마다 성질이 달라요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 수채화가 탁해져요 → 물통 두 개, 밝은 색부터, 마르기 전 덧칠 조심.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u7">입체·조소·공예</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">양감·공간을 생각한 입체와 쓰임이 있는 공예</p><p class="gm-k"><b>핵심</b> 조소: 소조(붙이기), 조각(깎기), 구성·설치(조립·공간 배치).</p><p class="gm-k gm-trap"><b>걸림돌</b> 정면만 완성하고 뒤는 비어 있어요 → 돌려 가며 만들기, 세 방향 사진으로 점검.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u8">디자인 — 시각·제품·환경</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">문제 해결로서의 디자인 과정 경험하기</p><p class="gm-k"><b>핵심</b> 시각 디자인: 포스터, 로고, 타이포그래피(글자 디자인), 픽토그램, 인포그래픽.</p><p class="gm-k gm-trap"><b>걸림돌</b> 예쁜 결과물에만 집중하고 “문제”가 없어요 → 첫 줄에 “누가, 무엇 때문에 불편한가”를 쓰게 해요.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u9">사진·영상·디지털 매체</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">디지털 도구로 표현하고 저작권·초상권 지키기</p><p class="gm-k"><b>핵심</b> 사진: 구도, 앵글, 빛, 초점(심도). 영상: 숏(클로즈업·풀숏), 편집, 소리, 스토리보드.</p><p class="gm-k gm-trap"><b>걸림돌</b> 편집 효과에만 시간을 써요 → 스토리보드(이야기)가 먼저.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u10">미술 비평 — 기술·분석·해석·판단</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">근거를 들어 작품의 의미와 가치를 말하고 쓰기</p><p class="gm-k"><b>핵심</b> 비평 4단계(펠드만 방식으로 널리 알려진 순서): 기술(보이는 것) → 분석(조형 요소·원리가 어떻게 쓰였나) → 해석(의미·의도)…</p><p class="gm-k gm-trap"><b>걸림돌</b> 기술·분석 없이 바로 판단(“별로다”)부터 해요 → 순서를 지키면 판단이 설득력 있어져요.</p></li>
+<li><div class="gm-h"><a href="../subjects/art-secondary.html#art-secondary-u11">미술사와 미술 문화</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">한국·세계 미술의 흐름과 전시 문화를 경험하기</p><p class="gm-k"><b>핵심</b> 한국 미술: 고분 벽화, 불교 미술, 고려청자, 조선 백자·산수화·풍속화·민화, 근현대 미술(이중섭, 박수근, 김환기 등).</p><p class="gm-k gm-trap"><b>걸림돌</b> 연도·작가 외우기로만 공부해요 → 시험 대비는 필요하지만, 작품 하나라도 직접 보고 이야기한 경험이 오래 남아요.</p></li>
+</ul>
+</div></details>
+<p><a class="btn sm ghost" href="../subjects/art-secondary.html">미술 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+<p>체력 이해와 학생건강체력평가(PAPS), 육상 기록 도전, 영역형 구기, 스포츠 표현. 체육·음악·미술은 성적이 A·B·C 3단계로 기록돼요.</p>
+<ul class="gm-units">
+<li><div class="gm-h"><a href="../subjects/pe-secondary.html#pe-secondary-u1">건강 관리와 체력 이해</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">운동 · 건강 체력 · 중학교 PAPS</p><p class="gm-k"><b>핵심</b> 건강 체력(심폐지구력·근력·근지구력·유연성·체성분)과 운동 체력(순발력·민첩성·평형성·협응성)을 구분해요.</p><p class="gm-k gm-trap"><b>걸림돌</b> PAPS 오래달리기를 두려워해요 → 처음 절반은 “대화 가능한 속도”, 줄넘기·걷다 뛰다로 2~3주 준비하면 달라져요.</p></li>
+<li><div class="gm-h"><a href="../subjects/pe-secondary.html#pe-secondary-u2">육상: 기록 도전</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">스포츠 · 기술형 · 달리기·뛰기·던지기</p><p class="gm-k"><b>핵심</b> 단거리: 출발(스탠딩·크라우칭), 가속, 팔 흔들기, 결승선 통과.</p><p class="gm-k gm-trap"><b>걸림돌</b> 멀리뛰기 발구름이 안 맞아요 → 도움닫기 걸음 수를 정해(예: 짝수 걸음) 출발점을 표시해요.</p></li>
+<li><div class="gm-h"><a href="../subjects/pe-secondary.html#pe-secondary-u3">영역형 구기(축구·농구·핸드볼 등)</a> <span class="gm-tags"><span class="tag c-tip">🎮 게임</span><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">스포츠 · 전략형 · 기능과 전술</p><p class="gm-k"><b>핵심</b> 기능: 패스·드리블·슛(종목별), 공 없는 움직임.</p><p class="gm-k gm-trap"><b>걸림돌</b> 레이업 스텝이 꼬여요 → 공 없이 “오른발-왼발-점프(오른손 슛)” 구호로 걸어서 10번.</p></li>
+<li><div class="gm-h"><a href="../subjects/pe-secondary.html#pe-secondary-u4">스포츠 표현(음악 줄넘기·체조 등)</a> <span class="gm-tags"><span class="tag c-stem">📘 지도안</span></span></div><p class="gm-g">표현 · 모둠 구성 · 발표</p><p class="gm-k"><b>핵심</b> 스포츠 표현은 스포츠 동작(줄넘기, 체조, 치어리딩 등)을 음악과 대형에 맞춰 작품으로 구성하는 활동이에요.</p><p class="gm-k gm-trap"><b>걸림돌</b> 모둠 갈등(연습 불참, 의견 충돌) → 수행평가 스트레스의 흔한 원인. 먼저 들어 주고, 해결이 어려우면 담당 교사와 상의하도록 도와요.</p></li>
+</ul>
+<p><a class="btn sm ghost" href="../subjects/pe-secondary.html">체육 단원 지도 전체 보기 →</a></p>
   </div>
 </div>
-<p class="callout warning">위 단원은 2022 개정 교육과정 기준 예시입니다. 단원 순서와 학년 배치는 교과서 출판사·학교마다 다르니 학기 초 교과서 목차로 확인하세요. 아이가 중학생이 되는 2031~32년에는 교육과정이 다시 바뀌었을 수 있어요.</p>
+<p class="callout warning">단원은 2022 개정 교육과정 기준 대표 배치입니다. 검정 교과서라 단원 이름·순서·학기 배치가 출판사와 학교마다 다르고, 자유학기가 몇 학기인지에 따라 시험 범위도 달라져요. 아이들이 중1이 되는 2031~32년에는 교육과정이 다시 바뀌었을 수 있으니 학기 초 교과서 목차로 확인하세요.</p>
+<label class="memo-label" for="m1-school-plan">우리 학교 올해 편성 메모 (학년군 과목·자유학기 학기)</label>
+<textarea class="memo" id="m1-school-plan" data-key="grade-m1-school-plan" placeholder="예) 자유학기 1학기 / 사회① 1학년 / 정보 2학기 주 2시간 / 음악 1학기만 / 역사는 2학년부터"></textarea>
+<p class="saved-hint"></p>
 
-<h2 id="study">공부법 정착: 시험 3주 전 루틴</h2>
+<h2 id="jayu">자유학기 200% 활용법</h2>
+<p>중학교 1학년의 한 학기는 <strong>자유학기</strong>로 운영돼요. 중간·기말 같은 지필고사 대신 주제선택·진로탐색·예술체육·동아리 활동이 늘어납니다. "노는 학기"로 흘려보내기 쉽지만, 코치인 부모 입장에선 <strong>시험 압박 없이 공부법과 진로를 실험할 수 있는 유일한 학기</strong>예요.</p>
+<div class="compare">
+  <div style="--cs: var(--stem-soft); --c: var(--stem)"><h4>학교가 하는 것</h4><ul><li>주제선택: 학교가 개설한 탐구·융합 프로그램 중 골라서 참여</li><li>진로탐색: 직업인 특강, 진로 검사, 현장 직업 체험</li><li>예술·체육, 동아리 활동</li><li>과정 중심 평가: 참여와 성장을 문장으로 기록</li></ul></div>
+  <div style="--cs: var(--tip-soft); --c: var(--tip)"><h4>집에서 코치가 할 것</h4><ul><li>커리어넷 진로 검사 결과를 <strong>함께 읽고 대화</strong>하기</li><li>관심 직업 체험 1~2곳 (주말 가족 나들이로)</li><li>시험이 없는 동안 <strong>노트 정리·오답 관리·주간 계획</strong> 연습</li><li>독서 시간 확보: 이 학기에 교양서 읽는 습관 만들기</li></ul></div>
+</div>
+<div class="timeline">
+  <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">학기 초</div><h3>관심 목록 만들기</h3><p>좋아하는 것 10개 적기 → 주제선택 수업 고를 때 참고. 부모는 "왜 그게 좋아?"만 묻기.</p></div>
+  <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">1~2개월</div><h3>진로 검사와 대화</h3><p><a href="https://www.career.go.kr" target="_blank" rel="noopener">커리어넷</a> 흥미·적성 검사. 결과는 "정답"이 아니라 대화 재료. 의외의 결과가 나오면 더 좋아요.</p></div>
+  <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">3개월</div><h3>체험 한 번</h3><p>직업 체험관, 과학관 청소년 프로그램, 대학 캠퍼스 산책 중 하나. <a href="../trips/places.html">교과 연계 장소</a>에서 고르기.</p></div>
+  <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">학기 말</div><h3>공부법 점검</h3><p>시험은 없었지만 "노트 한 권, 오답 10개, 주간 계획 8주"가 남았는지 같이 봐요. 다음 학기 첫 지필고사의 무기가 됩니다.</p></div>
+</div>
+<p class="callout warning">2022 개정 교육과정에서 자유학기는 1학년 중 한 학기로 운영되고 운영 시간은 이전 자유학년제보다 줄었어요. 1학년 1학기에 두는 학교와 2학기에 두는 학교가 있고, 시·도교육청 방침에 따라 해마다 바뀔 수 있습니다. 입학 후 학교 교육과정 안내에서 확인하세요.</p>
+
+<h2 id="month">월별 가정 학습 캘린더 (3월 → 이듬해 2월)</h2>
+<p>학교는 3월에 시작해 2월에 끝나요. 학교가 바쁜 달엔 집은 가볍게, 방학엔 복습과 체험. <strong>이번 달</strong> 카드에는 표시가 붙어요.</p>
+<div class="cards gm-cal" id="m1-cal" style="--min: 250px">
+  <div class="card top c-root" data-month="3"><div><span class="gm-m">3월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>입학 · 적응</h3><p class="gm-ch">학교</p><ul><li>입학식, 반·사물함·시간표 적응</li><li>학부모총회 · 상담 주간 (3~4월)</li><li>진단 활동·동아리 조직 (학교별)</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u2">소인수분해</a></li><li><a href="../subjects/korean-mid.html#korean-mid-u1">비유와 상징 문학</a></li><li><a href="../subjects/english-mid.html#english-mid-u1">be동사와 일반동사</a></li><li><a href="../subjects/science-mid.html#science-mid-u1">과학과 인류의 지속가능한 삶</a></li></ul><p class="gm-ch">집에서</p><ul><li>저녁 15분 "오늘 제일 기억나는 수업" 말하기</li><li>과목별 공책·파일 정리 방법 함께 정하기</li></ul><p class="gm-ch">체험 추천</p><ul><li>동네 공공도서관 청소년 코너 등록 (<a href="../trips/places.html">교과 연계 장소</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>취침 시각이 11시를 넘기지 않는지, 3월 피로는 정상이라고 말해 주기</li></ul></div>
+  <div class="card top c-root" data-month="4"><div><span class="gm-m">4월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>첫 시험 또는 자유학기 탐색</h3><p class="gm-ch">학교</p><ul><li>(자유학기가 2학기면) 1학기 중간고사 준비</li><li>(자유학기가 1학기면) 주제선택·진로 탐색 시작</li><li>과학의 달 행사</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u3">정수와 유리수</a></li><li><a href="../subjects/science-mid.html#science-mid-u2">생물의 구성과 다양성</a></li><li><a href="../subjects/korean-mid.html#korean-mid-u2">소설의 구성 요소와 갈등 문학</a></li><li><a href="../subjects/english-mid.html#english-mid-u2">시제: 진행형과 과거</a></li></ul><p class="gm-ch">집에서</p><ul><li>정수 부호 게임 5분 (단원 안 게임)</li><li>시험이 있으면: 3주 전 계획표 아이가 짜기</li></ul><p class="gm-ch">체험 추천</p><ul><li>자연사박물관·수목원에서 생물 분류 찾기 (<a href="../trips/places.html">교과 연계 장소</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>첫 시험이라면 점수보다 "계획대로 했나"로 대화</li></ul></div>
+  <div class="card top c-root" data-month="5"><div><span class="gm-m">5월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>체험의 달</h3><p class="gm-ch">학교</p><ul><li>체육대회 · 현장체험학습</li><li>수행평가가 몰리는 시기 (과목별 일정 확인)</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u4">문자와 식</a></li><li><a href="../subjects/science-mid.html#science-mid-u3">열</a></li><li><a href="../subjects/pe-secondary.html#pe-secondary-u2">육상: 기록 도전</a></li><li><a href="../subjects/social-mid.html#social-mid-u1">지리적 속성과 공간 관계</a></li></ul><p class="gm-ch">집에서</p><ul><li>수행평가 일정표를 냉장고에 붙이기</li><li>문자식 만들기: 용돈·교통비를 식으로</li></ul><p class="gm-ch">체험 추천</p><ul><li>직업 체험관 또는 과학관 (<a href="../trips/places.html">교과 연계 장소</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>주말 하루는 온전히 쉬는 날로 지켰는지</li></ul></div>
+  <div class="card top c-stem" data-month="6"><div><span class="gm-m">6월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>1학기 마무리 준비</h3><p class="gm-ch">학교</p><ul><li>(시험 있는 학교) 기말고사 3주 전</li><li>수행평가 마감 몰림</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u5">일차방정식</a></li><li><a href="../subjects/science-mid.html#science-mid-u4">물질의 상태 변화</a></li><li><a href="../subjects/korean-mid.html#korean-mid-u3">요약하며 읽기 읽기</a></li><li><a href="../subjects/english-mid.html#english-mid-u3">조동사와 미래 표현</a></li></ul><p class="gm-ch">집에서</p><ul><li>D-21 계획표 함께 점검 (현실적인가만)</li><li>오답 3분류: 몰라서 / 실수 / 시간 부족</li></ul><p class="gm-ch">체험 추천</p><ul><li>시험 기간엔 체험은 쉬고 산책·운동으로 대신</li></ul><p class="gm-ch">부모 체크</p><ul><li>잠을 줄여 공부하는 패턴이 시작되지 않았는지</li></ul></div>
+  <div class="card top c-stem" data-month="7"><div><span class="gm-m">7월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>기말 · 방학 시작</h3><p class="gm-ch">학교</p><ul><li>1학기 기말고사 (학교별)</li><li>1학기 성적표·생활기록 통지</li><li>여름방학 (7월 중하순)</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u6">좌표평면과 그래프</a></li><li><a href="../subjects/korean-mid.html#korean-mid-u4">설명 방법 읽기·쓰기</a></li><li><a href="../subjects/english-mid.html#english-mid-u4">비교: 원급·비교급·최상급</a></li></ul><p class="gm-ch">집에서</p><ul><li>성적표 함께 읽기: 칭찬 먼저, 질문은 하나만</li><li>여름방학 계획을 아이가 초안 → 가족 회의</li></ul><p class="gm-ch">체험 추천</p><ul><li>여름 가족 여행 1회 (<a href="../trips/places.html">교과 연계 장소</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>사교육 유지·조정은 성적표 받은 뒤 부부가 먼저 이야기 → 결정 로그</li></ul></div>
+  <div class="card top c-stem" data-month="8"><div><span class="gm-m">8월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>여름방학</h3><p class="gm-ch">학교</p><ul><li>개학 (8월 중하순)</li><li>(자유학기가 2학기면) 2학기 운영 안내 확인</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u3">정수와 유리수 복습</a></li><li><a href="../subjects/math-mid.html#math-mid-u5">일차방정식 복습</a></li><li><a href="../subjects/science-mid.html#science-mid-u4">상태 변화 복습</a></li></ul><p class="gm-ch">집에서</p><ul><li>1학기 오답만 다시 풀기 (새 문제집 X)</li><li>긴 책 한 권 끝까지 읽기</li></ul><p class="gm-ch">체험 추천</p><ul><li>국립과천과학관 등 과학관 청소년 프로그램 (<a href="../trips/places.html">교과 연계 장소</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>개학 1주 전 기상·취침 시각 되돌리기</li></ul></div>
+  <div class="card top c-fruit" data-month="9"><div><span class="gm-m">9월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>2학기 시작</h3><p class="gm-ch">학교</p><ul><li>2학기 시작, 상담 주간 (학교별)</li><li>(자유학기가 1학기였다면) 첫 지필고사 준비 시작</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u7">기본 도형과 작도·합동</a></li><li><a href="../subjects/korean-mid.html#korean-mid-u5">품사 문법</a></li><li><a href="../subjects/science-mid.html#science-mid-u5">힘의 작용</a></li><li><a href="../subjects/english-mid.html#english-mid-u5">문장의 형식 ① 감각동사·수여동사</a></li></ul><p class="gm-ch">집에서</p><ul><li>작도: 컴퍼스·자로 삼각형 그려 보기</li><li>품사 찾기 놀이: 노래 가사에서 명사·동사 찾기</li></ul><p class="gm-ch">체험 추천</p><ul><li>가을 체험 계획 세우기 (<a href="../trips/places.html">교과 연계 장소</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>2학기 담임 상담에서 1학기 대비 변화 묻기</li></ul></div>
+  <div class="card top c-fruit" data-month="10"><div><span class="gm-m">10월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>중간고사 · 축제</h3><p class="gm-ch">학교</p><ul><li>2학기 중간고사 (학교별)</li><li>학교 축제 · 동아리 발표</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u8">평면도형: 다각형, 원과 부채꼴</a></li><li><a href="../subjects/science-mid.html#science-mid-u6">기체의 성질</a></li><li><a href="../subjects/korean-mid.html#korean-mid-u6">어휘의 체계와 양상 문법</a></li><li><a href="../subjects/english-mid.html#english-mid-u6">접속사 기초</a></li></ul><p class="gm-ch">집에서</p><ul><li>3주 전 계획 두 번째 실험: 1학기와 무엇을 바꿀지 한 가지</li><li>시험 후 회고 10분</li></ul><p class="gm-ch">체험 추천</p><ul><li>박물관·미술관 한 곳 (<a href="../trips/places.html">교과 연계 장소</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>결과는 아이가 먼저 말하게 기다렸는지</li></ul></div>
+  <div class="card top c-fruit" data-month="11"><div><span class="gm-m">11월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>진로 · 탐구</h3><p class="gm-ch">학교</p><ul><li>진로 체험·현장체험학습 (학교별)</li><li>수행평가 (보고서·발표)</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u9">입체도형</a></li><li><a href="../subjects/korean-mid.html#korean-mid-u7">면담과 발표 듣기·말하기·매체</a></li><li><a href="../subjects/coding-mid.html#coding-mid-u7">파이썬 ① 변수·자료형·입출력</a></li><li><a href="../subjects/art-secondary.html#art-secondary-u3">주제 탐색과 발상</a></li></ul><p class="gm-ch">집에서</p><ul><li>파이썬 첫 프로그램 같이 실행해 보기</li><li>면담 연습: 가족 중 한 사람 직업 인터뷰</li></ul><p class="gm-ch">체험 추천</p><ul><li>대학 캠퍼스 산책 또는 진로 박람회 (<a href="../trips/places.html">교과 연계 장소</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>진로 이야기가 "성적"으로 흐르지 않았는지</li></ul></div>
+  <div class="card top c-branch" data-month="12"><div><span class="gm-m">12월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>기말 · 1년 마무리</h3><p class="gm-ch">학교</p><ul><li>2학기 기말고사</li><li>학기 말 성적 통지 · 방학 (12월 말~1월, 학교별)</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u10">자료의 정리와 해석</a></li><li><a href="../subjects/pe-secondary.html#pe-secondary-u4">스포츠 표현(음악 줄넘기·체조 등)</a></li><li><a href="../subjects/music-secondary.html#music-secondary-u1">발성과 변성기</a></li></ul><p class="gm-ch">집에서</p><ul><li>올해 공부법 회고: 가장 효과 있던 방법 하나</li><li>가족 연말 회의: 2학년 목표 초안</li></ul><p class="gm-ch">체험 추천</p><ul><li>연말 공연·전시 한 번</li></ul><p class="gm-ch">부모 체크</p><ul><li>학원·예체능 유지/중단은 아이 의견 먼저 듣고 결정 로그에</li></ul></div>
+  <div class="card top c-branch" data-month="1"><div><span class="gm-m">1월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>겨울방학</h3><p class="gm-ch">학교</p><ul><li>겨울방학 (학교에 따라 1월 초 종업식까지)</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u6">좌표평면 복습 (일차함수의 토대)</a></li><li><a href="../subjects/english-mid.html#english-mid-u2">시제 복습</a></li><li><a href="../subjects/math-mid.html#math-mid-u11">중2 수와 식 가볍게 미리보기</a></li></ul><p class="gm-ch">집에서</p><ul><li>첫 2주는 푹 쉬기</li><li>중1 수학 약점 단원 하나만 복습</li></ul><p class="gm-ch">체험 추천</p><ul><li>역사 여행 한 번 (<a href="../trips/history-route.html">한국사 여행 루트</a>)</li></ul><p class="gm-ch">부모 체크</p><ul><li>폰 사용 규칙을 방학용으로 다시 합의했는지</li></ul></div>
+  <div class="card top c-branch" data-month="2"><div><span class="gm-m">2월</span> <span class="tag c-accent gm-now">이번 달</span></div><h3>중2 준비</h3><p class="gm-ch">학교</p><ul><li>종업식 · 새 학년 반 배정 안내</li></ul><p class="gm-ch">이번 달 주요 단원</p><ul><li><a href="../subjects/math-mid.html#math-mid-u14">중2 일차함수 목차만 훑기</a></li><li><a href="../subjects/science-mid.html#science-mid-u7">중2 과학 첫 단원 훑기</a></li></ul><p class="gm-ch">집에서</p><ul><li>새 학년 공책·파일 정리</li><li>2학년 목표를 아이가 한 줄로 쓰기</li></ul><p class="gm-ch">체험 추천</p><ul><li>가족 산책 · 운동 루틴 되살리기</li></ul><p class="gm-ch">부모 체크</p><ul><li>분기 부부 회의: 올해 기록을 보고 2학년 전략 정하기</li></ul></div>
+</div>
+<p class="callout warning">시험·행사·방학 날짜는 학교마다 다르고, 특히 중1은 자유학기가 1학기인지 2학기인지에 따라 지필고사 시기가 완전히 달라집니다. 3월 학교 학사일정표를 받으면 이 캘린더 옆에 적어 두세요. 연간 흐름은 <a href="../workbook/annual-calendar.html">연간 캘린더</a>에도 있어요.</p>
+
+<h2 id="week">주간 루틴 예시</h2>
+<p>중1은 자습 습관을 처음 만드는 해입니다. 긴 시간보다 <strong>매일 같은 시각에 짧게</strong>. 아래는 학원 1~2개를 다니는 경우의 예시예요.</p>
+<div class="table-wrap gm-week"><table>
+<thead><tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th><th>일</th></tr></thead>
+<tbody>
+<tr><th>하교 후</th><td>간식·쉬기 30분</td><td>간식·쉬기</td><td>간식·쉬기</td><td>간식·쉬기</td><td>간식·쉬기</td><td rowspan="2">가족 활동 · 체험 · 운동</td><td rowspan="4">쉬는 날<br>(밀린 것 X)</td></tr>
+<tr><th>오후</th><td>학원 또는 운동</td><td>동아리·운동</td><td>학원 또는 운동</td><td>자유 시간</td><td>운동·친구</td></tr>
+<tr><th>저녁 자습</th><td>복습 20분 + 과제</td><td>수학 30분</td><td>복습 20분 + 과제</td><td>영어 30분</td><td>자유 (금요일은 쉼)</td><td>주간 오답 30분</td></tr>
+<tr><th>독서</th><td>20분</td><td>20분</td><td>20분</td><td>20분</td><td>자유 독서</td><td>30분</td></tr>
+<tr><th>밤</th><td colspan="6">10시 폰 거실 충전 · 10시 반~11시 취침</td><td>주간 계획 10분 (아이 주도)</td></tr>
+</tbody></table></div>
+<p class="callout tip">시험 3주 전에는 저녁 자습을 40~60분으로 늘리되, 운동과 수면 시간은 줄이지 않아요. 중학생 권장 수면은 하루 8~10시간 수준입니다.</p>
+<label class="memo-label" for="m1-routine">우리 집 루틴 (아이와 함께 적기)</label>
+<textarea class="memo" id="m1-routine" data-key="grade-m1-routine" placeholder="예) 월수: 학원 5~7시 / 저녁 8시 복습 20분 / 10시 폰 거실 / 일요일 저녁 주간 계획"></textarea>
+<p class="saved-hint"></p>
+
+<h2 id="semester">학기별 준비</h2>
+<div class="tabs" data-tabs id="m1-sem-tabs">
+  <div class="tab-list"><button>1학기</button><button>2학기</button></div>
+  <div class="tab-panel">
+<h3>담임 상담 질문 (3~4월)</h3><ol><li>수업 시간에 집중하는 모습은 어떤가요? 특히 어려워 보이는 과목이 있나요?</li><li>친구 관계에서 눈에 띄는 점이 있을까요? (쉬는 시간, 모둠 활동)</li><li>자유학기는 몇 학기에 운영되고, 주제선택은 어떻게 고르나요?</li><li>올해 지필고사는 몇 번이고, 수행평가 일정은 어디서 확인하나요?</li><li>휴대폰 사용 규칙과 학교 내 생활 규칙에서 가정이 알아야 할 것은?</li><li>아이가 힘들 때 도움을 청할 수 있는 선생님(상담·Wee클래스)은 누구인가요?</li><li>집에서 도와주면 좋을 것 한 가지를 꼽아 주신다면?</li></ol>
+<p class="callout note">상담은 "우리 아이를 어떻게 보셨나요?"로 시작해 선생님 관찰을 먼저 듣습니다. 부모가 먼저 걱정을 늘어놓으면 선생님도 그 틀로 보게 돼요.</p>
+<h3>시험 · 수행평가 대비</h3><p>자유학기가 1학기라면 1학기엔 지필고사가 없어요. 대신 <strong>수행평가(발표·보고서·실험)</strong>를 통해 "마감 관리"를 연습합니다. 자유학기가 2학기라면 4월 말~5월 초에 첫 중간고사를 봐요. 아래 3주 루틴을 한 번 함께 해 보세요.</p>
+<h3>여름방학 5주 계획 (예시)</h3>
+<div class="table-wrap"><table><thead><tr><th>주차</th><th>복습</th><th>독서·체험</th><th>쉬기</th></tr></thead><tbody>
+<tr><td>1주</td><td>없음</td><td>가족 여행</td><td>푹 쉬기, 늦잠 허용</td></tr>
+<tr><td>2주</td><td>수학 1학기 오답만 (하루 30분)</td><td>긴 책 한 권 시작</td><td>운동 1가지</td></tr>
+<tr><td>3주</td><td>영어 교과서 본문 소리 내어 읽기</td><td>과학관·박물관 한 곳</td><td>친구와 약속</td></tr>
+<tr><td>4주</td><td>국어·과학 교과서 1학기 핵심 말로 설명하기</td><td>책 마무리, 한 줄 감상</td><td>주 1일 자유</td></tr>
+<tr><td>5주</td><td>2학기 교과서 목차 훑기 (선행 X)</td><td>진로 관심 분야 영상·기사</td><td>기상·취침 되돌리기</td></tr>
+</tbody></table></div>
+  </div>
+  <div class="tab-panel">
+<h3>담임 상담 질문 (9~10월)</h3><ol><li>1학기와 비교해 달라진 점(좋아진 점 먼저)이 있을까요?</li><li>지필고사 준비나 수행평가에서 보완하면 좋을 습관은?</li><li>진로 활동에서 아이가 관심을 보인 분야가 있었나요?</li><li>교우 관계와 학급 생활에서 변화가 있나요?</li><li>2학년 진급 전에 복습하면 좋은 과목·단원은?</li><li>학교생활기록부 세부능력 특기사항은 어떤 활동이 기록되나요?</li></ol>
+<h3>시험 · 수행평가 대비</h3><p>2학기에는 대부분의 학교에서 지필고사를 봐요. 첫 시험이라면 결과를 "공부법 실험 결과"로 받아들이고, 1학기에 시험을 봤다면 <strong>한 가지만 바꿔서</strong> 다시 실험합니다.</p>
+<h3>겨울방학 6주 계획 (예시)</h3>
+<div class="table-wrap"><table><thead><tr><th>주차</th><th>복습·준비</th><th>독서·체험</th><th>쉬기</th></tr></thead><tbody>
+<tr><td>1~2주</td><td>없음</td><td>보고 싶던 책·영화</td><td>푹 쉬기, 가족 여행</td></tr>
+<tr><td>3주</td><td>중1 수학 약점 단원 1개 (정수·방정식·좌표 중)</td><td>역사 교양서 또는 박물관</td><td>운동 루틴</td></tr>
+<tr><td>4주</td><td>영어 시제·조동사 정리</td><td>과학 교양서 한 권</td><td>주 1일 자유</td></tr>
+<tr><td>5주</td><td>중2 수학 목차 훑기 + 첫 단원 개념만 가볍게</td><td>진로 관심 분야 체험 1회</td><td>친구와 약속</td></tr>
+<tr><td>6주</td><td>새 학년 공책·계획표 준비</td><td>한 줄 감상 모아 보기</td><td>기상·취침 되돌리기</td></tr>
+</tbody></table></div>
+  </div>
+</div>
+
+<h3>성취평가 성적표 읽는 법</h3>
+<div class="cards" style="--min: 220px">
+  <div class="card c-stem"><span class="tag">성취도</span><h3>A~E (체육·예술은 A~C)</h3><p>등수가 아니라 기준 점수에 도달했는지를 보여 줘요. 보통 90점 이상 A, 80점 이상 B… 식으로 나누지만 기준은 학교 학업성적관리규정을 따릅니다.</p></div>
+  <div class="card c-fruit"><span class="tag">원점수·평균</span><h3>원점수 / 과목평균(표준편차)</h3><p>평균보다 높은지, 표준편차가 작은(점수가 몰린) 과목인지 함께 봐요. 표준편차가 작은데 평균 근처라면 한두 문제 차이일 수 있어요.</p></div>
+  <div class="card c-branch"><span class="tag">수행평가</span><h3>반영 비율</h3><p>과목마다 지필과 수행의 비율이 달라요. 수행 점수가 낮으면 "마감·준비물·발표"의 문제일 가능성이 큽니다.</p></div>
+  <div class="card c-accent"><span class="tag">문장 기록</span><h3>세부능력 및 특기사항</h3><p>수업에서 보인 모습이 문장으로 남아요. 자유학기에는 성취도 대신 활동과 참여를 문장으로 기록하는 경우가 일반적입니다.</p></div>
+</div>
+<p class="callout warning">성취도 구간 기준, 자유학기 성적 기록 방식, 성적표 양식은 학교와 교육청 지침에 따라 달라요. 중학교 성적은 고입(특히 특목·자사고)에 반영될 수 있으니 반영 학기는 <a href="../system/assessment.html">평가 방식</a>과 그해 전형 요강에서 확인하세요.</p>
+
+<h3 id="study">공부법 정착: 시험 3주 전 루틴</h3>
 <div class="timeline">
   <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">D-21</div><h3>범위 확인 · 계획표</h3><p>시험 범위와 수행평가 일정을 한 장에 모으고, 아이가 직접 과목별 계획을 짭니다. 부모는 "현실적인가"만 같이 봐요.</p></div>
   <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">D-14</div><h3>교과서 · 노트 1회독</h3><p>문제집보다 교과서와 수업 노트가 먼저. 선생님이 강조한 부분 표시.</p></div>
   <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">D-7</div><h3>문제 풀이 · 오답 정리</h3><p>틀린 문제는 "왜 틀렸는지" 한 줄. 개념 몰라서 / 실수 / 시간 부족으로 분류.</p></div>
   <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">시험 후</div><h3>회고 10분</h3><p>점수보다 "다음엔 무엇을 바꿀까?" 한 가지. 결과는 아이가 먼저 말하게 기다려 줍니다.</p></div>
 </div>
+<p class="callout tip">시험 전 코치의 말: "몇 점 받을 것 같아?"보다 "이번엔 뭘 다르게 해 볼 거야?" 아이 스스로 세운 가설이 있어야 시험 후 회고가 의미 있어요.</p>
 
-<h2 id="growth">발달 특성</h2>
+<h2 id="grow">중1 성장 체크리스트</h2>
+<p>학년 말에 "이런 걸 할 수 있어요"를 아이와 함께 체크해 보세요. 모두 체크할 필요는 없어요. 비어 있는 칸이 다음 학년 복습 목록입니다.</p>
+<div class="tabs" data-tabs id="m1-grow-tabs">
+  <div class="tab-list"><button>국어</button><button>수학</button><button>영어</button><button>사회</button><button>과학</button><button>정보·예체능</button></div>
+  <div class="tab-panel">
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="m1-grow-korean">
+  <li class="task"><label><input type="checkbox"><span>시에서 비유(직유·은유)와 상징을 찾아 효과를 말할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>소설의 인물·사건·배경과 갈등을 한 문단으로 정리할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>설명문을 문단별 한 줄로 요약할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>정의·예시·비교·대조 같은 설명 방법을 구별할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>9품사를 예를 들어 구분할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>면담 질문을 열린 질문으로 준비할 수 있어요</span></label></li>
+</ul>
+  </div>
+  <div class="tab-panel">
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="m1-grow-math">
+  <li class="task"><label><input type="checkbox"><span>소인수분해로 최대공약수·최소공배수를 구할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>부호가 있는 수의 사칙계산을 실수 없이 할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>문장을 일차방정식으로 세우고 풀 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>좌표평면에 점을 찍고 정비례·반비례 그래프를 그릴 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>작도로 삼각형을 그리고 합동 조건을 말할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>부채꼴의 호의 길이와 넓이, 입체도형 겉넓이·부피를 구할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>도수분포표와 히스토그램을 읽고 설명할 수 있어요</span></label></li>
+</ul>
+  </div>
+  <div class="tab-panel">
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="m1-grow-english">
+  <li class="task"><label><input type="checkbox"><span>be동사와 일반동사를 구분해 부정문·의문문을 만들 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>현재·과거·진행 시제를 구별해 쓸 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>can, will, must 등 조동사의 의미 차이를 말할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>비교급·최상급으로 두세 대상을 비교할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>교과서 본문을 막힘없이 소리 내어 읽을 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>5문장 정도의 자기소개·일기를 쓸 수 있어요</span></label></li>
+</ul>
+  </div>
+  <div class="tab-panel">
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="m1-grow-social">
+  <li class="task"><label><input type="checkbox"><span>지도에서 위치와 방위, 축척을 읽을 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>기후에 따라 생활 모습이 다른 까닭을 설명할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>뉴스 속 사회 개념(문화, 선거 등)을 한 가지 찾아 말할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>교과서 개념어를 자기 말로 설명할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>탐구 보고서의 자료 출처를 밝힐 수 있어요</span></label></li>
+</ul>
+  </div>
+  <div class="tab-panel">
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="m1-grow-science">
+  <li class="task"><label><input type="checkbox"><span>가설을 "~하면 ~할 것이다, 왜냐하면"으로 세울 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>변인 통제가 무엇인지 예를 들어 말할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>상태 변화를 입자 모형으로 설명할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>전도·대류·복사를 생활 예로 구별할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>무게와 질량의 차이를 말할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>실험 보고서를 목적-방법-결과-결론 순서로 쓸 수 있어요</span></label></li>
+</ul>
+  </div>
+  <div class="tab-panel">
+<div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="m1-grow-arts">
+  <li class="task"><label><input type="checkbox"><span>파이썬으로 입력을 받아 출력하는 프로그램을 만들 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>개인정보와 비밀번호를 스스로 관리할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>내 체력 측정 결과를 보고 운동 목표를 하나 세울 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>작품을 보고 근거를 들어 느낌을 말할 수 있어요</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>주 1회 이상 좋아하는 예체능 활동을 유지하고 있어요</span></label></li>
+</ul>
+  </div>
+</div>
+
+<h2 id="mind">마음 · 관계</h2>
+<h3 id="growth">발달 특성</h3>
 <div class="compare">
   <div class="c-fruit" style="--cs: var(--fruit-soft)"><h4>생각</h4><ul><li>추상적 사고가 시작되는 시기</li><li>"왜 이걸 배워?"를 묻기 시작</li><li>계획 세우기는 아직 서툼</li></ul></div>
   <div class="c-stem" style="--cs: var(--stem-soft)"><h4>마음과 관계</h4><ul><li>사춘기 입구, 친구가 세상의 중심</li><li>외모·평판에 민감</li><li>부모와의 대화가 짧아짐 (정상)</li></ul></div>
 </div>
 <p><a href="../wellbeing/puberty.html">사춘기 대화법 →</a></p>
-
-<h2 id="role">부모의 역할: 이것만은 함께</h2>
+<h3>대화 대본: 이럴 땐 이렇게</h3>
+<p>대본은 외우는 게 아니라 "방향"을 잡는 용도예요. 공통 원칙: 판단보다 공감 먼저, 해결책은 아이가 먼저 말하게.</p>
+<details class="acc"><summary>첫 시험을 망쳤을 때<small>"나 수학 망했어"</small></summary><div class="acc-body">
+<div class="gm-script"><p class="k"><b>아이</b>나 수학 완전 망했어. 60점대야.</p><p class="x"><b>피할 말</b>그러니까 폰 좀 그만하라고 했잖아.</p><p class="p"><b>부모</b>속상하겠다. 준비를 많이 했는데.</p><p class="k"><b>아이</b>공부는 했는데 시간이 모자랐어.</p><p class="p"><b>부모</b>그럼 이번 시험에서 알게 된 건 "시간 배분"이네. 다음엔 뭘 한 가지 바꿔 볼래?</p><p class="k"><b>아이</b>어려운 문제는 넘기고 나중에 풀어 볼래.</p></div>
+<p>점수 평가는 아끼고 "알게 된 것"으로 바꿉니다. 성취평가제라 등수가 없다는 것도 알려 주세요.</p></div></details>
+<details class="acc"><summary>단톡방에서 상처받았을 때<small>"애들이 나만 빼고 방 만들었어"</small></summary><div class="acc-body">
+<div class="gm-script"><p class="k"><b>아이</b>애들이 나만 빼고 단톡방 새로 만들었어.</p><p class="x"><b>피할 말</b>신경 쓰지 마, 그런 애들이랑 놀지 마.</p><p class="p"><b>부모</b>그걸 알았을 때 어떤 기분이었어?</p><p class="k"><b>아이</b>그냥… 창피하고 화났어.</p><p class="p"><b>부모</b>말해 줘서 고마워. 엄마 아빠가 뭘 해 주면 좋겠어? 그냥 들어 주는 거, 아니면 같이 방법 찾는 거?</p></div>
+<p>따돌림이 반복되거나 모욕·위협이 있다면 캡처로 기록을 남기고 담임·상담 선생님과 상의합니다. 학교폭력 신고·상담은 117, 청소년 상담은 1388.</p></div></details>
+<details class="acc"><summary>휴대폰 시간 협상<small>"다른 애들은 다 밤새 해"</small></summary><div class="acc-body">
+<div class="gm-script"><p class="k"><b>아이</b>다른 애들은 다 밤에도 폰 해. 나만 거실에 두래.</p><p class="x"><b>피할 말</b>남들은 남들이고, 우리 집은 우리 집이야. 끝.</p><p class="p"><b>부모</b>친구들이랑 연락 못 하면 소외될까 봐 걱정되는구나.</p><p class="k"><b>아이</b>응, 밤에 단톡 제일 많이 해.</p><p class="p"><b>부모</b>그럼 10시까지는 자유롭게 하고, 10시에 친구들한테 "나 잔다" 하고 거실에 두는 건 어때? 2주 해 보고 다시 이야기하자.</p></div>
+<p>규칙은 "시험 기간 예외" 같은 조건까지 미리 합의해 두면 싸움이 줄어요. <a href="../wellbeing/screen.html">스크린타임 →</a></p></div></details>
+<details class="acc"><summary>"학원 끊고 싶어"<small>그만두기 이야기가 나올 때</small></summary><div class="acc-body">
+<div class="gm-script"><p class="k"><b>아이</b>수학 학원 그만 다니고 싶어.</p><p class="x"><b>피할 말</b>돈이 얼마나 드는데 그런 소리를 해.</p><p class="p"><b>부모</b>그렇게 생각한 이유가 있을 것 같은데, 들려줄래?</p><p class="k"><b>아이</b>진도가 너무 빨라서 뭔 말인지 모르겠어.</p><p class="p"><b>부모</b>그럼 "학원이 문제"라기보다 "지금 배우는 속도"가 문제일 수도 있겠다. 같이 방법을 세 가지 정도 적어 보고 주말에 정하자.</p></div>
+<p>그만두기 결정은 부부가 먼저 이야기한 뒤 아이와 함께. <a href="../workbook/decision-log.html">결정 로그</a>에 이유를 남겨 두면 나중에 흔들리지 않아요.</p></div></details>
+<h3 id="role">부모의 역할: 이것만은 함께</h3>
 <div class="cards" style="--min: 220px">
   <div class="card"><div class="card-ic" style="--cs:var(--fruit-soft);--c:var(--fruit)">🗓️</div><h3>계획은 아이가, 점검은 함께</h3><p>부모가 짜 준 계획표는 3일 갑니다. 아이가 짜고 주 1회 함께 돌아봐요.</p></div>
   <div class="card"><div class="card-ic" style="--cs:var(--stem-soft);--c:var(--stem)">🧭</div><h3>자유학기 진로 탐색</h3><p>좋아하는 것 → 관련 직업 → 체험 한 번. <a href="https://www.career.go.kr" target="_blank" rel="noopener">커리어넷</a> 검사를 같이 보고 이야기 나누기.</p></div>
   <div class="card"><div class="card-ic" style="--cs:var(--tip-soft);--c:var(--tip)">😴</div><h3>수면 먼저</h3><p>중학생 권장 수면은 하루 8~10시간 수준. 스마트폰은 침실 밖에서 충전하는 가족 규칙을.</p></div>
 </div>
-
-<h2 id="hard">흔한 어려움과 대처</h2>
+<h3 id="hard">흔한 어려움과 대처</h3>
 <details class="acc"><summary>첫 지필고사<small>시험이 처음이라 무엇부터 할지 모를 때</small></summary><div class="acc-body"><p>위의 3주 루틴을 한 번 같이 해 봅니다. 첫 시험 결과는 "공부법 실험 결과"로 받아들이고, 점수에 대한 평가는 아껴 두세요. 성취평가제라 등수가 없다는 점도 아이에게 알려 주세요.</p></div></details>
 <details class="acc"><summary>수학: 음수와 문자<small>"-3 - (-5)"에서 멈출 때</small></summary><div class="acc-body"><p>수직선 위에서 움직이는 놀이로 음수의 덧셈·뺄셈을 다시 봅니다. 문자식이 어려우면 초등 분수 연산 정확도를 먼저 점검하세요. 진도를 나가는 것보다 이 구멍을 메우는 게 빠릅니다.</p></div></details>
 <details class="acc"><summary>친구 관계와 단톡방<small>메신저 갈등, 따돌림 걱정</small></summary><div class="acc-body"><p>입학 전에 도움을 청할 곳을 미리 알려 둡니다: 담임, 상담 선생님(Wee클래스), 학교폭력 신고 117. "무슨 일이 있어도 너를 먼저 믿는다"는 말을 해 두면 아이가 말을 꺼내기 쉬워요.</p></div></details>
 <details class="acc"><summary>과목이 너무 많아 지쳐요<small>학기 초 피로, 짜증</small></summary><div class="acc-body"><p>3~4월은 적응기. 학원·학습지를 새로 늘리지 말고 수면과 운동을 지켜 주세요. 피로가 한 달 넘게 가면 <a href="../wellbeing/burnout.html">번아웃 신호</a>를 확인합니다.</p></div></details>
+<div class="callout danger" data-label="도움을 청할 때">2주 넘게 잠을 못 자거나 너무 많이 자고, 좋아하던 것까지 놓고, 학교 가기를 거부하거나 "사라지고 싶다"는 말을 한다면 혼자 해결하려 하지 마세요. 담임·학교 상담(Wee클래스), 청소년상담 1388, 가까운 정신건강의학과와 상의합니다. 긴급하면 112·119. <a href="../wellbeing/burnout.html">번아웃 신호와 대처</a> · <a href="../wellbeing/puberty.html">사춘기 대화법</a> · <a href="../wellbeing/study-emotion.html">공부 정서 지키기</a></div>
+
+<h2 id="reading">독서 가이드</h2>
+<div class="stats">
+  <div class="stat" style="--c:var(--fruit)"><b>하루 20~30분</b><span>또는 주 1~2권</span></div>
+  <div class="stat" style="--c:var(--stem)"><b>문학 : 비문학</b><span>반반 섞기</span></div>
+  <div class="stat" style="--c:var(--branch)"><b>한 줄 감상</b><span>다 읽으면 한 줄</span></div>
+</div>
+<div class="cards" style="--min: 220px">
+  <div class="card c-root"><h3>수준</h3><p>청소년 소설, 교양 입문서가 중심. 초등 고학년 책을 여전히 좋아해도 괜찮아요. 교과서 지문을 막힘없이 읽는지가 기준입니다.</p></div>
+  <div class="card c-stem"><h3>섞어 읽을 갈래</h3><p>청소년 소설 · 과학 교양 · 역사 이야기 · 인물 이야기(평전) · 신문 기사와 칼럼 · 고전(홍길동전, 셰익스피어 희곡, 쥘 베른 소설 같은 오래된 명작).</p></div>
+  <div class="card c-fruit"><h3>교과 연결</h3><p>과학(생물 다양성·열), 사회(세계 기후와 문화), 국어(소설의 갈등) 단원과 이어지는 책을 한 권씩 골라 보세요. 도서관 사서 선생님께 "중1 교과 연계" 목록을 물어보면 좋아요.</p></div>
+</div>
+<h3>독서 대화 질문 5개</h3>
+<ol>
+  <li>이 책을 한 문장으로 소개한다면?</li>
+  <li>주인공(또는 글쓴이)의 선택에 동의해? 너라면 어떻게 했을까?</li>
+  <li>새로 알게 된 사실 하나, 아직 궁금한 것 하나는?</li>
+  <li>이 책이 요즘 뉴스나 네 생활과 닮은 점이 있어?</li>
+  <li>친구에게 추천한다면 누구에게, 왜?</li>
+</ol>
+<p>부모도 같은 시간에 책을 읽는 게 가장 강력한 코칭이에요. <a href="../wellbeing/reading.html">독서 습관</a> · <a href="../subjects/korean.html">국어·독서</a></p>
 
 <h2 id="extras">체험 · 교재 · 예체능</h2>
 <div class="tabs" data-tabs>
@@ -236,3 +680,13 @@ summary: 자유학기 · 중학 적응 · 공부법 정착
 <p class="saved-hint"></p>
 
 </div>
+
+<script>
+(function () {
+  var m = new Date().getMonth() + 1;
+  var cards = document.querySelectorAll('#m1-cal [data-month]');
+  for (var i = 0; i < cards.length; i++) {
+    if (+cards[i].getAttribute('data-month') === m) { cards[i].classList.add('is-now'); }
+  }
+})();
+</script>

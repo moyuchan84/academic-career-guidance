@@ -6,6 +6,24 @@ stage: stem
 kid: true
 summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
 ---
+<style>
+.e4p .e4u-list { list-style: none; padding: 0; margin: 8px 0 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.e4p .e4u-list > li { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--card); margin: 0; }
+.e4p .e4u-h { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 4px; }
+.e4p .e4u-h a { font-weight: 800; margin-right: auto; }
+.e4p .e4u-list p { margin: 3px 0; font-size: 13.5px; line-height: 1.55; }
+.e4p .e4u-list p b { display: inline-block; min-width: 42px; font-size: 12px; color: var(--ink-2); }
+.e4p .e4u-goal { color: var(--muted); }
+.e4p .e4u-n { font-size: 13px; color: var(--muted); font-weight: 600; }
+.e4p .e4-cal .card { gap: 4px; }
+.e4p .e4-cal .cal-h { margin: 8px 0 2px; font-size: 12px; font-weight: 800; color: var(--ink-2); }
+.e4p .e4-cal ul { margin: 0; padding-left: 18px; font-size: 13.5px; }
+.e4p .e4-cal .cal-now { display: none; }
+.e4p .e4-cal .card.is-now { border: 2px solid var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.e4p .e4-cal .card.is-now .cal-now { display: inline-flex; }
+.e4p .e4-talk { border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; margin: 10px 0; background: var(--card); }
+.e4p .e4-talk h4 { margin: 2px 0 6px; }
+</style>
 <header class="page-hero">
   <p class="kicker">2단계 줄기 · 만 9~10세 · 첫째 2028년 · 둘째 2029년</p>
   <h1>초등 4학년</h1>
@@ -28,6 +46,68 @@ summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
     </div>
   </div>
 
+  <h2 id="kid-explore">올해 탐험할 것들</h2>
+  <p>과목 이름을 눌러 봐. 올해 어떤 모험이 기다리고 있을까?</p>
+  <div class="tabs" data-tabs>
+    <div class="tab-list"><button>🔢 수학</button><button>🔬 과학</button><button>📖 국어</button><button>🗺️ 사회</button><button>🔤 영어</button><button>🎨 예체능</button><button>💻 정보</button></div>
+    <div class="tab-panel">
+      <div class="cards" style="--min: 170px">
+        <div class="card c-root"><div class="card-ic">🌌</div><h3>억, 조, 경!</h3><p>별의 수, 우리나라 사람 수처럼 어마어마한 수를 읽어 봐.</p></div>
+        <div class="card c-stem"><div class="card-ic">📐</div><h3>각도 탐정</h3><p>시계 바늘, 피자 조각, 미끄럼틀은 몇 도일까?</p></div>
+        <div class="card c-branch"><div class="card-ic">🍕</div><h3>피자 분수</h3><p>2/8 조각에 3/8 조각을 더하면? 그림으로 척척!</p></div>
+        <div class="card c-fruit"><div class="card-ic">📈</div><h3>꺾은선 그래프</h3><p>내 키, 강낭콩 키가 자라는 걸 그래프로 그려 봐.</p></div>
+      </div>
+    </div>
+    <div class="tab-panel">
+      <div class="cards" style="--min: 170px">
+        <div class="card c-root"><div class="card-ic">🦴</div><h3>화석 찾기</h3><p>돌 속에 숨은 조개, 나뭇잎, 발자국을 찾아봐.</p></div>
+        <div class="card c-stem"><div class="card-ic">🌋</div><h3>화산과 지진</h3><p>땅속 마그마가 밖으로 나오면? 지진이 나면 어떻게 대피할까?</p></div>
+        <div class="card c-branch"><div class="card-ic">🌱</div><h3>강낭콩 키우기</h3><p>씨에서 싹, 꽃, 열매까지 내가 관찰 일기를 써!</p></div>
+        <div class="card c-fruit"><div class="card-ic">🧊</div><h3>물의 변신</h3><p>얼음 → 물 → 수증기. 구름은 사실 뭘까?</p></div>
+        <div class="card c-accent"><div class="card-ic">🪞</div><h3>그림자와 거울</h3><p>손전등으로 그림자 연극을 만들어 봐.</p></div>
+      </div>
+    </div>
+    <div class="tab-panel">
+      <div class="cards" style="--min: 170px">
+        <div class="card c-root"><div class="card-ic">🔎</div><h3>사실? 의견?</h3><p>광고 속 말은 사실일까, 생각일까? 탐정처럼 가려내기.</p></div>
+        <div class="card c-stem"><div class="card-ic">💬</div><h3>내 의견 + 까닭 두 개</h3><p>"급식에 떡볶이를!" 친구들을 설득해 봐.</p></div>
+        <div class="card c-branch"><div class="card-ic">🧑‍🚀</div><h3>인물 이야기</h3><p>멋진 사람도 실수하고 힘들었대. 어떻게 이겨 냈을까?</p></div>
+        <div class="card c-fruit"><div class="card-ic">🎬</div><h3>책과 만화 영화</h3><p>같은 이야기가 책과 영상에서 어떻게 다를까?</p></div>
+      </div>
+    </div>
+    <div class="tab-panel">
+      <div class="cards" style="--min: 170px">
+        <div class="card c-root"><div class="card-ic">🧭</div><h3>진짜 지도 읽기</h3><p>방위표, 기호, 등고선으로 산이 얼마나 가파른지 알아내기.</p></div>
+        <div class="card c-stem"><div class="card-ic">🏯</div><h3>우리 지역 보물</h3><p>우리 시·도에 있는 문화유산과 옛날 인물 찾기.</p></div>
+        <div class="card c-branch"><div class="card-ic">🌾</div><h3>촌락과 도시</h3><p>농촌·어촌·산지촌 사람들은 무슨 일을 할까?</p></div>
+        <div class="card c-fruit"><div class="card-ic">🛒</div><h3>시장 놀이</h3><p>갖고 싶은 건 많은데 용돈은 한정! 뭘 고를까?</p></div>
+      </div>
+    </div>
+    <div class="tab-panel">
+      <div class="cards" style="--min: 170px">
+        <div class="card c-root"><div class="card-ic">📍</div><h3>Where is my cap?</h3><p>물건 숨기고 영어로 찾기 놀이.</p></div>
+        <div class="card c-stem"><div class="card-ic">⏰</div><h3>What time is it?</h3><p>내 하루 일과를 영어 시계로.</p></div>
+        <div class="card c-branch"><div class="card-ic">☀️</div><h3>날씨 리포터</h3><p>It's sunny! 오늘의 날씨 방송을 해 봐.</p></div>
+        <div class="card c-fruit"><div class="card-ic">🏃</div><h3>I'm reading!</h3><p>가족이 지금 뭐 하는지 영어로 말해 봐.</p></div>
+      </div>
+    </div>
+    <div class="tab-panel">
+      <div class="cards" style="--min: 170px">
+        <div class="card c-root"><div class="card-ic">🎵</div><h3>리코더 한 옥타브</h3><p>낮은 도부터 높은 레까지 불어 보자.</p></div>
+        <div class="card c-stem"><div class="card-ic">🥁</div><h3>굿거리장단</h3><p>덩 기덕 쿵 더러러러 쿵 기덕 쿵 더러러러!</p></div>
+        <div class="card c-branch"><div class="card-ic">🖨️</div><h3>판화 찍기</h3><p>같은 그림을 여러 장! 그런데 좌우가 바뀐다고?</p></div>
+        <div class="card c-fruit"><div class="card-ic">🏊</div><h3>생존수영</h3><p>물에 누워 둥둥 뜨기, 구조 요청하는 법.</p></div>
+      </div>
+    </div>
+    <div class="tab-panel">
+      <div class="cards" style="--min: 170px">
+        <div class="card c-root"><div class="card-ic">🧩</div><h3>블록 코딩</h3><p>블록을 끼워서 캐릭터를 움직여 봐.</p></div>
+        <div class="card c-stem"><div class="card-ic">🔀</div><h3>줄 세우기 대결</h3><p>컴퓨터는 카드를 어떻게 정리할까?</p></div>
+        <div class="card c-branch"><div class="card-ic">🛡️</div><h3>인터넷 예절</h3><p>화면 너머에도 사람이 있어요.</p></div>
+      </div>
+    </div>
+  </div>
+
   <h2 id="kid-stickers">4학년 탐험 스티커</h2>
   <p>해낸 것을 눌러서 스티커를 붙여 봐! <span class="stamp-count" data-stamp-count="e4"></span></p>
   <div class="stamps" data-key="e4">
@@ -40,6 +120,10 @@ summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
     <button class="stamp c-tip" data-id="opinion"><span class="stamp-ic">💬</span>의견 글<small>까닭 들어 쓰기</small></button>
     <button class="stamp c-warn" data-id="plant"><span class="stamp-ic">🌱</span>식물 키우기<small>한살이 관찰</small></button>
   </div>
+
+  <h2 id="kid-games">4학년 미니 게임</h2>
+  <div class="game-box"><div class="game-head">분수 칠하기 <small>5분 · 계산한 답만큼 칠해 봐!</small></div><div class="game" data-game="fraction" data-id="e4-kid-fraction"><script type="application/json" class="game-data">{"title":"답만큼 칠하기","help":"차례로: 3/8 + 7/8 → 5/7 − 2/7 → 2와 1/3 + 1과 1/3 → 3과 1/5 − 1과 3/5. 계산한 답을 가분수로 보고 칠해요.","mode":"shade","tasks":[{"n":10,"d":8},{"n":3,"d":7},{"n":11,"d":3},{"n":8,"d":5}]}</script></div></div>
+  <div class="game-box"><div class="game-head">물의 변신 분류 <small>5분 · 증발일까, 응결일까?</small></div><div class="game" data-game="sort" data-id="e4-kid-water-sort"><script type="application/json" class="game-data">{"title":"증발일까, 응결일까?","buckets":["증발 (물 → 수증기)","응결 (수증기 → 물)"],"items":[{"t":"젖은 빨래가 마른다","b":0},{"t":"어항 물이 조금씩 줄어든다","b":0},{"t":"오징어를 햇볕에 말린다","b":0},{"t":"염전에서 바닷물이 줄어 소금이 남는다","b":0},{"t":"차가운 컵 겉에 물방울이 맺힌다","b":1,"why":"컵 속 물이 새어 나온 게 아니라, 공기 속 수증기가 차가운 컵에 닿아 물이 된 거예요."},{"t":"욕실 거울이 뿌옇게 흐려진다","b":1},{"t":"아침 풀잎에 이슬이 맺힌다","b":1},{"t":"추운 날 따뜻한 방에 들어오면 안경이 뿌예진다","b":1}]}</script></div></div>
 
   <h2 id="kid-quiz">줄기 퀴즈</h2>
   <div class="quiz" data-answer="2">
@@ -81,12 +165,20 @@ summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
 </div>
 
 <!-- ================= PARENT ================= -->
-<div class="parent-only">
+<div class="parent-only e4p">
 
+<h2 id="glance">4학년 한눈에</h2>
 <div class="cards" style="--min: 200px">
   <div class="card top c-stem"><span class="tag">키워드 1</span><h3>구멍 점검</h3><p>나눗셈·분수·각도. 여기서 생긴 구멍이 5학년 약분·통분에서 한꺼번에 드러납니다.</p></div>
   <div class="card top c-branch"><span class="tag">키워드 2</span><h3>격차와 자존감</h3><p>성취 차이가 자존감과 연결되기 시작. "못하는 과목"이 생기지 않게 정서를 지키세요.</p></div>
   <div class="card top c-root"><span class="tag">키워드 3</span><h3>자기주도 연습</h3><p>주간 계획표를 아이가 짜고, 주말에 함께 돌아보기. 실패해도 괜찮은 연습 기간.</p></div>
+  <div class="card top c-warn"><span class="tag">키워드 4</span><h3>스마트폰 첫 규칙</h3><p>휴대폰·단톡방이 본격적으로 시작되는 시기. 사 주든 안 사 주든 규칙을 먼저 합의합니다.</p></div>
+</div>
+<div class="stats">
+  <div class="stat" style="--c:var(--stem)"><b>70</b><span>올해 단원 가이드 (9과목)</span></div>
+  <div class="stat" style="--c:var(--accent)"><b>2</b><span>꼭 잡을 수학 구멍 (나눗셈·분수)</span></div>
+  <div class="stat" style="--c:var(--root)"><b>10분</b><span>일요일 저녁 주간 돌아보기</span></div>
+  <div class="stat" style="--c:var(--branch)"><b>1일</b><span>일주일에 쉬는 날</span></div>
 </div>
 
 <h2 id="year-flow">4학년의 1년 흐름</h2>
@@ -103,6 +195,165 @@ summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
     <text x="30" y="150" class="dg-t sm muted">단원 순서는 교과서마다 다를 수 있습니다. 학기 초 목차로 확인하세요.</text>
   </svg>
 </figure>
+
+<h2 id="learn">이번 학년 과목별 단원 한눈에</h2>
+<p>4학년 단원 70개를 과목별로 모았습니다. 제목을 누르면 해당 단원 가이드가 바로 열려요(핵심 개념 · 집에서 하는 활동 · 게임 · 자세한 지도안). 아이 교과서 목차를 옆에 펴 놓고 짝을 맞춰 보세요.</p>
+<p class="callout tip">"의견 + 까닭 2개" 쓰기(국어)는 사회·과학 서술형의 기본 틀이 됩니다. 식탁 대화에서 연습하기 좋아요. 도덕(정직·공정·사이버 예절)은 별도 가이드가 없어 정보 탭의 사이버 예절·저작권 단원과 함께 보세요.</p>
+<div class="tabs e4-units" data-tabs>
+  <div class="tab-list"><button>국어</button><button>수학</button><button>영어</button><button>사회</button><button>과학</button><button>정보</button><button>음악</button><button>미술</button><button>체육</button></div>
+  <div class="tab-panel">
+    <p class="callout note">국어는 대표 단원 기준입니다. 실제 교과서 단원명·순서는 출판사마다 달라요.</p>
+    <h3>1학기 <small class="e4u-n">5개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u36">사실과 의견 읽기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">확인할 수 있는 사실과 생각인 의견 구별</p><p><b>핵심</b> 사실 = 실제로 있었던 일, 확인할 수 있음</p><p><b>걸림돌</b> ‘좋다·나쁘다’가 없으면 다 사실로 봄 → “모두가 확인할 수 있나?”</p></li>
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u37">의견을 나타내는 글 쓰기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">의견 + 알맞은 근거 두 가지로 글쓰기</p><p><b>핵심</b> 의견 글 = 문제 상황 → 의견 → 근거 → 정리</p><p><b>걸림돌</b> 근거가 “그냥 좋아서” → 다른 사람도 고개 끄덕일 까닭인지 확인</p></li>
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u38">낱말의 뜻 짐작 · 맞춤법 문법</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">문맥으로 뜻 짐작, 헷갈리는 말 바로 쓰기</p><p><b>핵심</b> 뜻이 여러 개인 낱말(다의어): 손(몸의 손 / 일손)</p><p><b>걸림돌</b> 맞히다/맞추다 → 정답은 ‘맞히다’, 조각은 ‘맞추다’</p></li>
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u39">회의하기 듣기·말하기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">회의 절차와 역할 알고 참여</p><p><b>핵심</b> 회의 절차: 개회 → 주제 선정 → 주제 토의 → 표결 → 결과 발표 → 폐회</p><p><b>걸림돌</b> 목소리 큰 사람 의견으로 결정 → 표결 절차</p></li>
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u40">이야기 속 세계 · 만화 영화 문학·매체</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">글 이야기와 영상 이야기의 표현 비교</p><p><b>핵심</b> 이야기 속 세계 = 인물·사건·배경이 만드는 상상의 세계</p><p><b>걸림돌</b> 영상만 보고 책은 건너뜀 → 책 먼저, 영상 나중</p></li>
+    </ul>
+    <h3>2학기 <small class="e4u-n">5개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u41">글을 간추려요 읽기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">문단별 중심 문장으로 전체 간추리기</p><p><b>핵심</b> 간추리기 = 중요한 내용만 짧게 정리</p><p><b>걸림돌</b> 예시까지 다 옮김 → “예는 빼도 뜻이 통해?”</p></li>
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u42">문장의 짜임 문법</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">‘누가/무엇이 + 어찌하다/어떠하다/무엇이다’</p><p><b>핵심</b> 무엇이 + 어찌하다/어떠하다/무엇이다</p><p><b>걸림돌</b> ‘누가’ 빠진 문장 → “누가 했지?” 묻기</p></li>
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u43">독서 감상문 쓰기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">책 내용 + 생각·느낌을 짜임 있게</p><p><b>핵심</b> 감상문 요소: 읽게 된 까닭 · 인상 깊은 내용 · 생각이나 느낌</p><p><b>걸림돌</b> 줄거리만 길게 → “네 생각은 어디 있어?”</p></li>
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u44">인물 이야기 읽기 문학·읽기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">인물이 한 일과 가치 파악</p><p><b>핵심</b> 전기문(인물 이야기): 실제 인물의 삶을 쓴 글</p><p><b>걸림돌</b> 인물을 완벽한 영웅으로만 봄 → 어려움·실수도 살피기</p></li>
+      <li><div class="e4u-h"><a href="../subjects/korean-elem.html#korean-elem-u45">찾아보고 정리하기 매체·읽기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">검색어 정하기, 믿을 만한 정보 고르기</p><p><b>핵심</b> 검색어는 핵심 낱말 2~3개</p><p><b>걸림돌</b> 첫 결과만 믿음 → 최소 두 곳 확인</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/korean-elem.html">국어·독서 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <h3>1학기 <small class="e4u-n">6개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-1-1">1. 큰 수</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">만·억·조를 알고 네 자리씩 끊어 읽고 비교한다</p><p><b>핵심</b> 10000(만) = 1000의 10배 = 9999보다 1 큰 수</p><p><b>걸림돌</b> 0이 많은 수에서 자릿수 빠뜨림 → 네 자리씩 끊기</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-1-2">2. 각도</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">각도기로 각을 재고 그리며, 삼각형·사각형의 각의 합을 안다</p><p><b>핵심</b> 각의 크기 단위 1°, 직각 = 90°</p><p><b>걸림돌</b> 각도기의 안쪽·바깥쪽 눈금 혼동(60°를 120°로 읽음) → 예각인지 둔각인지 먼저 어림</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-1-3">3. 곱셈과 나눗셈</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">(세 자리)×(두 자리), (세 자리)÷(두 자리)와 몫 어림</p><p><b>핵심</b> (세 자리)×(두 자리) = 자리별 곱의 합</p><p><b>걸림돌</b> 몫 어림 실패로 몇 번이고 지우고 다시 → 몫 어림 연습을 따로 짧게</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-1-4">4. 평면도형의 이동</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">밀기·뒤집기·돌리기를 하고 결과를 예상한다</p><p><b>핵심</b> 밀기: 모양 그대로 위치만</p><p><b>걸림돌</b> 뒤집기와 돌리기 혼동 → 투명 종이로 직접</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-1-5">5. 막대그래프</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">막대그래프를 읽고 그리며 눈금 한 칸의 크기를 정한다</p><p><b>핵심</b> 가로·세로 축, 눈금, 제목</p><p><b>걸림돌</b> 눈금 한 칸을 1로 착각하고 읽음 → 첫 칸 숫자부터 확인</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-1-6">6. 규칙 찾기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">수 배열과 계산식에서 규칙을 찾아 식으로 나타낸다</p><p><b>핵심</b> 수 배열표에서 가로·세로·대각선 규칙</p><p><b>걸림돌</b> 한두 개만 보고 성급하게 규칙을 정함 → 최소 3개 확인</p></li>
+    </ul>
+    <h3>2학기 <small class="e4u-n">6개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-2-1">1. 분수의 덧셈과 뺄셈</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">분모가 같은 분수의 덧셈·뺄셈(대분수 포함)</p><p><b>핵심</b> 분모가 같으면 단위분수의 개수끼리 더하고 뺀다: 2/5 + 1/5 = (1/5이 3개) = 3/5</p><p><b>걸림돌</b> 분모끼리도 더함(2/5 + 1/5 = 3/10) → 종이띠로 크기 확인</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-2-2">2. 삼각형</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">변의 길이(이등변·정삼각형)와 각의 크기(예각·직각·둔각)로 분류한다</p><p><b>핵심</b> 이등변삼각형(두 변 같음), 정삼각형(세 변 같음, 세 각 60°)</p><p><b>걸림돌</b> 둔각이 하나라도 있으면 둔각삼각형인데, 예각이 둘이라 예각삼각형이라 해요 → 예각삼각형은 세 각 모두 예각</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-2-3">3. 소수의 덧셈과 뺄셈</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">소수 두·세 자리를 알고 소수점을 맞춰 더하고 뺀다</p><p><b>핵심</b> 0.01 = 1/100, 0.001 = 1/1000. 소수점을 맞춰 계산</p><p><b>걸림돌</b> 소수점이 아니라 끝자리를 맞춰 계산(1.5 + 0.25 = 0.40) → 자릿값 표, 빈자리 0 채우기</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-2-4">4. 사각형</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">수직·평행, 사다리꼴·평행사변형·마름모의 성질과 포함 관계</p><p><b>핵심</b> 수직(직각으로 만남)·평행(늘여도 만나지 않음), 사각형의 포함 관계</p><p><b>걸림돌</b> 정사각형은 마름모가 아니라고 해요 → 모양 인상이 아닌 조건 검사로</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-2-5">5. 꺾은선그래프</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">변화하는 자료를 꺾은선그래프로 나타내고 해석한다</p><p><b>핵심</b> 시간에 따른 변화를 나타낼 때 꺾은선그래프</p><p><b>걸림돌</b> 막대그래프와 꺾은선그래프를 아무 때나 씀 → “비교야, 변화야?”</p></li>
+      <li><div class="e4u-h"><a href="../subjects/math-elem.html#math-elem-e4-2-6">6. 다각형</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">다각형·정다각형·대각선을 알고 모양 조각으로 채운다</p><p><b>핵심</b> 다각형: 선분으로만 둘러싸인 도형(원은 아님)</p><p><b>걸림돌</b> 변의 길이만 같으면 정다각형이라 함 → 마름모 반례</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/math-elem.html">수학 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <p class="callout note">영어는 주 2시간. 검정 교과서마다 표현 순서가 달라 목차로 짝을 맞춰 보세요.</p>
+    <h3>1학기 <small class="e4u-n">3개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/english-elem.html#english-elem-u16">위치 묻기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">Where is ~?로 물건 위치 묻고 답하기</p><p><b>핵심</b> Where is my cap? – It’s on the desk.</p><p><b>걸림돌</b> in/on 혼동(in the box vs on the box)</p></li>
+      <li><div class="e4u-h"><a href="../subjects/english-elem.html#english-elem-u17">시간</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">시각을 묻고 일과와 연결하기</p><p><b>핵심</b> What time is it? – It’s seven (o’clock).</p><p><b>걸림돌</b> “It’s 7 hours.” → o’clock</p></li>
+      <li><div class="e4u-h"><a href="../subjects/english-elem.html#english-elem-u18">날씨</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">날씨를 묻고 알맞은 옷차림 말하기</p><p><b>핵심</b> How’s the weather? – It’s sunny / rainy / cloudy / snowy / windy.</p><p><b>걸림돌</b> “It’s sun.” → It’s sunny.</p></li>
+    </ul>
+    <h3>2학기 <small class="e4u-n">4개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/english-elem.html#english-elem-u19">가족·사람 소개</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">Who is he/she?로 사람을 소개하고 묘사하기</p><p><b>핵심</b> Who is he? – He’s my uncle.</p><p><b>걸림돌</b> he/she 혼동 → 사진에 파랑/빨강 스티커로 구분 연습</p></li>
+      <li><div class="e4u-h"><a href="../subjects/english-elem.html#english-elem-u20">쇼핑·가격</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">원하는 것을 말하고 가격 묻기</p><p><b>핵심</b> Can I help you? – I want this cap.</p><p><b>걸림돌</b> How much / How many 혼동</p></li>
+      <li><div class="e4u-h"><a href="../subjects/english-elem.html#english-elem-u21">지금 하고 있는 일</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">What are you doing?으로 하는 일 말하기(현재진행)</p><p><b>핵심</b> What are you doing? – I’m reading a book.</p><p><b>걸림돌</b> “I reading.” → be동사 필수: I’m reading.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/english-elem.html#english-elem-u22">읽기·쓰기 트랙 ② 단모음·이중자음·사이트워드</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">짧은 단어를 소리로 읽고 자주 나오는 단어는 통째로</p><p><b>핵심</b> 단모음 5개: a(cat) e(bed) i(pig) o(hot) u(bus)</p><p><b>걸림돌</b> th를 ㄷ/ㅆ로 → 혀끝을 이 사이에 살짝</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/english-elem.html">영어 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <h3>1학기 <small class="e4u-n">3개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/social-elem.html#social-elem-u13">지역의 위치와 특성</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">지도의 요소를 알고 우리 지역(시·도)의 위치와 특성을 읽어요</p><p><b>핵심</b> 지도의 기본 요소: 방위표, 기호와 범례, 축척, 등고선(땅의 높낮이)</p><p><b>걸림돌</b> 등고선 간격이 좁을수록 경사가 급하다는 걸 반대로 외워요 → 손 모형으로 확인</p></li>
+      <li><div class="e4u-h"><a href="../subjects/social-elem.html#social-elem-u14">우리 지역의 역사</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">지역의 문화유산과 역사 인물을 조사하고 소개해요</p><p><b>핵심</b> 문화유산의 종류: 유형(건축물, 탑, 책)과 무형(전통 기술, 예술, 놀이)</p><p><b>걸림돌</b> 문화유산 = 오래된 건물로만 생각해요 → 판소리·탈춤 같은 무형 유산, 기록물도</p></li>
+      <li><div class="e4u-h"><a href="../subjects/social-elem.html#social-elem-u15">지역의 공공 기관과 주민 참여</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">공공 기관의 역할과 민주적인 문제 해결 방법을 알아요</p><p><b>핵심</b> 공공 기관은 주민 전체의 이익을 위해 세운 곳(시·군·구청, 소방서, 보건소…)</p><p><b>걸림돌</b> 다수결 = 무조건 옳다고 오해해요 → 충분한 대화 뒤 마지막 방법, 소수 의견 존중</p></li>
+    </ul>
+    <h3>2학기 <small class="e4u-n">3개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/social-elem.html#social-elem-u16">촌락과 도시의 생활 모습</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">촌락과 도시의 특징, 문제, 서로 돕는 교류를 알아요</p><p><b>핵심</b> 촌락의 종류: 농촌·어촌·산지촌과 하는 일</p><p><b>걸림돌</b> 촌락 = 가난하고 불편한 곳이라는 편견 → 각각의 장점과 문제, 서로 필요한 관계</p></li>
+      <li><div class="e4u-h"><a href="../subjects/social-elem.html#social-elem-u17">필요한 것의 생산과 교환</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">희소성과 선택, 생산·소비, 지역 간 경제 교류를 이해해요</p><p><b>핵심</b> 원하는 것은 많고 자원은 한정 → 선택이 필요(희소성)</p><p><b>걸림돌</b> 희소하다 = 수가 적다로만 이해해요 → 원하는 양에 비해 부족한 것</p></li>
+      <li><div class="e4u-h"><a href="../subjects/social-elem.html#social-elem-u18">사회 변화와 문화의 다양성</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">달라지는 사회 모습과 다양한 문화를 존중하는 태도를 알아요</p><p><b>핵심</b> 사회 변화: 저출생·고령화, 정보화, 세계화와 생활 모습의 변화</p><p><b>걸림돌</b> 다문화 = 외국인으로 좁게 보거나 동정으로 봐요 → 편견(생각)과 차별(행동) 구별</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/social-elem.html">사회 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <h3>1학기 <small class="e4u-n">4개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u16">지층과 화석</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">층층이 쌓인 지층, 퇴적암, 화석이 알려 주는 옛날</p><p><b>핵심</b> 자갈·모래·진흙이 층층이 쌓여 굳은 것이 지층, 그 속에 남은 옛 생물의 흔적이 화석</p><p><b>걸림돌</b> 화석 = 공룡 뼈 → 발자국·나뭇잎 자국·조개도 화석이에요.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u17">식물의 한살이</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">씨 → 싹 → 자람 → 꽃 → 열매, 싹트는 조건</p><p><b>핵심</b> 한살이: 씨가 싹 트고 자라서 꽃이 피고 열매(씨)를 맺는 과정.</p><p><b>걸림돌</b> 싹 트려면 햇빛·흙이 꼭 필요하다고 생각해요 → 젖은 솜, 어둠 속에서도 싹이 터요</p></li>
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u18">물체의 무게</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">무게는 지구가 끌어당기는 힘, 저울과 수평 잡기</p><p><b>핵심</b> 무게는 지구가 물체를 끌어당기는 힘의 크기</p><p><b>걸림돌</b> 무거운 물체가 더 빨리 떨어진다고 생각해요 → 공기 저항이 비슷하면 거의 동시에</p></li>
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u19">혼합물의 분리</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">섞여도 성질이 남아 있다, 성질을 이용해 나누기</p><p><b>핵심</b> 섞여 있어도 각 물질의 성질은 그대로 → 성질을 이용해 분리</p><p><b>걸림돌</b> 소금이 물에 녹으면 없어진다고 생각해요 → 물을 증발시키면 다시 나와요</p></li>
+    </ul>
+    <h3>2학기 <small class="e4u-n">5개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u20">식물의 생활</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">사는 곳에 따라 다른 식물의 생김새</p><p><b>핵심</b> 사는 곳(들·산·물·사막·극지)에 따라 생김새가 달라요</p><p><b>걸림돌</b> 선인장 가시는 줄기가 변한 것 → 잎이 변한 거예요(줄기는 초록 몸통).</p></li>
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u21">물의 상태 변화</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">얼음 ↔ 물 ↔ 수증기, 증발·끓음·응결</p><p><b>핵심</b> 물은 얼음(고체), 물(액체), 수증기(기체)로 상태가 변해요.</p><p><b>걸림돌</b> 컵 겉 물방울이 컵 속 물이 스며 나온 거라 생각해요 → 공기 속 수증기의 응결</p></li>
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u22">그림자와 거울</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">빛의 직진과 그림자, 거울의 반사</p><p><b>핵심</b> 빛은 곧게 나아가요(직진). 빛이 물체에 막히면 뒤쪽에 그림자가 생겨요.</p><p><b>걸림돌</b> 그림자는 물체의 색을 띤다 → 빨간 공도 그림자는 검어요(빛이 없는 곳이니까).</p></li>
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u23">화산과 지진</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">화산 활동과 화성암, 지진과 대피</p><p><b>핵심</b> 화산: 땅속 깊은 곳의 마그마가 지표로 나와 생긴 지형.</p><p><b>걸림돌</b> 마그마 = 용암 → 땅속에 있으면 마그마, 땅 위로 흘러나오면 용암.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/science-elem.html#science-elem-u24">물의 여행</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">돌고 도는 물(물의 순환)과 물 부족</p><p><b>핵심</b> 증발 → 응결(구름) → 비·눈 → 강·바다·지하수로 돌고 도는 물</p><p><b>걸림돌</b> 구름이 수증기라고 생각해요 → 아주 작은 물방울·얼음 알갱이예요</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/science-elem.html">과학 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <p class="callout note">초등 정보 교육은 실과 시간·창의적 체험활동 등에 흩어져 있어 학교마다 시기가 다릅니다.</p>
+    <h3>1학기 <small class="e4u-n">3개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/coding-elem.html#coding-elem-u16">블록 코딩 첫 만남</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">로봇 놀이가 화면 속 블록으로</p><p><b>핵심</b> 명령 블록을 끼워 맞춰 프로그램을 만들어요. 오타 걱정 없이 생각에 집중</p><p><b>걸림돌</b> 시작 블록 없이 블록만 쌓아요 → “이 프로그램은 언제 시작해?”를 물어요.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/coding-elem.html#coding-elem-u17">정렬과 알고리즘 비교</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">같은 문제도 푸는 방법에 따라 빠르기가 달라요</p><p><b>핵심</b> 정렬은 크기·가나다 순으로 줄 세우기, 컴퓨터가 가장 많이 하는 일 중 하나</p><p><b>걸림돌</b> 여러 장을 한눈에 보고 정렬해요 → 컴퓨터는 한 번에 두 개만 비교</p></li>
+      <li><div class="e4u-h"><a href="../subjects/coding-elem.html#coding-elem-u18">검색과 정보 판단</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">찾은 정보가 믿을 만한지 따져 보기</p><p><b>핵심</b> 검색어를 잘 고르면 원하는 정보를 빨리 찾아요(핵심 낱말 2~3개).</p><p><b>걸림돌</b> 첫 결과를 그대로 베껴요 → “두 곳 이상에서 확인” 규칙.</p></li>
+    </ul>
+    <h3>2학기 <small class="e4u-n">2개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/coding-elem.html#coding-elem-u19">사이버 예절</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">화면 너머에도 사람이 있어요</p><p><b>핵심</b> 채팅·댓글 너머에도 사람이 있어요. 얼굴 보고 못 할 말은 쓰지 않기</p><p><b>걸림돌</b> “장난이었어”면 괜찮다고 생각해요 → 받는 사람이 상처받으면 장난이 아니라고 분명히 말해요.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/coding-elem.html#coding-elem-u20">저작권과 출처</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">그림·사진·음악·글은 만든 사람의 것</p><p><b>핵심</b> 그림, 사진, 음악, 글, 영상, 캐릭터에는 만든 사람의 권리(저작권)가 있어요.</p><p><b>걸림돌</b> 인터넷에 있으면 공짜라고 생각해요 → 볼 수 있는 것과 가져다 써도 되는 것은 다르다고 구별해요.</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/coding-elem.html">정보·코딩 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <p class="callout note">권장 순서예요. 학교 연간 계획에 따라 바뀔 수 있어요.</p>
+    <h3>1학기 <small class="e4u-n">4개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/music-elem.html#music-elem-u15">리코더 오른손 음과 합주</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">미·레·도·파, 높은 도·레까지 한 옥타브</p><p><b>핵심</b> 미·레·낮은 도·파. 낮은 음일수록 구멍을 많이 막고 숨은 약하게</p><p><b>걸림돌</b> 낮은 음이 삑 뒤집혀요 → 숨을 더 약하게, 오른손 약지·새끼가 구멍을 다 덮었는지</p></li>
+      <li><div class="e4u-h"><a href="../subjects/music-elem.html#music-elem-u16">가락과 음높이</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">오선 읽기, 차례가기·뛰어가기</p><p><b>핵심</b> 가락: 높이가 다른 음들이 리듬과 함께 이어진 것(멜로디).</p><p><b>걸림돌</b> 음표마다 계이름을 적어 글자로 읽어요 → 가락선 모양을 보는 습관</p></li>
+      <li><div class="e4u-h"><a href="../subjects/music-elem.html#music-elem-u17">굿거리·세마치 장단</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">장단꼴 익히고 민요에 맞춰 치기</p><p><b>핵심</b> 굿거리는 한 박이 셋으로 나뉘는 4박, 덩실거리는 느낌</p><p><b>걸림돌</b> 굿거리를 4/4박자처럼 딱딱하게 쳐요 → 한 박 안의 셋을 입으로 세며</p></li>
+      <li><div class="e4u-h"><a href="../subjects/music-elem.html#music-elem-u18">민요와 메기고 받는 형식</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">지역마다 다른 우리 노래</p><p><b>핵심</b> 일하며, 놀며, 의식을 치르며 오랜 세월 불려 온 노래</p><p><b>걸림돌</b> 옛날 노래라 재미없대요 → 몸 놀이, 가사 바꾸기로 우리 노래가 되게</p></li>
+    </ul>
+    <h3>2학기 <small class="e4u-n">4개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/music-elem.html#music-elem-u19">타악기 리듬 합주</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">여러 리듬이 겹치는 즐거움, 오스티나토</p><p><b>핵심</b> 악기마다 음색과 어울리는 리듬이 달라요. 반복 리듬(오스티나토) 겹치기</p><p><b>걸림돌</b> 다른 파트 소리에 끌려가요 → 자기 파트를 입으로 말하며 쳐요(“타 타 타 타”).</p></li>
+      <li><div class="e4u-h"><a href="../subjects/music-elem.html#music-elem-u20">반복과 형식</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">같은 부분, 다른 부분 찾기 (AB 형식)</p><p><b>핵심</b> 같은 부분이 되풀이되고 다른 부분이 섞이며 한 곡이 돼요</p><p><b>걸림돌</b> 가사가 다르면 다른 부분이라고 해요 → 가사가 아니라 “가락”이 같은지 들어 보게.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/music-elem.html#music-elem-u21">가락 만들기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">다섯 음으로 짧은 가락 짓기</p><p><b>핵심</b> 아는 음 몇 개에 리듬을 입히는 것에서 시작</p><p><b>걸림돌</b> 음을 너무 멀리 뛰어 부르기 어려워져요 → 대부분 차례가기, 가끔 뛰어가기.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/music-elem.html#music-elem-u22">생활 속 음악</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">공연 예절, 가족 음악회, 음악이 있는 하루</p><p><b>핵심</b> 행사·광고·영화·게임 속 음악, 공연 예절</p><p><b>걸림돌</b> 공연장에서 지루해해요 → 1시간 안쪽 어린이 공연, 곡 한 곡 미리 듣고 가기</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/music-elem.html">음악 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <p class="callout note">미술은 학기 구분 없이 학교 계획에 따라 배워요. 계절·행사에 맞춰 골라 쓰세요.</p>
+    <h3>연중 (학교 계획에 따라) <small class="e4u-n">6개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/art-elem.html#art-elem-u18">생활 속 미술 찾기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">물건·간판·포장에 숨은 디자인과 미술을 발견하기</p><p><b>핵심</b> 우리가 쓰는 물건 대부분은 누군가 목적에 맞게 디자인한 것</p><p><b>걸림돌</b> 예쁜 것 = 좋은 디자인이라고만 생각해요 → “쓰기 편한가?”도 같이 물어요.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/art-elem.html#art-elem-u19">상상 표현</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">본 적 없는 것을 떠올리고 구체적으로 그려 내기</p><p><b>핵심</b> 경험·이야기·꿈을 바탕으로 새로운 장면 만들기</p><p><b>걸림돌</b> 뭘 그려야 할지 모르겠대요 → 백지 공포. &quot;만약에 질문&quot; 카드 준비</p></li>
+      <li><div class="e4u-h"><a href="../subjects/art-elem.html#art-elem-u20">색의 3요소와 색 혼합</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">색상·명도·채도로 색을 설명하고 원하는 색 만들기</p><p><b>핵심</b> 색의 3요소: 색상(빨강·파랑 같은 색의 종류), 명도(밝고 어두운 정도), 채도(맑고 선명한 정도).</p><p><b>걸림돌</b> 명도와 채도를 헷갈려요 → 명도 = 밝기, 채도 = 선명함</p></li>
+      <li><div class="e4u-h"><a href="../subjects/art-elem.html#art-elem-u21">판화 기초 — 찍어 내는 그림</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">판을 만들어 여러 장 찍어 보고 좌우가 바뀌는 걸 알기</p><p><b>핵심</b> 판에 물감을 묻혀 찍어 내면 같은 그림을 여러 장, 좌우는 반대로</p><p><b>걸림돌</b> 이름 글자가 거꾸로 찍혀요 → 거울에 비친 글자를 보고 새기기</p></li>
+      <li><div class="e4u-h"><a href="../subjects/art-elem.html#art-elem-u22">입체 만들기 — 종이·재활용 구조물</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">접고 끼우고 세워서 서 있는 입체 만들기</p><p><b>핵심</b> 평면 종이도 접기·말기·자르고 끼우기로 입체가 돼요.</p><p><b>걸림돌</b> 붙이자마자 무너져요 → 접착제가 마를 시간이 필요해요. 집게로 잠깐 고정해 두기.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/art-elem.html#art-elem-u23">미술관 관람</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">미술관 예절을 알고 가족이 함께 작품 하나를 깊이 보기</p><p><b>핵심</b> 만지지 않기·뛰지 않기·작게 말하기, 사진 규칙 확인</p><p><b>걸림돌</b> 30분 만에 지쳐요 → 정상이에요. 1시간 이내, 한 층만</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/art-elem.html">미술 단원 지도 전체 보기 →</a></p>
+  </div>
+  <div class="tab-panel">
+    <p class="callout note">체육은 계절·시설에 따라 순서가 달라요. 생존수영은 지역·학교마다 운영 학년과 시기가 다릅니다.</p>
+    <h3>연중 (학교 계획에 따라) <small class="e4u-n">7개 단원</small></h3>
+    <ul class="e4u-list">
+      <li><div class="e4u-h"><a href="../subjects/pe-elem.html#pe-elem-u16">체력 요소 알기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">심폐지구력 · 근력 · 근지구력 · 유연성 · 순발력</p><p><b>핵심</b> 건강 체력 = 심폐지구력·근력·근지구력·유연성</p><p><b>걸림돌</b> 근력과 근지구력을 헷갈려요 → “무거운 가방 한 번 들기(근력) vs 가벼운 가방 오래 들기(근지구력).”</p></li>
+      <li><div class="e4u-h"><a href="../subjects/pe-elem.html#pe-elem-u17">심폐지구력 기르기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">가족 걷기 · 걷다 뛰다 · 내 속도 찾기</p><p><b>핵심</b> 심장·폐가 근육에 산소를 오래 보내는 힘. 걷기·줄넘기·자전거·수영</p><p><b>걸림돌</b> 처음부터 전력 질주하고 멈춰요 → 대화 가능한 속도로 시작</p></li>
+      <li><div class="e4u-h"><a href="../subjects/pe-elem.html#pe-elem-u18">던지기와 받기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">기술형(거리·정확) · 반대발 · 몸통 회전</p><p><b>핵심</b> 옆으로 서기 → 팔 뒤로 → 반대발 내딛기 → 몸통 회전 → 손목 채기</p><p><b>걸림돌</b> 던지는 손과 같은 쪽 발이 나가요 → 반대발 운동화에 스티커, &quot;스티커 발 먼저!&quot;</p></li>
+      <li><div class="e4u-h"><a href="../subjects/pe-elem.html#pe-elem-u19">멀리뛰기와 뜀틀 입문</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">기술형(거리·동작) · 도움닫기 · 착지</p><p><b>핵심</b> 팔 뒤로 → 무릎 굽히기 → 팔 휘두르며 두 발로 차고 → 두 발 착지</p><p><b>걸림돌</b> 한 발로 구르거나 두 발이 따로 떨어져요 → &quot;두 발 모아 쿵!&quot; 구호</p></li>
+      <li><div class="e4u-h"><a href="../subjects/pe-elem.html#pe-elem-u20">영역형 게임 기초</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">전략형 · 패스 · 빈 공간 · 공격과 수비</p><p><b>핵심</b> 상대 영역으로 들어가 점수를 얻는 게임. 패스와 빈 공간</p><p><b>걸림돌</b> 공만 보고 몰려가요 → “공 가진 사람에게서 다섯 걸음” 규칙 놀이.</p></li>
+      <li><div class="e4u-h"><a href="../subjects/pe-elem.html#pe-elem-u21">리듬 표현과 음악 줄넘기</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">박자에 맞춰 움직이기 · 모둠 동작</p><p><b>핵심</b> 음악의 박·빠르기·강약에 맞춰 몸을 움직이기</p><p><b>걸림돌</b> 줄넘기 박자가 음악보다 빨라져요 → 줄 없이 먼저, 느리고 박이 분명한 곡으로</p></li>
+      <li><div class="e4u-h"><a href="../subjects/pe-elem.html#pe-elem-u22">생존수영 2 · 생활 안전</a><span class="tag c-tip">🎮 게임</span><span class="tag c-note">📘 지도안</span></div><p class="e4u-goal">누워 뜨기 · 구조 요청 · 구명조끼 · 자전거 안전</p><p><b>핵심</b> 누워 뜨기: 귀를 물에 담그고 팔다리 벌리고 배를 살짝 내밀기</p><p><b>걸림돌</b> 뜨다가 코로 물이 들어가 놀라요 → 물속에서 코로 &quot;음~&quot; 계속 내쉬기</p></li>
+    </ul>
+    <p><a class="btn sm ghost" href="../subjects/pe-elem.html">체육 단원 지도 전체 보기 →</a></p>
+  </div>
+</div>
+<p class="callout warning">2022 개정 교육과정 검정 교과서 기준으로 출판사마다 단원 구성·순서가 다를 수 있습니다. 특히 국어·과학·영어는 교과서별 차이가 커요. 3월과 8월에 목차를 확인하세요.</p>
 
 <h2 id="math-map">수학 구멍 지도: 4학년은 어디와 이어질까</h2>
 <p>4학년 수학은 3학년에서 받아 5학년으로 넘기는 다리입니다. 막힌 단원을 누르면 거슬러 올라가 점검할 곳이 보여요.</p>
@@ -144,48 +395,25 @@ summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
   <figcaption>4학년에서 막히면 왼쪽으로 거슬러 올라가 점검하는 것이 선행보다 빠릅니다.</figcaption>
 </figure>
 
-<h2 id="learn">이번 학년에 배우는 것</h2>
-<div class="tabs" data-tabs>
-  <div class="tab-list"><button>국어</button><button>수학</button><button>사회</button><button>과학</button><button>영어</button><button>도덕·예체능</button></div>
-  <div class="tab-panel">
-    <ul>
-      <li>생각과 느낌 나누기, 이야기의 흐름(구조) 파악</li>
-      <li>의견과 까닭을 들어 글쓰기</li>
-      <li>회의하기, 토의하기</li>
-      <li>전기문·설명문 읽기, 국어사전에서 기본형 찾기</li>
-    </ul>
-    <p class="callout note">"의견 + 까닭 2개" 쓰기는 모든 과목 서술형의 기본 틀이 됩니다. 식탁 대화에서 연습하기 좋아요.</p>
-  </div>
-  <div class="tab-panel">
-    <div class="compare">
-      <div class="c-stem" style="--cs: var(--stem-soft)"><h4>1학기</h4><ul><li><strong>큰 수</strong> (만·억·조)</li><li><strong>각도</strong> (각도기, 삼각형·사각형 각의 합)</li><li>곱셈과 나눗셈 (세 자리 × 두 자리, 세 자리 ÷ 두 자리)</li><li>평면도형의 이동 (밀기·뒤집기·돌리기)</li><li>막대그래프</li><li>규칙 찾기</li></ul></div>
-      <div class="c-branch" style="--cs: var(--branch-soft)"><h4>2학기</h4><ul><li><strong>분수의 덧셈과 뺄셈</strong> (같은 분모)</li><li>삼각형 (이등변·정삼각형, 예각·둔각삼각형)</li><li>소수의 덧셈과 뺄셈</li><li>사각형 (수직·평행, 사다리꼴·평행사변형·마름모)</li><li>꺾은선그래프</li><li>다각형</li></ul></div>
-    </div>
-  </div>
-  <div class="tab-panel">
-    <p>무대가 '우리 고장'에서 <strong>우리 지역(시·도)</strong>으로 넓어집니다. 지도로 지역의 위치와 특성 알기, 지역의 역사와 문화유산, 공공기관과 주민 참여, 촌락과 도시의 생활, 생산과 교환(경제 첫걸음), 사회 변화와 다양한 문화.</p>
-    <p>도청·시청 견학, 지역 전통시장, 도시와 시골 비교 여행이 딱 맞아요.</p>
-  </div>
-  <div class="tab-panel">
-    <ul>
-      <li>지층과 화석</li>
-      <li>식물의 한살이, 식물의 생활</li>
-      <li>물체의 무게, 혼합물의 분리</li>
-      <li>물의 상태 변화 (얼음·물·수증기)</li>
-      <li>그림자와 거울</li>
-      <li>화산과 지진</li>
-    </ul>
-  </div>
-  <div class="tab-panel">
-    <p>주 2시간. 낱말에서 <strong>문장 단위</strong> 말하기·읽기로 넘어갑니다. 짧은 대화 듣고 이해하기, 쉬운 문장 따라 쓰기.</p>
-  </div>
-  <div class="tab-panel">
-    <p><strong>도덕</strong> 정직, 공정, 사이버 예절. <strong>음악·미술</strong> 합주, 다양한 표현 기법. <strong>체육</strong> 경쟁 활동이 늘어 운동 자신감 차이가 보이기 시작해요.</p>
-  </div>
-</div>
-<p class="callout warning">2022 개정 교육과정 검정 교과서 기준으로 출판사마다 단원 구성·순서가 다를 수 있습니다. 특히 과학 단원명은 교과서별 차이가 커요. 학기 초 목차를 확인하세요.</p>
+<h3 id="hole-monthly">월별 수학 구멍 점검 (나눗셈·분수 중심)</h3>
+<p>한 달에 한 번, 5분이면 됩니다. 시험처럼 묻지 말고 숙제·게임·생활 계산 중에 슬쩍 확인하고 체크하세요. 흔들리는 칸이 보이면 그 달은 진도보다 거슬러 올라가기가 먼저예요.</p>
+<div class="check-progress"><div class="meter c-accent"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="e4-hole-monthly">
+  <li class="task"><label><input type="checkbox"><span><b>3월</b> 곱셈구구 아무 칸이나 3초 안에 (나눗셈의 바탕). 안 되면 <a href="../subjects/math-elem.html#math-elem-e4-1-3">곱셈과 나눗셈</a> 전에 1주 게임으로 재점검</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>4월</b> 3학년 나눗셈: 나머지가 나누는 수보다 작아야 하는 이유를 말로 설명</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>5월</b> 몫 어림: "157 ÷ 23은 20으로 보면 약 7" 식으로 먼저 짐작하고 고친다 (올해 첫째 구멍)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>6월</b> 나눗셈 검산(나누는 수 × 몫 + 나머지)을 스스로 한다</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>7월</b> 1학기 단원평가 오답을 "유형"으로 분류 (계산 실수 / 개념 / 문제 읽기)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>8월</b> 2학기 준비: 3학년 분수 감각 (1/4과 1/8 중 큰 것, 가분수 ↔ 대분수) 그림으로 설명</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>9월</b> 같은 분모 덧셈에서 분모끼리 더하지 않는다 (2/5 + 1/5 = 3/5) (올해 둘째 구멍)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>10월</b> 대분수 뺄셈에서 받아내림(3과 1/5 − 1과 3/5)을 그림이나 가분수로 해결</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>11월</b> 소수 덧뺄셈에서 끝자리가 아니라 소수점을 맞춘다 (1.5 + 0.25)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>12월</b> 2학기 단원평가 오답 유형 점검, 아래 "구멍 자가 점검" 다시 해 보기</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>1월</b> 겨울방학 복습 주: 긴 나눗셈 10문제 + 분수 덧뺄셈 10문제, 틀린 것만 다시</span></label></li>
+  <li class="task"><label><input type="checkbox"><span><b>2월</b> 5학년 약분·통분 대비: 나눗셈이 빠르고 분수를 그림으로 설명할 수 있는지 최종 확인</span></label></li>
+</ul>
 
-<h2 id="selfcheck">4학년 구멍 자가 점검 (부모용)</h2>
+<h3 id="selfcheck">4학년 구멍 자가 점검 (부모용)</h3>
 <p>아이에게 시험처럼 묻지 말고, 숙제하는 모습을 보며 체크해 보세요.</p>
 <div class="selfcheck" id="e4-hole-check">
   <ul class="checklist">
@@ -204,10 +432,326 @@ summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
   </div>
 </div>
 
-<h2 id="growth">발달 특성</h2>
+<h2 id="calendar">월별 가정 학습 캘린더 (3월 → 이듬해 2월)</h2>
+<p>이번 달 카드에 테두리가 표시됩니다. 단원 시기는 교과서 목차 기준 대략의 예시예요. 한 달에 "주요 단원 2~3개 + 구멍 점검 1개 + 체험 1개"면 충분합니다.</p>
+<p class="callout warning">방학·개학일, 상담 주간, 현장체험학습, 생존수영 시기는 지역과 학교마다 다릅니다. 최근에는 겨울방학을 1월 초에 시작해 2월 봄방학 없이 이어지는 학교도 많아요. 3월 학교 연간 학사일정(가정통신문·학교 홈페이지)으로 꼭 맞춰 보세요.</p>
+<div class="cards e4-cal" style="--min: 260px">
+  <div class="card top c-root" data-month="3"><div><b>3월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>새 학년 · 큰 수</h3>
+    <p class="cal-h">학교</p><ul><li>새 학년 시작, 학부모총회</li><li>담임 상담 주간 (3~4월, 학교별)</li><li>기초학력 진단 (학교별)</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-1-1">큰 수</a></li><li><a href="../subjects/korean-elem.html#korean-elem-u36">사실과 의견 읽기</a></li><li><a href="../subjects/social-elem.html#social-elem-u13">지역의 위치와 특성</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>뉴스 속 큰 수 네 자리씩 끊어 읽기</li><li>식탁 뉴스: 사실 1개, 의견 1개</li></ul>
+    <p class="cal-h">체험</p><ul><li>우리 시·도 지도 펴 놓고 드라이브 계획 (<a href="../trips/places.html">장소</a>)</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>곱셈구구 3초 점검, 올해 목표 1~2개 합의</li></ul></div>
+  <div class="card top c-root" data-month="4"><div><b>4월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>각도 · 씨 심기</h3>
+    <p class="cal-h">학교</p><ul><li>과학의 달 행사</li><li>상담 주간 마무리</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-1-2">각도</a></li><li><a href="../subjects/science-elem.html#science-elem-u17">식물의 한살이</a></li><li><a href="../subjects/korean-elem.html#korean-elem-u37">의견을 나타내는 글 쓰기</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>강낭콩 심고 관찰 일기 (주 2회)</li><li>집 안 각도 찾기: 문 열림, 시계 바늘</li></ul>
+    <p class="cal-h">체험</p><ul><li>수목원·식물원 (<a href="../trips/places.html#eco">생태</a>)</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>가족 미디어·스마트폰 규칙 회의</li></ul></div>
+  <div class="card top c-root" data-month="5"><div><b>5월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>긴 나눗셈의 달</h3>
+    <p class="cal-h">학교</p><ul><li>현장체험학습, 운동회 (학교별)</li><li>어린이날 · 연휴</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-1-3">곱셈과 나눗셈</a></li><li><a href="../subjects/science-elem.html#science-elem-u18">물체의 무게</a></li><li><a href="../subjects/social-elem.html#social-elem-u14">우리 지역의 역사</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>여행 경비 ÷ 가족 수, 용돈 목표 ÷ 주당 저금</li><li>단원 가이드의 몫 찾기 게임</li></ul>
+    <p class="cal-h">체험</p><ul><li>우리 지역 문화유산·박물관 (<a href="../trips/places.html#museum">박물관</a>)</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>몫 어림 점검 (구멍 1)</li></ul></div>
+  <div class="card top c-stem" data-month="6"><div><b>6월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>도형 이동 · 물놀이 안전</h3>
+    <p class="cal-h">학교</p><ul><li>생존수영 (지역·학교별 시기 다름)</li><li>단원평가·수행평가</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-1-4">평면도형의 이동</a></li><li><a href="../subjects/math-elem.html#math-elem-e4-1-5">막대그래프</a></li><li><a href="../subjects/science-elem.html#science-elem-u19">혼합물의 분리</a></li><li><a href="../subjects/pe-elem.html#pe-elem-u22">생존수영 2 · 생활 안전</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>가족 설문 → 막대그래프 그리기</li><li>콩·쌀·소금 섞어 분리 실험</li></ul>
+    <p class="cal-h">체험</p><ul><li>과학관 (<a href="../trips/places.html#science">과학관</a>)</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>분기 회의: 1학기 점검, 여름방학 초안</li></ul></div>
+  <div class="card top c-stem" data-month="7"><div><b>7월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>1학기 마무리</h3>
+    <p class="cal-h">학교</p><ul><li>1학기 통지표 · 여름방학 (학교별)</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-1-6">규칙 찾기</a></li><li><a href="../subjects/korean-elem.html#korean-elem-u39">회의하기</a></li><li><a href="../subjects/social-elem.html#social-elem-u15">공공 기관과 주민 참여</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>가족회의로 방학 계획 정하기 (회의 절차 그대로)</li><li>달력 속 수 배열 규칙 찾기</li></ul>
+    <p class="cal-h">체험</p><ul><li>시청·도청·소방서 견학</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>통지표 함께 읽기 (칭찬 먼저), 오답 유형 정리</li></ul></div>
+  <div class="card top c-stem" data-month="8"><div><b>8월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>여름방학 · 쉬기</h3>
+    <p class="cal-h">학교</p><ul><li>방학, 8월 중하순 개학 (학교별)</li></ul>
+    <p class="cal-h">복습 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-1-3">곱셈과 나눗셈</a> 오답만</li><li><a href="../subjects/art-elem.html#art-elem-u23">미술관 관람</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>3학년 분수 그림 복습 (2학기 준비)</li><li>긴 책 한 권</li></ul>
+    <p class="cal-h">체험</p><ul><li>지질공원·천문대 (<a href="../trips/places.html#volcano">화산 지형</a> · <a href="../trips/places.html#stars">별</a>)</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>쉬는 주 1주 확보, 개학 1주 전 생활 리듬</li></ul></div>
+  <div class="card top c-fruit" data-month="9"><div><b>9월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>분수 덧뺄셈</h3>
+    <p class="cal-h">학교</p><ul><li>2학기 시작, 상담 주간 (학교별)</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-2-1">분수의 덧셈과 뺄셈</a></li><li><a href="../subjects/science-elem.html#science-elem-u20">식물의 생활</a></li><li><a href="../subjects/social-elem.html#social-elem-u16">촌락과 도시</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>피자·케이크 조각으로 분수 덧셈</li><li>분수 칠하기 게임</li></ul>
+    <p class="cal-h">체험</p><ul><li>농촌·어촌 체험, 전통시장</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>분모끼리 더하는지 점검 (구멍 2)</li></ul></div>
+  <div class="card top c-fruit" data-month="10"><div><b>10월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>삼각형 · 소수 · 물의 변신</h3>
+    <p class="cal-h">학교</p><ul><li>현장체험학습·학예회 (학교별)</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-2-2">삼각형</a></li><li><a href="../subjects/math-elem.html#math-elem-e4-2-3">소수의 덧셈과 뺄셈</a></li><li><a href="../subjects/science-elem.html#science-elem-u21">물의 상태 변화</a></li><li><a href="../subjects/korean-elem.html#korean-elem-u43">독서 감상문 쓰기</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>영수증 소수 계산 (1.5 L + 0.25 L)</li><li>차가운 컵 물방울 관찰</li></ul>
+    <p class="cal-h">체험</p><ul><li>경제·직업 체험 (<a href="../trips/places.html#money">경제</a>)</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>소수점 맞추기 점검</li></ul></div>
+  <div class="card top c-fruit" data-month="11"><div><b>11월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>사각형 · 그림자 · 화산</h3>
+    <p class="cal-h">학교</p><ul><li>단원평가·수행평가</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-2-4">사각형</a></li><li><a href="../subjects/science-elem.html#science-elem-u22">그림자와 거울</a></li><li><a href="../subjects/science-elem.html#science-elem-u23">화산과 지진</a></li><li><a href="../subjects/coding-elem.html#coding-elem-u19">사이버 예절</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>손전등 그림자 연극</li><li>지진 대피 훈련 가족판</li></ul>
+    <p class="cal-h">체험</p><ul><li>자연사 박물관, 지진 안전 체험관</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>스마트폰 규칙 두 달 점검</li></ul></div>
+  <div class="card top c-branch" data-month="12"><div><b>12월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>그래프 · 다각형 · 정리</h3>
+    <p class="cal-h">학교</p><ul><li>2학기 마무리, 방학 (학교별 12월 말~1월 초)</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-2-5">꺾은선그래프</a></li><li><a href="../subjects/math-elem.html#math-elem-e4-2-6">다각형</a></li><li><a href="../subjects/social-elem.html#social-elem-u18">사회 변화와 문화의 다양성</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>한 달 기온 꺾은선그래프</li><li>연말 가족 음악회 (<a href="../subjects/music-elem.html#music-elem-u22">생활 속 음악</a>)</li></ul>
+    <p class="cal-h">체험</p><ul><li>천문대 겨울 별자리</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>학원·예체능 과부하 점검, 5학년 방향</li></ul></div>
+  <div class="card top c-branch" data-month="1"><div><b>1월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>겨울방학 · 복습 주</h3>
+    <p class="cal-h">학교</p><ul><li>겨울방학 (종업식 시기 학교별)</li></ul>
+    <p class="cal-h">복습 단원</p><ul><li><a href="../subjects/math-elem.html#math-elem-e4-2-1">분수의 덧셈과 뺄셈</a></li><li><a href="../subjects/math-elem.html#math-elem-e4-2-3">소수의 덧셈과 뺄셈</a></li><li><a href="../subjects/pe-elem.html#pe-elem-u17">심폐지구력 기르기</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>틀린 문제만 다시 풀기</li><li>판화·입체 만들기 (<a href="../subjects/art-elem.html#art-elem-u21">판화</a>)</li></ul>
+    <p class="cal-h">체험</p><ul><li>역사 여행 (<a href="../trips/history-route.html">한국사 루트</a>)</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>분기 회의: 1년 돌아보기</li></ul></div>
+  <div class="card top c-branch" data-month="2"><div><b>2월</b> <span class="tag c-accent cal-now">이번 달</span></div><h3>5학년 준비</h3>
+    <p class="cal-h">학교</p><ul><li>종업식·봄방학 (학교별)</li></ul>
+    <p class="cal-h">주요 단원</p><ul><li><a href="../subjects/korean-elem.html#korean-elem-u45">찾아보고 정리하기</a></li><li><a href="../subjects/coding-elem.html#coding-elem-u20">저작권과 출처</a></li></ul>
+    <p class="cal-h">집에서 15분</p><ul><li>5학년 교과서 목차 훑어보기 (선행 말고 미리보기)</li><li>나눗셈·분수 최종 점검</li></ul>
+    <p class="cal-h">체험</p><ul><li>가족 여행 또는 푹 쉬기</li></ul>
+    <p class="cal-h">부모 체크</p><ul><li>생활 리듬·학용품 정비, 3월 목표 초안</li></ul></div>
+</div>
+
+<h2 id="self-directed">공부 격차와 자기주도 연습</h2>
+<p>4학년은 같은 반 안에서도 "혼자 읽고 이해하는 아이"와 "옆에서 읽어 줘야 하는 아이"의 차이가 보이기 시작하는 때입니다. 격차의 원인은 대개 머리가 아니라 <strong>읽기량, 기초 연산 자동화, 스스로 확인하는 습관</strong> 세 가지예요. 셋 다 집에서 매일 조금씩 기를 수 있습니다.</p>
+<div class="compare">
+  <div style="--cs: var(--warn-soft); --c: var(--warn)"><h4>격차를 키우는 것</h4><ul><li>옆 아이·옆 집과 비교하는 말</li><li>구멍을 둔 채 선행으로 덮기</li><li>숙제를 부모가 "대신 정리"해 주기</li><li>문제집 양 늘리기로 불안 달래기</li></ul></div>
+  <div style="--cs: var(--tip-soft); --c: var(--tip)"><h4>격차를 줄이는 것</h4><ul><li>매일 30분 독서 (교과서 줄글 포함)</li><li>틀린 문제를 "왜" 말로 설명하기</li><li>검산·다시 읽기 같은 스스로 확인</li><li>작게 계획하고 지켜 본 경험</li></ul></div>
+</div>
+<h3>자기주도 4단계 사다리 (4학년 1년 동안)</h3>
+<div class="timeline">
+  <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">3~4월</div><h3>1단계 · 부모가 짜고 같이 지키기</h3><p>하루 할 일 3칸(수학 15분, 독서 30분, 숙제)만. 아이는 체크 표시를 직접 합니다.</p></div>
+  <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">5~7월</div><h3>2단계 · 함께 짜기</h3><p>일요일 저녁 10분, 다음 주 계획을 둘이 같이. 아이가 요일과 순서를 고르게 하세요.</p></div>
+  <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">9~11월</div><h3>3단계 · 아이가 짜고 부모가 확인</h3><p>양이 너무 많거나 적으면 질문으로만 조정: "이거 다 하면 몇 시에 끝나?"</p></div>
+  <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">12~2월</div><h3>4단계 · 스스로 짜고 스스로 돌아보기</h3><p>방학 계획을 아이가 초안 작성. 부모는 쉬는 날이 들어 있는지만 확인합니다.</p></div>
+</div>
+<div class="callout tip" data-label="일요일 저녁 10분 돌아보기 질문">
+  <p>1) 이번 주에 제일 잘 지킨 칸은? 2) 못 지킨 칸은 왜 그랬을까? (혼내지 않기) 3) 다음 주엔 양을 줄일까, 시간을 바꿀까? 4) 다음 주 기대되는 일 하나는?</p>
+</div>
+<p>더 자세한 방법은 <a href="../wellbeing/self-directed.html">자기주도 학습</a>과 <a href="../wellbeing/study-emotion.html">공부 정서 지키기</a>에 있어요.</p>
+<label class="memo-label" for="e4-plan-memo">우리 아이 주간 계획 연습 기록 (몇 단계인지, 무엇이 잘 됐는지)</label>
+<textarea class="memo" id="e4-plan-memo" data-key="e4-weekplan" placeholder="예) 5월 2주: 2단계. 수학을 저녁 먹기 전으로 옮기니 잘 지킴. 독서는 주말에 몰아서 → 다음 주 평일 20분으로"></textarea>
+<p class="saved-hint"></p>
+
+<h2 id="routine">주간 루틴 예시</h2>
+<p>4학년은 대개 5~6교시로 하교가 늦어지고, 학원이 한두 개 생기는 때입니다. 공부는 짧고 매일, 몸 쓰는 시간과 쉬는 날은 꼭 지키는 틀이에요.</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>요일</th><th>하교 후</th><th>저녁</th><th>잠들기 전</th></tr></thead>
+  <tbody>
+    <tr><td>월</td><td>간식 · 놀이터 30분</td><td>수학 15~20분 (교과서 복습) · 숙제</td><td>독서 30분 · 9시 반 취침 준비</td></tr>
+    <tr><td>화</td><td>운동 (수영·축구 등)</td><td>국어 독해 1지문 · 숙제</td><td>독서 30분</td></tr>
+    <tr><td>수</td><td>예체능 (악기·미술)</td><td>수학 15~20분 · 영어 소리 내어 읽기 10분</td><td>독서 30분</td></tr>
+    <tr><td>목</td><td>자유 놀이</td><td>사회·과학 교과서 한 쪽 읽고 한 줄 요약</td><td>독서 30분</td></tr>
+    <tr><td>금</td><td>친구와 놀기</td><td>밀린 것만 가볍게, 게임·영상 약속 시간</td><td>가족 영화 · 보드게임</td></tr>
+    <tr><td>토</td><td colspan="2">가족 체험·운동 · 오전 30분만 공부 (틀린 문제 다시)</td><td>독서</td></tr>
+    <tr><td>일</td><td colspan="2">쉬는 날 (공부 없음) · 저녁 10분 주간 돌아보기</td><td>다음 주 준비물 챙기기</td></tr>
+  </tbody>
+</table></div>
+<p class="callout note">수면은 이 나이에 하루 9~11시간이 권장됩니다. 학원이 늘어 저녁 공부 시간이 밀리면 독서보다 <strong>잠을 먼저</strong> 지켜 주세요.</p>
+<label class="memo-label" for="e4-routine-memo">우리 집 루틴</label>
+<textarea class="memo" id="e4-routine-memo" data-key="e4-routine" placeholder="예) 월수금 수영 → 저녁 먹고 수학 15분 / 화목 피아노 / 일요일 오후는 무조건 쉬기"></textarea>
+<p class="saved-hint"></p>
+
+<h2 id="phone">스마트폰 규칙: 사 주기 전에 먼저 합의</h2>
+<p>4학년은 "우리 반에 폰 없는 애 나밖에 없어"가 시작되는 때입니다. 사 주는 시기보다 중요한 건 <strong>첫 규칙</strong>이에요. 처음에 느슨하면 나중에 조이기가 훨씬 어렵습니다.</p>
+<div class="compare">
+  <div style="--cs: var(--note-soft); --c: var(--note)"><h4>부부가 먼저 정할 것</h4><ul><li>시기: 지금? 5학년? 연락용 키즈폰부터?</li><li>기종: 전화·문자 위주 vs 스마트폰</li><li>앱: 설치는 부모 승인, SNS는 연령 기준 확인</li><li>장소: 식탁·침실에는 두지 않기</li><li>시간: 평일 하루 몇 분, 몇 시까지</li></ul></div>
+  <div style="--cs: var(--tip-soft); --c: var(--tip)"><h4>아이와 함께 정할 것</h4><ul><li>약속을 어기면 어떻게 할지 (미리 합의)</li><li>단톡방 예절: 밤 늦게 안 보내기, 험담 나가기</li><li>모르는 사람 메시지, 이상한 링크는 바로 알리기</li><li>게임 결제는 절대 혼자 하지 않기</li><li>한 달 뒤 규칙 다시 보기</li></ul></div>
+</div>
+<h3>우리 집 스마트폰 약속 (초안 체크)</h3>
+<p>합의된 항목만 체크하고, 체크된 것을 종이에 옮겨 적어 냉장고에 붙이세요.</p>
+<div class="check-progress"><div class="meter c-warn"><i></i></div><span class="count"></span></div>
+<ul class="checklist" id="e4-phone-rules">
+  <li class="task"><label><input type="checkbox"><span>밤에는 거실 충전 (침실 반입 없음)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>식사 시간, 숙제 시간에는 엎어 두기</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>평일 사용 시간 합의 (예: 게임·영상 합쳐 하루 정해진 분)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>새 앱 설치는 부모와 함께</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>단톡방에서 속상한 일이 생기면 바로 이야기하기 (혼나지 않음)</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>사진 찍어 올리기 전에 친구 허락 받기</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>유료 결제는 반드시 부모 확인</span></label></li>
+  <li class="task"><label><input type="checkbox"><span>부모도 같은 규칙 지키기 (식탁·침실)</span></label></li>
+</ul>
+<label class="memo-label" for="e4-phone-memo">우리 집 스마트폰 계약서 메모 (날짜 · 합의 내용 · 다시 볼 날)</label>
+<textarea class="memo" id="e4-phone-memo" data-key="e4-phone-contract" placeholder="예) 4/20 가족회의: 5학년 3월에 구입. 그전까지 키즈폰. 평일 30분, 9시 이후 거실 충전. 6월에 다시 보기"></textarea>
+<p class="saved-hint"></p>
+<p><a href="../wellbeing/screen.html">스크린타임 가이드 →</a> · 결정은 <a href="../workbook/decision-log.html">결정 로그</a>에 남겨 두세요.</p>
+
+<h2 id="semester">학기별 준비</h2>
+<div class="tabs" data-tabs>
+  <div class="tab-list"><button>1학기</button><button>2학기</button><button>통지표 읽기</button><button>방학 계획</button></div>
+  <div class="tab-panel">
+    <h3>3~4월 담임 상담 질문</h3>
+    <ol>
+      <li>수업 시간에 집중하는 모습은 어떤가요? 발표나 모둠 활동은요?</li>
+      <li>수학에서 특히 속도가 느리거나 어려워하는 부분이 보이나요?</li>
+      <li>교과서 글을 혼자 읽고 이해하는 편인가요?</li>
+      <li>친구 관계에서 눈에 띄는 점이 있을까요? (단짝, 무리, 갈등)</li>
+      <li>올해 반에서 단톡방·휴대폰 관련해 안내하실 규칙이 있나요?</li>
+      <li>단원평가·수행평가는 어떤 방식으로, 결과는 어떻게 알려 주시나요?</li>
+      <li>집에서 도와주면 좋을 한 가지를 꼽으신다면요?</li>
+      <li>연락은 어떤 방법·시간대가 편하신가요?</li>
+    </ol>
+    <h3>평가 대비 (단원평가·수행평가)</h3>
+    <p>초등은 대부분 중간·기말 지필고사 대신 <strong>단원평가와 수행평가(과정 중심 평가)</strong>로 봅니다. 따로 시험 공부를 시키기보다 단원이 끝날 때 교과서 "확인 문제"를 다시 풀고, 틀린 것을 말로 설명하게 하면 충분해요. 결과지는 점수보다 틀린 유형(계산 실수 / 개념 / 문제 읽기)으로 보세요.</p>
+    <p class="callout warning">평가 방식과 결과 안내(점수 공개 여부, 서술형 비중)는 교육청·학교마다 다릅니다. 3월 학부모총회 안내를 확인하세요.</p>
+  </div>
+  <div class="tab-panel">
+    <h3>9월 상담 질문 (1학기와 비교)</h3>
+    <ol>
+      <li>1학기와 비교해 달라진 점이 있나요?</li>
+      <li>분수·소수 단원에서 어려워하는 모습이 보이나요?</li>
+      <li>숙제·준비물을 스스로 챙기는 편인가요?</li>
+      <li>친구 관계나 반 분위기에서 신경 쓸 점이 있을까요?</li>
+      <li>5학년을 앞두고 방학에 채우면 좋을 부분은요?</li>
+      <li>아이가 특히 빛나는 순간(좋아하는 과목·활동)은 언제인가요?</li>
+    </ol>
+    <h3>2학기 평가 대비</h3>
+    <p>2학기 수학은 분수·소수·도형 성질처럼 <strong>개념 설명형</strong> 문제가 많아집니다. "왜 그렇게 생각해?"를 자주 물어 말로 설명하는 연습을 해 두면 서술형 평가에 강해져요. 과학은 실험 과정을 순서대로 말하기, 사회는 "의견 + 까닭" 틀로 답 쓰기를 연습하세요.</p>
+  </div>
+  <div class="tab-panel">
+    <h3>4학년 통지표 읽는 법</h3>
+    <ul>
+      <li>초등 통지표는 대개 과목별 <strong>서술형 평가</strong>입니다. 등급(예: 매우 잘함·잘함·보통·노력 요함) 표기 여부는 학교마다 달라요.</li>
+      <li>"~할 수 있음"은 잘한 것, "~하는 데 노력이 필요함", "~하면 더 좋겠음"은 구멍 신호입니다. 이 문장만 따로 옮겨 적으세요.</li>
+      <li>행동특성 및 종합의견은 친구 관계·태도를 보는 곳. 좋은 문장을 아이에게 소리 내어 읽어 주세요.</li>
+      <li>통지표 이야기는 <strong>칭찬 먼저 3개, 보완 1개</strong>. 보완할 점은 방학 계획의 한 줄로 바꿉니다.</li>
+    </ul>
+    <p class="callout warning">통지표 양식과 표기 방식은 교육청·학교 정책에 따라 다릅니다. <a href="../system/assessment.html">평가 방식</a>도 참고하세요.</p>
+  </div>
+  <div class="tab-panel">
+    <div class="compare">
+      <div style="--cs: var(--stem-soft); --c: var(--stem)"><h4>여름방학 (약 4~5주)</h4><ul>
+        <li><strong>1주</strong> 푹 쉬기, 생활 리듬만 유지, 긴 책 한 권 시작</li>
+        <li><strong>2주</strong> 1학기 수학 오답 복습 (곱셈과 나눗셈, 각도)</li>
+        <li><strong>3주</strong> 가족 체험: 지질공원·천문대·과학관 중 1곳</li>
+        <li><strong>4주</strong> 3학년 분수 그림 복습 (2학기 준비), 독후 감상 한 편</li>
+        <li><strong>5주</strong> 개학 준비: 수면 시간 되돌리기, 2학기 목차 훑기</li>
+      </ul></div>
+      <div style="--cs: var(--branch-soft); --c: var(--branch)"><h4>겨울방학 (약 5~8주, 학교별)</h4><ul>
+        <li><strong>1주</strong> 쉬기, 1년 돌아보기 가족 대화</li>
+        <li><strong>2~3주</strong> 분수·소수 덧뺄셈, 긴 나눗셈 오답만 복습</li>
+        <li><strong>4주</strong> 역사·박물관 여행, 운동 하나 꾸준히</li>
+        <li><strong>5주</strong> 아이가 짠 방학 계획 돌아보기 (자기주도 4단계)</li>
+        <li><strong>마지막 주</strong> 5학년 목차 미리보기, 생활 리듬 정비</li>
+      </ul></div>
+    </div>
+    <p class="callout tip">방학 계획표에는 <strong>쉬는 칸을 먼저</strong> 그리세요. 복습은 하루 30~40분이면 충분합니다.</p>
+  </div>
+</div>
+
+<h2 id="grow">학년 성장 체크리스트: "~할 수 있어요"</h2>
+<p>학년 말에 이 정도면 탄탄합니다. 학기마다 한 번씩 아이와 같이 체크해 보세요. 못 한 칸은 "아직"일 뿐이에요.</p>
+<div class="tabs" data-tabs>
+  <div class="tab-list"><button>국어</button><button>수학</button><button>영어</button><button>사회</button><button>과학</button><button>예체능·정보</button></div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="e4-grow-korean">
+      <li class="task"><label><input type="checkbox"><span>글에서 사실과 의견을 구별할 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>의견과 까닭 두 가지로 짧은 글을 쓸 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>문단의 중심 문장을 찾아 글을 간추릴 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>모르는 낱말의 뜻을 앞뒤 문장으로 짐작할 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>회의에서 차례를 지켜 의견을 말할 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>책을 읽고 인상 깊은 점과 내 생각을 쓸 수 있어요</span></label></li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="e4-grow-math">
+      <li class="task"><label><input type="checkbox"><span>억·조 단위의 큰 수를 네 자리씩 끊어 읽을 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>각도기로 각을 재고 그릴 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>(세 자리) ÷ (두 자리)에서 몫을 어림하고 검산할 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>분모가 같은 분수의 덧셈·뺄셈을 그림으로 설명할 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>소수점을 맞춰 소수를 더하고 뺄 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>수직·평행을 알고 사다리꼴·평행사변형·마름모를 구별해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>막대그래프와 꺾은선그래프 중 알맞은 것을 골라 그려요</span></label></li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="e4-grow-english">
+      <li class="task"><label><input type="checkbox"><span>Where is ~? 로 물건 위치를 묻고 답해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>시각과 날씨를 영어로 말해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>가족·사람을 He/She로 소개해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>I'm ~ing로 지금 하는 일을 말해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>짧은 단어를 소리 규칙으로 읽을 수 있어요</span></label></li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="e4-grow-social">
+      <li class="task"><label><input type="checkbox"><span>지도에서 방위표·범례·축척·등고선을 읽을 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>우리 지역 문화유산 하나를 소개할 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>공공 기관이 하는 일을 세 가지 말할 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>촌락과 도시가 서로 돕는 예를 들 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>희소성 때문에 선택해야 한다는 걸 용돈으로 설명해요</span></label></li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="e4-grow-science">
+      <li class="task"><label><input type="checkbox"><span>지층이 쌓이는 순서와 화석이 생기는 과정을 말해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>식물의 한살이를 관찰 기록으로 정리해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>혼합물을 성질을 이용해 분리하는 방법을 떠올려요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>증발과 응결을 생활 속 예로 구별해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>그림자가 생기는 까닭을 빛의 직진으로 설명해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>지진이 났을 때 대피 방법을 알아요</span></label></li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="e4-grow-arts">
+      <li class="task"><label><input type="checkbox"><span>리코더로 낮은 도부터 높은 레까지 불 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>굿거리·세마치 장단을 손으로 칠 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>색상·명도·채도로 색을 설명해요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>물에 누워 뜨고 구조 요청을 할 수 있어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>블록 코딩으로 캐릭터를 움직이는 짧은 프로그램을 만들어요</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>인터넷 정보는 두 곳 이상에서 확인하고, 출처를 밝혀요</span></label></li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="growth">마음·관계: 발달 특성</h2>
 <div class="compare">
   <div class="c-stem" style="--cs: var(--stem-soft)"><h4>생각</h4><ul><li>추상 사고가 조금씩 가능 (큰 수, 각도)</li><li>계획을 세우고 지키는 능력이 자라는 중</li><li>관심 분야가 뚜렷해짐 (공룡, 우주, 게임…)</li></ul></div>
-  <div class="c-branch" style="--cs: var(--branch-soft)"><h4>마음과 관계</h4><ul><li>또래 집단이 중요, 자존심이 강해짐</li><li>성취 차이가 자존감과 연결</li><li>스마트폰·게임 요구가 커짐</li></ul></div>
+  <div class="c-branch" style="--cs: var(--branch-soft)"><h4>마음과 관계</h4><ul><li>또래 집단이 중요, 자존심이 강해짐</li><li>성취 차이가 자존감과 연결</li><li>스마트폰·게임 요구가 커짐</li><li>빠른 아이는 사춘기 초기 신호가 보이기도 해요</li></ul></div>
+</div>
+
+<h3 id="talk">이럴 땐 이렇게: 대화 대본</h3>
+<div class="e4-talk">
+  <h4>단원평가를 망치고 "난 수학 머리가 없어"</h4>
+  <p class="say kid"><b>아이</b>"나 수학 머리 없나 봐. 우리 반에서 나만 못해."</p>
+  <p class="say"><b>부모</b>"속상했겠다. 그런데 머리가 아니라 아직 연습이 덜 된 칸이 있는 거야. 틀린 문제 같이 보면서 어느 칸인지 찾아볼까?"</p>
+  <p class="say kid"><b>아이</b>"나눗셈이 계속 틀려."</p>
+  <p class="say"><b>부모</b>"좋아, 찾았다! 이번 주는 나눗셈 게임만 하루 5분. 다음 주에 다시 보자."</p>
+</div>
+<div class="e4-talk">
+  <h4>"우리 반에 폰 없는 애 나밖에 없어"</h4>
+  <p class="say kid"><b>아이</b>"다들 단톡방에서 얘기하는데 나만 몰라."</p>
+  <p class="say"><b>부모</b>"소외되는 느낌이 들었구나. 그건 진짜 중요한 문제야. 엄마 아빠가 이번 주에 의논해서 언제, 어떤 규칙으로 할지 알려 줄게. 너도 원하는 규칙을 적어 와 줄래?"</p>
+  <p class="say kid"><b>아이</b>"진짜? 그럼 게임 시간도 정해?"</p>
+  <p class="say"><b>부모</b>"응, 같이 정하고 같이 지키는 거야. 엄마 아빠도 식탁에서는 안 볼게."</p>
+</div>
+<div class="e4-talk">
+  <h4>친구 무리에서 빠졌어요</h4>
+  <p class="say kid"><b>아이</b>"걔네가 나만 빼고 놀아."</p>
+  <p class="say"><b>부모</b>"(먼저 끝까지 듣고) 많이 서운했겠다. 언제부터 그랬어? 누가 그렇게 말했어?"</p>
+  <p class="say"><b>부모</b>"엄마 아빠는 네 편이야. 선생님께 알려야 할 일인지 같이 생각해 보자. 다른 친구 중에 같이 놀고 싶은 친구도 있어?"</p>
+</div>
+<div class="e4-talk">
+  <h4>주간 계획을 못 지키고 짜증</h4>
+  <p class="say kid"><b>아이</b>"계획표 짜 봤자 어차피 못 지켜!"</p>
+  <p class="say"><b>부모</b>"3일은 지켰잖아. 그게 지난주보다 늘었어. 못 지킨 날은 뭐가 문제였을까? 양이 많았어, 시간이 안 맞았어?"</p>
+  <p class="say kid"><b>아이</b>"학원 끝나고는 너무 피곤해."</p>
+  <p class="say"><b>부모</b>"그럼 학원 있는 날은 칸을 하나만 넣자. 계획은 지키라고 있는 게 아니라 고치라고 있는 거야."</p>
+</div>
+
+<h3 id="hard">흔한 어려움과 대처</h3>
+<details class="acc"><summary>긴 나눗셈을 너무 어려워해요<small>몫을 세우다가 포기할 때</small></summary><div class="acc-body"><p>대부분 곱셈구구 자동화 부족 또는 "몫 어림하기" 연습 부족입니다. 구구단을 1주일 게임으로 재점검하고, 몫을 크게 세웠다 줄이는 과정을 부모가 소리 내어 보여 주세요. 계산기로 검산하게 하면 스스로 확인하는 습관이 생겨요. <a href="../subjects/math-elem.html#math-elem-e4-1-3">곱셈과 나눗셈 지도안 →</a></p></div></details>
+<details class="acc"><summary>분수 덧셈에서 분모끼리도 더해요<small>1/5 + 2/5 = 3/10</small></summary><div class="acc-body"><p>피자 5조각 중 1조각 + 2조각 = 5조각 중 3조각. 그림을 그리면 분모는 "조각 크기"라서 바뀌지 않는다는 게 보입니다. 3학년 분수 개념으로 돌아가는 신호예요. <a href="../subjects/math-elem.html#math-elem-e4-2-1">분수의 덧셈과 뺄셈 지도안 →</a></p></div></details>
+<details class="acc"><summary>특정 과목이 싫어졌대요<small>"과학 재미없어", "수학 싫어"</small></summary><div class="acc-body"><p>학원·문제집 과부하를 먼저 점검하세요. 체험·영상(화산 다큐, 천문대)으로 흥미를 되살리고, 문제집 양은 오히려 줄입니다. 공부 정서가 무너지면 5~6학년이 힘들어요. <a href="../wellbeing/study-emotion.html">공부 정서 지키기 →</a></p></div></details>
+<details class="acc"><summary>스마트폰 사 달라고 해요<small>"우리 반에 없는 애 나밖에 없어"</small></summary><div class="acc-body"><p>부부가 먼저 기준(시기, 기종, 사용 시간, 장소)을 합의하고 아이와 계약서처럼 정리합니다. 사 주더라도 첫 규칙이 가장 중요해요. 위의 <a href="#phone">스마트폰 규칙</a>을 쓰고, 결정은 <a href="../workbook/decision-log.html">결정 로그</a>에 남겨 두세요.</p></div></details>
+<details class="acc"><summary>친구 관계에서 상처받아요<small>무리에서 빠지거나 단톡방 문제</small></summary><div class="acc-body"><p>먼저 충분히 들어 주고 감정을 인정합니다. 반복되거나 따돌림 신호가 보이면 담임과 바로 공유하세요. 학교 밖 활동(운동·취미 모임)으로 관계의 폭을 넓혀 주는 것도 도움이 됩니다.</p></div></details>
+
+<div class="callout danger" data-label="도움을 청해야 할 때">
+  <p>2주 이상 잠·식욕이 눈에 띄게 달라짐, 학교 가기를 계속 거부, "사라지고 싶다" 같은 말, 이유 없는 복통·두통의 반복, 단톡방 괴롭힘 정황이 보이면 혼자 해결하려 하지 말고 담임·학교 상담실(Wee클래스)에 먼저 알리세요. 필요하면 소아청소년 전문 상담·진료를 받습니다. 청소년상담전화 1388에서도 부모 상담이 가능해요. <a href="../wellbeing/burnout.html">번아웃 신호와 대처 →</a> · <a href="../wellbeing/mood.html">오늘 마음 날씨 →</a></p>
 </div>
 
 <h2 id="role">부모의 역할: 이것만은 함께</h2>
@@ -217,21 +761,31 @@ summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
   <div class="card"><div class="card-ic" style="--cs:var(--stem-soft);--c:var(--stem)">📱</div><h3>미디어 규칙 합의</h3><p>게임·스마트폰 규칙은 가족 회의로 정하고 종이에 적어 붙이기. <a href="../wellbeing/screen.html">스크린타임 →</a></p></div>
 </div>
 
-<h2 id="hard">흔한 어려움과 대처</h2>
-<details class="acc"><summary>긴 나눗셈을 너무 어려워해요<small>몫을 세우다가 포기할 때</small></summary><div class="acc-body"><p>대부분 곱셈구구 자동화 부족 또는 "몫 어림하기" 연습 부족입니다. 구구단을 1주일 게임으로 재점검하고, 몫을 크게 세웠다 줄이는 과정을 부모가 소리 내어 보여 주세요. 계산기로 검산하게 하면 스스로 확인하는 습관이 생겨요.</p></div></details>
-<details class="acc"><summary>분수 덧셈에서 분모끼리도 더해요<small>1/5 + 2/5 = 3/10</small></summary><div class="acc-body"><p>피자 5조각 중 1조각 + 2조각 = 5조각 중 3조각. 그림을 그리면 분모는 "조각 크기"라서 바뀌지 않는다는 게 보입니다. 3학년 분수 개념으로 돌아가는 신호예요.</p></div></details>
-<details class="acc"><summary>특정 과목이 싫어졌대요<small>"과학 재미없어", "수학 싫어"</small></summary><div class="acc-body"><p>학원·문제집 과부하를 먼저 점검하세요. 체험·영상(화산 다큐, 천문대)으로 흥미를 되살리고, 문제집 양은 오히려 줄입니다. 공부 정서가 무너지면 5~6학년이 힘들어요. <a href="../wellbeing/study-emotion.html">공부 정서 지키기 →</a></p></div></details>
-<details class="acc"><summary>스마트폰 사 달라고 해요<small>"우리 반에 없는 애 나밖에 없어"</small></summary><div class="acc-body"><p>부부가 먼저 기준(시기, 기종, 사용 시간, 장소)을 합의하고 아이와 계약서처럼 정리합니다. 사 주더라도 첫 규칙이 가장 중요해요. 결정은 <a href="../workbook/decision-log.html">결정 로그</a>에 남겨 두세요.</p></div></details>
-<details class="acc"><summary>친구 관계에서 상처받아요<small>무리에서 빠지거나 단톡방 문제</small></summary><div class="acc-body"><p>먼저 충분히 들어 주고 감정을 인정합니다. 반복되거나 따돌림 신호가 보이면 담임과 바로 공유하세요. 학교 밖 활동(운동·취미 모임)으로 관계의 폭을 넓혀 주는 것도 도움이 됩니다.</p></div></details>
+<h2 id="reading">독서 가이드</h2>
+<div class="cards" style="--min: 220px">
+  <div class="card c-root"><span class="tag">수준</span><h3>그림책 졸업, 줄글 장편으로</h3><p>100쪽 이상 장편 동화, 지식 정보책, 인물 이야기(전기)로 넘어가는 때. 학습 만화만 읽는다면 줄글 1권과 짝지어 주세요.</p></div>
+  <div class="card c-stem"><span class="tag">양</span><h3>하루 30분 이상</h3><p>짧은 책 주 2~3권 또는 긴 책 1권. 권수보다 "매일 펼치기"가 핵심이에요.</p></div>
+  <div class="card c-branch"><span class="tag">섞어 읽기</span><h3>이야기 : 지식 = 반반</h3><p>창작 동화 · 과학 지식책 · 인물 이야기 · 옛이야기·전래 동화 · 어린이 신문을 골고루. 교과 단원(화산, 지역 역사)과 이어 고르면 좋아요.</p></div>
+  <div class="card c-fruit"><span class="tag">함께</span><h3>부모도 같은 시간에 읽기</h3><p>잠들기 전 30분 "가족 독서 시간". 가끔은 부모가 소리 내어 읽어 주는 것도 여전히 효과적입니다.</p></div>
+</div>
+<h3>독서 대화 질문 5개</h3>
+<ol>
+  <li>주인공(인물)이 가장 크게 고민한 건 뭐였어?</li>
+  <li>네가 주인공이라면 그 장면에서 어떻게 했을 것 같아? 왜?</li>
+  <li>이 책에서 "사실"과 "글쓴이의 의견"을 하나씩 찾아볼까?</li>
+  <li>처음 알게 된 것 중에 친구한테 알려 주고 싶은 건?</li>
+  <li>이 책을 한 문장으로 소개한다면?</li>
+</ol>
+<p class="callout note">독서 감상문은 줄거리보다 "내 생각이 들어간 한 문단"이면 충분해요. <a href="../wellbeing/reading.html">독서 습관 →</a> · <a href="../subjects/korean-elem.html#korean-elem-u43">독서 감상문 쓰기 단원 →</a></p>
 
 <h2 id="extras">체험 · 학습지 · 예체능</h2>
 <div class="tabs" data-tabs>
   <div class="tab-list"><button>체험·여행</button><button>학습지·교재</button><button>예체능</button></div>
   <div class="tab-panel">
     <div class="cards" style="--min: 200px">
-      <a class="card c-branch" href="../trips/places.html"><span class="tag">과학</span><h3>지질공원</h3><p>한탄강·제주 등 지층·화산 지형 관찰.</p></a>
-      <a class="card c-root" href="../trips/places.html"><span class="tag">과학</span><h3>화석·자연사 박물관</h3><p>지층과 화석 단원과 연결.</p></a>
-      <a class="card c-stem" href="../trips/places.html"><span class="tag">과학</span><h3>천문대</h3><p>별 보기, 5학년 태양계 예고편.</p></a>
+      <a class="card c-branch" href="../trips/places.html#volcano"><span class="tag">과학</span><h3>지질공원</h3><p>한탄강·제주 등 지층·화산 지형 관찰.</p></a>
+      <a class="card c-root" href="../trips/places.html#museum"><span class="tag">과학</span><h3>화석·자연사 박물관</h3><p>지층과 화석 단원과 연결.</p></a>
+      <a class="card c-stem" href="../trips/places.html#stars"><span class="tag">과학</span><h3>천문대</h3><p>별 보기, 5학년 태양계 예고편.</p></a>
       <a class="card c-fruit" href="../trips/places.html"><span class="tag">사회</span><h3>도청·시청·국회</h3><p>공공기관과 주민 참여.</p></a>
     </div>
   </div>
@@ -275,3 +829,15 @@ summary: 큰 수·각도 · 분수 구멍 점검 · 자기주도 연습
 <p class="saved-hint"></p>
 
 </div>
+
+<script>
+(function () {
+  try {
+    var m = new Date().getMonth() + 1;
+    var cards = document.querySelectorAll('.e4-cal [data-month]');
+    for (var i = 0; i < cards.length; i++) {
+      if (+cards[i].getAttribute('data-month') === m) { cards[i].classList.add('is-now'); }
+    }
+  } catch (e) {}
+})();
+</script>

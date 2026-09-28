@@ -3,6 +3,11 @@
    See docs/start/how-to-use.html for usage snippets.
    ============================================================ */
 
+/* deep-link target flash */
+.is-target { animation: targetflash 2.4s ease-out; scroll-margin-top: 90px; }
+@keyframes targetflash { 0%, 30% { box-shadow: 0 0 0 4px var(--accent); } 100% { box-shadow: 0 0 0 0 transparent; } }
+details.acc[id] { scroll-margin-top: 90px; }
+
 /* ---------- mode visibility ---------- */
 .kid-only, .kid-only-inline, .kid-gate { display: none !important; }
 [data-mode="kid"] .kid-only { display: block !important; }

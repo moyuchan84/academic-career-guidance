@@ -225,6 +225,30 @@
     document.addEventListener('click', function (e) { if (!dg.contains(e.target)) clear(); });
   });
 
+  /* ---------- deep links: #id opens the tab panel(s) and accordion(s) containing it ---------- */
+  function openHash() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    var node = el;
+    while (node && node !== document.body) {
+      if (node.classList && node.classList.contains('tab-panel') && node.hidden) {
+        var tabs = node.parentElement, panels = $$(':scope > .tab-panel', tabs), idx = panels.indexOf(node);
+        var btn = $$('.tab-list > button', tabs)[idx];
+        if (btn) btn.click();
+      }
+      if (node.tagName === 'DETAILS' && !node.open && !node.classList.contains('lesson')) node.open = true;
+      node = node.parentElement;
+    }
+    if (el.tagName === 'DETAILS') el.open = true;
+    el.classList.add('is-target');
+    setTimeout(function () { el.scrollIntoView({ block: 'start', behavior: 'smooth' }); }, 60);
+    setTimeout(function () { el.classList.remove('is-target'); }, 2600);
+  }
+  window.addEventListener('hashchange', openHash);
+  setTimeout(openHash, 0);
+
   /* ---------- "current grade" personalisation: [data-kid-year] shows each child's grade in a given year ---------- */
   // Children: 첫째 2026 초2, 둘째 2026 초1. Grade index 1..12 = 초1..고3.
   var KIDS = [{ name: '첫째', g2026: 2 }, { name: '둘째', g2026: 1 }];
