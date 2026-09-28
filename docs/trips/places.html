@@ -52,56 +52,507 @@ summary: 과목·학년·계절로 고르는 국공립 체험 장소
 <!-- ================= PARENT ================= -->
 <div class="parent-only">
 
-<p class="sec-label">과목</p>
-<div class="filters" data-filter-group="places">
-  <button data-filter="all">전체</button><button data-filter="kor">국어</button><button data-filter="math">수학</button><button data-filter="soc">사회·역사</button><button data-filter="sci">과학</button><button data-filter="info">정보</button><button data-filter="career">진로</button>
-</div>
-<p class="sec-label">추천 학년</p>
-<div class="filters" data-filter-group="places">
-  <button data-filter="all">전 학년</button><button data-filter="g12">초1~2</button><button data-filter="g34">초3~4</button><button data-filter="g56">초5~6</button><button data-filter="gm">중학생</button>
-</div>
-<p class="sec-label">계절</p>
-<div class="filters" data-filter-group="places">
-  <button data-filter="all">언제든</button><button data-filter="spring">봄</button><button data-filter="summer">여름</button><button data-filter="autumn">가을</button><button data-filter="winter">겨울</button>
+<div class="cards" style="--min:200px">
+  <a class="card top c-root" href="museums-history.html"><span class="tag">테마</span><h3>박물관·역사</h3><p>20곳 · 장소별 체험 지도안</p></a>
+  <a class="card top c-branch" href="science-nature.html"><span class="tag">테마</span><h3>과학관·천문</h3><p>12곳 · 장소별 체험 지도안</p></a>
+  <a class="card top c-stem" href="nature-ecology.html"><span class="tag">테마</span><h3>자연·생태·바다</h3><p>12곳 · 장소별 체험 지도안</p></a>
+  <a class="card top c-accent" href="arts-culture.html"><span class="tag">테마</span><h3>문화·예술·문학</h3><p>12곳 · 장소별 체험 지도안</p></a>
+  <a class="card top c-note" href="society-career.html"><span class="tag">테마</span><h3>사회·경제·진로·안전</h3><p>13곳 · 장소별 체험 지도안</p></a>
+  <a class="card top c-fruit" href="by-grade.html"><span class="tag">학년별</span><h3>학년별 체험 로드맵</h3><p>단원마다 연결된 체험을 학년별로 모아 봤어요</p></a>
 </div>
 
-<div class="cards" data-filter-target="places" style="--min: 250px">
-  <div class="card top c-root" data-tags="kor g12 g34 spring summer autumn winter"><span class="tag">국어 · 서울 용산</span><h3>국립한글박물관</h3><p>한글의 탄생과 쓰임. 어린이용 한글 놀이 공간이 있어 한글 해득 시기(초1~2)에 딱 맞아요.</p><span class="card-foot">연계: 한글 · 초1~4 · 실내</span></div>
-  <div class="card top c-root" data-tags="kor g12 g34 spring summer autumn winter"><span class="tag">국어 · 서울 강남</span><h3>국립어린이청소년도서관</h3><p>어린이·청소년 전용 국립 도서관. 독서 습관을 들이는 "특별한 도서관 나들이"로 좋아요.</p><span class="card-foot">연계: 독서 · 초1~ · 실내</span></div>
-  <div class="card top c-root" data-tags="kor g56 gm spring autumn"><span class="tag">국어 · 서울 종로</span><h3>윤동주문학관</h3><p>교과서에 실리는 시인의 삶과 시. 근처 인왕산 자락 "시인의 언덕"까지 산책 코스로.</p><span class="card-foot">연계: 문학·시 · 초5~중</span></div>
-  <div class="card top c-stem" data-tags="math sci g34 g56 gm spring summer autumn winter"><span class="tag">수학·과학 · 경기 과천</span><h3>국립과천과학관</h3><p>기초과학·첨단기술·자연사 전시와 천체관측 시설. 규칙·도형을 몸으로 해 보는 체험 전시를 찾아보세요.</p><span class="card-foot">연계: 전 영역 · 초3~ · 실내 중심</span></div>
-  <div class="card top c-stem" data-tags="sci g12 g34 spring summer autumn winter"><span class="tag">과학 · 서울 종로</span><h3>국립어린이과학관</h3><p>저학년 눈높이의 과학 체험관. 과학 교과가 시작되기 전 "과학은 재미있다"는 첫인상 만들기.</p><span class="card-foot">연계: 과학 입문 · 초1~4 · 실내</span></div>
-  <div class="card top c-stem" data-tags="sci g34 g56 gm spring summer autumn winter"><span class="tag">과학 · 대전</span><h3>국립중앙과학관</h3><p>자연사·과학기술사·천체 관측 등. 대전 여행과 묶어 하루 코스로 좋아요.</p><span class="card-foot">연계: 전 영역 · 초3~ · 실내 중심</span></div>
-  <div class="card top c-stem" data-tags="sci g34 g56 spring summer autumn winter"><span class="tag">과학 · 충남 서천</span><h3>국립생태원</h3><p>열대·사막·극지 기후를 재현한 에코리움과 야외 생태 공간. 생물과 환경 단원과 연결돼요.</p><span class="card-foot">연계: 생물과 환경 · 초3~5</span></div>
-  <div class="card top c-stem" data-tags="sci soc g34 g56 gm summer winter"><span class="tag">과학·사회 · 부산</span><h3>국립해양박물관</h3><p>바다 생물, 해양 탐사, 배와 항해의 역사. 여름 부산 여행과 묶기 좋아요.</p><span class="card-foot">연계: 해양·생물·교통 · 초3~</span></div>
-  <div class="card top c-stem" data-tags="sci g34 g56 spring autumn"><span class="tag">과학 · 경기 포천·연천 / 강원 철원</span><h3>한탄강 지질공원</h3><p>유네스코 세계지질공원. 용암이 만든 주상절리와 협곡을 직접 봐요.</p><span class="card-foot">연계: 지층과 화석·화산 · 초4 · 야외</span></div>
-  <div class="card top c-stem" data-tags="sci soc g34 g56 gm spring summer autumn"><span class="tag">과학 · 제주</span><h3>제주 지질공원</h3><p>유네스코 세계지질공원. 성산일출봉 같은 화산 지형과 현무암을 관찰하는 가족여행 코스.</p><span class="card-foot">연계: 화산과 지진·지층 · 초4~</span></div>
-  <div class="card top c-stem" data-tags="sci g56 gm autumn winter"><span class="tag">과학 · 전국</span><h3>지역 시민천문대</h3><p>여러 시·군이 천문대를 운영해요. 공기가 맑은 가을·겨울 밤 관측 프로그램을 예약해 보세요.</p><span class="card-foot">연계: 태양계와 별 · 초5~6</span></div>
-  <div class="card top c-branch" data-tags="soc g12 g34 g56 gm spring summer autumn winter"><span class="tag">사회·역사 · 서울 용산</span><h3>국립중앙박물관</h3><p>선사부터 조선까지 한국사 전체를 한 건물에서. 어린이박물관은 저학년용, 상설전시는 초5 역사와 함께.</p><span class="card-foot">연계: 역사 전반 · 초1~</span></div>
-  <div class="card top c-branch" data-tags="soc g12 g34 spring summer autumn winter"><span class="tag">사회 · 서울 종로</span><h3>국립민속박물관</h3><p>경복궁 안. 옛사람들의 한 해와 한평생을 보여 줘요. 어린이박물관이 따로 있습니다.</p><span class="card-foot">연계: 옛날과 오늘날 · 초1~4</span></div>
-  <div class="card top c-branch" data-tags="soc g56 gm spring autumn"><span class="tag">역사 · 경북 경주</span><h3>경주 역사유적지구</h3><p>불국사·석굴암, 대릉원, 첨성대, 국립경주박물관. 신라 천년의 수도를 걸어서 봐요.</p><span class="card-foot">연계: 삼국·통일신라 · 초5~6</span></div>
-  <div class="card top c-branch" data-tags="soc g56 gm spring autumn"><span class="tag">역사 · 충남 공주·부여</span><h3>백제역사유적지구</h3><p>공산성, 무령왕릉과 왕릉원, 정림사지, 국립공주·부여박물관. 백제 이야기를 한 번에.</p><span class="card-foot">연계: 삼국 · 초5~6</span></div>
-  <div class="card top c-branch" data-tags="soc g56 gm spring autumn"><span class="tag">역사 · 인천 강화</span><h3>강화도</h3><p>고인돌(선사), 고려궁지(고려), 광성보(근대). 한 섬에서 여러 시대를 만나는 코스.</p><span class="card-foot">연계: 선사·고려·근대 · 초5~중</span></div>
-  <div class="card top c-branch" data-tags="soc g34 g56 gm spring autumn"><span class="tag">역사 · 서울</span><h3>경복궁·창덕궁</h3><p>조선의 궁궐. 창덕궁은 유네스코 세계유산이에요. 궁궐 해설 프로그램을 이용해 보세요.</p><span class="card-foot">연계: 조선 · 초3~</span></div>
-  <div class="card top c-branch" data-tags="soc math g56 gm spring autumn"><span class="tag">역사 · 경기 수원</span><h3>수원화성</h3><p>정조가 쌓은 성곽, 유네스코 세계유산. 거중기 이야기로 과학·수학과도 연결돼요.</p><span class="card-foot">연계: 조선 후기 · 초5~6</span></div>
-  <div class="card top c-branch" data-tags="soc g56 gm spring autumn winter"><span class="tag">역사 · 서울 서대문</span><h3>서대문형무소역사관</h3><p>독립운동가들이 갇혔던 곳. 전시가 무거울 수 있어 미리 이야기 나누고 초5 이후에 권해요.</p><span class="card-foot">연계: 일제강점기 · 초5~</span></div>
-  <div class="card top c-branch" data-tags="soc g56 gm spring autumn winter"><span class="tag">역사 · 충남 천안</span><h3>독립기념관</h3><p>국난 극복과 독립운동의 역사. 전시관이 넓어 한두 관을 골라서 보는 게 좋아요.</p><span class="card-foot">연계: 근현대 · 초5~</span></div>
-  <div class="card top c-branch" data-tags="soc g56 gm spring summer autumn winter"><span class="tag">사회 · 서울 여의도</span><h3>국회</h3><p>국회 참관·견학 프로그램과 헌정기념관. 법이 만들어지는 과정을 봐요.</p><span class="card-foot">연계: 민주주의·정치 · 초6</span></div>
-  <div class="card top c-branch" data-tags="soc math g56 gm spring summer autumn winter"><span class="tag">사회 · 서울 중구</span><h3>한국은행 화폐박물관</h3><p>돈의 역사와 만들어지는 과정. 경제 단원과 용돈 교육을 함께.</p><span class="card-foot">연계: 경제 · 초6</span></div>
-  <div class="card top c-note" data-tags="info g56 gm spring summer autumn winter"><span class="tag">정보 · 제주</span><h3>넥슨컴퓨터박물관</h3><p>컴퓨터와 게임의 역사를 직접 만져 보는 박물관(민간). 초5부터 시작되는 정보 교육과 연결돼요.</p><span class="card-foot">연계: 컴퓨터의 역사 · 초5~</span></div>
-  <div class="card top c-fruit" data-tags="career g34 g56 gm spring summer autumn winter"><span class="tag">진로 · 경기 성남</span><h3>한국잡월드</h3><p>고용노동부 산하 직업체험관. 어린이 체험관과 청소년 체험관이 나뉘어 있어요.</p><span class="card-foot">연계: 진로 탐색 · 초4~중</span></div>
+<h2 id="finder">장소 찾기</h2>
+<p>필터를 겹쳐 고르세요. 카드를 누르면 그 장소의 <strong>체험 지도안</strong>(연계 단원 · 관람 동선 · 현장 미션 · 대화 질문)으로 이동해요.</p>
+<div class="filters" data-filter-group="pl" aria-label="과목"><button data-filter="all" class="is-on">전체 과목</button><button data-filter="kor">국어</button><button data-filter="math">수학</button><button data-filter="eng">영어</button><button data-filter="soc">사회</button><button data-filter="hist">역사</button><button data-filter="sci">과학</button><button data-filter="code">정보</button><button data-filter="music">음악</button><button data-filter="art">미술</button><button data-filter="pe">체육·안전</button><button data-filter="career">진로</button></div>
+<div class="filters" data-filter-group="pl" aria-label="학년"><button data-filter="all" class="is-on">전체 학년</button><button data-filter="elow">초1~2</button><button data-filter="emid">초3~4</button><button data-filter="ehigh">초5~6</button><button data-filter="mid">중학교</button><button data-filter="high">고등학교</button></div>
+<div class="filters" data-filter-group="pl" aria-label="지역"><button data-filter="all" class="is-on">전체 지역</button><button data-filter="seoul">서울</button><button data-filter="gyeonggi">경기·인천</button><button data-filter="gangwon">강원</button><button data-filter="chung">충청·대전</button><button data-filter="gyeong">경상·대구·부산</button><button data-filter="jeolla">전라·광주</button><button data-filter="jeju">제주</button></div>
+<div class="filters" data-filter-group="pl" aria-label="계절"><button data-filter="all" class="is-on">언제든</button><button data-filter="spring">봄</button><button data-filter="summer">여름</button><button data-filter="autumn">가을</button><button data-filter="winter">겨울</button><button data-filter="indoor">실내(비·미세먼지)</button><button data-filter="night">밤</button></div>
+<div class="cards" data-filter-target="pl" style="--min:230px">
+  <a class="card top c-root" data-tags="elow emid ehigh mid high seoul soc hist art all indoor spring summer autumn winter" href="museums-history.html#place-national-museum">
+    <span class="tag">박물관·역사</span>
+    <h3>국립중앙박물관</h3>
+    <p>서울 · 초1~고3</p>
+    <div class="tags"><span class="tag">사회</span><span class="tag">역사</span><span class="tag">미술</span></div>
+    <span class="card-foot">연계 단원 43개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="elow emid ehigh mid seoul soc int all indoor spring summer autumn winter" href="museums-history.html#place-national-folk">
+    <span class="tag">박물관·역사</span>
+    <h3>국립민속박물관</h3>
+    <p>서울 · 초1~중3</p>
+    <div class="tags"><span class="tag">사회</span><span class="tag">통합</span></div>
+    <span class="card-foot">연계 단원 15개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="emid ehigh mid high seoul hist soc math spring autumn" href="museums-history.html#place-gyeongbokgung">
+    <span class="tag">박물관·역사</span>
+    <h3>경복궁·국립고궁박물관</h3>
+    <p>서울 · 초3~고3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">사회</span><span class="tag">수학</span></div>
+    <span class="card-foot">연계 단원 15개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high seoul hist art spring autumn" href="museums-history.html#place-changdeokgung">
+    <span class="tag">박물관·역사</span>
+    <h3>창덕궁·종묘</h3>
+    <p>서울 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">미술</span></div>
+    <span class="card-foot">연계 단원 11개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high gyeonggi hist math sci spring autumn" href="museums-history.html#place-suwon-hwaseong">
+    <span class="tag">박물관·역사</span>
+    <h3>수원 화성</h3>
+    <p>경기 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">수학</span><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 6개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high gyeong hist sci art spring autumn" href="museums-history.html#place-gyeongju">
+    <span class="tag">박물관·역사</span>
+    <h3>경주 (국립경주박물관·대릉원·첨성대·불국사·석굴암)</h3>
+    <p>경북 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">과학</span><span class="tag">미술</span></div>
+    <span class="card-foot">연계 단원 7개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high chung hist spring autumn" href="museums-history.html#place-gongju-buyeo">
+    <span class="tag">박물관·역사</span>
+    <h3>공주·부여 백제역사유적지구</h3>
+    <p>충남 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 3개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high gyeonggi hist soc spring autumn" href="museums-history.html#place-ganghwa">
+    <span class="tag">박물관·역사</span>
+    <h3>강화도 (고인돌·광성보·전등사)</h3>
+    <p>인천 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 6개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="emid ehigh mid gyeonggi hist sci spring autumn" href="museums-history.html#place-jeongok">
+    <span class="tag">박물관·역사</span>
+    <h3>연천 전곡리 유적·전곡선사박물관</h3>
+    <p>경기 · 초3~중3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 2개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="emid ehigh seoul hist spring autumn" href="museums-history.html#place-amsa">
+    <span class="tag">박물관·역사</span>
+    <h3>서울 암사동 유적</h3>
+    <p>서울 · 초3~초6</p>
+    <div class="tags"><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 1개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid seoul hist all indoor spring summer autumn winter" href="museums-history.html#place-hanseong-baekje">
+    <span class="tag">박물관·역사</span>
+    <h3>한성백제박물관</h3>
+    <p>서울 · 초5~중3</p>
+    <div class="tags"><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 2개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high seoul hist all spring summer autumn winter" href="museums-history.html#place-seodaemun">
+    <span class="tag">박물관·역사</span>
+    <h3>서대문형무소역사관</h3>
+    <p>서울 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 7개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high chung hist all spring summer autumn winter" href="museums-history.html#place-independence-hall">
+    <span class="tag">박물관·역사</span>
+    <h3>독립기념관</h3>
+    <p>충남 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 5개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high seoul hist soc all indoor spring summer autumn winter" href="museums-history.html#place-war-memorial">
+    <span class="tag">박물관·역사</span>
+    <h3>전쟁기념관</h3>
+    <p>서울 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 6개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="elow emid ehigh mid seoul kor hist all indoor spring summer autumn winter" href="museums-history.html#place-hangeul-museum">
+    <span class="tag">박물관·역사</span>
+    <h3>국립한글박물관</h3>
+    <p>서울 · 초1~중3</p>
+    <div class="tags"><span class="tag">국어</span><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 21개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="emid ehigh mid gyeonggi hist sci kor spring autumn" href="museums-history.html#place-sejong-yeongneung">
+    <span class="tag">박물관·역사</span>
+    <h3>여주 세종대왕릉(영릉)</h3>
+    <p>경기 · 초3~중3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">과학</span><span class="tag">국어</span></div>
+    <span class="card-foot">연계 단원 5개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high gyeong hist sci spring autumn" href="museums-history.html#place-haeinsa">
+    <span class="tag">박물관·역사</span>
+    <h3>합천 해인사 장경판전</h3>
+    <p>경남 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 3개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="emid ehigh mid high gyeong hist soc music spring autumn" href="museums-history.html#place-andong-hahoe">
+    <span class="tag">박물관·역사</span>
+    <h3>안동 하회마을</h3>
+    <p>경북 · 초3~고3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">사회</span><span class="tag">음악</span></div>
+    <span class="card-foot">연계 단원 2개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="emid ehigh mid jeolla hist soc spring autumn" href="museums-history.html#place-jeonju-hanok">
+    <span class="tag">박물관·역사</span>
+    <h3>전주 한옥마을·경기전</h3>
+    <p>전북 · 초3~중3</p>
+    <div class="tags"><span class="tag">역사</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 1개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-root" data-tags="ehigh mid high gyeong hist all spring summer autumn winter" href="museums-history.html#place-busan-provisional">
+    <span class="tag">박물관·역사</span>
+    <h3>부산 임시수도기념관</h3>
+    <p>부산 · 초5~고3</p>
+    <div class="tags"><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 0개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="elow emid ehigh mid high gyeonggi sci math code all indoor spring summer autumn winter" href="science-nature.html#place-gwacheon-science">
+    <span class="tag">과학관·천문</span>
+    <h3>국립과천과학관</h3>
+    <p>경기 · 초1~고3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">수학</span><span class="tag">정보</span></div>
+    <span class="card-foot">연계 단원 79개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="elow emid ehigh mid high chung sci code all indoor spring summer autumn winter" href="science-nature.html#place-daejeon-science">
+    <span class="tag">과학관·천문</span>
+    <h3>국립중앙과학관</h3>
+    <p>대전 · 초1~고3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">정보</span></div>
+    <span class="card-foot">연계 단원 50개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="elow emid seoul sci math all indoor spring summer autumn winter" href="science-nature.html#place-children-science">
+    <span class="tag">과학관·천문</span>
+    <h3>국립어린이과학관</h3>
+    <p>서울 · 초1~초4</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">수학</span></div>
+    <span class="card-foot">연계 단원 9개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="elow emid ehigh mid jeolla sci all indoor spring summer autumn winter" href="science-nature.html#place-gwangju-science">
+    <span class="tag">과학관·천문</span>
+    <h3>국립광주과학관</h3>
+    <p>광주 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 0개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="elow emid ehigh mid gyeong sci all indoor spring summer autumn winter" href="science-nature.html#place-daegu-science">
+    <span class="tag">과학관·천문</span>
+    <h3>국립대구과학관</h3>
+    <p>대구 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 0개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="elow emid ehigh mid gyeong sci all indoor spring summer autumn winter" href="science-nature.html#place-busan-science">
+    <span class="tag">과학관·천문</span>
+    <h3>국립부산과학관</h3>
+    <p>부산 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 0개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="emid ehigh mid seoul sci hist all indoor spring summer autumn winter" href="science-nature.html#place-weather-museum">
+    <span class="tag">과학관·천문</span>
+    <h3>국립기상박물관</h3>
+    <p>서울 · 초3~중3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 3개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="elow emid ehigh mid seoul sci all indoor spring summer autumn winter" href="science-nature.html#place-natural-history">
+    <span class="tag">과학관·천문</span>
+    <h3>서대문자연사박물관</h3>
+    <p>서울 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 3개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="emid ehigh mid high seoul gyeonggi gangwon chung gyeong jeolla jeju sci all night spring summer autumn winter" href="science-nature.html#place-observatory">
+    <span class="tag">과학관·천문</span>
+    <h3>지역 시민천문대</h3>
+    <p>전국 · 초3~고3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 11개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="emid ehigh mid high jeolla sci all indoor spring summer autumn winter" href="science-nature.html#place-naro-space">
+    <span class="tag">과학관·천문</span>
+    <h3>고흥 나로우주센터 우주과학관</h3>
+    <p>전남 · 초3~고3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 0개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="emid ehigh mid high jeju code all indoor spring summer autumn winter" href="science-nature.html#place-computer-museum">
+    <span class="tag">과학관·천문</span>
+    <h3>넥슨컴퓨터박물관 (민간·제주)</h3>
+    <p>제주 · 초3~고3</p>
+    <div class="tags"><span class="tag">정보</span></div>
+    <span class="card-foot">연계 단원 8개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-branch" data-tags="emid ehigh mid seoul gyeonggi gangwon chung gyeong jeolla jeju sci soc all indoor spring summer autumn winter" href="science-nature.html#place-energy-center">
+    <span class="tag">과학관·천문</span>
+    <h3>에너지·환경 체험관 (지역 공공 시설)</h3>
+    <p>전국 · 초3~중3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 1개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid ehigh mid high chung sci all spring summer autumn winter" href="nature-ecology.html#place-nie">
+    <span class="tag">자연·생태·바다</span>
+    <h3>국립생태원</h3>
+    <p>충남 · 초1~고3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 18개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid ehigh mid gyeong sci soc hist all indoor spring summer autumn winter" href="nature-ecology.html#place-marine-museum">
+    <span class="tag">자연·생태·바다</span>
+    <h3>국립해양박물관</h3>
+    <p>부산 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">사회</span><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 9개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid ehigh mid chung sci all indoor spring summer autumn winter" href="nature-ecology.html#place-marine-bio">
+    <span class="tag">자연·생태·바다</span>
+    <h3>국립해양생물자원관</h3>
+    <p>충남 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 2개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid ehigh mid gyeonggi sci spring summer autumn" href="nature-ecology.html#place-national-arboretum">
+    <span class="tag">자연·생태·바다</span>
+    <h3>국립수목원</h3>
+    <p>경기 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 13개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid ehigh mid gyeong sci spring summer autumn" href="nature-ecology.html#place-baekdudaegan">
+    <span class="tag">자연·생태·바다</span>
+    <h3>국립백두대간수목원</h3>
+    <p>경북 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 0개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="emid ehigh mid high gyeonggi sci soc spring autumn" href="nature-ecology.html#place-hantan-geopark">
+    <span class="tag">자연·생태·바다</span>
+    <h3>한탄강 세계지질공원</h3>
+    <p>경기·강원 · 초4~고3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 7개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="emid ehigh mid high jeju sci soc all spring summer autumn winter" href="nature-ecology.html#place-jeju-geo">
+    <span class="tag">자연·생태·바다</span>
+    <h3>제주 세계지질공원 (만장굴·성산일출봉 등)</h3>
+    <p>제주 · 초4~고3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 14개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="emid ehigh mid high jeolla sci soc autumn winter" href="nature-ecology.html#place-suncheon-bay">
+    <span class="tag">자연·생태·바다</span>
+    <h3>순천만 습지</h3>
+    <p>전남 · 초3~고3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 1개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid ehigh mid high seoul gyeonggi gangwon chung gyeong jeolla jeju sci pe spring summer autumn" href="nature-ecology.html#place-national-park">
+    <span class="tag">자연·생태·바다</span>
+    <h3>국립공원 탐방 (탐방안내소 프로그램)</h3>
+    <p>전국 · 초1~고3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">체육</span></div>
+    <span class="card-foot">연계 단원 1개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid ehigh seoul gyeonggi gangwon chung gyeong jeolla jeju sci soc summer" href="nature-ecology.html#place-mudflat">
+    <span class="tag">자연·생태·바다</span>
+    <h3>서해 갯벌 체험 (지역 공인 체험장)</h3>
+    <p>서해안 · 초1~초6</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 2개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid gyeonggi sci int spring autumn" href="nature-ecology.html#place-seoul-grand-park">
+    <span class="tag">자연·생태·바다</span>
+    <h3>서울대공원 동물원</h3>
+    <p>경기 · 초1~초4</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">통합</span></div>
+    <span class="card-foot">연계 단원 5개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-stem" data-tags="elow emid ehigh mid seoul gyeonggi gangwon chung gyeong jeolla jeju sci int all spring summer autumn winter" href="nature-ecology.html#place-city-park">
+    <span class="tag">자연·생태·바다</span>
+    <h3>동네 공원·하천 생태 관찰</h3>
+    <p>전국 · 초1~중3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">통합</span></div>
+    <span class="card-foot">연계 단원 94개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="elow emid ehigh mid high seoul art all indoor spring summer autumn winter" href="arts-culture.html#place-mmca">
+    <span class="tag">문화·예술·문학</span>
+    <h3>국립현대미술관 (서울·과천)</h3>
+    <p>서울·경기 · 초1~고3</p>
+    <div class="tags"><span class="tag">미술</span></div>
+    <span class="card-foot">연계 단원 44개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="elow emid ehigh mid high seoul art all indoor spring summer autumn winter" href="arts-culture.html#place-seoul-art">
+    <span class="tag">문화·예술·문학</span>
+    <h3>서울시립미술관</h3>
+    <p>서울 · 초1~고3</p>
+    <div class="tags"><span class="tag">미술</span></div>
+    <span class="card-foot">연계 단원 15개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="elow emid ehigh mid high seoul music art all indoor spring summer autumn winter" href="arts-culture.html#place-sac">
+    <span class="tag">문화·예술·문학</span>
+    <h3>예술의전당</h3>
+    <p>서울 · 초1~고3</p>
+    <div class="tags"><span class="tag">음악</span><span class="tag">미술</span></div>
+    <span class="card-foot">연계 단원 43개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="elow emid ehigh mid high seoul music hist all indoor spring summer autumn winter" href="arts-culture.html#place-gugak">
+    <span class="tag">문화·예술·문학</span>
+    <h3>국립국악원</h3>
+    <p>서울 · 초1~고3</p>
+    <div class="tags"><span class="tag">음악</span><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 21개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="emid ehigh mid high seoul music kor all indoor spring summer autumn winter" href="arts-culture.html#place-national-theater">
+    <span class="tag">문화·예술·문학</span>
+    <h3>국립극장</h3>
+    <p>서울 · 초3~고3</p>
+    <div class="tags"><span class="tag">음악</span><span class="tag">국어</span></div>
+    <span class="card-foot">연계 단원 0개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="elow emid ehigh mid seoul kor eng all indoor spring summer autumn winter" href="arts-culture.html#place-kids-library">
+    <span class="tag">문화·예술·문학</span>
+    <h3>국립어린이청소년도서관</h3>
+    <p>서울 · 초1~중3</p>
+    <div class="tags"><span class="tag">국어</span><span class="tag">영어</span></div>
+    <span class="card-foot">연계 단원 6개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="elow emid ehigh mid high seoul gyeonggi gangwon chung gyeong jeolla jeju kor eng all indoor spring summer autumn winter" href="arts-culture.html#place-local-library">
+    <span class="tag">문화·예술·문학</span>
+    <h3>동네 도서관 프로그램</h3>
+    <p>전국 · 초1~고3</p>
+    <div class="tags"><span class="tag">국어</span><span class="tag">영어</span></div>
+    <span class="card-foot">연계 단원 200개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="ehigh mid high seoul kor hist all spring summer autumn winter" href="arts-culture.html#place-yoondongju">
+    <span class="tag">문화·예술·문학</span>
+    <h3>윤동주문학관</h3>
+    <p>서울 · 초5~고3</p>
+    <div class="tags"><span class="tag">국어</span><span class="tag">역사</span></div>
+    <span class="card-foot">연계 단원 6개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="ehigh mid high gangwon kor spring autumn" href="arts-culture.html#place-literary-houses">
+    <span class="tag">문화·예술·문학</span>
+    <h3>지역 문학관 (김유정문학촌·박경리문학공원 등)</h3>
+    <p>강원 등 · 초5~고3</p>
+    <div class="tags"><span class="tag">국어</span></div>
+    <span class="card-foot">연계 단원 12개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="emid ehigh mid high seoul gyeonggi gangwon chung gyeong jeolla jeju art soc spring autumn" href="arts-culture.html#place-public-art">
+    <span class="tag">문화·예술·문학</span>
+    <h3>공공미술·건축 산책</h3>
+    <p>전국 · 초3~고3</p>
+    <div class="tags"><span class="tag">미술</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 3개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="elow emid ehigh seoul gyeonggi gangwon chung gyeong jeolla jeju music kor all indoor spring summer autumn winter" href="arts-culture.html#place-kids-theater">
+    <span class="tag">문화·예술·문학</span>
+    <h3>어린이 공연 (지역 문화재단·구민회관)</h3>
+    <p>전국 · 초1~초6</p>
+    <div class="tags"><span class="tag">음악</span><span class="tag">국어</span></div>
+    <span class="card-foot">연계 단원 48개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-accent" data-tags="elow emid ehigh mid seoul gyeonggi gangwon chung gyeong jeolla jeju soc music spring autumn" href="arts-culture.html#place-local-festival">
+    <span class="tag">문화·예술·문학</span>
+    <h3>지역 축제·전통 행사</h3>
+    <p>전국 · 초1~중3</p>
+    <div class="tags"><span class="tag">사회</span><span class="tag">음악</span></div>
+    <span class="card-foot">연계 단원 25개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="ehigh mid high seoul soc all indoor spring summer autumn winter" href="society-career.html#place-national-assembly">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>국회 (견학·국회박물관)</h3>
+    <p>서울 · 초5~고3</p>
+    <div class="tags"><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 16개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="ehigh mid high seoul soc all indoor spring summer autumn winter" href="society-career.html#place-court">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>대법원·법원 견학</h3>
+    <p>서울 등 · 초5~고3</p>
+    <div class="tags"><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 7개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="elow emid ehigh mid high seoul soc math all indoor spring summer autumn winter" href="society-career.html#place-bok-money">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>한국은행 화폐박물관</h3>
+    <p>서울 · 초1~고3</p>
+    <div class="tags"><span class="tag">사회</span><span class="tag">수학</span></div>
+    <span class="card-foot">연계 단원 9개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="emid ehigh mid high gyeonggi soc career all indoor spring summer autumn winter" href="society-career.html#place-jobworld">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>한국잡월드</h3>
+    <p>경기 · 초3~고3</p>
+    <div class="tags"><span class="tag">사회</span><span class="tag">진로</span></div>
+    <span class="card-foot">연계 단원 5개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="elow emid ehigh mid seoul gyeonggi gangwon chung gyeong jeolla jeju pe sci all indoor spring summer autumn winter" href="society-career.html#place-safety-center">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>소방·안전체험관 (시·도 운영)</h3>
+    <p>전국 · 초1~중3</p>
+    <div class="tags"><span class="tag">체육</span><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 13개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="elow emid seoul gyeonggi gangwon chung gyeong jeolla jeju int pe spring autumn" href="society-career.html#place-traffic-park">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>어린이 교통공원</h3>
+    <p>전국 · 초1~초4</p>
+    <div class="tags"><span class="tag">통합</span><span class="tag">체육</span></div>
+    <span class="card-foot">연계 단원 1개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="elow emid ehigh mid seoul gyeonggi gangwon chung gyeong jeolla jeju soc math all spring summer autumn winter" href="society-career.html#place-market">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>전통시장·마트 장보기</h3>
+    <p>전국 · 초1~중3</p>
+    <div class="tags"><span class="tag">사회</span><span class="tag">수학</span></div>
+    <span class="card-foot">연계 단원 49개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="emid ehigh seoul gyeonggi gangwon chung gyeong jeolla jeju soc all spring summer autumn winter" href="society-career.html#place-public-office">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>시청·구청·주민센터·소방서</h3>
+    <p>전국 · 초3~초6</p>
+    <div class="tags"><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 22개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="elow emid ehigh mid gyeonggi soc sci all spring summer autumn winter" href="society-career.html#place-railway-museum">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>철도박물관 (의왕)</h3>
+    <p>경기 · 초1~중3</p>
+    <div class="tags"><span class="tag">사회</span><span class="tag">과학</span></div>
+    <span class="card-foot">연계 단원 1개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="emid ehigh mid chung soc all indoor spring summer autumn winter" href="society-career.html#place-postal-museum">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>우정박물관 (천안)</h3>
+    <p>충남 · 초3~중3</p>
+    <div class="tags"><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 1개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="ehigh mid high seoul gyeonggi gangwon chung gyeong jeolla jeju kor soc all indoor spring summer autumn winter" href="society-career.html#place-broadcast">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>방송국·시청자미디어센터 견학</h3>
+    <p>전국 · 초5~고3</p>
+    <div class="tags"><span class="tag">국어</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 5개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="emid ehigh mid seoul gyeonggi gangwon chung gyeong jeolla jeju sci soc all spring summer autumn winter" href="society-career.html#place-eco-facility">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>정수장·자원순환센터 견학 (지자체)</h3>
+    <p>전국 · 초3~중3</p>
+    <div class="tags"><span class="tag">과학</span><span class="tag">사회</span></div>
+    <span class="card-foot">연계 단원 3개 · 체험 지도안 보기 →</span>
+  </a>
+  <a class="card top c-note" data-tags="mid high seoul gyeonggi gangwon chung gyeong jeolla jeju career all spring summer autumn winter" href="society-career.html#place-campus-tour">
+    <span class="tag">사회·경제·진로·안전</span>
+    <h3>대학 캠퍼스·오픈캠퍼스</h3>
+    <p>전국 · 중1~고3</p>
+    <div class="tags"><span class="tag">진로</span></div>
+    <span class="card-foot">연계 단원 29개 · 체험 지도안 보기 →</span>
+  </a>
   <p class="filter-empty" hidden>조건에 맞는 장소가 없어요. 필터를 하나 풀어 보세요.</p>
 </div>
-
-<p class="callout warning">운영 시간, 휴관일, 예약제 여부, 관람료, 어린이 프로그램은 수시로 바뀝니다. 공사·리모델링으로 일부 전시가 닫혀 있을 수도 있으니 출발 전 각 기관 공식 홈페이지에서 꼭 확인하세요. 추천 학년은 우리 집 기준의 참고값입니다.</p>
-
-<h2 id="tips">장소를 공부로 바꾸는 세 가지</h2>
-<div class="cards" style="--min: 220px">
-  <div class="card c-tip"><div class="card-ic">📖</div><h3>가기 전 5분</h3><p>교과서의 관련 쪽을 함께 펼쳐 보고 "가서 찾을 것 1개"를 정해요.</p></div>
-  <div class="card c-tip"><div class="card-ic">🔍</div><h3>가서는 하나만</h3><p>다 보려고 하면 지칩니다. 2시간 안에 끝내고 하나를 오래 봐요.</p></div>
-  <div class="card c-tip"><div class="card-ic">🛂</div><h3>다녀와서 기록</h3><p><a href="passport.html">여행 여권</a>에 도장 찍고 한 줄 일기를 남깁니다.</p></div>
-</div>
-
-<p>아이가 고른 "가고 싶은 곳"은 아이 모드에서 볼 수 있어요. 평일에 가야 한다면 <a href="how-to.html">교외체험학습 신청</a>을 확인하세요. 한국사 장소는 <a href="history-route.html">한국사 여행 루트</a>에서 시대 순서로 정리했습니다.</p>
+<p class="callout warning">운영 시간·예약 방법·요금·휴관일·전시 구성은 자주 바뀌어요. 방문 전 각 기관 공식 홈페이지에서 꼭 확인하세요. "전국" 표시는 지역마다 있는 공공 시설(도서관, 안전체험관 등)이에요.</p>
 
 </div>

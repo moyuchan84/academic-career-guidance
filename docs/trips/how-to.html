@@ -1,37 +1,130 @@
 ---
 title: 교외체험학습 신청
 parent: 체험·여행
-nav_order: 4
+nav_order: 10
 summary: 사전 신청서 → 여행 → 보고서
 ---
+<style>
+  .ht-frame { padding: 12px 14px; border-radius: 12px; background: var(--paper-2); border: 1px dashed var(--line); margin: 8px 0 12px; }
+  .ht-frame p { margin: 0 0 6px; }
+  .ht-frame p:last-child { margin-bottom: 0; }
+  .ht-ex { padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--tip) 8%, var(--card)); border: 1px solid color-mix(in srgb, var(--tip) 30%, var(--line)); margin: 8px 0 12px; }
+  .ht-ex > b:first-child, .ht-frame > b:first-child { display: block; font-size: 12.5px; font-weight: 800; margin-bottom: 6px; color: var(--ink-2); }
+  .ht-budget { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4px 14px; }
+  .ht-budget .memo-label { margin-top: 8px; }
+  .ht-total { margin: 14px 0 6px; padding: 12px 16px; border-radius: 14px; background: var(--accent-soft); font-weight: 800; }
+  .ht-total span { color: var(--accent); font-size: 20px; }
+</style>
+
 <header class="page-hero">
-  <p class="kicker">평일 여행을 출석으로 인정받는 방법</p>
+  <p class="kicker">평일 여행을 출석으로 인정받는 방법 · 준비부터 보고서까지</p>
   <h1>교외체험학습 신청</h1>
-  <p class="lede">가족여행·체험을 학기 중 평일에 가야 할 때, 학교장 허가를 받으면 <strong>출석으로 인정</strong>받을 수 있습니다. 순서는 간단해요. 규정 확인 → 사전 신청서 → 다녀와서 보고서.</p>
+  <p class="lede">가족여행·체험을 학기 중 평일에 가야 할 때, 학교장 허가를 받으면 <strong>출석으로 인정</strong>받을 수 있습니다. 이 페이지는 신청 절차, 학년별 보고서 양식, 준비물·예산, 날씨·안전 대비, 가족 여행 계획법까지 한 번에 정리했어요.</p>
 </header>
 
-<p class="callout warning">허용 일수, 신청 기한, 양식, 신청이 제한되는 기간은 <strong>학교와 교육청마다 다르고 해마다 바뀔 수 있습니다.</strong> 학년 초 가정통신문과 학교 홈페이지의 학칙·학업성적관리규정을 먼저 확인하고, 애매하면 담임 선생님께 여쭤보세요.</p>
+<p class="callout warning">허용 일수, 신청 기한, 양식, 제출 방법(종이·학교 앱), 신청이 제한되는 기간, 해외 체험 인정 기준은 <strong>학교와 교육청마다 다르고 해마다 바뀔 수 있습니다.</strong> 아래 절차는 많은 학교에서 공통적인 흐름일 뿐이에요. 학년 초 가정통신문과 학교 홈페이지의 학칙·학업성적관리규정을 먼저 확인하고, 애매하면 담임 선생님께 여쭤보세요.</p>
 
-<h2 id="steps">신청 흐름</h2>
-<div class="timeline">
-  <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">학년 초 (3월)</div><h3>우리 학교 규정 확인</h3><p>연간 허용 일수, 신청 기한(며칠 전까지), 온라인 제출 여부, 신청이 어려운 시기(학기 초·평가 기간·학교 행사일 등)를 메모해 둡니다.</p></div>
-  <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">출발 전 (기한 안에)</div><h3>사전 신청서 제출</h3><p>기간, 장소, 목적(학습 주제), 동행 보호자, 비상 연락처를 적습니다. 목적란에 교과 단원을 한 줄 적어 두면 보고서 쓰기도 쉬워요.</p></div>
-  <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">출발 전</div><h3>승인 확인</h3><p>학교장 승인 여부를 확인하고 떠납니다. 승인 전에 출발하면 결석 처리될 수 있어요.</p></div>
-  <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">여행 중</div><h3>기록 모으기</h3><p>사진 몇 장, 입장권, 아이가 한 말 한두 개. 여행 여권의 한 줄 일기가 그대로 재료가 됩니다.</p></div>
-  <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">다녀온 뒤 (기한 안에)</div><h3>결과 보고서 제출</h3><p>제출 기한을 넘기면 인정이 안 될 수 있어요. 돌아온 주말에 바로 씁니다.</p></div>
+<div class="cards" style="--min: 200px">
+  <a class="card top c-root" href="#steps"><span class="tag">1</span><h3>신청 절차</h3><p>규정 확인부터 보고서 제출까지 8단계</p></a>
+  <a class="card top c-stem" href="#report"><span class="tag">2</span><h3>학년별 보고서</h3><p>초저 · 초고 · 중·고 문장 틀과 예시</p></a>
+  <a class="card top c-branch" href="#pack"><span class="tag">3</span><h3>준비물 · 예산</h3><p>서류·아이 가방·상비약 체크, 예산 메모</p></a>
+  <a class="card top c-fruit" href="#safety"><span class="tag">4</span><h3>날씨 · 안전</h3><p>폭염·미세먼지, 멀미, 길 잃음, 분실</p></a>
+  <a class="card top c-accent" href="#plan5"><span class="tag">5</span><h3>여행 계획 5단계</h3><p>목적 → 장소 → 동선 → 준비 → 기록</p></a>
 </div>
 
-<h2 id="report">보고서 템플릿</h2>
-<p>보고서는 아이의 <strong>기록 연습</strong>입니다. 부모가 대신 쓰지 말고, 저학년은 말로 하면 받아 적어 주고 고학년은 스스로 씁니다. 학교 양식이 있으면 그 틀에 맞추세요.</p>
+<h2 id="steps">신청 절차 한 단계씩</h2>
+<p>핵심은 두 가지예요. <strong>출발 전에 승인</strong>받고, <strong>돌아와서 기한 안에 보고서</strong>를 내는 것. 나머지는 이 두 가지를 놓치지 않기 위한 준비입니다.</p>
+<div class="timeline">
+  <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">1 · 학년 초 (3월)</div><h3>우리 학교 규정 확인</h3><p>가정통신문·학교 홈페이지에서 연간 허용 일수, 한 번에 쓸 수 있는 최대 일수, 신청 기한(출발 며칠 전까지), 제출 방법, 신청이 어려운 시기(학기 초·평가 기간·주요 행사일 등)를 찾아 아래 메모에 적어 둡니다.</p></div>
+  <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">2 · 여행 결정 직후</div><h3>날짜 고르기</h3><p>학사 일정(평가, 수행평가, 현장체험학습, 학예회 등)과 겹치지 않는지 확인합니다. 중·고등학교는 지필·수행평가 기간 신청이 제한되는 경우가 많아요.</p></div>
+  <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">3 · 담임 선생님께</div><h3>미리 한마디</h3><p>알림장·학교 앱 메시지로 "○월 ○일~○일 가족 체험학습을 계획하고 있다"고 먼저 알리면, 빠지는 날의 수업·과제 안내를 받기 쉽습니다.</p></div>
+  <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">4 · 기한 안에</div><h3>사전 신청서 제출</h3><p>기간, 장소, 체험 목적(학습 주제), 인솔 보호자와 관계, 비상 연락처, 세부 일정을 적습니다. 목적란에 <strong>연계 교과·단원을 한 줄</strong> 적어 두면 보고서가 쉬워져요. 형제는 신청서를 아이마다 따로 냅니다.</p></div>
+  <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">5 · 출발 전</div><h3>승인 확인</h3><p>학교장 승인 여부를 확인하고 떠납니다. 승인 전에 출발하면 결석으로 처리될 수 있어요. 승인 알림이 없으면 담임 선생님께 확인합니다.</p></div>
+  <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">6 · 여행 중</div><h3>기록 모으기</h3><p>아이가 나온 사진 몇 장, 입장권·안내 책자, 아이가 한 말 한두 개. 학교에 따라 증빙 자료(사진·입장권 등)를 요구하기도 합니다. 일정이 바뀌거나 사고가 나면 학교에 바로 알려요.</p></div>
+  <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">7 · 돌아온 주말</div><h3>결과 보고서 작성</h3><p>기억이 생생할 때 씁니다. 아래 학년별 양식과 문장 틀을 쓰세요. 아이가 쓰고, 부모는 사진 붙이기와 날짜 확인만 돕습니다.</p></div>
+  <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">8 · 기한 안에</div><h3>보고서 제출 · 남은 일수 기록</h3><p>제출 기한을 넘기면 출석으로 인정되지 않을 수 있어요. 제출 후 올해 쓴 일수를 메모에 업데이트합니다.</p></div>
+</div>
+
+<label class="memo-label" for="howto-rules">우리 학교 규정 메모 (아이별로)</label>
+<textarea class="memo" id="howto-rules" data-key="trips-howto-rules" placeholder="첫째 학교: 연간 ○일 · 신청 ○일 전까지 · 제출 방법 ○○ · 보고서 복귀 후 ○일 이내 · 제한 기간 ○○&#10;둘째 학교: …&#10;올해 사용: 첫째 ○일 / 둘째 ○일"></textarea>
+<p class="saved-hint"></p>
+
+<details class="acc"><summary>학교마다 다를 수 있는 것<small>꼭 확인할 항목 목록</small></summary><div class="acc-body">
+  <ul>
+    <li><b>허용 일수</b> — 연간 총 일수와 1회 최대 일수. 가정학습(집에서의 학습)을 같은 일수 안에 포함하는 학교도 있어요.</li>
+    <li><b>신청 기한</b> — 출발 며칠 전까지인지, 주말·공휴일을 포함해 세는지.</li>
+    <li><b>제출 방법</b> — 종이 양식, 학교 홈페이지 서식, 학교 알림 앱 등.</li>
+    <li><b>제한 기간</b> — 학기 초 적응 기간, 지필·수행평가 기간, 학교 행사일, 방학식 전후 등.</li>
+    <li><b>해외 체험</b> — 인정 여부, 추가 서류(항공권 사본 등) 요구 여부.</li>
+    <li><b>보고서</b> — 제출 기한, 분량, 사진 첨부 여부, 학교 양식 여부.</li>
+    <li><b>보호자 요건</b> — 부모가 아닌 친척과 동행할 때 인정 기준.</li>
+  </ul>
+</div></details>
+
+<h2 id="report">학년별 보고서 양식</h2>
+<p>보고서는 아이의 <strong>기록 연습</strong>입니다. 부모가 대신 쓰지 말고, 저학년은 말로 하면 받아 적어 주고 고학년은 스스로 씁니다. 학교 양식이 있으면 그 틀에 맞추고, 칸이 비면 아래 문장 틀을 가져다 쓰세요.</p>
 <div class="cards" style="--min: 200px">
   <div class="card top c-root"><span class="tag">1</span><h3>어디에, 누구와</h3><p>날짜, 장소, 함께 간 사람.</p></div>
   <div class="card top c-stem"><span class="tag">2</span><h3>본 것·한 것</h3><p>사진 2~3장과 짧은 설명.</p></div>
   <div class="card top c-branch"><span class="tag">3</span><h3>배운 점 3줄</h3><p>새로 안 것, 신기했던 것, 궁금해진 것.</p></div>
   <div class="card top c-fruit"><span class="tag">4</span><h3>교과 연결</h3><p>"사회 ○단원에서 배운 ○○를 직접 봤다."</p></div>
 </div>
-<label class="memo-label" for="howto-report">보고서 초안 (이 브라우저에 저장)</label>
-<textarea class="memo" id="howto-report" data-key="trips-howto-report" style="min-height:160px" placeholder="날짜/장소/함께 간 사람:&#10;본 것·한 것:&#10;배운 점 3줄:&#10;교과 연결:"></textarea>
-<p class="saved-hint"></p>
+
+<div class="tabs" data-tabs>
+  <div class="tab-list"><button>초등 저학년 (1~2)</button><button>초등 고학년 (3~6)</button><button>중·고등학생</button></div>
+  <div class="tab-panel">
+    <p><strong>목표: 그림 한 장 + 문장 서너 개.</strong> 아이가 말하고 부모가 받아 적어도 됩니다. 맞춤법은 고치지 말고, "그다음엔?"으로 말을 이어 주세요.</p>
+    <div class="ht-frame"><b>문장 틀</b>
+      <p>나는 ○월 ○일에 (누구)와 (어디)에 갔다.</p>
+      <p>거기서 (무엇)을 봤다 / 했다.</p>
+      <p>제일 신기했던 것은 (무엇)이다. 왜냐하면 (까닭)이다.</p>
+      <p>다음에는 (무엇)을 해 보고 싶다.</p>
+      <p>[그림] 제일 기억나는 장면 그리기</p>
+    </div>
+    <div class="ht-ex"><b>예시</b>
+      <p>나는 5월 15일에 엄마, 아빠, 동생이랑 국립과천과학관에 갔다. 공룡 뼈를 봤는데 우리 집 거실보다 길었다. 제일 신기했던 것은 로봇이 그림을 그리는 거였다. 왜냐하면 사람처럼 손을 움직였기 때문이다. 다음에는 별 보는 곳에 가고 싶다.</p>
+    </div>
+    <label class="memo-label" for="howto-report-low">저학년 보고서 초안</label>
+    <textarea class="memo" id="howto-report-low" data-key="trips-howto-report-low" placeholder="나는 ○월 ○일에 …와 …에 갔다.&#10;거기서 …을 봤다.&#10;제일 신기했던 것은 …이다. 왜냐하면 …&#10;다음에는 …"></textarea>
+    <p class="saved-hint"></p>
+  </div>
+  <div class="tab-panel">
+    <p><strong>목표: 일정 + 배운 점 3가지 + 교과 연결 + 느낀 점.</strong> 스스로 쓰게 하고, 부모는 사진 고르기와 사실 확인(날짜·이름)만 돕습니다. 현장 미션지나 여권 일기를 옆에 펴 놓고 쓰면 쉬워요.</p>
+    <div class="ht-frame"><b>문장 틀</b>
+      <p>체험 목적: (교과)의 (단원)에서 배운 (내용)을 직접 보기 위해 (장소)에 갔다.</p>
+      <p>일정: 오전에는 ○○, 오후에는 ○○를 둘러보았다.</p>
+      <p>새로 안 점: 첫째, … 둘째, … 셋째, …</p>
+      <p>교과서와 비교: 교과서에서는 ○○라고만 나왔는데, 직접 보니 ○○했다.</p>
+      <p>더 알고 싶은 점: ○○은 왜 ○○일까?</p>
+      <p>느낀 점: …</p>
+    </div>
+    <div class="ht-ex"><b>예시 (초5)</b>
+      <p>체험 목적: 사회 한국사 단원에서 배운 조선 후기 수원 화성을 직접 보기 위해 수원에 갔다. 일정: 오전에는 수원화성박물관과 화성행궁, 오후에는 장안문부터 방화수류정까지 성곽을 걸었다. 새로 안 점: 첫째, 정약용이 도르래를 이용한 거중기를 만들었다. 둘째, 공사 기록인 의궤가 있어서 부서진 성을 다시 지을 수 있었다. 셋째, 성문 밖에 둥근 성벽을 한 번 더 쌓아 적이 바로 문에 닿지 못하게 했다. 교과서와 비교: 교과서 사진으로는 작아 보였는데 실제로는 성벽이 끝없이 이어져 있었다. 더 알고 싶은 점: 거중기로 돌 하나를 올리는 데 몇 명이 필요했을까? 느낀 점: 기록을 남기는 것이 중요하다는 것을 알았다.</p>
+    </div>
+    <label class="memo-label" for="howto-report">보고서 초안 (공통 · 이 브라우저에 저장)</label>
+    <textarea class="memo" id="howto-report" data-key="trips-howto-report" style="min-height:160px" placeholder="날짜/장소/함께 간 사람:&#10;본 것·한 것:&#10;배운 점 3줄:&#10;교과 연결:"></textarea>
+    <p class="saved-hint"></p>
+  </div>
+  <div class="tab-panel">
+    <p><strong>목표: 탐구 질문 하나를 세우고 답을 찾는 보고서.</strong> 중·고등학생은 체험학습 보고서가 자기 관심 분야를 정리하는 연습이 됩니다. 출처(안내판·도록·공식 홈페이지)를 적는 습관을 들여요. 다만 중·고등학교는 수업 결손 부담이 크니 체험학습은 꼭 필요한 경우에만, 방학·주말 활용을 먼저 생각하세요.</p>
+    <div class="ht-frame"><b>문장 틀</b>
+      <p>탐구 질문: (장소)에서 (주제)에 대해 "○○은 왜/어떻게 ○○했을까?"를 알아보고자 했다.</p>
+      <p>사전 조사: 교과서 (과목·단원)과 (자료)를 통해 ○○을 미리 알아보았다.</p>
+      <p>관찰·조사 내용: (전시·현장)에서 ○○을 확인했다. 특히 ○○이 인상적이었는데, ○○ 때문이다.</p>
+      <p>결론: 탐구 질문에 대한 나의 답은 ○○이다.</p>
+      <p>한계와 더 알아볼 점: 현장에서 확인하지 못한 ○○은 (방법)으로 더 알아보겠다.</p>
+      <p>진로·관심과의 연결: 이번 체험은 내가 관심 있는 ○○ 분야와 ○○ 점에서 연결된다.</p>
+      <p>참고 자료: 안내판, 도록, 기관 공식 홈페이지 등</p>
+    </div>
+    <div class="ht-ex"><b>예시 (중2)</b>
+      <p>탐구 질문: 서대문형무소역사관에서 "일제는 왜 독립운동가를 이렇게 가혹하게 다루었을까?"를 알아보고자 했다. 사전 조사: 역사 교과서 근·현대 단원과 기관 홈페이지 전시 소개를 읽었다. 관찰·조사 내용: 전시관의 수형 기록표와 옥사 구조를 확인했다. 특히 여옥사 전시가 인상적이었는데, 나와 비슷한 나이의 학생들이 만세 운동으로 수감되었기 때문이다. 결론: 공포를 주어 저항을 막으려 했지만, 기록을 보면 수감된 뒤에도 옥중 만세 등 저항이 이어졌다. 더 알아볼 점: 광복 이후 이곳이 어떻게 쓰였는지 추가로 조사하겠다. 진로·관심과의 연결: 인권과 법에 관심이 생겨 사회 교과의 인권 단원과 연결해 보고 싶다.</p>
+    </div>
+    <label class="memo-label" for="howto-report-sec">중·고 보고서 초안</label>
+    <textarea class="memo" id="howto-report-sec" data-key="trips-howto-report-sec" placeholder="탐구 질문:&#10;사전 조사:&#10;관찰·조사 내용:&#10;결론:&#10;더 알아볼 점:&#10;참고 자료:"></textarea>
+    <p class="saved-hint"></p>
+  </div>
+</div>
+<p class="callout tip">보고서를 쓰기 싫어하면 "사진 세 장 고르고 한 줄씩 설명"부터 시작하세요. 한국사 여행은 <a href="history-route.html">한국사 여행 루트</a>의 코스별 "한 줄 기록"을 그대로 보고서 재료로 쓸 수 있어요.</p>
 
 <h2 id="check">출발 전 체크리스트</h2>
 <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
@@ -44,10 +137,156 @@ summary: 사전 신청서 → 여행 → 보고서
   <li class="task"><label><input type="checkbox"><span>돌아와서 보고서 제출일 달력에 표시</span></label></li>
 </ul>
 
-<details class="acc"><summary>자주 하는 고민<small>빠진 수업, 형제 동시 신청, 해외여행</small></summary><div class="acc-body">
+<h2 id="pack">준비물 체크리스트</h2>
+<div class="tabs" data-tabs>
+  <div class="tab-list"><button>예약·서류</button><button>아이 가방</button><button>건강·상비약</button><button>차·이동</button></div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="howto-pack-docs">
+      <li class="task"><label><input type="checkbox"><span>관람·체험 프로그램 예약 확인 (예약 필요한 곳인지부터)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>휴관일·운영 시간 공식 홈페이지에서 재확인</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>숙소 예약 확인 (1박 이상)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>아이 할인에 필요한 증빙 (학생증·등본 요구 여부 확인)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>체험학습 승인 확인 화면 캡처</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>보고서용 활동지·미션지 인쇄 또는 휴대폰에 저장</span></label></li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="howto-pack-kid">
+      <li class="task"><label><input type="checkbox"><span>작은 수첩과 연필 (필기구 제한 전시실이 있으면 연필)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>물병과 간식 (전시실 안 취식 금지, 휴게 공간에서)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>오래 걸어도 편한 신발</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>계절 옷 (얇은 겉옷 하나는 늘)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>모자·선크림 (야외 유적지)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>보호자 연락처 카드 (주머니 속)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>차 안에서 볼 책 한 권</span></label></li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="howto-pack-health">
+      <li class="task"><label><input type="checkbox"><span>해열제·소화제 등 아이가 평소 쓰는 상비약</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>밴드·소독 용품</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>멀미 대비 (비닐봉지, 물티슈, 필요하면 약사와 상담한 약)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>알레르기가 있다면 관련 약과 메모</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>마스크 (미세먼지·감기 유행 시)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>여행지 근처 병원·약국 위치 한 번 검색</span></label></li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+    <ul class="checklist" id="howto-pack-car">
+      <li class="task"><label><input type="checkbox"><span>카시트·부스터 시트 (아이 나이·체격에 맞게)</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>주차 가능 여부와 대중교통 대안 확인</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>1~2시간마다 쉴 휴게소 미리 정하기</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>충전기·보조 배터리</span></label></li>
+      <li class="task"><label><input type="checkbox"><span>귀가 시간 정하기 (다음 날 등교 고려)</span></label></li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="budget">여행 예산 메모</h2>
+<p>숫자만 적으면 아래에 합계가 나와요(원 단위). 요금은 기관·시기마다 달라서 이 페이지에는 적지 않았습니다. 공식 홈페이지에서 확인한 금액을 적어 두세요. 고학년이면 아이에게 예산 짜기를 맡겨 보는 것도 좋은 경제 공부입니다.</p>
+<div class="ht-budget" id="ht-budget">
+  <div><label class="memo-label" for="hb-move">교통 (유류비·통행료·기차)</label><input class="memo" id="hb-move" data-key="trips-howto-budget-move" inputmode="numeric" placeholder="예) 60000"><p class="saved-hint"></p></div>
+  <div><label class="memo-label" for="hb-ticket">입장료·체험비</label><input class="memo" id="hb-ticket" data-key="trips-howto-budget-ticket" inputmode="numeric" placeholder="공식 요금 확인 후"><p class="saved-hint"></p></div>
+  <div><label class="memo-label" for="hb-food">식비·간식</label><input class="memo" id="hb-food" data-key="trips-howto-budget-food" inputmode="numeric"><p class="saved-hint"></p></div>
+  <div><label class="memo-label" for="hb-stay">숙박</label><input class="memo" id="hb-stay" data-key="trips-howto-budget-stay" inputmode="numeric"><p class="saved-hint"></p></div>
+  <div><label class="memo-label" for="hb-goods">기념품·책 (아이 용돈)</label><input class="memo" id="hb-goods" data-key="trips-howto-budget-goods" inputmode="numeric"><p class="saved-hint"></p></div>
+  <div><label class="memo-label" for="hb-extra">예비비</label><input class="memo" id="hb-extra" data-key="trips-howto-budget-extra" inputmode="numeric"><p class="saved-hint"></p></div>
+</div>
+<p class="ht-total">예상 합계 <span id="ht-sum">0</span>원</p>
+<label class="memo-label" for="hb-note">예산 메모 (아끼는 방법·다음에 참고할 점)</label>
+<textarea class="memo" id="hb-note" data-key="trips-howto-budget-note" placeholder="예) 도시락 싸 가면 식비 절반 · 박물관 상설전시는 무료인 곳이 많음(기관별 확인) · 기념품은 1인 1개 규칙"></textarea>
+<p class="saved-hint"></p>
+<p class="callout note">국공립 박물관은 상설전시가 무료인 곳이 많고, 문화가 있는 날 등 할인 제도가 있기도 하지만 운영 방식이 바뀔 수 있어요. 방문 전 공식 안내를 확인하세요.</p>
+
+<h2 id="safety">날씨·안전·멀미·분실 대비</h2>
+<div class="tabs" data-tabs>
+  <div class="tab-list"><button>날씨</button><button>현장 안전</button><button>멀미</button><button>길 잃음·분실</button></div>
+  <div class="tab-panel">
+    <ul>
+      <li><b>출발 전날과 당일 아침</b> 기상청 날씨누리(<a href="https://www.weather.go.kr">weather.go.kr</a>)와 에어코리아(<a href="https://www.airkorea.or.kr">airkorea.or.kr</a>)로 날씨·미세먼지를 확인합니다.</li>
+      <li><b>폭염</b> — 한낮(대략 정오~오후 늦게) 야외 일정은 실내 전시로 바꾸고, 그늘·물·모자를 챙깁니다. 아이가 어지럽다, 머리가 아프다고 하면 바로 시원한 곳에서 쉬게 하세요.</li>
+      <li><b>한파·눈</b> — 유적지는 바람을 막을 곳이 적어요. 장갑·목도리와 실내 대피 장소(박물관·카페)를 동선에 넣습니다.</li>
+      <li><b>비</b> — 야외 유적(성곽·고분)은 미끄럽습니다. 우비가 우산보다 편하고, 플랜 B 실내 장소를 하나 정해 두세요.</li>
+      <li><b>미세먼지 나쁨</b> — 야외 활동을 줄이고 실내 전시 위주로. 마스크를 챙깁니다.</li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <ul>
+      <li><b>물가·바다·갯벌</b> — 구명조끼, 보호자 손 닿는 거리. 갯벌은 물때를 꼭 확인하고, 공인된 체험장과 안내 요원이 있는 곳을 이용합니다.</li>
+      <li><b>산성·성곽</b> — 성벽 위 난간 없는 구간이 있어요. 성벽 위에서는 뛰지 않기, 가장자리에 서지 않기를 약속합니다.</li>
+      <li><b>문화유산 보호</b> — 출입 금지선 안으로 들어가지 않고, 유물·석탑을 만지거나 오르지 않습니다. 아이에게 "우리 다음 사람도 봐야 해서"라고 이유를 말해 주세요.</li>
+      <li><b>주차장·도로</b> — 관광지 주차장은 차가 많고 아이가 잘 안 보여요. 차에서 내릴 때는 보호자와 손잡기.</li>
+      <li><b>체력</b> — 초등 저학년은 전시 관람 1~1.5시간이 집중 한계인 경우가 많아요. 1시간마다 쉬는 시간을 동선에 넣습니다.</li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <ul>
+      <li>출발 전 과식과 기름진 음식은 피하고, 빈속도 피합니다.</li>
+      <li>차 안에서 책·태블릿 보기를 줄이고 창밖 먼 곳을 보게 합니다. 끝말잇기·노래 같은 "귀로 하는 놀이"가 좋아요.</li>
+      <li>환기를 자주 하고, 1시간 안팎마다 쉬어 갑니다.</li>
+      <li>어린이는 안전을 위해 뒷좌석(카시트·부스터)에 앉혀요. 그중 앞이 잘 보이는 가운데 자리가 덜 어지럽다는 아이도 있어요.</li>
+      <li>멀미약은 제품마다 <b>사용 가능한 나이와 방법이 다릅니다.</b> 아이에게 쓰기 전 약사나 의사와 상담하세요.</li>
+      <li>멀미가 심한 아이라면 기차 여행으로 바꿔 보는 것도 방법이에요.</li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <ul>
+      <li><b>출발 전 사진</b> — 당일 아침 아이 전신 사진을 찍어 두면, 길을 잃었을 때 옷차림을 정확히 설명할 수 있어요.</li>
+      <li><b>연락처</b> — 보호자 전화번호를 적은 카드를 주머니나 가방 안쪽에 넣습니다. 아이 이름은 겉으로 보이지 않게 하세요.</li>
+      <li><b>만날 곳 정하기</b> — 입구에 들어가자마자 "헤어지면 여기(안내 데스크 등)에서 만나자"를 정하고 한 번 같이 가 봅니다.</li>
+      <li><b>도움 요청 연습</b> — "길을 잃으면 그 자리에 멈추기 → 직원(명찰·유니폼)이나 아이와 함께 있는 어른에게 말하기"를 미리 연습합니다. 급하면 112에 신고해요.</li>
+      <li><b>물건 분실</b> — 박물관·관광지는 보통 안내 데스크에서 분실물을 모아요. 지갑·휴대폰 분실은 경찰청 유실물 통합포털(LOST112)에서도 찾아볼 수 있어요.</li>
+      <li><b>입장권·영수증</b> — 보고서 증빙이 될 수 있으니 사진으로 한 번 찍어 둡니다.</li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="plan5">가족 여행 계획 5단계</h2>
+<p>체험학습은 "어디 갈까?"보다 <strong>"왜 가지?"</strong>에서 출발하면 보고서까지 한 줄로 이어집니다. 단계마다 메모를 채우면 한 번의 여행 계획이 완성돼요.</p>
+<div class="timeline">
+  <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">1단계 · 목적</div><h3>무엇을 보고 싶은가</h3><p>이번 학기 교과서 목차를 보고 "직접 보면 좋을 단원" 하나를 고릅니다. 아이가 요즘 궁금해하는 것(공룡·별·임금님)도 좋은 출발점이에요.</p></div>
+  <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">2단계 · 장소</div><h3>어디로, 언제</h3><p><a href="places.html">교과 연계 장소</a>에서 학년·과목·계절로 고릅니다. 이동 시간은 편도 2시간 안쪽이 아이에게 무리가 적어요.</p></div>
+  <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">3단계 · 동선</div><h3>하루를 세 덩어리로</h3><p>오전 핵심 1곳, 점심과 휴식, 오후 1곳(선택). "다 보기"가 아니라 "하나 제대로"가 목표입니다. 예산도 이때 적어요.</p></div>
+  <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">4단계 · 준비</div><h3>신청 · 예습 · 짐</h3><p>평일이면 체험학습 신청, 그림책·영상으로 5분 예습, 현장 미션 3개 정하기, 준비물 체크.</p></div>
+  <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">5단계 · 기록</div><h3>보고서 · 여권 · 연표</h3><p>돌아온 주말에 보고서, <a href="passport.html">여행 여권</a>에 도장과 일기, 한국사 여행이면 거실 연표에 한 칸.</p></div>
+</div>
+<div class="cards" style="--min: 240px">
+  <div class="card c-root"><label class="memo-label" for="hp-1">1 · 목적 (연계 단원)</label><textarea class="memo" id="hp-1" data-key="trips-howto-plan-1" placeholder="예) 초5 사회 조선 단원 · 첫째가 궁금해한 거중기"></textarea><p class="saved-hint"></p></div>
+  <div class="card c-stem"><label class="memo-label" for="hp-2">2 · 장소와 날짜</label><textarea class="memo" id="hp-2" data-key="trips-howto-plan-2" placeholder="예) 수원 화성 · 10월 둘째 주 토요일"></textarea><p class="saved-hint"></p></div>
+  <div class="card c-branch"><label class="memo-label" for="hp-3">3 · 동선과 예산</label><textarea class="memo" id="hp-3" data-key="trips-howto-plan-3" placeholder="예) 오전 박물관 → 점심 → 오후 성곽 북쪽 구간"></textarea><p class="saved-hint"></p></div>
+  <div class="card c-fruit"><label class="memo-label" for="hp-4">4 · 준비 (신청·예습·미션)</label><textarea class="memo" id="hp-4" data-key="trips-howto-plan-4" placeholder="예) 도르래 영상 보기 · 미션: 옹성 찾기"></textarea><p class="saved-hint"></p></div>
+  <div class="card c-accent"><label class="memo-label" for="hp-5">5 · 기록 (보고서·다음 여행)</label><textarea class="memo" id="hp-5" data-key="trips-howto-plan-5" placeholder="예) 보고서 제출 ○일 · 다음엔 서울 궁궐"></textarea><p class="saved-hint"></p></div>
+</div>
+
+<details class="acc"><summary>자주 하는 고민<small>빠진 수업, 형제 동시 신청, 해외여행, 중·고등학생</small></summary><div class="acc-body">
   <p><strong>빠진 수업이 걱정돼요.</strong> 초등 저학년은 하루 이틀 공백을 금방 메웁니다. 다녀와서 교과서 해당 쪽을 함께 훑어보면 충분해요.</p>
-  <p><strong>두 아이가 같은 학교예요.</strong> 신청서는 아이마다 따로 냅니다. 학년별로 보고서의 깊이만 다르게 해 보세요.</p>
-  <p><strong>해외여행도 되나요?</strong> 많은 학교가 해외 체험도 허용하지만 기준은 학교마다 다릅니다. 기간이 길면 미리 담임 선생님과 상의하세요.</p>
+  <p><strong>두 아이가 같은 학교예요.</strong> 신청서는 아이마다 따로 냅니다. 학년별로 보고서의 깊이만 다르게 해 보세요. 학교가 다르면 규정도 다를 수 있으니 각각 확인합니다.</p>
+  <p><strong>해외여행도 되나요?</strong> 많은 학교가 해외 체험도 허용하지만 기준과 서류는 학교마다 다릅니다. 기간이 길면 미리 담임 선생님과 상의하세요.</p>
+  <p><strong>중·고등학생도 써도 될까요?</strong> 제도상 가능한 경우가 많지만, 수업 진도·수행평가 부담이 커서 실제로는 방학과 주말을 먼저 활용하는 편이 낫습니다. 쓴다면 평가 일정을 꼭 확인하세요.</p>
+  <p><strong>보고서를 부모가 써 주면 안 되나요?</strong> 형식을 맞추는 정도는 도와도 되지만, 문장은 아이의 말로 남겨 주세요. 서툰 문장이 아이에게는 진짜 기록입니다.</p>
 </div></details>
 
-<p>여행지 고르기는 <a href="places.html">교과 연계 장소</a>, 아이의 여행 일기는 <a href="passport.html">우리 가족 여행 여권</a>에서.</p>
+<p>여행지 고르기는 <a href="places.html">교과 연계 장소</a>, 한국사 코스는 <a href="history-route.html">한국사 여행 루트</a>, 아이의 여행 일기는 <a href="passport.html">우리 가족 여행 여권</a>에서.</p>
+
+<script>
+(function () {
+  var box = document.getElementById('ht-budget');
+  var out = document.getElementById('ht-sum');
+  if (!box || !out) return;
+  var inputs = box.querySelectorAll('input.memo');
+  function num(v) { var n = parseInt(String(v || '').replace(/[^0-9]/g, ''), 10); return isNaN(n) ? 0 : n; }
+  function sum() {
+    var t = 0;
+    for (var i = 0; i < inputs.length; i++) t += num(inputs[i].value);
+    try { out.textContent = t.toLocaleString('ko-KR'); } catch (e) { out.textContent = String(t); }
+  }
+  for (var i = 0; i < inputs.length; i++) inputs[i].addEventListener('input', sum);
+  if (document.readyState === 'complete') setTimeout(sum, 0);
+  else window.addEventListener('load', function () { setTimeout(sum, 0); });
+  setTimeout(sum, 300);
+})();
+</script>

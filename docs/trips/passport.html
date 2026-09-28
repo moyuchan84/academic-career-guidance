@@ -1,7 +1,7 @@
 ---
 title: 우리 가족 여행 여권
 parent: 체험·여행
-nav_order: 3
+nav_order: 9
 kid: true
 summary: 도장 찍고 여행 일기 쓰기
 ---
@@ -10,6 +10,10 @@ summary: 도장 찍고 여행 일기 쓰기
   .pp-cover b { display: block; font-family: var(--serif); font-size: 24px; color: var(--ink); }
   .pp-cover span { font-size: 15px; color: var(--ink-2); }
   .pp-cover .pp-emblem { font-size: 48px; line-height: 1; }
+  .pp-places .pp-group { grid-column: 1 / -1; margin: 14px 0 2px; font-size: 17px; }
+  .pp-places .pp-group:first-child { margin-top: 0; }
+  .pp-places .pp-group small { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: 6px; }
+  .pp-board .card .memo-label { margin-top: 0; }
 </style>
 
 <header class="page-hero">
@@ -74,6 +78,97 @@ summary: 도장 찍고 여행 일기 쓰기
   </div>
 </div>
 
+<!-- ================= SHARED: 장소 도장판 (아이·부모 모두 보임) ================= -->
+<section class="pp-board">
+  <h2 id="place-stamps">장소 도장판 <span class="stamp-count" data-stamp-count="trips-passport-places"></span></h2>
+  <p>체험·여행 섹션에 소개된 장소마다 도장이 하나씩 있어요. 다녀온 곳을 눌러 도장을 찍으면 테마별로 얼마나 다녔는지 한눈에 보여요. 동네 도서관이나 공원처럼 가까운 곳도 도장 하나! 제목 옆 링크를 누르면 그 테마의 장소 안내로 가요.</p>
+  <div class="stamps pp-places" data-key="trips-passport-places">
+    <h3 class="pp-group" id="pp-g-museums-history">🏛️ 박물관·역사 <small>20곳 · <a href="museums-history.html">장소 안내 보기</a></small></h3>
+    <button class="stamp c-root" data-id="national-museum"><span class="stamp-ic">🏺</span>국립중앙박물관<small>서울</small></button>
+    <button class="stamp c-root" data-id="national-folk"><span class="stamp-ic">🧺</span>국립민속박물관<small>서울</small></button>
+    <button class="stamp c-root" data-id="gyeongbokgung"><span class="stamp-ic">👑</span>경복궁<small>서울</small></button>
+    <button class="stamp c-root" data-id="changdeokgung"><span class="stamp-ic">🏯</span>창덕궁·종묘<small>서울</small></button>
+    <button class="stamp c-root" data-id="suwon-hwaseong"><span class="stamp-ic">🧱</span>수원 화성<small>경기</small></button>
+    <button class="stamp c-root" data-id="gyeongju"><span class="stamp-ic">🌟</span>경주<small>경북</small></button>
+    <button class="stamp c-root" data-id="gongju-buyeo"><span class="stamp-ic">🪷</span>공주·부여<small>충남</small></button>
+    <button class="stamp c-root" data-id="ganghwa"><span class="stamp-ic">🏝️</span>강화도<small>인천</small></button>
+    <button class="stamp c-root" data-id="jeongok"><span class="stamp-ic">🪨</span>전곡리 유적<small>경기</small></button>
+    <button class="stamp c-root" data-id="amsa"><span class="stamp-ic">🛖</span>암사동 유적<small>서울</small></button>
+    <button class="stamp c-root" data-id="hanseong-baekje"><span class="stamp-ic">🏰</span>한성백제박물관<small>서울</small></button>
+    <button class="stamp c-root" data-id="seodaemun"><span class="stamp-ic">🕊️</span>서대문형무소역사관<small>서울</small></button>
+    <button class="stamp c-root" data-id="independence-hall"><span class="stamp-ic">🇰🇷</span>독립기념관<small>충남</small></button>
+    <button class="stamp c-root" data-id="war-memorial"><span class="stamp-ic">🎖️</span>전쟁기념관<small>서울</small></button>
+    <button class="stamp c-root" data-id="hangeul-museum"><span class="stamp-ic">🔤</span>국립한글박물관<small>서울</small></button>
+    <button class="stamp c-root" data-id="sejong-yeongneung"><span class="stamp-ic">📜</span>세종대왕릉<small>경기</small></button>
+    <button class="stamp c-root" data-id="haeinsa"><span class="stamp-ic">📚</span>해인사 장경판전<small>경남</small></button>
+    <button class="stamp c-root" data-id="andong-hahoe"><span class="stamp-ic">🎭</span>안동 하회마을<small>경북</small></button>
+    <button class="stamp c-root" data-id="jeonju-hanok"><span class="stamp-ic">🏘️</span>전주 한옥마을<small>전북</small></button>
+    <button class="stamp c-root" data-id="busan-provisional"><span class="stamp-ic">🕰️</span>임시수도기념관<small>부산</small></button>
+    <h3 class="pp-group" id="pp-g-science-nature">🔬 과학관·천문 <small>12곳 · <a href="science-nature.html">장소 안내 보기</a></small></h3>
+    <button class="stamp c-stem" data-id="gwacheon-science"><span class="stamp-ic">🚀</span>국립과천과학관<small>경기</small></button>
+    <button class="stamp c-stem" data-id="daejeon-science"><span class="stamp-ic">🧪</span>국립중앙과학관<small>대전</small></button>
+    <button class="stamp c-stem" data-id="children-science"><span class="stamp-ic">🔬</span>국립어린이과학관<small>서울</small></button>
+    <button class="stamp c-stem" data-id="gwangju-science"><span class="stamp-ic">💡</span>국립광주과학관<small>광주</small></button>
+    <button class="stamp c-stem" data-id="daegu-science"><span class="stamp-ic">⚙️</span>국립대구과학관<small>대구</small></button>
+    <button class="stamp c-stem" data-id="busan-science"><span class="stamp-ic">🚢</span>국립부산과학관<small>부산</small></button>
+    <button class="stamp c-stem" data-id="weather-museum"><span class="stamp-ic">🌦️</span>국립기상박물관<small>서울</small></button>
+    <button class="stamp c-stem" data-id="natural-history"><span class="stamp-ic">🦕</span>서대문자연사박물관<small>서울</small></button>
+    <button class="stamp c-stem" data-id="observatory"><span class="stamp-ic">🔭</span>시민천문대<small>전국</small></button>
+    <button class="stamp c-stem" data-id="naro-space"><span class="stamp-ic">🛰️</span>나로우주센터<small>전남</small></button>
+    <button class="stamp c-stem" data-id="computer-museum"><span class="stamp-ic">💻</span>넥슨컴퓨터박물관<small>제주</small></button>
+    <button class="stamp c-stem" data-id="energy-center"><span class="stamp-ic">🔋</span>에너지·환경 체험관<small>전국</small></button>
+    <h3 class="pp-group" id="pp-g-nature-ecology">🌿 자연·생태·바다 <small>12곳 · <a href="nature-ecology.html">장소 안내 보기</a></small></h3>
+    <button class="stamp c-branch" data-id="nie"><span class="stamp-ic">🐸</span>국립생태원<small>충남</small></button>
+    <button class="stamp c-branch" data-id="marine-museum"><span class="stamp-ic">⚓</span>국립해양박물관<small>부산</small></button>
+    <button class="stamp c-branch" data-id="marine-bio"><span class="stamp-ic">🐚</span>국립해양생물자원관<small>충남</small></button>
+    <button class="stamp c-branch" data-id="national-arboretum"><span class="stamp-ic">🌳</span>국립수목원<small>경기</small></button>
+    <button class="stamp c-branch" data-id="baekdudaegan"><span class="stamp-ic">🐯</span>백두대간수목원<small>경북</small></button>
+    <button class="stamp c-branch" data-id="hantan-geopark"><span class="stamp-ic">🏞️</span>한탄강 지질공원<small>경기·강원</small></button>
+    <button class="stamp c-branch" data-id="jeju-geo"><span class="stamp-ic">🌋</span>제주 지질공원<small>제주</small></button>
+    <button class="stamp c-branch" data-id="suncheon-bay"><span class="stamp-ic">🐦</span>순천만 습지<small>전남</small></button>
+    <button class="stamp c-branch" data-id="national-park"><span class="stamp-ic">⛰️</span>국립공원<small>전국</small></button>
+    <button class="stamp c-branch" data-id="mudflat"><span class="stamp-ic">🦀</span>갯벌 체험<small>서해안</small></button>
+    <button class="stamp c-branch" data-id="seoul-grand-park"><span class="stamp-ic">🦒</span>서울대공원 동물원<small>경기</small></button>
+    <button class="stamp c-branch" data-id="city-park"><span class="stamp-ic">🌼</span>동네 공원·하천<small>전국</small></button>
+    <h3 class="pp-group" id="pp-g-arts-culture">🎨 문화·예술·문학 <small>12곳 · <a href="arts-culture.html">장소 안내 보기</a></small></h3>
+    <button class="stamp c-fruit" data-id="mmca"><span class="stamp-ic">🖼️</span>국립현대미술관<small>서울·경기</small></button>
+    <button class="stamp c-fruit" data-id="seoul-art"><span class="stamp-ic">🎨</span>서울시립미술관<small>서울</small></button>
+    <button class="stamp c-fruit" data-id="sac"><span class="stamp-ic">🎻</span>예술의전당<small>서울</small></button>
+    <button class="stamp c-fruit" data-id="gugak"><span class="stamp-ic">🥁</span>국립국악원<small>서울</small></button>
+    <button class="stamp c-fruit" data-id="national-theater"><span class="stamp-ic">🎬</span>국립극장<small>서울</small></button>
+    <button class="stamp c-fruit" data-id="kids-library"><span class="stamp-ic">📖</span>국립어린이청소년도서관<small>서울</small></button>
+    <button class="stamp c-fruit" data-id="local-library"><span class="stamp-ic">📚</span>동네 도서관<small>전국</small></button>
+    <button class="stamp c-fruit" data-id="yoondongju"><span class="stamp-ic">✒️</span>윤동주문학관<small>서울</small></button>
+    <button class="stamp c-fruit" data-id="literary-houses"><span class="stamp-ic">📝</span>지역 문학관<small>강원 등</small></button>
+    <button class="stamp c-fruit" data-id="public-art"><span class="stamp-ic">🏙️</span>공공미술·건축<small>전국</small></button>
+    <button class="stamp c-fruit" data-id="kids-theater"><span class="stamp-ic">🎪</span>어린이 공연<small>전국</small></button>
+    <button class="stamp c-fruit" data-id="local-festival"><span class="stamp-ic">🏮</span>지역 축제<small>전국</small></button>
+    <h3 class="pp-group" id="pp-g-society-career">🏙️ 사회·경제·진로·안전 <small>13곳 · <a href="society-career.html">장소 안내 보기</a></small></h3>
+    <button class="stamp c-accent" data-id="national-assembly"><span class="stamp-ic">🏛️</span>국회<small>서울</small></button>
+    <button class="stamp c-accent" data-id="court"><span class="stamp-ic">⚖️</span>법원 견학<small>서울 등</small></button>
+    <button class="stamp c-accent" data-id="bok-money"><span class="stamp-ic">🪙</span>화폐박물관<small>서울</small></button>
+    <button class="stamp c-accent" data-id="jobworld"><span class="stamp-ic">👷</span>한국잡월드<small>경기</small></button>
+    <button class="stamp c-accent" data-id="safety-center"><span class="stamp-ic">🚒</span>안전체험관<small>전국</small></button>
+    <button class="stamp c-accent" data-id="traffic-park"><span class="stamp-ic">🚦</span>어린이 교통공원<small>전국</small></button>
+    <button class="stamp c-accent" data-id="market"><span class="stamp-ic">🛒</span>전통시장 장보기<small>전국</small></button>
+    <button class="stamp c-accent" data-id="public-office"><span class="stamp-ic">🏢</span>시청·주민센터<small>전국</small></button>
+    <button class="stamp c-accent" data-id="railway-museum"><span class="stamp-ic">🚂</span>철도박물관<small>경기</small></button>
+    <button class="stamp c-accent" data-id="postal-museum"><span class="stamp-ic">✉️</span>우정박물관<small>충남</small></button>
+    <button class="stamp c-accent" data-id="broadcast"><span class="stamp-ic">📺</span>방송국·미디어센터<small>전국</small></button>
+    <button class="stamp c-accent" data-id="eco-facility"><span class="stamp-ic">♻️</span>정수장·자원순환센터<small>전국</small></button>
+    <button class="stamp c-accent" data-id="campus-tour"><span class="stamp-ic">🎓</span>대학 캠퍼스<small>전국</small></button>
+  </div>
+  <h2 id="place-logs">테마별 여행 기록</h2>
+  <p>도장을 찍은 뒤 한 줄씩 남겨 두면, 한 해가 끝날 때 우리 가족만의 여행 책이 돼요.</p>
+  <div class="cards" style="--min: 260px">
+  <div class="card top c-root"><label class="memo-label" for="pp-log-museums">🏛️ 박물관·역사 여행 기록</label><textarea class="memo" id="pp-log-museums" data-key="trips-passport-log-museums" placeholder="날짜 · 장소 · 누구와 · 제일 기억나는 것 한 가지"></textarea><p class="saved-hint"></p></div>
+  <div class="card top c-stem"><label class="memo-label" for="pp-log-science">🔬 과학관·천문 여행 기록</label><textarea class="memo" id="pp-log-science" data-key="trips-passport-log-science" placeholder="날짜 · 장소 · 누구와 · 제일 기억나는 것 한 가지"></textarea><p class="saved-hint"></p></div>
+  <div class="card top c-branch"><label class="memo-label" for="pp-log-nature">🌿 자연·생태·바다 여행 기록</label><textarea class="memo" id="pp-log-nature" data-key="trips-passport-log-nature" placeholder="날짜 · 장소 · 누구와 · 제일 기억나는 것 한 가지"></textarea><p class="saved-hint"></p></div>
+  <div class="card top c-fruit"><label class="memo-label" for="pp-log-arts">🎨 문화·예술·문학 여행 기록</label><textarea class="memo" id="pp-log-arts" data-key="trips-passport-log-arts" placeholder="날짜 · 장소 · 누구와 · 제일 기억나는 것 한 가지"></textarea><p class="saved-hint"></p></div>
+  <div class="card top c-accent"><label class="memo-label" for="pp-log-society">🏙️ 사회·경제·진로·안전 여행 기록</label><textarea class="memo" id="pp-log-society" data-key="trips-passport-log-society" placeholder="날짜 · 장소 · 누구와 · 제일 기억나는 것 한 가지"></textarea><p class="saved-hint"></p></div>
+  </div>
+</section>
+
 <!-- ================= PARENT ================= -->
 <div class="parent-only">
 
@@ -92,6 +187,7 @@ summary: 도장 찍고 여행 일기 쓰기
 <textarea class="memo" id="pp-parent" data-key="trips-passport-parent" style="min-height:160px" placeholder="예) 2026.10.3 국립중앙박물관 어린이박물관 · 사회(옛날과 오늘날) · 첫째는 토기 만들기 몰입, 둘째는 1시간 뒤 지침 · 초5 때 상설전시로 다시"></textarea>
 <p class="saved-hint"></p>
 
-<p>갈 곳 고르기는 <a href="places.html">교과 연계 장소</a>, 평일 여행은 <a href="how-to.html">교외체험학습 신청</a>을 참고하세요.</p>
+<p>위 "장소 도장판"은 아이 모드와 부모 모드 모두에서 보여요. 부모 모드에서 도장 수를 보며 "아직 안 가 본 테마"를 다음 여행 후보로 삼아 보세요.</p>
+<p>갈 곳 고르기는 <a href="places.html">교과 연계 장소</a>, 한국사 코스는 <a href="history-route.html">한국사 여행 루트</a>, 평일 여행은 <a href="how-to.html">교외체험학습 신청</a>을 참고하세요.</p>
 
 </div>

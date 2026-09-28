@@ -7,6 +7,15 @@ kid: true
 kid_title: 여행 스탬프
 summary: 교과서 속 장소를 직접 보는 가족 여행
 ---
+<style>
+  .tp-year { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin: 0 0 22px; }
+  .tp-month { padding: 12px 14px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--c, var(--accent)); }
+  .tp-month .memo-label { margin: 0 0 4px; font-size: 15px; color: var(--ink); }
+  .tp-month .tp-hint { margin: 0 0 8px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .tp-month .memo { min-height: 72px; }
+  .tp-month .saved-hint { margin: 4px 0 0; }
+</style>
+
 <header class="page-hero">
   <p class="kicker">교과서 밖으로 · 계절과 학년에 맞춰</p>
   <h1>체험·여행</h1>
@@ -23,18 +32,74 @@ summary: 교과서 속 장소를 직접 보는 가족 여행
       <p>다녀온 곳마다 도장을 쾅! 찍어서 우리 가족 여행 여권을 채워 봐.</p>
     </div>
   </div>
+  <h2 id="kid-themes">어떤 탐험을 해 볼까?</h2>
+  <div class="cards" style="--min: 190px">
+    <a class="card top c-root" href="museums-history.html"><div class="card-ic">🏛️</div><h3>박물관·역사</h3><p>옛날 사람들 물건이랑 임금님 집 구경!</p></a>
+    <a class="card top c-stem" href="science-nature.html"><div class="card-ic">🔬</div><h3>과학관·천문</h3><p>로봇, 공룡, 로켓, 별 보기!</p></a>
+    <a class="card top c-branch" href="nature-ecology.html"><div class="card-ic">🌿</div><h3>자연·생태·바다</h3><p>숲, 갯벌, 동물 친구들 만나기!</p></a>
+    <a class="card top c-fruit" href="arts-culture.html"><div class="card-ic">🎨</div><h3>문화·예술·문학</h3><p>그림, 음악, 공연, 도서관 탐험!</p></a>
+    <a class="card top c-accent" href="society-career.html"><div class="card-ic">🏙️</div><h3>사회·진로·안전</h3><p>소방관, 기차, 돈, 여러 가지 직업!</p></a>
+  </div>
   <div class="cards" style="--min: 200px">
     <a class="card top c-stem" href="places.html"><div class="card-ic">🗺️</div><h3>가고 싶은 곳 고르기</h3><p>박물관, 과학관, 바닷가… 가고 싶은 곳에 별표!</p></a>
     <a class="card top c-branch" href="history-route.html"><div class="card-ic">🏯</div><h3>역사 여행 길</h3><p>옛날 옛적 선사시대부터 차례차례 여행해 봐.</p></a>
     <a class="card top c-fruit" href="passport.html"><div class="card-ic">🛂</div><h3>우리 가족 여행 여권</h3><p>다녀온 곳 도장 찍고 여행 일기 쓰기.</p></a>
+  </div>
+  <div class="quiz" data-answer="2">
+    <p class="quiz-q">여행 가서 제일 중요한 건 뭘까?</p>
+    <div class="quiz-opts"><button class="quiz-opt">전부 다 빨리 보기</button><button class="quiz-opt">사진 100장 찍기</button><button class="quiz-opt">제일 신기한 것 하나 찾기</button></div>
+    <p class="quiz-fb" data-ok="맞아! 신기한 것 하나를 오래 보면 그게 진짜 보물이야" data-no="음… 다 보면 다리만 아파. 하나만 골라 볼까?"></p>
   </div>
 </div>
 
 <!-- ================= PARENT ================= -->
 <div class="parent-only">
 
+<h2 id="structure">이 섹션의 구조</h2>
+<p>체험·여행 섹션은 "어디로 → 언제 → 어떻게 → 기록"의 순서로 짜여 있어요. 장소는 하나의 목록(교과 연계 장소)에서 시작해 다섯 개 테마 페이지로 깊어지고, 학년별 로드맵과 한국사 루트가 그 장소들을 시간 순서로 엮습니다.</p>
+<figure class="dg" style="--dg-min: 700px">
+  <svg viewBox="0 0 900 250" role="img" aria-label="체험·여행 섹션 구조: 교과 연계 장소 목록이 다섯 테마 페이지로 이어지고, 학년별 로드맵과 한국사 루트가 장소를 엮으며, 교외체험학습 신청과 여행 여권이 여행 전후를 돕는다">
+    <defs><marker id="m-trips-st-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
+    <rect x="20" y="95" width="160" height="60" rx="12" class="dg-box c-note"/><text x="100" y="120" text-anchor="middle" class="dg-t">교과 연계 장소</text><text x="100" y="140" text-anchor="middle" class="dg-t sm">전체 목록·필터</text>
+    <rect x="250" y="10" width="170" height="38" rx="10" class="dg-box c-root"/><text x="335" y="34" text-anchor="middle" class="dg-t sm">박물관·역사</text>
+    <rect x="250" y="56" width="170" height="38" rx="10" class="dg-box c-stem"/><text x="335" y="80" text-anchor="middle" class="dg-t sm">과학관·천문</text>
+    <rect x="250" y="102" width="170" height="38" rx="10" class="dg-box c-branch"/><text x="335" y="126" text-anchor="middle" class="dg-t sm">자연·생태·바다</text>
+    <rect x="250" y="148" width="170" height="38" rx="10" class="dg-box c-fruit"/><text x="335" y="172" text-anchor="middle" class="dg-t sm">문화·예술·문학</text>
+    <rect x="250" y="194" width="170" height="38" rx="10" class="dg-box c-accent"/><text x="335" y="218" text-anchor="middle" class="dg-t sm">사회·경제·진로·안전</text>
+    <path d="M180 125 L 245 29" class="dg-line"/><path d="M180 125 L 245 75" class="dg-line"/><path d="M180 125 L 245 121" class="dg-line"/><path d="M180 125 L 245 167" class="dg-line"/><path d="M180 125 L 245 213" class="dg-line"/>
+    <rect x="490" y="40" width="170" height="60" rx="12" class="dg-box c-branch"/><text x="575" y="65" text-anchor="middle" class="dg-t">학년별 로드맵</text><text x="575" y="85" text-anchor="middle" class="dg-t sm">초1 → 고3 순서로</text>
+    <rect x="490" y="150" width="170" height="60" rx="12" class="dg-box c-fruit"/><text x="575" y="175" text-anchor="middle" class="dg-t">한국사 여행 루트</text><text x="575" y="195" text-anchor="middle" class="dg-t sm">선사 → 근현대 7코스</text>
+    <path d="M420 70 L 485 70" class="dg-line dash" marker-end="url(#m-trips-st-arrow)"/>
+    <path d="M420 29 C 460 29, 460 180, 485 180" class="dg-line dash" marker-end="url(#m-trips-st-arrow)"/>
+    <rect x="720" y="40" width="160" height="60" rx="12" class="dg-box c-note"/><text x="800" y="65" text-anchor="middle" class="dg-t">체험학습 신청</text><text x="800" y="85" text-anchor="middle" class="dg-t sm">떠나기 전</text>
+    <rect x="720" y="150" width="160" height="60" rx="12" class="dg-box c-accent"/><text x="800" y="175" text-anchor="middle" class="dg-t">여행 여권</text><text x="800" y="195" text-anchor="middle" class="dg-t sm">다녀와서 기록</text>
+    <path d="M660 70 L 715 70" class="dg-line strong" marker-end="url(#m-trips-st-arrow)"/>
+    <path d="M800 100 L 800 145" class="dg-line strong" marker-end="url(#m-trips-st-arrow)"/>
+    <path d="M660 180 L 715 180" class="dg-line strong" marker-end="url(#m-trips-st-arrow)"/>
+  </svg>
+  <figcaption>장소(무엇) → 로드맵·루트(언제·어떤 순서) → 신청(떠나기 전) → 여권(다녀와서). 테마 페이지의 장소마다 연계 단원, 관람 동선, 현장 미션이 들어 있어요.</figcaption>
+</figure>
+
+<h3 id="themes">테마 5개 — 장소별 자세한 안내</h3>
+<div class="cards" style="--min: 200px">
+  <a class="card top c-root" href="museums-history.html"><span class="tag">테마 1</span><div class="card-ic">🏛️</div><h3>박물관·역사 체험</h3><p>국립중앙박물관, 궁궐, 경주·공주·부여, 강화도, 독립기념관 등 역사 장소.</p><span class="card-foot">사회·역사 · 국어</span></a>
+  <a class="card top c-stem" href="science-nature.html"><span class="tag">테마 2</span><div class="card-ic">🔬</div><h3>과학관·천문 체험</h3><p>국립과학관들, 자연사박물관, 기상박물관, 천문대, 우주과학관.</p><span class="card-foot">과학 · 수학 · 정보</span></a>
+  <a class="card top c-branch" href="nature-ecology.html"><span class="tag">테마 3</span><div class="card-ic">🌿</div><h3>자연·생태·바다 체험</h3><p>국립생태원, 수목원, 지질공원, 습지, 갯벌, 동네 공원 관찰.</p><span class="card-foot">과학 · 사회(지리) · 미술</span></a>
+  <a class="card top c-fruit" href="arts-culture.html"><span class="tag">테마 4</span><div class="card-ic">🎨</div><h3>문화·예술·문학 체험</h3><p>미술관, 공연장, 국악원, 도서관, 문학관, 지역 축제.</p><span class="card-foot">미술 · 음악 · 국어</span></a>
+  <a class="card top c-accent" href="society-career.html"><span class="tag">테마 5</span><div class="card-ic">🏙️</div><h3>사회·경제·진로·안전 체험</h3><p>국회, 법원, 화폐박물관, 잡월드, 안전체험관, 시장, 대학 캠퍼스.</p><span class="card-foot">사회 · 진로 · 안전</span></a>
+</div>
+
+<h3 id="tools">찾기 · 순서 · 기록 도구</h3>
+<div class="cards" style="--min: 220px">
+  <a class="card c-note" href="places.html"><div class="card-ic">🗺️</div><h3>교과 연계 장소</h3><p>모든 장소를 과목·학년·계절·지역으로 걸러 보는 전체 목록. 어디서부터 볼지 모르겠다면 여기서.</p></a>
+  <a class="card c-branch" href="by-grade.html"><div class="card-ic">🪜</div><h3>학년별 체험 로드맵</h3><p>초1부터 고3까지 학년마다 교과서가 다루는 세계에 맞춘 추천 장소와 순서.</p></a>
+  <a class="card c-fruit" href="history-route.html"><div class="card-ic">🏯</div><h3>한국사 여행 루트</h3><p>선사 → 삼국 → 고려 → 조선 → 근현대, 7개 코스의 시간대별 동선·미션·연표 활동.</p></a>
+  <a class="card c-accent" href="passport.html"><div class="card-ic">🛂</div><h3>우리 가족 여행 여권</h3><p>아이가 직접 찍는 도장, 장소 도장판, 테마별 여행 기록.</p></a>
+  <a class="card c-note" href="how-to.html"><div class="card-ic">📝</div><h3>교외체험학습 신청</h3><p>신청 절차, 학년별 보고서 문장 틀, 준비물·예산, 날씨·안전 대비.</p></a>
+</div>
+
 <h2 id="by-grade">학년별 여행 주제</h2>
-<p>학년마다 교과서가 다루는 세계가 조금씩 넓어집니다. 여행 반경도 그에 맞춰 넓혀 가면 무리가 없어요.</p>
+<p>학년마다 교과서가 다루는 세계가 조금씩 넓어집니다. 여행 반경도 그에 맞춰 넓혀 가면 무리가 없어요. 학년별 자세한 추천은 <a href="by-grade.html">학년별 체험 로드맵</a>에 있습니다.</p>
 <figure class="dg" style="--dg-min: 700px">
   <svg viewBox="0 0 900 230" role="img" aria-label="학년별 여행 주제: 초1-2 오감과 자연, 초3 우리 고장, 초4 우리 지역과 지구, 초5 한국사, 초6 정치경제와 세계, 중학교 진로, 고등학교 전공 탐색">
     <defs><marker id="m-trips-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="dg-arrow-head"/></marker></defs>
@@ -48,26 +113,74 @@ summary: 교과서 속 장소를 직접 보는 가족 여행
     <line x1="30" y1="222" x2="880" y2="100" class="dg-line dash" marker-end="url(#m-trips-arrow)"/>
     <text x="620" y="200" class="dg-t sm muted">동네 → 지역 → 나라 → 세계로 반경이 넓어져요</text>
   </svg>
-  <figcaption>예) 초1~2 농촌·갯벌·동물원 · 초3 시청·소방서·향토박물관 · 초4 지질공원·화석 · 초5 선사→근현대 순서 여행 · 초6 국회·한국은행 · 중·고 대학 캠퍼스와 기업 견학</figcaption>
+  <figcaption>예) 초1~2 농촌·갯벌·동물원 · 초3 시청·소방서·향토박물관 · 초4 지질공원·화석 · 초5 선사→근현대 순서 여행 · 초6 국회·한국은행 · 중·고 대학 캠퍼스와 진로 체험</figcaption>
 </figure>
 
-<h2 id="season">계절·방학 캘린더</h2>
+<h2 id="year-plan">우리 가족 1년 체험 계획</h2>
+<p>학년이 시작되는 3월부터 다음 해 2월까지, 달마다 "한 곳"만 적어 보세요. 한 달에 한 번이면 1년에 열두 곳, 두 아이의 초등 6년이면 교과서 속 장소 대부분을 만납니다. 칸마다 그 달의 제안을 적어 두었어요. 지금 학년: <span data-grade-now></span></p>
+<p class="callout note">한 번에 다 채우지 않아도 됩니다. 분기별 <a href="../workbook/quarterly-meeting.html">부부 회의</a> 때 다음 3개월만 채우고, 1년 행사는 <a href="../workbook/annual-calendar.html">연간 캘린더</a>에 옮겨 적으세요.</p>
+<div class="tp-year">
+  <div class="tp-month" style="--c:var(--root)"><label class="memo-label" for="tp-3">3월 · 새 학년</label><p class="tp-hint">적응이 먼저. 동네 도서관·공원처럼 가까운 곳. 학교 체험학습 규정 확인.</p><textarea class="memo" id="tp-3" data-key="trips-plan-3" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--root)"><label class="memo-label" for="tp-4">4월 · 과학의 달</label><p class="tp-hint">과학관 행사가 많은 달. 봄꽃 핀 수목원도 좋아요.</p><textarea class="memo" id="tp-4" data-key="trips-plan-4" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--root)"><label class="memo-label" for="tp-5">5월 · 가정의 달</label><p class="tp-hint">연휴는 어디든 붐벼요. 이른 시간·평일로. 궁궐·유적 걷기 좋은 날씨.</p><textarea class="memo" id="tp-5" data-key="trips-plan-5" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--stem)"><label class="memo-label" for="tp-6">6월 · 호국보훈의 달</label><p class="tp-hint">현충일·6·25 전후 전쟁기념관. 더위 전 갯벌·바다 체험.</p><textarea class="memo" id="tp-6" data-key="trips-plan-6" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--stem)"><label class="memo-label" for="tp-7">7월 · 여름방학 시작</label><p class="tp-hint">연꽃 핀 연못, 바다·갯벌(물때 확인). 한낮은 실내 과학관.</p><textarea class="memo" id="tp-7" data-key="trips-plan-7" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--stem)"><label class="memo-label" for="tp-8">8월 · 광복절</label><p class="tp-hint">독립기념관·서대문형무소역사관. 8월 중순 유성우 시기 천문대. 폭염 주의.</p><textarea class="memo" id="tp-8" data-key="trips-plan-8" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--branch)"><label class="memo-label" for="tp-9">9월 · 2학기 · 추석</label><p class="tp-hint">명절 풍습을 민속박물관에서. 맑은 가을 하늘 별 보기.</p><textarea class="memo" id="tp-9" data-key="trips-plan-9" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--branch)"><label class="memo-label" for="tp-10">10월 · 한글날</label><p class="tp-hint">한글박물관·세종대왕릉. 경주·공주·부여 등 한국사 여행 최적기. 지역 축제.</p><textarea class="memo" id="tp-10" data-key="trips-plan-10" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--branch)"><label class="memo-label" for="tp-11">11월 · 단풍·철새</label><p class="tp-hint">국립공원 단풍 산책, 습지의 겨울 철새 도착. 박물관 특별전.</p><textarea class="memo" id="tp-11" data-key="trips-plan-11" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--fruit)"><label class="memo-label" for="tp-12">12월 · 한 해 돌아보기</label><p class="tp-hint">실내 공연·미술관. 여행 여권 펼쳐 "올해 최고의 여행" 뽑기.</p><textarea class="memo" id="tp-12" data-key="trips-plan-12" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--fruit)"><label class="memo-label" for="tp-1">1월 · 겨울방학</label><p class="tp-hint">과학관·박물관 방학 프로그램(조기 마감 잦음). 다음 학년 교과서 목차 보고 장소 고르기.</p><textarea class="memo" id="tp-1" data-key="trips-plan-1" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+  <div class="tp-month" style="--c:var(--fruit)"><label class="memo-label" for="tp-2">2월 · 새 학년 준비</label><p class="tp-hint">가까운 박물관 한 곳, 여행 기록 정리. 내년 1년 계획 초안.</p><textarea class="memo" id="tp-2" data-key="trips-plan-2" placeholder="장소 · 날짜 · 연계 단원"></textarea><p class="saved-hint"></p></div>
+</div>
+
+<h2 id="season">계절별 팁</h2>
 <div class="tabs" data-tabs>
   <div class="tab-list"><button>봄 3~5월</button><button>여름방학</button><button>가을 9~11월</button><button>겨울방학</button></div>
-  <div class="tab-panel"><p>식물 관찰, 궁궐 나들이, 4월 과학의 달 행사. 날씨가 좋아 야외 유적지도 걷기 좋아요.</p></div>
-  <div class="tab-panel"><p>바다·갯벌, 천문대, 과학관 캠프, 해외 가족여행. 한낮 야외 일정은 줄이고 실내 전시와 섞습니다.</p></div>
-  <div class="tab-panel"><p>역사 유적지(경주·공주·부여), 지역 축제, 박물관 행사. 한국사 여행의 최적기입니다.</p></div>
-  <div class="tab-panel"><p>실내 박물관·전시, 스키, 독서 캠프, 다음 학년 교과서 훑어보고 연계 장소 고르기.</p></div>
+  <div class="tab-panel">
+    <p>식물 관찰, 궁궐 나들이, 4월 과학의 달 행사. 날씨가 좋아 야외 유적지도 걷기 좋아요.</p>
+    <ul>
+      <li><b>추천</b> — <a href="nature-ecology.html#place-national-arboretum">국립수목원</a>, <a href="museums-history.html#place-gyeongbokgung">경복궁</a>, <a href="science-nature.html#place-gwacheon-science">국립과천과학관</a>, <a href="history-route.html#route-hwaseong">수원 화성</a></li>
+      <li><b>주의</b> — 봄 황사·미세먼지, 5월 연휴 인파와 교통 체증. 학교 현장체험학습(소풍)과 장소가 겹치지 않게 확인.</li>
+      <li><b>팁</b> — 새 학기 교과서가 막 나왔을 때라 "이번 학기에 배울 것 미리 보기" 여행으로 좋아요.</li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <p>바다·갯벌, 천문대, 과학관 캠프, 해외 가족여행. 한낮 야외 일정은 줄이고 실내 전시와 섞습니다.</p>
+    <ul>
+      <li><b>추천</b> — <a href="nature-ecology.html#place-mudflat">서해 갯벌 체험</a>, <a href="science-nature.html#place-observatory">시민천문대</a>, <a href="nature-ecology.html#place-marine-museum">국립해양박물관</a>, <a href="science-nature.html#place-daejeon-science">국립중앙과학관</a></li>
+      <li><b>주의</b> — 폭염·장마·태풍. 물놀이는 구명조끼와 보호자 가까이, 갯벌은 물때 확인.</li>
+      <li><b>팁</b> — 방학 프로그램은 신청이 일찍 마감되는 경우가 많아요. 6월에 미리 공지를 확인하세요.</li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <p>역사 유적지(경주·공주·부여), 지역 축제, 박물관 행사. 한국사 여행의 최적기입니다.</p>
+    <ul>
+      <li><b>추천</b> — <a href="history-route.html#route-silla">경주 1박 2일</a>, <a href="history-route.html#route-baekje">공주·부여</a>, <a href="museums-history.html#place-hangeul-museum">국립한글박물관</a>(한글날 전후), <a href="nature-ecology.html#place-suncheon-bay">순천만 습지</a></li>
+      <li><b>주의</b> — 추석 연휴·단풍철 주말 인파. 수학여행 시즌과 겹치면 유적지가 붐빌 수 있어요.</li>
+      <li><b>팁</b> — 해가 빨리 지니 야외 일정은 오후 4시 전후에 마무리하는 계획이 편합니다.</li>
+    </ul>
+  </div>
+  <div class="tab-panel">
+    <p>실내 박물관·전시, 공연, 독서 캠프, 다음 학년 교과서 훑어보고 연계 장소 고르기.</p>
+    <ul>
+      <li><b>추천</b> — <a href="museums-history.html#place-national-museum">국립중앙박물관</a>, <a href="science-nature.html#place-natural-history">서대문자연사박물관</a>, <a href="arts-culture.html#place-kids-library">국립어린이청소년도서관</a>, <a href="society-career.html#place-jobworld">한국잡월드</a></li>
+      <li><b>주의</b> — 한파·빙판. 야외 유적은 짧게, 실내 쉼터를 동선에 넣기.</li>
+      <li><b>팁</b> — 한 해 여권을 돌아보고 "내년에 꼭 갈 곳 세 곳"을 아이가 고르게 하면 1년 계획이 저절로 시작돼요.</li>
+    </ul>
+  </div>
 </div>
+<p class="callout warning">운영 시간·예약·요금·휴관일·전시와 프로그램 내용은 수시로 바뀝니다. 이 섹션에는 시간과 요금을 적지 않았어요. 방문 전 각 기관 공식 홈페이지에서 꼭 확인하세요.</p>
 
 <h2 id="how">이 섹션 쓰는 법</h2>
 <div class="timeline">
-  <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">학기 초</div><h3>교과서 목차 보고 장소 고르기</h3><p><a href="places.html">교과 연계 장소</a>에서 과목·학년·계절로 걸러 보세요.</p></div>
+  <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">학기 초</div><h3>교과서 목차 보고 장소 고르기</h3><p><a href="places.html">교과 연계 장소</a>에서 과목·학년·계절로 걸러 보거나, <a href="by-grade.html">학년별 로드맵</a>에서 이번 학년 추천을 봅니다.</p></div>
+  <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">가기 전</div><h3>테마 페이지에서 장소 공부</h3><p>장소마다 "부모가 먼저 알아 둘 것", 관람 동선, 현장 미션이 있어요. 미션 3개만 골라 아이와 공유합니다.</p></div>
   <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">평일에 가야 한다면</div><h3>교외체험학습 신청</h3><p>학교 규정 확인 → 사전 신청서 → 다녀와서 보고서. <a href="how-to.html">신청 방법 보기</a></p></div>
   <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">여행 중</div><h3>보고 듣고 하나만 기억하기</h3><p>다 보려고 하지 말고 "오늘 제일 신기했던 것 하나"를 찾게 합니다.</p></div>
-  <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">다녀와서</div><h3>여권 도장과 여행 일기</h3><p><a href="passport.html">우리 가족 여행 여권</a>에 도장을 찍고 한 줄 일기를 남깁니다.</p></div>
+  <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">다녀와서</div><h3>여권 도장과 여행 일기</h3><p><a href="passport.html">우리 가족 여행 여권</a>에 도장을 찍고 한 줄 일기를 남깁니다. 위 1년 계획표의 그 달 칸에 "다녀옴"을 적어요.</p></div>
 </div>
 
-<p class="callout tip">같은 곳을 두 번 가도 좋습니다. 초2에 본 국립중앙박물관과 초5에 본 국립중앙박물관은 전혀 다른 곳이에요. 한 살 차이 두 아이라면 "첫째가 설명해 주는" 여행도 큰 공부가 됩니다.</p>
+<p class="callout tip">같은 곳을 두 번 가도 좋습니다. 초2에 본 국립중앙박물관과 초5에 본 국립중앙박물관은 전혀 다른 곳이에요. 한 살 차이 두 아이라면 "첫째가 설명해 주는" 여행도 큰 공부가 됩니다. 여행이 숙제가 되지 않도록, 아이가 지치면 계획보다 일찍 돌아오는 것도 좋은 선택이에요.</p>
 
 </div>

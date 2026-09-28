@@ -1,7 +1,7 @@
 ---
 title: 한국사 여행 루트
 parent: 체험·여행
-nav_order: 2
+nav_order: 8
 kid: true
 wide: true
 summary: 선사 → 삼국 → 고려 → 조선 → 근현대 순서로 걷기
@@ -82,14 +82,464 @@ summary: 선사 → 삼국 → 고려 → 조선 → 근현대 순서로 걷기
 <!-- ================= PARENT ================= -->
 <div class="parent-only">
 
-<h2 id="plan">시대별 여행 계획</h2>
-<details class="acc"><summary>1. 선사<small>당일 · 서울 근교 · 초4~5</small></summary><div class="acc-body"><p>국립중앙박물관 선사·고대관으로 먼저 "그림"을 보고, 연천 전곡리 유적이나 강화 고인돌에서 실물을 봅니다. 돌 도구 만들기 같은 체험 프로그램이 있는지 미리 확인하세요.</p></div></details>
-<details class="acc"><summary>2. 삼국~통일신라<small>1박 2일 × 2회 · 봄·가을 · 초5</small></summary><div class="acc-body"><p>경주 한 번, 공주·부여 한 번으로 나눕니다. 경주는 국립경주박물관 → 대릉원·첨성대(저녁 산책) → 불국사·석굴암. 공주·부여는 국립공주박물관 → 무령왕릉과 왕릉원 → 공산성 → 부여 정림사지. 하루 두세 곳이면 충분해요.</p></div></details>
-<details class="acc"><summary>3. 고려<small>당일 · 강화도 · 초5</small></summary><div class="acc-body"><p>고려궁지에서 몽골 침입과 강화 천도 이야기를 나눕니다. 고려청자는 국립중앙박물관에서 보면 좋아요. 강화 고인돌·광성보와 묶으면 한 번에 세 시대.</p></div></details>
-<details class="acc"><summary>4. 조선<small>당일 여러 번 · 서울·수원 · 초5~6</small></summary><div class="acc-body"><p>경복궁(조선의 시작) → 창덕궁 → 수원화성(조선 후기, 정조). 국립한글박물관을 세종 이야기와 엮어도 좋습니다. 궁궐 해설 프로그램을 이용하면 아이 집중도가 훨씬 높아요.</p></div></details>
-<details class="acc"><summary>5. 근현대<small>당일 · 서울·천안 · 초5~6</small></summary><div class="acc-body"><p>서대문형무소역사관은 전시가 무겁습니다. 미리 어떤 곳인지 이야기하고, 아이가 힘들어하면 중간에 나와도 괜찮아요. 독립기념관은 넓으니 관 한두 개를 골라 봅니다.</p></div></details>
 
-<p class="callout tip">순서가 중요합니다. 선사부터 차례로 가면 "앞 시대와 무엇이 달라졌지?"라는 질문이 저절로 생겨요. 교과 진도와 정확히 맞출 필요는 없고, 초5 역사 단원 전후 1~2년 안에 다섯 시대를 한 바퀴 도는 것이 목표입니다.</p>
+<style>
+  .hr-route .acc-body h4 { margin: 20px 0 8px; font-size: 15px; }
+  .hr-route .acc-body h4:first-child { margin-top: 4px; }
+  .hr-route .hr-go { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+  .hr-route .hr-go a { font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 99px; border: 1px solid var(--line); background: var(--card); text-decoration: none; }
+  .hr-route .hr-go a:hover { border-color: var(--accent); }
+  .hr-route .timeline { margin-bottom: 12px; }
+  .hr-route .tl-item h3 { font-size: 15px; }
+  .hr-route .cards .card h3 { font-size: 14.5px; }
+  .hr-route .cards .card ul { margin: 0; padding-left: 1.1em; font-size: 14px; }
+</style>
+
+<h2 id="overview">다섯 시대, 일곱 코스 한눈에</h2>
+<p>위 지도가 "어디로"라면, 아래는 "어떻게"입니다. 시대마다 하루(경주는 1박 2일) 코스를 시간대별 동선, 부모가 먼저 알아 둘 이야기, 아이 현장 미션, 대화 질문, 다녀와서 연표 활동까지 한 묶음으로 정리했어요. 코스 제목을 눌러 펼쳐 보세요.</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>시대</th><th>코스</th><th>기간</th><th>추천 시기</th><th>연계 단원</th></tr></thead>
+  <tbody>
+    <tr><td>선사·고조선</td><td><a href="#route-pre">연천 전곡리 + 서울 암사동</a></td><td>당일</td><td>봄·가을</td><td>초5 한국사 ① · 중 역사 · 고 한국사1</td></tr>
+    <tr><td>삼국·통일신라</td><td><a href="#route-silla">경주</a></td><td>1박 2일</td><td>4~5월, 10~11월</td><td>초5 한국사 ② · 중 역사 · 고 한국사1</td></tr>
+    <tr><td>삼국(백제)</td><td><a href="#route-baekje">공주·부여</a></td><td>당일(빠듯) 또는 1박</td><td>봄·가을, 연꽃 필 때 7월</td><td>초5 한국사 ② · 중 역사 · 고 한국사1</td></tr>
+    <tr><td>고려 (+선사·근대)</td><td><a href="#route-goryeo">강화도</a></td><td>당일</td><td>봄·가을</td><td>초5 한국사 ③ · 중 역사 · 고 한국사1</td></tr>
+    <tr><td>조선 전기</td><td><a href="#route-palace">서울 궁궐</a></td><td>당일</td><td>사계절 (여름 한낮 피하기)</td><td>초5 한국사 ④ · 중 역사 · 고 한국사1</td></tr>
+    <tr><td>조선 후기</td><td><a href="#route-hwaseong">수원 화성</a></td><td>당일</td><td>봄·가을</td><td>초5 한국사 ④ · 중 역사 · 고 한국사1</td></tr>
+    <tr><td>근현대</td><td><a href="#route-modern">서대문 + 독립기념관</a></td><td>당일 2회 또는 1일</td><td>3·1절·광복절 전후</td><td>초5 한국사 ⑤ · 중 역사 · 고 한국사2</td></tr>
+  </tbody>
+</table></div>
+
+<p class="callout warning">관람 시간·휴관일·예약 방식·요금·해설 프로그램·전시 구성은 기관마다, 해마다 바뀝니다. 아래 동선의 시각은 <strong>이동과 쉬는 시간을 감안한 예시</strong>일 뿐이에요. 출발 전 각 기관 공식 홈페이지(국가유산청·각 박물관)에서 꼭 확인하세요.</p>
+
+<div class="hr-route">
+
+<h2 id="plan">시대별 코스 계획</h2>
+
+<!-- ============ 1. 선사 ============ -->
+<details class="acc" id="route-pre"><summary>1. 선사·고조선 — 연천 전곡리 + 서울 암사동<small>당일 · 경기 북부·서울 · 초4~중1 · 봄·가을</small></summary><div class="acc-body">
+  <div class="hr-go"><a href="museums-history.html#place-jeongok">전곡리 유적·전곡선사박물관</a><a href="museums-history.html#place-amsa">서울 암사동 유적</a><a href="museums-history.html#place-national-museum">국립중앙박물관</a><a href="museums-history.html#place-ganghwa">강화 고인돌</a></div>
+  <p>구석기(뗀석기) → 신석기(간석기·토기·움집) → 청동기(고인돌·청동검)로 이어지는 "도구와 집의 변화"를 하루에 봅니다. 연천과 암사동이 멀다면 둘 중 한 곳 + 국립중앙박물관 선사·고대관으로 바꿔도 좋아요. 청동기 고인돌은 <a href="#route-goryeo">강화도 코스</a>에서 만납니다.</p>
+
+  <h4>동선 (시간대별 예시)</h4>
+  <div class="timeline">
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">09:30 · 도착</div><h3>전곡선사박물관</h3><p>주먹도끼 전시부터. 사람의 진화, 구석기 사람들의 사냥·불 사용 이야기를 봅니다. 체험 프로그램(석기 만들기 등)은 운영 여부를 미리 확인하세요.</p></div>
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">11:00</div><h3>전곡리 유적 산책</h3><p>박물관 밖 유적지를 걸으며 "이 강가 언덕에 수십만 년 전 사람이 살았다"는 감각을 느낍니다. 한탄강 지형 이야기(용암대지)와 묶으면 과학 연결도 돼요.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">12:00 · 점심</div><h3>점심 + 이동</h3><p>서울 강동구 암사동까지는 차로 이동합니다(교통 상황에 따라 시간 차가 커요). 차 안에서 "구석기 → 신석기, 무엇이 달라졌을까?" 퀴즈.</p></div>
+    <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">14:30</div><h3>암사동 유적</h3><p>복원된 움집과 전시관에서 빗살무늬토기, 간석기, 집터를 봅니다. "이제 한곳에 머물러 살기 시작했다"가 핵심이에요.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">16:00 · 마무리</div><h3>벤치에서 3분 정리</h3><p>오늘 본 도구 중 하나만 골라 그리고, 이름을 붙입니다. 여권 도장은 집에서.</p></div>
+  </div>
+
+  <h4>부모가 미리 알아 둘 이야기</h4>
+  <ul>
+    <li><b>전곡리 주먹도끼</b> — 1978년 한탄강 유원지에 놀러 온 주한미군 병사가 이상한 돌을 발견해 알려진 유적입니다. 양면을 다듬은 '아슐리안형' 주먹도끼가 동아시아에서도 확인되면서, "동아시아에는 이런 주먹도끼가 없다"던 당시 학설을 다시 생각하게 만든 곳으로 유명해요.</li>
+    <li><b>뗀석기와 간석기</b> — 구석기 사람은 돌을 깨뜨려(뗀석기) 쓰고, 신석기 사람은 돌을 갈아(간석기) 썼습니다. 신석기에는 농사를 시작하고, 흙으로 토기를 빚고, 움집을 지어 정착했어요.</li>
+    <li><b>암사동 유적</b> — 한강 가의 대표적인 신석기 마을 유적입니다. 1925년 큰 홍수 때 유물이 드러나면서 알려졌고, 뾰족한 밑의 빗살무늬토기가 대표 유물이에요.</li>
+    <li><b>고조선으로</b> — 청동기 시대에 계급이 생기고 고인돌 같은 큰 무덤이 만들어졌습니다. 탁자식 고인돌·비파형 동검이 나오는 지역을 고조선의 문화 범위로 보는 설명이 교과서에 나와요.</li>
+  </ul>
+  <p class="callout note">연대(몇십만 년 전 등)는 연구에 따라 수치가 달라집니다. 아이에게는 "아주 아주 오래전, 글자가 없던 때"로 충분해요.</p>
+
+  <h4>현장 미션 (아이 활동지)</h4>
+  <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+  <ul class="checklist" id="route-pre-mission">
+    <li class="task"><label><input type="checkbox"><span>주먹도끼를 찾아 내 주먹과 크기 비교하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>뗀석기와 간석기를 하나씩 찾아 "무엇이 다른지" 말하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>빗살무늬토기의 밑모양 그려 보기 (왜 뾰족할까?)</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>움집 안에서 불 피우던 자리 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>구석기 사람이 먹었을 것 같은 음식 3가지 상상하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>전시 해설 하나를 골라 가족에게 30초 설명하기</span></label></li>
+  </ul>
+
+  <h4>대화 질문</h4>
+  <div class="cards" style="--min: 200px">
+    <div class="card c-note"><h3>가기 전</h3><ul><li>칼도 가위도 없으면 고기를 어떻게 자를까?</li><li>옷장에서 돌로 만든 물건 찾기!</li><li>'석기'의 '석'은 무슨 뜻일까?</li></ul></div>
+    <div class="card c-tip"><h3>현장에서</h3><ul><li>이 돌 도구로 뭘 했을 것 같아?</li><li>움집에 사는 가족은 몇 명이었을까?</li><li>우리 집과 움집, 같은 점은?</li></ul></div>
+    <div class="card c-accent"><h3>다녀와서</h3><ul><li>구석기와 신석기 중 어디서 살고 싶어?</li><li>농사를 짓게 되면 무엇이 달라질까?</li><li>우리 동네에도 옛날 사람이 살았을까?</li></ul></div>
+  </div>
+
+  <h4>다녀와서 연표 활동</h4>
+  <p>긴 종이(달력 뒷면 이어 붙이기)를 거실 벽에 붙이고 <b>왼쪽 끝에 "구석기"</b>를 씁니다. 오늘 찍은 사진 1장, 아이가 그린 도구 그림 1장을 붙이고 "뗀석기 → 간석기 → 토기 → 움집" 화살표를 그려요. 이 연표를 다섯 시대 내내 이어 붙입니다.</p>
+  <label class="memo-label" for="rt-pre-note">선사 여행 한 줄 기록 (연표에 붙일 문장)</label>
+  <textarea class="memo" id="rt-pre-note" data-key="trips-route-pre-timeline" placeholder="예) 구석기 사람은 돌을 깨서 주먹도끼를 만들었다. 신석기 사람은 토기를 만들고 움집에 살았다."></textarea>
+  <p class="saved-hint"></p>
+
+  <h4>연계 단원</h4>
+  <ul>
+    <li><a href="../subjects/social-elem.html#social-elem-u21">사회 · 초5 · 한국사 ① 선사 시대와 고조선</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u29">역사 · 중학교 · 선사 문화와 고대 국가의 형성</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u11">한국사1 · 고1 · 고대 국가의 형성과 발전</a></li>
+  </ul>
+</div></details>
+
+<!-- ============ 2. 경주 ============ -->
+<details class="acc" id="route-silla"><summary>2. 삼국·통일신라 — 경주 1박 2일<small>1박 2일 · 경북 · 초4~고 · 봄·가을 (가을이 가장 좋음)</small></summary><div class="acc-body">
+  <div class="hr-go"><a href="museums-history.html#place-gyeongju">경주 (박물관·대릉원·첨성대·불국사·석굴암)</a><a href="museums-history.html#place-national-museum">국립중앙박물관</a></div>
+  <p>천 년 가까이 신라의 수도였던 도시 전체가 박물관입니다. 욕심내면 아이가 지쳐요. <b>첫날은 시내(박물관·대릉원·첨성대·월지), 둘째 날은 토함산(불국사·석굴암)</b> 두 덩어리로 나누면 동선이 깔끔합니다. 시내 구간은 자전거·도보 이동도 가능해요.</p>
+
+  <h4>동선 (시간대별 예시)</h4>
+  <div class="timeline">
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">1일차 10:30</div><h3>국립경주박물관</h3><p>먼저 "그림"을 머리에 넣는 곳. 신라의 금관·토기, 야외의 성덕대왕신종을 봅니다. 전시관 전부가 아니라 신라 역사관 중심으로 1시간 반 정도.</p></div>
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">12:30 · 점심</div><h3>점심 + 휴식</h3><p>오후가 길어요. 숙소 체크인이나 카페에서 한 번 충분히 쉬어 갑니다.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">15:00</div><h3>대릉원 · 천마총</h3><p>언덕처럼 큰 무덤 사이를 걷습니다. 천마총은 무덤 안 구조를 보여 주는 전시로 꾸며져 있어 "돌무지덧널무덤"을 눈으로 이해하기 좋아요.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">16:30</div><h3>첨성대 → 계림 → 월성 주변 산책</h3><p>대릉원에서 걸어서 이어지는 구간입니다. 넓은 잔디밭이라 아이가 뛰어놀 시간도 주세요.</p></div>
+    <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">해 질 녘</div><h3>동궁과 월지</h3><p>통일신라 궁궐 연못. 조명이 켜지는 저녁이 가장 예쁘지만 붐빌 수 있어요. 어린 동생은 여기서 체력이 끝나니 짧게.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">2일차 09:00</div><h3>불국사</h3><p>아침 일찍 가면 한결 여유롭습니다. 청운교·백운교, 다보탑과 석가탑을 나란히 비교해요.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">11:00</div><h3>석굴암</h3><p>토함산 위쪽으로 차로 이동한 뒤 산길을 조금 걷습니다. 본존불은 보존을 위해 유리벽 너머로 봐요. 오래 머무는 곳이 아니니 "들어가기 전 이야기"가 중요합니다.</p></div>
+    <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">13:00 · 귀가</div><h3>점심 후 출발</h3><p>여유가 있으면 황룡사지(빈 절터의 크기 느끼기)나 분황사를 한 곳만 더. 동해 쪽 문무대왕릉은 별도 반나절이 필요해요.</p></div>
+  </div>
+
+  <h4>부모가 미리 알아 둘 이야기</h4>
+  <ul>
+    <li><b>천 년의 수도</b> — 신라는 오랫동안 금성(지금의 경주)을 도읍으로 삼았고, 676년 삼국 통일 이후 통일신라 시대를 거쳐 935년 고려에 나라를 넘겨주었습니다. 도시 곳곳이 '경주역사유적지구'(2000년), '석굴암과 불국사'(1995년)로 유네스코 세계유산에 올라 있어요.</li>
+    <li><b>대릉원·천마총</b> — 신라 초기의 큰 무덤은 나무 덧널 위에 돌을 쌓고 흙을 덮은 '돌무지덧널무덤'이라 도굴이 어려워 금관 같은 유물이 많이 남았습니다. 천마총은 1973년 발굴 때 말다래(말 안장 양옆 가리개)에 그려진 하늘을 나는 말 그림이 나와 이름이 붙었어요.</li>
+    <li><b>첨성대</b> — 선덕여왕 때(7세기) 세워진 것으로 전합니다. 별을 관측한 천문대로 널리 알려져 있지만, 제단·상징물이었다는 등 용도에 대한 다른 해석도 있어요. "쌓은 돌 수가 1년 날수와 같다" 같은 이야기는 세는 방법에 따라 달라지니 재미로만 들려주세요.</li>
+    <li><b>동궁과 월지</b> — 통일신라 궁궐의 연못(예전 이름 '안압지')입니다. 1970년대 발굴 때 많은 생활 유물이 나왔는데, 그중 벌칙이 적힌 14면체 나무 주사위 '주령구'가 유명해요(원본은 보존 처리 중 소실되어 복제품이 전해집니다).</li>
+    <li><b>불국사·석굴암</b> — 『삼국유사』에 따르면 8세기 중엽(경덕왕 때) 김대성이 짓기 시작했습니다. 석가탑 안에서 1966년 발견된 『무구정광대다라니경』은 현존하는 가장 오래된 목판 인쇄물 가운데 하나로 꼽혀요. 석굴암은 돌을 쌓아 만든 인공 석굴이라는 점이 특별합니다.</li>
+    <li><b>성덕대왕신종</b> — 8세기 후반에 완성된 큰 종입니다. '에밀레종' 전설은 후대에 덧붙은 이야기로 보는 견해가 많으니, 아이에게는 "전설이 있다"고 구분해 주세요.</li>
+  </ul>
+
+  <h4>현장 미션 (아이 활동지)</h4>
+  <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+  <ul class="checklist" id="route-silla-mission">
+    <li class="task"><label><input type="checkbox"><span>박물관에서 금관을 찾아 가지 모양 장식이 무엇을 닮았는지 말하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>성덕대왕신종 앞에서 종 표면의 선녀(비천상) 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>대릉원 큰 무덤 한 바퀴 걸음 수 세어 보기 (들어가지 않는 선 지키기)</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>첨성대 창문(네모 구멍) 위치 찾고 "사람은 어떻게 올라갔을까?" 추리</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>다보탑과 석가탑 그려서 다른 점 3가지 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>불국사 돌계단(청운교·백운교) 계단 수 세어 보기 (올라가지는 않아요)</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>석굴암 본존불의 얼굴 표정 흉내 내 사진 찍기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>월지에서 물에 비친 건물 사진 한 장 찍기</span></label></li>
+  </ul>
+
+  <h4>대화 질문</h4>
+  <div class="cards" style="--min: 200px">
+    <div class="card c-note"><h3>가기 전</h3><ul><li>천 년 동안 한 도시가 수도였다면 무엇이 쌓여 있을까?</li><li>왕의 무덤은 왜 이렇게 크게 만들었을까?</li><li>신라·고구려·백제 중 어디를 먼저 알고 싶어?</li></ul></div>
+    <div class="card c-tip"><h3>현장에서</h3><ul><li>첨성대를 설계한 사람이라면 무엇을 생각했을까?</li><li>석가탑은 단순하고 다보탑은 화려해. 너는 어느 쪽?</li><li>무덤 속 금관은 왜 넣었을까?</li></ul></div>
+    <div class="card c-accent"><h3>다녀와서</h3><ul><li>천 년 뒤 사람들이 우리 동네에서 무엇을 발견할까?</li><li>신라가 통일한 뒤 무엇이 달라졌을까?</li><li>경주를 친구에게 한 문장으로 소개하면?</li></ul></div>
+  </div>
+
+  <h4>다녀와서 연표 활동</h4>
+  <p>거실 연표에 <b>"삼국 → 676 통일 → 통일신라"</b> 구간을 만들고, 첨성대(선덕여왕 때)·불국사(8세기)·성덕대왕신종(8세기 후반) 카드를 순서대로 붙입니다. 아이가 "무엇이 먼저였지?"를 스스로 찾아 붙이게 하는 것이 핵심이에요.</p>
+  <label class="memo-label" for="rt-silla-note">경주 여행 한 줄 기록</label>
+  <textarea class="memo" id="rt-silla-note" data-key="trips-route-silla-timeline" placeholder="예) 첨성대는 선덕여왕 때, 불국사는 통일신라 때 만들어졌다. 석가탑 안에서 오래된 인쇄물이 나왔다."></textarea>
+  <p class="saved-hint"></p>
+
+  <h4>연계 단원</h4>
+  <ul>
+    <li><a href="../subjects/social-elem.html#social-elem-u22">사회 · 초5 · 한국사 ② 삼국·가야와 남북국</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u29">역사 · 중학교 · 선사 문화와 고대 국가의 형성</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u30">역사 · 중학교 · 남북국 시대의 전개</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u11">한국사1 · 고1 · 고대 국가의 형성과 발전</a></li>
+  </ul>
+</div></details>
+
+<!-- ============ 3. 공주·부여 ============ -->
+<details class="acc" id="route-baekje"><summary>3. 삼국(백제) — 공주·부여 1일<small>당일(빠듯) 또는 1박 · 충남 · 초4~고 · 봄·가을, 7월 궁남지 연꽃</small></summary><div class="acc-body">
+  <div class="hr-go"><a href="museums-history.html#place-gongju-buyeo">공주·부여 백제역사유적지구</a><a href="museums-history.html#place-hanseong-baekje">한성백제박물관 (서울)</a></div>
+  <p>백제는 도읍을 두 번 옮겼습니다. <b>한성(서울) → 웅진(공주) → 사비(부여)</b>. 공주에서 오전, 부여에서 오후를 보내면 "왜 옮겼을까?"가 자연스럽게 이어져요. 서울에 산다면 사전 코스로 한성백제박물관(올림픽공원)을 먼저 다녀오면 백제 이야기의 앞부분이 채워집니다.</p>
+
+  <h4>동선 (시간대별 예시)</h4>
+  <div class="timeline">
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">09:30 · 공주</div><h3>국립공주박물관</h3><p>무령왕릉에서 나온 유물(금제 관꾸미개, 지석 등)을 먼저 봅니다. "누구 무덤인지 알려 준 돌"이 오늘의 주인공이에요.</p></div>
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">10:45</div><h3>무령왕릉과 왕릉원</h3><p>무덤 내부는 보존을 위해 공개하지 않고, 모형 전시관에서 벽돌무덤 안을 재현해 보여 줍니다. 무덤 언덕 산책은 짧게.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">11:30</div><h3>공산성</h3><p>금강을 끼고 도는 성곽길. 전부 돌 필요 없이 성문 하나와 강이 보이는 구간만 걸어도 충분합니다.</p></div>
+    <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">12:30 · 점심</div><h3>점심 후 부여로 이동</h3><p>차로 이동합니다. 차 안에서 "왜 강가에 도읍을 정했을까?" 이야기.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">14:30 · 부여</div><h3>정림사지 오층석탑 + 정림사지박물관</h3><p>사비 도읍 한가운데 있던 절터. 탑 하나가 1,400년 가까이 서 있어요.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">15:30</div><h3>국립부여박물관</h3><p>백제금동대향로 앞에서 오래 머뭅니다. 뚜껑의 산·동물·악사를 찾는 "숨은그림찾기"가 제일 재미있어요.</p></div>
+    <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">17:00 · 선택</div><h3>궁남지 또는 부소산성</h3><p>체력이 남으면 궁남지(연못, 여름 연꽃)에서 산책. 1박이라면 다음 날 부소산성·낙화암과 백마강 쪽을 걷습니다.</p></div>
+  </div>
+
+  <h4>부모가 미리 알아 둘 이야기</h4>
+  <ul>
+    <li><b>도읍 이동</b> — 475년 고구려 장수왕의 공격으로 한성이 함락되자 백제는 웅진(공주)으로 옮겼고, 538년 성왕이 사비(부여)로 다시 옮겼습니다. 660년 나당 연합군에게 멸망했어요.</li>
+    <li><b>무령왕릉</b> — 1971년 배수로 공사 중 우연히 발견되었습니다. 도굴되지 않은 채 발견된 데다 무덤 주인을 밝힌 지석(묘지석)이 나와, 삼국 시대 왕릉 가운데 주인이 확실히 밝혀진 드문 경우예요. 벽돌로 쌓은 무덤 양식은 중국 남조와의 교류를 보여 줍니다. 다만 발굴이 하룻밤 사이 급하게 진행되어 아쉬움이 컸다는 이야기도 함께 전해져요.</li>
+    <li><b>정림사지 오층석탑</b> — 백제 석탑의 대표입니다. 백제 멸망 뒤 당나라 장수가 탑에 승전 기록을 새겨 한때 엉뚱한 이름으로 불리기도 했어요. "나라가 망하는 순간을 지켜본 탑"이라는 이야기에 아이들이 몰입합니다.</li>
+    <li><b>백제금동대향로</b> — 1993년 부여 능산리 절터에서 진흙 속에 묻힌 채 발견되었습니다. 백제 금속 공예 솜씨를 보여 주는 대표 유물이에요.</li>
+    <li><b>세계유산</b> — 공주·부여·익산의 유적 8곳이 2015년 '백제역사유적지구'로 유네스코 세계유산에 올랐습니다.</li>
+  </ul>
+
+  <h4>현장 미션 (아이 활동지)</h4>
+  <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+  <ul class="checklist" id="route-baekje-mission">
+    <li class="task"><label><input type="checkbox"><span>무령왕릉 지석(돌판)을 찾아 "왜 중요한지" 한 문장으로 말하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>모형 전시관에서 벽돌 무늬 하나 따라 그리기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>공산성에서 금강이 보이는 곳 찾아 사진 찍기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>정림사지 오층석탑 층수 세고, 경주에서 본 탑과 비교하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>백제금동대향로 뚜껑에서 동물 3마리, 악기 연주하는 사람 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>지도에 한성 → 웅진 → 사비 화살표 그리기</span></label></li>
+  </ul>
+
+  <h4>대화 질문</h4>
+  <div class="cards" style="--min: 200px">
+    <div class="card c-note"><h3>가기 전</h3><ul><li>수도를 옮긴다는 건 어떤 일일까?</li><li>우리 집이 이사 간다면 무엇을 챙길까?</li><li>백제 사람들은 어떤 나라와 친했을까?</li></ul></div>
+    <div class="card c-tip"><h3>현장에서</h3><ul><li>무덤 주인을 모르는 무덤이 많은 이유는?</li><li>향로를 만든 장인은 몇 날 며칠 걸렸을까?</li><li>이 탑이 말할 수 있다면 무슨 말을 할까?</li></ul></div>
+    <div class="card c-accent"><h3>다녀와서</h3><ul><li>신라 탑과 백제 탑, 느낌이 어떻게 달랐어?</li><li>백제가 남긴 것 중 지금까지 이어지는 것은?</li><li>백제에 가족 여행 광고를 만든다면?</li></ul></div>
+  </div>
+
+  <h4>다녀와서 연표 활동</h4>
+  <p>연표의 삼국 구간을 <b>세 줄(고구려·백제·신라)</b>로 나눠 그리고, 백제 줄에 475(웅진) · 538(사비) · 660(멸망)을 표시합니다. 경주 여행을 먼저 다녀왔다면 신라 줄과 나란히 놓고 "같은 시기에 신라에서는?"을 찾아봐요.</p>
+  <label class="memo-label" for="rt-baekje-note">공주·부여 여행 한 줄 기록</label>
+  <textarea class="memo" id="rt-baekje-note" data-key="trips-route-baekje-timeline" placeholder="예) 백제는 한성에서 웅진, 사비로 도읍을 옮겼다. 무령왕릉은 주인을 알려 주는 돌이 나왔다."></textarea>
+  <p class="saved-hint"></p>
+
+  <h4>연계 단원</h4>
+  <ul>
+    <li><a href="../subjects/social-elem.html#social-elem-u22">사회 · 초5 · 한국사 ② 삼국·가야와 남북국</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u29">역사 · 중학교 · 선사 문화와 고대 국가의 형성</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u11">한국사1 · 고1 · 고대 국가의 형성과 발전</a></li>
+  </ul>
+</div></details>
+
+<!-- ============ 4. 강화도 ============ -->
+<details class="acc" id="route-goryeo"><summary>4. 고려 (+선사·근대) — 강화도 1일<small>당일 · 인천 강화 · 초4~고 · 봄·가을</small></summary><div class="acc-body">
+  <div class="hr-go"><a href="museums-history.html#place-ganghwa">강화도 (고인돌·광성보·전등사)</a><a href="museums-history.html#place-haeinsa">합천 해인사 장경판전</a><a href="museums-history.html#place-national-museum">국립중앙박물관 (고려청자)</a></div>
+  <p>강화도는 "섬 하나가 한국사 교과서"입니다. 청동기 고인돌, 고려의 임시 수도, 조선의 외규장각, 개항기 외세와의 전투 현장이 모두 있어요. 이 코스의 주제는 <b>고려</b>지만, 선사와 근대를 살짝 곁들이면 다섯 시대 여행 전체를 이어 주는 다리가 됩니다.</p>
+
+  <h4>동선 (시간대별 예시)</h4>
+  <div class="timeline">
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">09:30</div><h3>강화 고인돌 (부근리)</h3><p>탁자처럼 생긴 큰 고인돌 앞에서 시작합니다. 주변 역사박물관이 함께 있으면 강화 역사 전체를 먼저 훑어요.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">11:00</div><h3>고려궁지</h3><p>몽골 침입 때 고려 조정이 옮겨 온 궁궐 터. 지금 남은 건물은 주로 조선 시대 것이고, 외규장각(복원)도 있습니다. "터"라는 개념을 설명하기 좋은 곳이에요.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">12:00 · 점심</div><h3>강화읍에서 점심</h3><p>주말엔 다리 쪽 교통 체증이 심해요. 점심을 일찍 먹고 남쪽으로 이동합니다.</p></div>
+    <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">13:30</div><h3>전등사 · 정족산성(삼랑성)</h3><p>산성 안에 있는 오래된 절. 병인양요 때 조선군이 프랑스군을 물리친 곳이자, 조선왕조실록을 지키던 사고(史庫)가 있던 곳이에요.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">15:30</div><h3>광성보 (→ 시간 되면 초지진)</h3><p>바다를 바라보는 돈대와 성곽. 신미양요 때 치열한 전투가 있던 곳입니다. 해안 산책로가 좋아 아이들이 좋아해요.</p></div>
+    <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">17:00 · 귀가</div><h3>차 안 퀴즈</h3><p>"오늘 강화도에서 만난 시대 네 개는?" (청동기·고려·조선·개항기)</p></div>
+  </div>
+
+  <h4>부모가 미리 알아 둘 이야기</h4>
+  <ul>
+    <li><b>강화 천도</b> — 1232년 몽골의 침입이 거세지자 무신 정권(최우)은 고종과 함께 도읍을 개경에서 강화도로 옮겼습니다. 물살이 거센 바다가 기마병 중심인 몽골군을 막아 줄 것이라 봤기 때문이에요. 1270년 개경으로 돌아갈 때까지 약 40년 가까이 강화가 수도였습니다. 그동안 육지의 백성들은 큰 고통을 겪었다는 점도 함께 이야기해 주세요.</li>
+    <li><b>팔만대장경</b> — 몽골 침입 중에 부처의 힘으로 나라를 지키려는 마음을 담아 강화에서 대장경판을 새겼습니다(1236~1251년 무렵). 지금은 합천 해인사 장경판전에 보관되어 있고, 장경판전은 1995년 유네스코 세계유산, 대장경판은 2007년 세계기록유산이 되었어요.</li>
+    <li><b>고인돌</b> — 청동기 시대의 무덤입니다. 강화·고창·화순의 고인돌 유적이 2000년 함께 세계유산에 올랐어요.</li>
+    <li><b>외규장각</b> — 조선 정조 때 왕실 기록(의궤 등)을 보관하려고 강화에 세운 도서관입니다. 1866년 병인양요 때 프랑스군이 책을 약탈해 갔고, 2011년 '영구 임대' 형식으로 돌아왔어요.</li>
+    <li><b>병인양요·신미양요</b> — 1866년 프랑스(병인양요), 1871년 미국(신미양요)이 강화도를 공격했습니다. 정족산성에서는 양헌수 부대가 프랑스군을 물리쳤고, 광성보에서는 어재연 장군이 이끄는 조선군이 끝까지 싸우다 많은 희생을 치렀어요.</li>
+    <li><b>고려청자</b> — 고려는 흙을 파내고 다른 색 흙을 메우는 '상감' 기법으로 독창적인 청자를 만들었습니다. 강화도 코스 전후로 국립중앙박물관 청자실을 들르면 고려 문화가 채워져요.</li>
+  </ul>
+
+  <h4>현장 미션 (아이 활동지)</h4>
+  <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+  <ul class="checklist" id="route-goryeo-mission">
+    <li class="task"><label><input type="checkbox"><span>고인돌 덮개돌이 몇 사람 키만큼인지 어림해 보기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>"이 무거운 돌을 어떻게 옮겼을까?" 방법 두 가지 생각하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>고려궁지 안내판에서 강화로 온 해와 떠난 해 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>외규장각에서 "왜 책을 섬에 보관했을까?" 추리하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>전등사 가는 길에 성벽(산성) 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>광성보에서 바다 건너편 육지 바라보며 물살 관찰하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>오늘 만난 시대를 순서대로 손가락으로 세기</span></label></li>
+  </ul>
+
+  <h4>대화 질문</h4>
+  <div class="cards" style="--min: 200px">
+    <div class="card c-note"><h3>가기 전</h3><ul><li>적이 쳐들어오면 너라면 어디로 피할래?</li><li>섬이 좋은 점과 불편한 점은?</li><li>나무판에 글자를 새겨 책을 찍는 방법 알아?</li></ul></div>
+    <div class="card c-tip"><h3>현장에서</h3><ul><li>임금님은 섬에 있는데 육지 백성은 어땠을까?</li><li>수백 년 사이 같은 섬에서 전쟁이 여러 번. 왜 하필 강화였을까?</li><li>외규장각 책이 돌아왔을 때 사람들 마음은?</li></ul></div>
+    <div class="card c-accent"><h3>다녀와서</h3><ul><li>강화도를 한 단어로 표현하면?</li><li>고려는 왜 끝까지 항복하지 않으려 했을까?</li><li>다음엔 해인사에 가서 대장경판을 볼까?</li></ul></div>
+  </div>
+
+  <h4>다녀와서 연표 활동</h4>
+  <p>연표에 <b>918 고려 건국 → 1232 강화 천도 → 1270 개경 환도 → 1392 조선 건국</b>을 적고, 강화도 사진을 청동기·고려·조선(외규장각)·개항기(광성보) 네 군데에 나눠 붙입니다. "한 장소, 여러 시대"를 눈으로 보는 활동이에요.</p>
+  <label class="memo-label" for="rt-goryeo-note">강화도 여행 한 줄 기록</label>
+  <textarea class="memo" id="rt-goryeo-note" data-key="trips-route-goryeo-timeline" placeholder="예) 고려는 몽골을 피해 강화도로 도읍을 옮겼다. 강화도에는 고인돌부터 광성보까지 여러 시대가 있다."></textarea>
+  <p class="saved-hint"></p>
+
+  <h4>연계 단원</h4>
+  <ul>
+    <li><a href="../subjects/social-elem.html#social-elem-u23">사회 · 초5 · 한국사 ③ 고려</a></li>
+    <li><a href="../subjects/social-elem.html#social-elem-u21">사회 · 초5 · 한국사 ① 선사 시대와 고조선 (고인돌)</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u31">역사 · 중학교 · 고려의 성립과 변천</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u12">한국사1 · 고1 · 고려의 정치 변동과 사회·문화</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u15">한국사1 · 고1 · 근대 국가 수립 운동 (양요)</a></li>
+  </ul>
+</div></details>
+
+<!-- ============ 5. 서울 궁궐 ============ -->
+<details class="acc" id="route-palace"><summary>5. 조선 전기 — 서울 궁궐 1일<small>당일 · 서울 종로 · 초3~고 · 사계절 (여름 한낮은 실내 위주)</small></summary><div class="acc-body">
+  <div class="hr-go"><a href="museums-history.html#place-gyeongbokgung">경복궁·국립고궁박물관</a><a href="museums-history.html#place-changdeokgung">창덕궁·종묘</a><a href="museums-history.html#place-hangeul-museum">국립한글박물관</a><a href="museums-history.html#place-sejong-yeongneung">여주 세종대왕릉</a></div>
+  <p>하루에 궁궐 두 곳이 한계예요. <b>경복궁(조선의 시작·법궁) + 국립고궁박물관</b>을 기본으로, 고학년은 오후에 창덕궁 또는 종묘를 더합니다. 궁궐 해설 프로그램을 이용하면 집중도가 훨씬 높아요(시간·언어·예약 여부 확인).</p>
+
+  <h4>동선 (시간대별 예시)</h4>
+  <div class="timeline">
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">09:30</div><h3>광화문 → 흥례문</h3><p>수문장 교대 의식 시간이 맞으면 구경합니다(운영 시간 확인). 광화문 앞 광장에서 세종대왕·이순신 동상도 함께 볼 수 있어요.</p></div>
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">10:00</div><h3>근정전 → 사정전 → 강녕전·교태전</h3><p>"회사로 치면 대강당 → 사무실 → 집" 순서로 설명하면 쉬워요. 근정전 앞마당의 품계석을 꼭 찾아봅니다.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">11:00</div><h3>경회루 · 향원정</h3><p>연못 위 누각. 외국 사신을 맞고 잔치를 열던 곳이에요. 사진 찍고 쉬어 가기 좋은 구간.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">11:40</div><h3>국립고궁박물관</h3><p>경복궁 안에 있는 박물관. 왕실 유물, 천문·시간을 재던 과학 기구 관련 전시를 보고, 더운 날·추운 날엔 여기서 오래 쉬어도 좋아요.</p></div>
+    <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">13:00 · 점심</div><h3>점심 (서촌·삼청동 방면)</h3><p>오후 일정은 아이 체력을 보고 결정합니다.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">14:30 · 선택</div><h3>창덕궁 또는 종묘</h3><p>창덕궁: 자연 지형을 살린 궁궐. 후원은 별도 관람(인원 제한)이라 미리 확인. 종묘: 왕과 왕비의 신주를 모신 사당으로, 정전의 긴 지붕이 인상적이에요. 해설 동행 관람 방식일 때가 많습니다.</p></div>
+  </div>
+
+  <h4>부모가 미리 알아 둘 이야기</h4>
+  <ul>
+    <li><b>경복궁</b> — 1392년 조선을 세운 태조가 한양으로 도읍을 옮긴 뒤 1395년 지은 첫 궁궐(법궁)입니다. 임진왜란(1592) 때 불탄 뒤 오랫동안 폐허로 남았다가 고종 때 흥선대원군이 다시 지었어요. 일제강점기에 많은 건물이 헐리고 그 자리에 조선총독부 건물이 섰다가, 1990년대에 철거되고 지금까지 복원이 이어지고 있습니다.</li>
+    <li><b>창덕궁</b> — 태종 때(1405) 지은 이궁으로, 임진왜란 뒤에는 오랫동안 실제 임금이 머문 궁궐이었어요. 자연과 어우러진 배치로 1997년 유네스코 세계유산이 되었습니다.</li>
+    <li><b>종묘</b> — 조선 왕과 왕비의 신주를 모시고 제사를 지내던 곳입니다. 1995년 세계유산, 종묘제례와 종묘제례악은 인류무형문화유산이에요. 궁궐(살아 있는 왕)과 종묘(돌아가신 왕)를 짝지어 설명하면 좋아요.</li>
+    <li><b>세종과 한글</b> — 세종은 1443년 훈민정음을 만들고 1446년 반포했습니다. 궁궐 여행 전후로 국립한글박물관(용산)이나 여주 세종대왕릉(영릉)을 묶으면 "세종 여행"이 됩니다. 국립한글박물관은 공사·휴관 여부를 꼭 확인하세요.</li>
+  </ul>
+
+  <h4>현장 미션 (아이 활동지)</h4>
+  <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+  <ul class="checklist" id="route-palace-mission">
+    <li class="task"><label><input type="checkbox"><span>근정전 앞마당의 품계석 찾고 "정1품"은 어디 있는지 확인하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>지붕 위 작은 동물 조각(잡상) 개수 세어 보기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>근정전 안 임금님 자리 뒤 그림(일월오봉도)에서 해와 달 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>경회루 기둥 가운데 둥근 기둥과 네모 기둥 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>고궁박물관에서 시간이나 하늘과 관련된 유물 하나 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>궁궐 안 아궁이·굴뚝 찾아 "어떻게 난방했을까?" 추리하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>가족에게 "여기는 임금님의 ○○" 해설사 역할 해 보기</span></label></li>
+  </ul>
+
+  <h4>대화 질문</h4>
+  <div class="cards" style="--min: 200px">
+    <div class="card c-note"><h3>가기 전</h3><ul><li>임금님의 하루는 어땠을까?</li><li>궁궐에는 몇 명이나 살았을까?</li><li>경복궁의 '복'은 무슨 뜻일까?</li></ul></div>
+    <div class="card c-tip"><h3>현장에서</h3><ul><li>신하들은 왜 줄 맞춰 서야 했을까?</li><li>지붕 위 잡상은 무엇을 지켰을까?</li><li>임금님이 되고 싶어, 안 되고 싶어? 왜?</li></ul></div>
+    <div class="card c-accent"><h3>다녀와서</h3><ul><li>불탄 궁궐을 다시 짓는 일은 왜 중요할까?</li><li>우리 집에서 제일 중요한 방은?</li><li>세종대왕에게 편지를 쓴다면 첫 문장은?</li></ul></div>
+  </div>
+
+  <h4>다녀와서 연표 활동</h4>
+  <p>연표에 <b>1392 조선 건국 → 1395 경복궁 → 1446 훈민정음 반포 → 1592 임진왜란(경복궁 소실) → 고종 때 중건</b>을 적습니다. 경복궁 사진을 두 번(지어짐·다시 지어짐) 붙이면 "건물에도 역사가 있다"는 걸 이해해요.</p>
+  <label class="memo-label" for="rt-palace-note">궁궐 여행 한 줄 기록</label>
+  <textarea class="memo" id="rt-palace-note" data-key="trips-route-palace-timeline" placeholder="예) 경복궁은 조선의 첫 궁궐이다. 임진왜란 때 불탔다가 고종 때 다시 지었다."></textarea>
+  <p class="saved-hint"></p>
+
+  <h4>연계 단원</h4>
+  <ul>
+    <li><a href="../subjects/social-elem.html#social-elem-u24">사회 · 초5 · 한국사 ④ 조선</a></li>
+    <li><a href="../subjects/social-elem.html#social-elem-u3">통합 · 초1 · 우리나라 (궁궐 나들이)</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u32">역사 · 중학교 · 조선의 성립과 발전</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u13">한국사1 · 고1 · 조선의 성립과 발전</a></li>
+  </ul>
+</div></details>
+
+<!-- ============ 6. 수원 화성 ============ -->
+<details class="acc" id="route-hwaseong"><summary>6. 조선 후기 — 수원 화성 1일<small>당일 · 경기 수원 · 초4~고 · 봄·가을 (가을 축제 시기 붐빔)</small></summary><div class="acc-body">
+  <div class="hr-go"><a href="museums-history.html#place-suwon-hwaseong">수원 화성</a><a href="museums-history.html#place-national-museum">국립중앙박물관 (조선 후기 회화)</a></div>
+  <p>정조의 꿈과 정약용의 과학이 만난 성입니다. <b>박물관(공사 기록) → 행궁(임금의 행차) → 성곽 걷기(건축의 과학)</b> 순서로 가면 "왜 · 어떻게 · 무엇을"이 차례로 채워져요. 성곽 전체를 다 걷기보다 구간을 골라 걷는 것이 아이에게 맞습니다.</p>
+
+  <h4>동선 (시간대별 예시)</h4>
+  <div class="timeline">
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">10:00</div><h3>수원화성박물관</h3><p>거중기 모형과 『화성성역의궤』 관련 전시로 "어떻게 지었나"를 먼저 봅니다.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">11:00</div><h3>화성행궁</h3><p>임금이 수원에 행차할 때 머물던 곳. 혜경궁 홍씨 회갑 잔치 이야기를 들려주세요. 전통 공연·체험이 열리는 날도 있어요(일정 확인).</p></div>
+    <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">12:30 · 점심</div><h3>행궁동 주변 점심</h3><p>오후 성곽 걷기 전에 물과 간식을 채웁니다.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">14:00</div><h3>성곽 걷기: 장안문 → 화홍문 → 방화수류정</h3><p>북쪽 구간은 볼거리가 촘촘해 아이와 걷기 좋아요. 방화수류정 아래 연못(용연)에서 쉬어 갑니다. 저학년은 이 구간만으로 충분.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">15:30 · 고학년</div><h3>연무대 · 동북공심돈 → (선택) 서장대</h3><p>속이 빈 망루 공심돈, 봉화를 올리던 봉돈 등 '기능이 다른 건물'을 찾아다닙니다. 서장대는 팔달산 위라 오르막이 있어요. 국궁 체험장 운영 여부도 확인해 보세요.</p></div>
+    <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">17:00 · 마무리</div><h3>성문 앞 사진 + 한 문장</h3><p>"화성은 ○○한 성이다" 한 문장 만들기.</p></div>
+  </div>
+
+  <h4>부모가 미리 알아 둘 이야기</h4>
+  <ul>
+    <li><b>왜 지었나</b> — 정조는 아버지 사도세자의 무덤을 수원 화산으로 옮기고, 새 도시와 성을 쌓았습니다(1794~1796). 효심, 왕권 강화, 새로운 상업 도시의 꿈이 함께 담긴 사업으로 설명돼요.</li>
+    <li><b>어떻게 지었나</b> — 정약용이 설계에 참여하고 도르래 원리를 이용한 거중기를 고안했습니다. 공사에 참여한 일꾼에게 품삯을 주었다는 점도 특징으로 꼽혀요. 계획보다 훨씬 짧은 약 2년 반 만에 완성되었습니다.</li>
+    <li><b>기록의 힘</b> — 공사 과정·비용·도구·인원까지 자세히 적은 『화성성역의궤』가 남아 있어서, 일제강점기와 6·25 전쟁으로 훼손된 성을 원래 모습대로 복원할 수 있었고 1997년 유네스코 세계유산이 되었습니다. "기록하면 되살릴 수 있다"는 메시지는 아이의 여행 기록과도 연결돼요.</li>
+    <li><b>화성행궁과 을묘년 원행</b> — 1795년 정조는 어머니 혜경궁 홍씨의 회갑을 맞아 수원으로 행차해 잔치를 열었고, 이 행차도 그림과 의궤로 자세히 남아 있습니다.</li>
+    <li><b>성의 구조</b> — 성벽 둘레는 약 5.7km이고, 성문·암문·공심돈·봉돈·포루처럼 기능이 다른 시설이 골고루 있어 "성곽 건축의 교과서"로 불립니다.</li>
+  </ul>
+
+  <h4>현장 미션 (아이 활동지)</h4>
+  <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+  <ul class="checklist" id="route-hwaseong-mission">
+    <li class="task"><label><input type="checkbox"><span>거중기 모형에서 도르래 개수 세기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>성벽 돌 중 색이 다른(새로 복원한) 돌 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>장안문 바깥쪽 둥근 성벽(옹성) 찾고 "왜 둥글까?" 말하기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>총이나 활을 쏘던 구멍(총안) 찾아보기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>방화수류정에서 연못에 비친 정자 그리기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>행궁에서 잔치가 열렸던 곳 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>오늘 걸은 걸음 수(또는 구간) 기록하기</span></label></li>
+  </ul>
+
+  <h4>대화 질문</h4>
+  <div class="cards" style="--min: 200px">
+    <div class="card c-note"><h3>가기 전</h3><ul><li>무거운 돌을 사람 힘만으로 들 수 있을까?</li><li>도르래는 어디에 쓰일까? (국기 게양대!)</li><li>정조는 왜 수원에 성을 쌓았을까?</li></ul></div>
+    <div class="card c-tip"><h3>현장에서</h3><ul><li>성문마다 모양이 다른 이유는?</li><li>이 성벽을 공격하는 쪽이라면 어디가 제일 어려울까?</li><li>일꾼에게 품삯을 주면 무엇이 달라질까?</li></ul></div>
+    <div class="card c-accent"><h3>다녀와서</h3><ul><li>의궤가 없었다면 화성은 어떻게 됐을까?</li><li>우리 집 여행 기록도 200년 뒤에 쓸모 있을까?</li><li>도르래로 물건 들어 올리기 실험 해 볼까?</li></ul></div>
+  </div>
+
+  <h4>다녀와서 연표 활동</h4>
+  <p>연표의 조선 구간을 <b>전기·후기</b>로 나누고, 임진왜란(1592)·병자호란(1636) 뒤에 1776 정조 즉위 → 1794~1796 화성 축성 → 1795 을묘년 행차를 붙입니다. 과학 연결로 실과 도르래(실·빈 실패)로 작은 거중기를 만들어 보면 원리가 손에 잡혀요.</p>
+  <label class="memo-label" for="rt-hwaseong-note">수원 화성 여행 한 줄 기록</label>
+  <textarea class="memo" id="rt-hwaseong-note" data-key="trips-route-hwaseong-timeline" placeholder="예) 정조는 수원 화성을 쌓았다. 정약용의 거중기와 자세한 기록(의궤) 덕분에 다시 복원할 수 있었다."></textarea>
+  <p class="saved-hint"></p>
+
+  <h4>연계 단원</h4>
+  <ul>
+    <li><a href="../subjects/social-elem.html#social-elem-u24">사회 · 초5 · 한국사 ④ 조선</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u33">역사 · 중학교 · 조선 사회의 변동</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u14">한국사1 · 고1 · 조선 후기 사회 변동</a></li>
+  </ul>
+</div></details>
+
+<!-- ============ 7. 근현대 ============ -->
+<details class="acc" id="route-modern"><summary>7. 근현대 — 서대문형무소역사관 + 독립기념관<small>당일 2회 권장 · 서울·충남 천안 · 초5~고 (서대문은 초고 이상) · 3·1절·광복절 전후</small></summary><div class="acc-body">
+  <div class="hr-go"><a href="museums-history.html#place-seodaemun">서대문형무소역사관</a><a href="museums-history.html#place-independence-hall">독립기념관</a><a href="museums-history.html#place-war-memorial">전쟁기념관</a><a href="museums-history.html#place-busan-provisional">부산 임시수도기념관</a></div>
+  <p>감정적으로 무거운 코스입니다. <b>서울(서대문, 반나절)</b>과 <b>천안(독립기념관, 하루)</b>을 따로 가는 것을 권해요. 하루에 몰아서 가면 아이가 "슬프고 무서운 곳"으로만 기억할 수 있습니다. 서대문 → 독립기념관 순서로 가면 "고난 → 저항과 독립"의 흐름이 됩니다.</p>
+
+  <h4>동선 A · 서울 서대문 (반나절)</h4>
+  <div class="timeline">
+    <div class="tl-item c-root" style="--c:var(--root)"><div class="tl-when">10:00</div><h3>독립문</h3><p>서대문독립공원 입구. 청나라 사신을 맞던 영은문 자리 근처에 독립협회가 세운 문이에요. "무엇으로부터의 독립이었을까?"로 시작합니다.</p></div>
+    <div class="tl-item c-stem" style="--c:var(--stem)"><div class="tl-when">10:30</div><h3>서대문형무소역사관</h3><p>전시관 → 옥사 → 여옥사 순으로. 지하 공간과 사형장 쪽은 아이 상태를 보고 건너뛰어도 됩니다. 1시간 반 안팎이면 충분해요.</p></div>
+    <div class="tl-item c-branch" style="--c:var(--branch)"><div class="tl-when">12:00</div><h3>독립공원 산책 · 정리</h3><p>밝은 공원에서 마음을 풀고 "오늘 가장 기억에 남는 사람 한 명" 이야기. 근처 대한민국임시정부기념관(2022년 개관)을 더해도 좋아요.</p></div>
+  </div>
+  <h4>동선 B · 충남 천안 (하루)</h4>
+  <div class="timeline">
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">10:00</div><h3>독립기념관 · 겨레의 탑 → 겨레의 집</h3><p>규모가 아주 커요. 전시관 전부를 보려 하지 말고 <b>두세 곳만</b> 고릅니다(예: 나라를 잃었을 때, 3·1 운동, 나라를 되찾기 위한 노력 관련 전시). 전시 구성은 바뀔 수 있어요.</p></div>
+    <div class="tl-item c-fruit" style="--c:var(--fruit)"><div class="tl-when">12:30 · 점심</div><h3>점심 + 넓은 야외 공간에서 휴식</h3><p>태극기가 늘어선 길, 넓은 잔디밭이 있어 아이가 쉬기 좋습니다.</p></div>
+    <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">14:00</div><h3>전시관 한 곳 더 또는 체험 프로그램</h3><p>어린이 대상 체험·교육 프로그램이 있는지 미리 확인하세요.</p></div>
+    <div class="tl-item c-accent" style="--c:var(--accent)"><div class="tl-when">15:30 · 선택</div><h3>유관순 열사 사적지 (천안 병천)</h3><p>독립기념관에서 가까운 병천에 유관순 열사 기념관과 생가, 아우내 장터가 있어요. 1919년 4월 1일 만세 운동이 일어난 곳입니다.</p></div>
+  </div>
+
+  <h4>부모가 미리 알아 둘 이야기</h4>
+  <ul>
+    <li><b>서대문형무소</b> — 1908년 일제가 '경성감옥'으로 문을 열었고, 이후 서대문형무소로 이름이 바뀌었습니다. 수많은 독립운동가가 갇히고 고문당하고 목숨을 잃은 곳이에요. 광복 후에도 이름을 바꿔 1987년까지 교도소·구치소로 쓰였고, 1998년 역사관으로 문을 열었습니다. 민주화 운동과 관련된 인물들이 수감된 곳이기도 해 '인권'의 관점으로도 볼 수 있어요.</li>
+    <li><b>유관순</b> — 이화학당 학생으로 3·1 운동에 참여하고, 고향 천안 아우내 장터에서 만세 운동을 이끌었습니다. 서대문형무소 여옥사에 갇혔다가 1920년 10대의 나이로 순국했어요.</li>
+    <li><b>독립문</b> — 1897년 독립협회가 중심이 되어 세웠습니다. 일본으로부터가 아니라, 청나라에 대한 오랜 사대 관계에서 벗어나 자주독립을 다짐한 상징이라는 점이 아이들이 자주 헷갈리는 부분이에요.</li>
+    <li><b>독립기념관</b> — 국민 성금을 모아 1987년 8월 15일 천안에 문을 열었습니다. 외세의 침략에 맞선 역사와 독립운동을 주제로 한 여러 전시관이 있어요.</li>
+    <li><b>6·25 전쟁까지</b> — 광복 이후 정부 수립과 6·25 전쟁은 용산 전쟁기념관, 부산 임시수도기념관에서 이어서 볼 수 있습니다. 무기 전시는 "멋있다"보다 "전쟁이 사람에게 남긴 것"을 이야기하는 방향으로 안내해 주세요.</li>
+  </ul>
+  <div class="callout warning" data-label="아이 마음 먼저">서대문형무소역사관에는 고문 도구 재현, 좁은 독방, 사형장 등 어린이에게 무섭고 슬픈 전시가 있습니다. 초등 저학년은 권하지 않고, 고학년도 미리 "어떤 곳인지"를 충분히 이야기한 뒤 가세요. 아이가 힘들어하면 중간에 나와도 괜찮고, 다녀온 날 밤에 한 번 더 마음을 물어봐 주세요.</div>
+
+  <h4>현장 미션 (아이 활동지)</h4>
+  <div class="check-progress"><div class="meter c-tip"><i></i></div><span class="count"></span></div>
+  <ul class="checklist" id="route-modern-mission">
+    <li class="task"><label><input type="checkbox"><span>독립문에 새겨진 글자(한글·한자) 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>서대문형무소 전시에서 나와 비슷한 나이의 독립운동가 한 명 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>여옥사에서 유관순 열사 이야기 읽기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>독립기념관에서 3·1 운동 때 쓰인 물건(태극기·선언서 등) 찾기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>가장 기억에 남는 인물 한 명의 이름과 한 일 적기</span></label></li>
+    <li class="task"><label><input type="checkbox"><span>"그분께 하고 싶은 말" 한 줄 쓰기</span></label></li>
+  </ul>
+
+  <h4>대화 질문</h4>
+  <div class="cards" style="--min: 200px">
+    <div class="card c-note"><h3>가기 전</h3><ul><li>나라를 잃는다는 건 어떤 뜻일까?</li><li>3월 1일, 8월 15일은 왜 쉬는 날일까?</li><li>오늘 가는 곳은 조금 슬플 수 있어. 힘들면 말해 줄래?</li></ul></div>
+    <div class="card c-tip"><h3>현장에서</h3><ul><li>이 사람은 무엇을 지키고 싶었을까?</li><li>무서웠을 텐데도 왜 멈추지 않았을까?</li><li>지금 우리가 누리는 것 중 그때 없던 것은?</li></ul></div>
+    <div class="card c-accent"><h3>다녀와서</h3><ul><li>오늘 마음 날씨는 어땠어?</li><li>그분들이 지금의 우리를 본다면 뭐라고 할까?</li><li>우리가 지킬 수 있는 '자유'는 무엇일까?</li></ul></div>
+  </div>
+
+  <h4>다녀와서 연표 활동</h4>
+  <p>연표 끝에 <b>1876 개항 → 1897 대한제국·독립문 → 1910 국권 피탈 → 1919 3·1 운동·대한민국 임시정부 → 1945 광복 → 1948 정부 수립 → 1950 6·25 전쟁</b>을 붙이고, 마지막 칸에 <b>"지금, 우리 가족"</b> 사진을 붙여 연표를 완성합니다. 다섯 시대 연표가 거실 벽 한쪽을 채우는 순간이 이 여행 시리즈의 졸업식이에요.</p>
+  <label class="memo-label" for="rt-modern-note">근현대 여행 한 줄 기록</label>
+  <textarea class="memo" id="rt-modern-note" data-key="trips-route-modern-timeline" placeholder="예) 유관순 열사는 아우내 장터에서 만세 운동을 이끌었다. 서대문형무소에서 많은 독립운동가가 고생했다."></textarea>
+  <p class="saved-hint"></p>
+
+  <h4>연계 단원</h4>
+  <ul>
+    <li><a href="../subjects/social-elem.html#social-elem-u25">사회 · 초5 · 한국사 ⑤ 근대와 현대</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u34">역사 · 중학교 · 근·현대 사회의 전개</a></li>
+    <li><a href="../subjects/social-mid.html#social-mid-u15">사회 · 중학교 · 인권과 헌법</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u16">한국사2 · 고1 · 일제의 식민 지배</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u17">한국사2 · 고1 · 민족 운동의 전개</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u18">한국사2 · 고1 · 대한민국 정부 수립과 6·25 전쟁</a></li>
+    <li><a href="../subjects/social-high.html#social-high-u6">통합사회2 · 고1 · 인권 보장과 헌법</a></li>
+  </ul>
+</div></details>
+
+</div>
+
+<p class="callout tip">순서가 중요합니다. 선사부터 차례로 가면 "앞 시대와 무엇이 달라졌지?"라는 질문이 저절로 생겨요. 교과 진도와 정확히 맞출 필요는 없고, 초5 역사 단원 전후 1~2년 안에 다섯 시대를 한 바퀴 도는 것이 목표입니다. 중·고등학생이 되어 같은 곳을 다시 가면 이번엔 아이가 가족에게 해설해 주는 여행이 됩니다.</p>
+
+<h2 id="timeline-wall">거실 연표 만들기 (다섯 시대 공통)</h2>
+<div class="cards" style="--min: 210px">
+  <div class="card top c-root"><span class="tag">준비</span><h3>긴 종이 한 장</h3><p>달력 뒷면이나 전지를 가로로 이어 붙여 거실 벽에. 왼쪽 끝이 "아주 옛날", 오른쪽 끝이 "지금 우리 가족"입니다.</p></div>
+  <div class="card top c-stem"><span class="tag">여행마다</span><h3>사진 1장 + 문장 1개</h3><p>각 코스의 "한 줄 기록"을 옮겨 적고, 아이가 고른 사진 한 장을 붙입니다. 부모는 연도만 도와줘요.</p></div>
+  <div class="card top c-branch"><span class="tag">비교</span><h3>화살표 긋기</h3><p>"토기 → 청자 → 백자", "움집 → 궁궐", "고인돌 → 왕릉"처럼 같은 종류끼리 화살표로 이어 변화 찾기.</p></div>
+  <div class="card top c-fruit"><span class="tag">완성</span><h3>아이가 해설하기</h3><p>다섯 시대를 다 채우면 아이가 가족에게 연표를 설명하는 "우리 집 박물관 개관식"을 엽니다.</p></div>
+</div>
 
 <h2 id="talk">현장에서 쓰는 질문</h2>
 <div class="compare">
@@ -108,6 +558,6 @@ summary: 선사 → 삼국 → 고려 → 조선 → 근현대 순서로 걷기
   <li class="task"><label><input type="checkbox"><span>근현대: 서대문형무소역사관 또는 독립기념관</span></label></li>
 </ul>
 <p class="callout warning">문화유산 관람 시간·예약 방식·해설 프로그램은 기관마다, 해마다 바뀝니다. 출발 전 각 기관 공식 안내를 확인하세요.</p>
-<p>역사 공부 방법은 <a href="../subjects/social.html">사회·역사 가이드</a>, 장소 전체 목록은 <a href="places.html">교과 연계 장소</a>에 있어요.</p>
+<p>역사 공부 방법은 <a href="../subjects/social.html">사회·역사 가이드</a>, 장소별 자세한 안내는 <a href="museums-history.html">박물관·역사 체험</a>, 장소 전체 목록은 <a href="places.html">교과 연계 장소</a>, 평일 여행 신청은 <a href="how-to.html">교외체험학습 신청</a>에 있어요.</p>
 
 </div>
